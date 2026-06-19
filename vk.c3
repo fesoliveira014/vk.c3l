@@ -4382,12 +4382,12 @@ faultdef  E_ERROR_OUT_OF_HOST_MEMORY,
 ;
 
 struct BaseOutStructure {
-   StructureType sType;
-   BaseOutStructure* pNext;
+   StructureType s_type;
+   BaseOutStructure* p_next;
 }
 struct BaseInStructure {
-   StructureType sType;
-   BaseInStructure* pNext;
+   StructureType s_type;
+   BaseInStructure* p_next;
 }
 struct Offset2D {
    int x;
@@ -4412,8 +4412,8 @@ struct Viewport {
    float y;
    float width;
    float height;
-   float minDepth;
-   float maxDepth;
+   float min_depth;
+   float max_depth;
 }
 struct Rect2D {
    Offset2D offset;
@@ -4421,8 +4421,8 @@ struct Rect2D {
 }
 struct ClearRect {
    Rect2D rect;
-   uint baseArrayLayer;
-   uint layerCount;
+   uint base_array_layer;
+   uint layer_count;
 }
 struct ComponentMapping {
    ComponentSwizzle r;
@@ -4431,134 +4431,134 @@ struct ComponentMapping {
    ComponentSwizzle a;
 }
 struct PhysicalDeviceProperties {
-   uint apiVersion;
-   uint driverVersion;
-   uint vendorID;
-   uint deviceID;
-   PhysicalDeviceType deviceType;
-   char[MAX_PHYSICAL_DEVICE_NAME_SIZE] deviceName;
-   uint[UUID_SIZE] pipelineCacheUUID;
+   uint api_version;
+   uint driver_version;
+   uint vendor_id;
+   uint device_id;
+   PhysicalDeviceType device_type;
+   char[MAX_PHYSICAL_DEVICE_NAME_SIZE] device_name;
+   uint[UUID_SIZE] pipeline_cache_uuid;
    PhysicalDeviceLimits limits;
-   PhysicalDeviceSparseProperties sparseProperties;
+   PhysicalDeviceSparseProperties sparse_properties;
 }
 struct ExtensionProperties {
-   char[MAX_EXTENSION_NAME_SIZE] extensionName;
-   uint specVersion;
+   char[MAX_EXTENSION_NAME_SIZE] extension_name;
+   uint spec_version;
 }
 struct LayerProperties {
-   char[MAX_EXTENSION_NAME_SIZE] layerName;
-   uint specVersion;
-   uint implementationVersion;
+   char[MAX_EXTENSION_NAME_SIZE] layer_name;
+   uint spec_version;
+   uint implementation_version;
    char[MAX_DESCRIPTION_SIZE] description;
 }
 struct ApplicationInfo {
-   StructureType sType;
-   void* pNext;
-   char* pApplicationName;
-   uint applicationVersion;
-   char* pEngineName;
-   uint engineVersion;
-   uint apiVersion;
+   StructureType s_type;
+   void* p_next;
+   char* p_application_name;
+   uint application_version;
+   char* p_engine_name;
+   uint engine_version;
+   uint api_version;
 }
 struct AllocationCallbacks {
-   void* pUserData;
-   PFN_vkAllocationFunction pfnAllocation;
-   PFN_vkReallocationFunction pfnReallocation;
-   PFN_vkFreeFunction pfnFree;
-   PFN_vkInternalAllocationNotification pfnInternalAllocation;
-   PFN_vkInternalFreeNotification pfnInternalFree;
+   void* p_user_data;
+   PFN_vkAllocationFunction pfn_allocation;
+   PFN_vkReallocationFunction pfn_reallocation;
+   PFN_vkFreeFunction pfn_free;
+   PFN_vkInternalAllocationNotification pfn_internal_allocation;
+   PFN_vkInternalFreeNotification pfn_internal_free;
 }
 struct DeviceQueueCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceQueueCreateFlags flags;
-   uint queueFamilyIndex;
-   uint queueCount;
-   float* pQueuePriorities;
+   uint queue_family_index;
+   uint queue_count;
+   float* p_queue_priorities;
 }
 struct DeviceCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceCreateFlags flags;
-   uint queueCreateInfoCount;
-   DeviceQueueCreateInfo* pQueueCreateInfos;
-   uint enabledLayerCount;
-   char* ppEnabledLayerNames;
-   uint enabledExtensionCount;
-   char* ppEnabledExtensionNames;
-   PhysicalDeviceFeatures* pEnabledFeatures;
+   uint queue_create_info_count;
+   DeviceQueueCreateInfo* p_queue_create_infos;
+   uint enabled_layer_count;
+   char** pp_enabled_layer_names;
+   uint enabled_extension_count;
+   char** pp_enabled_extension_names;
+   PhysicalDeviceFeatures* p_enabled_features;
 }
 struct InstanceCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    InstanceCreateFlags flags;
-   ApplicationInfo* pApplicationInfo;
-   uint enabledLayerCount;
-   char* ppEnabledLayerNames;
-   uint enabledExtensionCount;
-   char* ppEnabledExtensionNames;
+   ApplicationInfo* p_application_info;
+   uint enabled_layer_count;
+   char** pp_enabled_layer_names;
+   uint enabled_extension_count;
+   char** pp_enabled_extension_names;
 }
 struct QueueFamilyProperties {
-   QueueFlags queueFlags;
-   uint queueCount;
-   uint timestampValidBits;
-   Extent3D minImageTransferGranularity;
+   QueueFlags queue_flags;
+   uint queue_count;
+   uint timestamp_valid_bits;
+   Extent3D min_image_transfer_granularity;
 }
 struct PhysicalDeviceMemoryProperties {
-   uint memoryTypeCount;
-   MemoryType[MAX_MEMORY_TYPES] memoryTypes;
-   uint memoryHeapCount;
-   MemoryHeap[MAX_MEMORY_HEAPS] memoryHeaps;
+   uint memory_type_count;
+   MemoryType[MAX_MEMORY_TYPES] memory_types;
+   uint memory_heap_count;
+   MemoryHeap[MAX_MEMORY_HEAPS] memory_heaps;
 }
 struct MemoryAllocateInfo {
-   StructureType sType;
-   void* pNext;
-   DeviceSize allocationSize;
-   uint memoryTypeIndex;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize allocation_size;
+   uint memory_type_index;
 }
 struct MemoryRequirements {
    DeviceSize size;
    DeviceSize alignment;
-   uint memoryTypeBits;
+   uint memory_type_bits;
 }
 struct SparseImageFormatProperties {
-   ImageAspectFlags aspectMask;
-   Extent3D imageGranularity;
+   ImageAspectFlags aspect_mask;
+   Extent3D image_granularity;
    SparseImageFormatFlags flags;
 }
 struct SparseImageMemoryRequirements {
-   SparseImageFormatProperties formatProperties;
-   uint imageMipTailFirstLod;
-   DeviceSize imageMipTailSize;
-   DeviceSize imageMipTailOffset;
-   DeviceSize imageMipTailStride;
+   SparseImageFormatProperties format_properties;
+   uint image_mip_tail_first_lod;
+   DeviceSize image_mip_tail_size;
+   DeviceSize image_mip_tail_offset;
+   DeviceSize image_mip_tail_stride;
 }
 struct MemoryType {
-   MemoryPropertyFlags propertyFlags;
-   uint heapIndex;
+   MemoryPropertyFlags property_flags;
+   uint heap_index;
 }
 struct MemoryHeap {
    DeviceSize size;
    MemoryHeapFlags flags;
 }
 struct MappedMemoryRange {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceMemory memory;
    DeviceSize offset;
    DeviceSize size;
 }
 struct FormatProperties {
-   FormatFeatureFlags linearTilingFeatures;
-   FormatFeatureFlags optimalTilingFeatures;
-   FormatFeatureFlags bufferFeatures;
+   FormatFeatureFlags linear_tiling_features;
+   FormatFeatureFlags optimal_tiling_features;
+   FormatFeatureFlags buffer_features;
 }
 struct ImageFormatProperties {
-   Extent3D maxExtent;
-   uint maxMipLevels;
-   uint maxArrayLayers;
-   SampleCountFlags sampleCounts;
-   DeviceSize maxResourceSize;
+   Extent3D max_extent;
+   uint max_mip_levels;
+   uint max_array_layers;
+   SampleCountFlags sample_counts;
+   DeviceSize max_resource_size;
 }
 struct DescriptorBufferInfo {
    Buffer buffer;
@@ -4567,50 +4567,50 @@ struct DescriptorBufferInfo {
 }
 struct DescriptorImageInfo {
    Sampler sampler;
-   ImageView imageView;
-   ImageLayout imageLayout;
+   ImageView image_view;
+   ImageLayout image_layout;
 }
 struct WriteDescriptorSet {
-   StructureType sType;
-   void* pNext;
-   DescriptorSet dstSet;
-   uint dstBinding;
-   uint dstArrayElement;
-   uint descriptorCount;
-   DescriptorType descriptorType;
-   DescriptorImageInfo* pImageInfo;
-   DescriptorBufferInfo* pBufferInfo;
-   BufferView* pTexelBufferView;
+   StructureType s_type;
+   void* p_next;
+   DescriptorSet dst_set;
+   uint dst_binding;
+   uint dst_array_element;
+   uint descriptor_count;
+   DescriptorType descriptor_type;
+   DescriptorImageInfo* p_image_info;
+   DescriptorBufferInfo* p_buffer_info;
+   BufferView* p_texel_buffer_view;
 }
 struct CopyDescriptorSet {
-   StructureType sType;
-   void* pNext;
-   DescriptorSet srcSet;
-   uint srcBinding;
-   uint srcArrayElement;
-   DescriptorSet dstSet;
-   uint dstBinding;
-   uint dstArrayElement;
-   uint descriptorCount;
+   StructureType s_type;
+   void* p_next;
+   DescriptorSet src_set;
+   uint src_binding;
+   uint src_array_element;
+   DescriptorSet dst_set;
+   uint dst_binding;
+   uint dst_array_element;
+   uint descriptor_count;
 }
 struct BufferUsageFlags2CreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    BufferUsageFlags2KHR usage;
 }
 struct BufferCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    BufferCreateFlags flags;
    DeviceSize size;
    BufferUsageFlags usage;
-   SharingMode sharingMode;
-   uint queueFamilyIndexCount;
-   uint* pQueueFamilyIndices;
+   SharingMode sharing_mode;
+   uint queue_family_index_count;
+   uint* p_queue_family_indices;
 }
 struct BufferViewCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    BufferViewCreateFlags flags;
    Buffer buffer;
    Format format;
@@ -4618,96 +4618,96 @@ struct BufferViewCreateInfo {
    DeviceSize range;
 }
 struct ImageSubresource {
-   ImageAspectFlags aspectMask;
-   uint mipLevel;
-   uint arrayLayer;
+   ImageAspectFlags aspect_mask;
+   uint mip_level;
+   uint array_layer;
 }
 struct ImageSubresourceLayers {
-   ImageAspectFlags aspectMask;
-   uint mipLevel;
-   uint baseArrayLayer;
-   uint layerCount;
+   ImageAspectFlags aspect_mask;
+   uint mip_level;
+   uint base_array_layer;
+   uint layer_count;
 }
 struct ImageSubresourceRange {
-   ImageAspectFlags aspectMask;
-   uint baseMipLevel;
-   uint levelCount;
-   uint baseArrayLayer;
-   uint layerCount;
+   ImageAspectFlags aspect_mask;
+   uint base_mip_level;
+   uint level_count;
+   uint base_array_layer;
+   uint layer_count;
 }
 struct MemoryBarrier {
-   StructureType sType;
-   void* pNext;
-   AccessFlags srcAccessMask;
-   AccessFlags dstAccessMask;
+   StructureType s_type;
+   void* p_next;
+   AccessFlags src_access_mask;
+   AccessFlags dst_access_mask;
 }
 struct BufferMemoryBarrier {
-   StructureType sType;
-   void* pNext;
-   AccessFlags srcAccessMask;
-   AccessFlags dstAccessMask;
-   uint srcQueueFamilyIndex;
-   uint dstQueueFamilyIndex;
+   StructureType s_type;
+   void* p_next;
+   AccessFlags src_access_mask;
+   AccessFlags dst_access_mask;
+   uint src_queue_family_index;
+   uint dst_queue_family_index;
    Buffer buffer;
    DeviceSize offset;
    DeviceSize size;
 }
 struct ImageMemoryBarrier {
-   StructureType sType;
-   void* pNext;
-   AccessFlags srcAccessMask;
-   AccessFlags dstAccessMask;
-   ImageLayout oldLayout;
-   ImageLayout newLayout;
-   uint srcQueueFamilyIndex;
-   uint dstQueueFamilyIndex;
+   StructureType s_type;
+   void* p_next;
+   AccessFlags src_access_mask;
+   AccessFlags dst_access_mask;
+   ImageLayout old_layout;
+   ImageLayout new_layout;
+   uint src_queue_family_index;
+   uint dst_queue_family_index;
    Image image;
-   ImageSubresourceRange subresourceRange;
+   ImageSubresourceRange subresource_range;
 }
 struct ImageCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ImageCreateFlags flags;
-   ImageType imageType;
+   ImageType image_type;
    Format format;
    Extent3D extent;
-   uint mipLevels;
-   uint arrayLayers;
+   uint mip_levels;
+   uint array_layers;
    SampleCountFlagBits samples;
    ImageTiling tiling;
    ImageUsageFlags usage;
-   SharingMode sharingMode;
-   uint queueFamilyIndexCount;
-   uint* pQueueFamilyIndices;
-   ImageLayout initialLayout;
+   SharingMode sharing_mode;
+   uint queue_family_index_count;
+   uint* p_queue_family_indices;
+   ImageLayout initial_layout;
 }
 struct SubresourceLayout {
    DeviceSize offset;
    DeviceSize size;
-   DeviceSize rowPitch;
-   DeviceSize arrayPitch;
-   DeviceSize depthPitch;
+   DeviceSize row_pitch;
+   DeviceSize array_pitch;
+   DeviceSize depth_pitch;
 }
 struct ImageViewCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ImageViewCreateFlags flags;
    Image image;
-   ImageViewType viewType;
+   ImageViewType view_type;
    Format format;
    ComponentMapping components;
-   ImageSubresourceRange subresourceRange;
+   ImageSubresourceRange subresource_range;
 }
 struct BufferCopy {
-   DeviceSize srcOffset;
-   DeviceSize dstOffset;
+   DeviceSize src_offset;
+   DeviceSize dst_offset;
    DeviceSize size;
 }
 struct SparseMemoryBind {
-   DeviceSize resourceOffset;
+   DeviceSize resource_offset;
    DeviceSize size;
    DeviceMemory memory;
-   DeviceSize memoryOffset;
+   DeviceSize memory_offset;
    SparseMemoryBindFlags flags;
 }
 struct SparseImageMemoryBind {
@@ -4715,164 +4715,164 @@ struct SparseImageMemoryBind {
    Offset3D offset;
    Extent3D extent;
    DeviceMemory memory;
-   DeviceSize memoryOffset;
+   DeviceSize memory_offset;
    SparseMemoryBindFlags flags;
 }
 struct SparseBufferMemoryBindInfo {
    Buffer buffer;
-   uint bindCount;
-   SparseMemoryBind* pBinds;
+   uint bind_count;
+   SparseMemoryBind* p_binds;
 }
 struct SparseImageOpaqueMemoryBindInfo {
    Image image;
-   uint bindCount;
-   SparseMemoryBind* pBinds;
+   uint bind_count;
+   SparseMemoryBind* p_binds;
 }
 struct SparseImageMemoryBindInfo {
    Image image;
-   uint bindCount;
-   SparseImageMemoryBind* pBinds;
+   uint bind_count;
+   SparseImageMemoryBind* p_binds;
 }
 struct BindSparseInfo {
-   StructureType sType;
-   void* pNext;
-   uint waitSemaphoreCount;
-   Semaphore* pWaitSemaphores;
-   uint bufferBindCount;
-   SparseBufferMemoryBindInfo* pBufferBinds;
-   uint imageOpaqueBindCount;
-   SparseImageOpaqueMemoryBindInfo* pImageOpaqueBinds;
-   uint imageBindCount;
-   SparseImageMemoryBindInfo* pImageBinds;
-   uint signalSemaphoreCount;
-   Semaphore* pSignalSemaphores;
+   StructureType s_type;
+   void* p_next;
+   uint wait_semaphore_count;
+   Semaphore* p_wait_semaphores;
+   uint buffer_bind_count;
+   SparseBufferMemoryBindInfo* p_buffer_binds;
+   uint image_opaque_bind_count;
+   SparseImageOpaqueMemoryBindInfo* p_image_opaque_binds;
+   uint image_bind_count;
+   SparseImageMemoryBindInfo* p_image_binds;
+   uint signal_semaphore_count;
+   Semaphore* p_signal_semaphores;
 }
 struct ImageCopy {
-   ImageSubresourceLayers srcSubresource;
-   Offset3D srcOffset;
-   ImageSubresourceLayers dstSubresource;
-   Offset3D dstOffset;
+   ImageSubresourceLayers src_subresource;
+   Offset3D src_offset;
+   ImageSubresourceLayers dst_subresource;
+   Offset3D dst_offset;
    Extent3D extent;
 }
 struct ImageBlit {
-   ImageSubresourceLayers srcSubresource;
-   Offset3D[2] srcOffsets;
-   ImageSubresourceLayers dstSubresource;
-   Offset3D[2] dstOffsets;
+   ImageSubresourceLayers src_subresource;
+   Offset3D[2] src_offsets;
+   ImageSubresourceLayers dst_subresource;
+   Offset3D[2] dst_offsets;
 }
 struct BufferImageCopy {
-   DeviceSize bufferOffset;
-   uint bufferRowLength;
-   uint bufferImageHeight;
-   ImageSubresourceLayers imageSubresource;
-   Offset3D imageOffset;
-   Extent3D imageExtent;
+   DeviceSize buffer_offset;
+   uint buffer_row_length;
+   uint buffer_image_height;
+   ImageSubresourceLayers image_subresource;
+   Offset3D image_offset;
+   Extent3D image_extent;
 }
 struct CopyMemoryIndirectCommandNV {
-   DeviceAddress srcAddress;
-   DeviceAddress dstAddress;
+   DeviceAddress src_address;
+   DeviceAddress dst_address;
    DeviceSize size;
 }
 struct CopyMemoryToImageIndirectCommandNV {
-   DeviceAddress srcAddress;
-   uint bufferRowLength;
-   uint bufferImageHeight;
-   ImageSubresourceLayers imageSubresource;
-   Offset3D imageOffset;
-   Extent3D imageExtent;
+   DeviceAddress src_address;
+   uint buffer_row_length;
+   uint buffer_image_height;
+   ImageSubresourceLayers image_subresource;
+   Offset3D image_offset;
+   Extent3D image_extent;
 }
 struct ImageResolve {
-   ImageSubresourceLayers srcSubresource;
-   Offset3D srcOffset;
-   ImageSubresourceLayers dstSubresource;
-   Offset3D dstOffset;
+   ImageSubresourceLayers src_subresource;
+   Offset3D src_offset;
+   ImageSubresourceLayers dst_subresource;
+   Offset3D dst_offset;
    Extent3D extent;
 }
 struct ShaderModuleCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ShaderModuleCreateFlags flags;
-   sz codeSize;
-   uint* pCode;
+   sz code_size;
+   uint* p_code;
 }
 struct DescriptorSetLayoutBinding {
    uint binding;
-   DescriptorType descriptorType;
-   uint descriptorCount;
-   ShaderStageFlags stageFlags;
-   Sampler* pImmutableSamplers;
+   DescriptorType descriptor_type;
+   uint descriptor_count;
+   ShaderStageFlags stage_flags;
+   Sampler* p_immutable_samplers;
 }
 struct DescriptorSetLayoutCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DescriptorSetLayoutCreateFlags flags;
-   uint bindingCount;
-   DescriptorSetLayoutBinding* pBindings;
+   uint binding_count;
+   DescriptorSetLayoutBinding* p_bindings;
 }
 struct DescriptorPoolSize {
    DescriptorType type;
-   uint descriptorCount;
+   uint descriptor_count;
 }
 struct DescriptorPoolCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DescriptorPoolCreateFlags flags;
-   uint maxSets;
-   uint poolSizeCount;
-   DescriptorPoolSize* pPoolSizes;
+   uint max_sets;
+   uint pool_size_count;
+   DescriptorPoolSize* p_pool_sizes;
 }
 struct DescriptorSetAllocateInfo {
-   StructureType sType;
-   void* pNext;
-   DescriptorPool descriptorPool;
-   uint descriptorSetCount;
-   DescriptorSetLayout* pSetLayouts;
+   StructureType s_type;
+   void* p_next;
+   DescriptorPool descriptor_pool;
+   uint descriptor_set_count;
+   DescriptorSetLayout* p_set_layouts;
 }
 struct SpecializationMapEntry {
-   uint constantID;
+   uint constant_id;
    uint offset;
    sz size;
 }
 struct SpecializationInfo {
-   uint mapEntryCount;
-   SpecializationMapEntry* pMapEntries;
-   sz dataSize;
-   void* pData;
+   uint map_entry_count;
+   SpecializationMapEntry* p_map_entries;
+   sz data_size;
+   void* p_data;
 }
 struct PipelineShaderStageCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineShaderStageCreateFlags flags;
    ShaderStageFlagBits stage;
    ShaderModule mod;
-   char* pName;
-   SpecializationInfo* pSpecializationInfo;
+   char* p_name;
+   SpecializationInfo* p_specialization_info;
 }
 struct ComputePipelineCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineCreateFlags flags;
    PipelineShaderStageCreateInfo stage;
    PipelineLayout layout;
-   Pipeline basePipelineHandle;
-   int basePipelineIndex;
+   Pipeline base_pipeline_handle;
+   int base_pipeline_index;
 }
 struct ComputePipelineIndirectBufferInfoNV {
-   StructureType sType;
-   void* pNext;
-   DeviceAddress deviceAddress;
+   StructureType s_type;
+   void* p_next;
+   DeviceAddress device_address;
    DeviceSize size;
-   DeviceAddress pipelineDeviceAddressCaptureReplay;
+   DeviceAddress pipeline_device_address_capture_replay;
 }
 struct PipelineCreateFlags2CreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineCreateFlags2KHR flags;
 }
 struct VertexInputBindingDescription {
    uint binding;
    uint stride;
-   VertexInputRate inputRate;
+   VertexInputRate input_rate;
 }
 struct VertexInputAttributeDescription {
    uint location;
@@ -4881,286 +4881,286 @@ struct VertexInputAttributeDescription {
    uint offset;
 }
 struct PipelineVertexInputStateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineVertexInputStateCreateFlags flags;
-   uint vertexBindingDescriptionCount;
-   VertexInputBindingDescription* pVertexBindingDescriptions;
-   uint vertexAttributeDescriptionCount;
-   VertexInputAttributeDescription* pVertexAttributeDescriptions;
+   uint vertex_binding_description_count;
+   VertexInputBindingDescription* p_vertex_binding_descriptions;
+   uint vertex_attribute_description_count;
+   VertexInputAttributeDescription* p_vertex_attribute_descriptions;
 }
 struct PipelineInputAssemblyStateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineInputAssemblyStateCreateFlags flags;
    PrimitiveTopology topology;
-   uint primitiveRestartEnable;
+   uint primitive_restart_enable;
 }
 struct PipelineTessellationStateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineTessellationStateCreateFlags flags;
-   uint patchControlPoints;
+   uint patch_control_points;
 }
 struct PipelineViewportStateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineViewportStateCreateFlags flags;
-   uint viewportCount;
-   Viewport* pViewports;
-   uint scissorCount;
-   Rect2D* pScissors;
+   uint viewport_count;
+   Viewport* p_viewports;
+   uint scissor_count;
+   Rect2D* p_scissors;
 }
 struct PipelineRasterizationStateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineRasterizationStateCreateFlags flags;
-   uint depthClampEnable;
-   uint rasterizerDiscardEnable;
-   PolygonMode polygonMode;
-   CullModeFlags cullMode;
-   FrontFace frontFace;
-   uint depthBiasEnable;
-   float depthBiasConstantFactor;
-   float depthBiasClamp;
-   float depthBiasSlopeFactor;
-   float lineWidth;
+   uint depth_clamp_enable;
+   uint rasterizer_discard_enable;
+   PolygonMode polygon_mode;
+   CullModeFlags cull_mode;
+   FrontFace front_face;
+   uint depth_bias_enable;
+   float depth_bias_constant_factor;
+   float depth_bias_clamp;
+   float depth_bias_slope_factor;
+   float line_width;
 }
 struct PipelineMultisampleStateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineMultisampleStateCreateFlags flags;
-   SampleCountFlagBits rasterizationSamples;
-   uint sampleShadingEnable;
-   float minSampleShading;
-   SampleMask* pSampleMask;
-   uint alphaToCoverageEnable;
-   uint alphaToOneEnable;
+   SampleCountFlagBits rasterization_samples;
+   uint sample_shading_enable;
+   float min_sample_shading;
+   SampleMask* p_sample_mask;
+   uint alpha_to_coverage_enable;
+   uint alpha_to_one_enable;
 }
 struct PipelineColorBlendAttachmentState {
-   uint blendEnable;
-   BlendFactor srcColorBlendFactor;
-   BlendFactor dstColorBlendFactor;
-   BlendOp colorBlendOp;
-   BlendFactor srcAlphaBlendFactor;
-   BlendFactor dstAlphaBlendFactor;
-   BlendOp alphaBlendOp;
-   ColorComponentFlags colorWriteMask;
+   uint blend_enable;
+   BlendFactor src_color_blend_factor;
+   BlendFactor dst_color_blend_factor;
+   BlendOp color_blend_op;
+   BlendFactor src_alpha_blend_factor;
+   BlendFactor dst_alpha_blend_factor;
+   BlendOp alpha_blend_op;
+   ColorComponentFlags color_write_mask;
 }
 struct PipelineColorBlendStateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineColorBlendStateCreateFlags flags;
-   uint logicOpEnable;
-   LogicOp logicOp;
-   uint attachmentCount;
-   PipelineColorBlendAttachmentState* pAttachments;
-   float[4] blendConstants;
+   uint logic_op_enable;
+   LogicOp logic_op;
+   uint attachment_count;
+   PipelineColorBlendAttachmentState* p_attachments;
+   float[4] blend_constants;
 }
 struct PipelineDynamicStateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineDynamicStateCreateFlags flags;
-   uint dynamicStateCount;
-   DynamicState* pDynamicStates;
+   uint dynamic_state_count;
+   DynamicState* p_dynamic_states;
 }
 struct StencilOpState {
-   StencilOp failOp;
-   StencilOp passOp;
-   StencilOp depthFailOp;
-   CompareOp compareOp;
-   uint compareMask;
-   uint writeMask;
+   StencilOp fail_op;
+   StencilOp pass_op;
+   StencilOp depth_fail_op;
+   CompareOp compare_op;
+   uint compare_mask;
+   uint write_mask;
    uint reference;
 }
 struct PipelineDepthStencilStateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineDepthStencilStateCreateFlags flags;
-   uint depthTestEnable;
-   uint depthWriteEnable;
-   CompareOp depthCompareOp;
-   uint depthBoundsTestEnable;
-   uint stencilTestEnable;
+   uint depth_test_enable;
+   uint depth_write_enable;
+   CompareOp depth_compare_op;
+   uint depth_bounds_test_enable;
+   uint stencil_test_enable;
    StencilOpState front;
    StencilOpState back;
-   float minDepthBounds;
-   float maxDepthBounds;
+   float min_depth_bounds;
+   float max_depth_bounds;
 }
 struct GraphicsPipelineCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineCreateFlags flags;
-   uint stageCount;
-   PipelineShaderStageCreateInfo* pStages;
-   PipelineVertexInputStateCreateInfo* pVertexInputState;
-   PipelineInputAssemblyStateCreateInfo* pInputAssemblyState;
-   PipelineTessellationStateCreateInfo* pTessellationState;
-   PipelineViewportStateCreateInfo* pViewportState;
-   PipelineRasterizationStateCreateInfo* pRasterizationState;
-   PipelineMultisampleStateCreateInfo* pMultisampleState;
-   PipelineDepthStencilStateCreateInfo* pDepthStencilState;
-   PipelineColorBlendStateCreateInfo* pColorBlendState;
-   PipelineDynamicStateCreateInfo* pDynamicState;
+   uint stage_count;
+   PipelineShaderStageCreateInfo* p_stages;
+   PipelineVertexInputStateCreateInfo* p_vertex_input_state;
+   PipelineInputAssemblyStateCreateInfo* p_input_assembly_state;
+   PipelineTessellationStateCreateInfo* p_tessellation_state;
+   PipelineViewportStateCreateInfo* p_viewport_state;
+   PipelineRasterizationStateCreateInfo* p_rasterization_state;
+   PipelineMultisampleStateCreateInfo* p_multisample_state;
+   PipelineDepthStencilStateCreateInfo* p_depth_stencil_state;
+   PipelineColorBlendStateCreateInfo* p_color_blend_state;
+   PipelineDynamicStateCreateInfo* p_dynamic_state;
    PipelineLayout layout;
-   RenderPass renderPass;
+   RenderPass render_pass;
    uint subpass;
-   Pipeline basePipelineHandle;
-   int basePipelineIndex;
+   Pipeline base_pipeline_handle;
+   int base_pipeline_index;
 }
 struct PipelineCacheCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineCacheCreateFlags flags;
-   sz initialDataSize;
-   void* pInitialData;
+   sz initial_data_size;
+   void* p_initial_data;
 }
 struct PipelineCacheHeaderVersionOne {
-   uint headerSize;
-   PipelineCacheHeaderVersion headerVersion;
-   uint vendorID;
-   uint deviceID;
-   uint[UUID_SIZE] pipelineCacheUUID;
+   uint header_size;
+   PipelineCacheHeaderVersion header_version;
+   uint vendor_id;
+   uint device_id;
+   uint[UUID_SIZE] pipeline_cache_uuid;
 }
 struct PushConstantRange {
-   ShaderStageFlags stageFlags;
+   ShaderStageFlags stage_flags;
    uint offset;
    uint size;
 }
 struct PipelineBinaryCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   PipelineBinaryKeysAndDataKHR* pKeysAndDataInfo;
+   StructureType s_type;
+   void* p_next;
+   PipelineBinaryKeysAndDataKHR* p_keys_and_data_info;
    Pipeline pipeline;
-   PipelineCreateInfoKHR* pPipelineCreateInfo;
+   PipelineCreateInfoKHR* p_pipeline_create_info;
 }
 struct PipelineBinaryHandlesInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint pipelineBinaryCount;
-   PipelineBinaryKHR* pPipelineBinaries;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_binary_count;
+   PipelineBinaryKHR* p_pipeline_binaries;
 }
 struct PipelineBinaryDataKHR {
-   sz dataSize;
-   void* pData;
+   sz data_size;
+   void* p_data;
 }
 struct PipelineBinaryKeysAndDataKHR {
-   uint binaryCount;
-   PipelineBinaryKeyKHR* pPipelineBinaryKeys;
-   PipelineBinaryDataKHR* pPipelineBinaryData;
+   uint binary_count;
+   PipelineBinaryKeyKHR* p_pipeline_binary_keys;
+   PipelineBinaryDataKHR* p_pipeline_binary_data;
 }
 struct PipelineBinaryKeyKHR {
-   StructureType sType;
-   void* pNext;
-   uint keySize;
+   StructureType s_type;
+   void* p_next;
+   uint key_size;
    uint[MAX_PIPELINE_BINARY_KEY_SIZE_KHR] key;
 }
 struct PipelineBinaryInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint binaryCount;
-   PipelineBinaryKHR* pPipelineBinaries;
+   StructureType s_type;
+   void* p_next;
+   uint binary_count;
+   PipelineBinaryKHR* p_pipeline_binaries;
 }
 struct ReleaseCapturedPipelineDataInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Pipeline pipeline;
 }
 struct PipelineBinaryDataInfoKHR {
-   StructureType sType;
-   void* pNext;
-   PipelineBinaryKHR pipelineBinary;
+   StructureType s_type;
+   void* p_next;
+   PipelineBinaryKHR pipeline_binary;
 }
 struct PipelineCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
 }
 struct PipelineLayoutCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineLayoutCreateFlags flags;
-   uint setLayoutCount;
-   DescriptorSetLayout* pSetLayouts;
-   uint pushConstantRangeCount;
-   PushConstantRange* pPushConstantRanges;
+   uint set_layout_count;
+   DescriptorSetLayout* p_set_layouts;
+   uint push_constant_range_count;
+   PushConstantRange* p_push_constant_ranges;
 }
 struct SamplerCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SamplerCreateFlags flags;
-   Filter magFilter;
-   Filter minFilter;
-   SamplerMipmapMode mipmapMode;
-   SamplerAddressMode addressModeU;
-   SamplerAddressMode addressModeV;
-   SamplerAddressMode addressModeW;
-   float mipLodBias;
-   uint anisotropyEnable;
-   float maxAnisotropy;
-   uint compareEnable;
-   CompareOp compareOp;
-   float minLod;
-   float maxLod;
-   BorderColor borderColor;
-   uint unnormalizedCoordinates;
+   Filter mag_filter;
+   Filter min_filter;
+   SamplerMipmapMode mipmap_mode;
+   SamplerAddressMode address_mode_u;
+   SamplerAddressMode address_mode_v;
+   SamplerAddressMode address_mode_w;
+   float mip_lod_bias;
+   uint anisotropy_enable;
+   float max_anisotropy;
+   uint compare_enable;
+   CompareOp compare_op;
+   float min_lod;
+   float max_lod;
+   BorderColor border_color;
+   uint unnormalized_coordinates;
 }
 struct CommandPoolCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    CommandPoolCreateFlags flags;
-   uint queueFamilyIndex;
+   uint queue_family_index;
 }
 struct CommandBufferAllocateInfo {
-   StructureType sType;
-   void* pNext;
-   CommandPool commandPool;
+   StructureType s_type;
+   void* p_next;
+   CommandPool command_pool;
    CommandBufferLevel level;
-   uint commandBufferCount;
+   uint command_buffer_count;
 }
 struct CommandBufferInheritanceInfo {
-   StructureType sType;
-   void* pNext;
-   RenderPass renderPass;
+   StructureType s_type;
+   void* p_next;
+   RenderPass render_pass;
    uint subpass;
    Framebuffer framebuffer;
-   uint occlusionQueryEnable;
-   QueryControlFlags queryFlags;
-   QueryPipelineStatisticFlags pipelineStatistics;
+   uint occlusion_query_enable;
+   QueryControlFlags query_flags;
+   QueryPipelineStatisticFlags pipeline_statistics;
 }
 struct CommandBufferBeginInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    CommandBufferUsageFlags flags;
-   CommandBufferInheritanceInfo* pInheritanceInfo;
+   CommandBufferInheritanceInfo* p_inheritance_info;
 }
 struct RenderPassBeginInfo {
-   StructureType sType;
-   void* pNext;
-   RenderPass renderPass;
+   StructureType s_type;
+   void* p_next;
+   RenderPass render_pass;
    Framebuffer framebuffer;
-   Rect2D renderArea;
-   uint clearValueCount;
-   ClearValue* pClearValues;
+   Rect2D render_area;
+   uint clear_value_count;
+   ClearValue* p_clear_values;
 }
 struct ClearDepthStencilValue {
    float depth;
    uint stencil;
 }
 struct ClearAttachment {
-   ImageAspectFlags aspectMask;
-   uint colorAttachment;
-   ClearValue clearValue;
+   ImageAspectFlags aspect_mask;
+   uint color_attachment;
+   ClearValue clear_value;
 }
 struct AttachmentDescription {
    AttachmentDescriptionFlags flags;
    Format format;
    SampleCountFlagBits samples;
-   AttachmentLoadOp loadOp;
-   AttachmentStoreOp storeOp;
-   AttachmentLoadOp stencilLoadOp;
-   AttachmentStoreOp stencilStoreOp;
-   ImageLayout initialLayout;
-   ImageLayout finalLayout;
+   AttachmentLoadOp load_op;
+   AttachmentStoreOp store_op;
+   AttachmentLoadOp stencil_load_op;
+   AttachmentStoreOp stencil_store_op;
+   ImageLayout initial_layout;
+   ImageLayout final_layout;
 }
 struct AttachmentReference {
    uint attachment;
@@ -5168,254 +5168,254 @@ struct AttachmentReference {
 }
 struct SubpassDescription {
    SubpassDescriptionFlags flags;
-   PipelineBindPoint pipelineBindPoint;
-   uint inputAttachmentCount;
-   AttachmentReference* pInputAttachments;
-   uint colorAttachmentCount;
-   AttachmentReference* pColorAttachments;
-   AttachmentReference* pResolveAttachments;
-   AttachmentReference* pDepthStencilAttachment;
-   uint preserveAttachmentCount;
-   uint* pPreserveAttachments;
+   PipelineBindPoint pipeline_bind_point;
+   uint input_attachment_count;
+   AttachmentReference* p_input_attachments;
+   uint color_attachment_count;
+   AttachmentReference* p_color_attachments;
+   AttachmentReference* p_resolve_attachments;
+   AttachmentReference* p_depth_stencil_attachment;
+   uint preserve_attachment_count;
+   uint* p_preserve_attachments;
 }
 struct SubpassDependency {
-   uint srcSubpass;
-   uint dstSubpass;
-   PipelineStageFlags srcStageMask;
-   PipelineStageFlags dstStageMask;
-   AccessFlags srcAccessMask;
-   AccessFlags dstAccessMask;
-   DependencyFlags dependencyFlags;
+   uint src_subpass;
+   uint dst_subpass;
+   PipelineStageFlags src_stage_mask;
+   PipelineStageFlags dst_stage_mask;
+   AccessFlags src_access_mask;
+   AccessFlags dst_access_mask;
+   DependencyFlags dependency_flags;
 }
 struct RenderPassCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    RenderPassCreateFlags flags;
-   uint attachmentCount;
-   AttachmentDescription* pAttachments;
-   uint subpassCount;
-   SubpassDescription* pSubpasses;
-   uint dependencyCount;
-   SubpassDependency* pDependencies;
+   uint attachment_count;
+   AttachmentDescription* p_attachments;
+   uint subpass_count;
+   SubpassDescription* p_subpasses;
+   uint dependency_count;
+   SubpassDependency* p_dependencies;
 }
 struct EventCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    EventCreateFlags flags;
 }
 struct FenceCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    FenceCreateFlags flags;
 }
 struct PhysicalDeviceFeatures {
-   uint robustBufferAccess;
-   uint fullDrawIndexUint32;
-   uint imageCubeArray;
-   uint independentBlend;
-   uint geometryShader;
-   uint tessellationShader;
-   uint sampleRateShading;
-   uint dualSrcBlend;
-   uint logicOp;
-   uint multiDrawIndirect;
-   uint drawIndirectFirstInstance;
-   uint depthClamp;
-   uint depthBiasClamp;
-   uint fillModeNonSolid;
-   uint depthBounds;
-   uint wideLines;
-   uint largePoints;
-   uint alphaToOne;
-   uint multiViewport;
-   uint samplerAnisotropy;
-   uint textureCompressionETC2;
-   uint textureCompressionASTC_LDR;
-   uint textureCompressionBC;
-   uint occlusionQueryPrecise;
-   uint pipelineStatisticsQuery;
-   uint vertexPipelineStoresAndAtomics;
-   uint fragmentStoresAndAtomics;
-   uint shaderTessellationAndGeometryPointSize;
-   uint shaderImageGatherExtended;
-   uint shaderStorageImageExtendedFormats;
-   uint shaderStorageImageMultisample;
-   uint shaderStorageImageReadWithoutFormat;
-   uint shaderStorageImageWriteWithoutFormat;
-   uint shaderUniformBufferArrayDynamicIndexing;
-   uint shaderSampledImageArrayDynamicIndexing;
-   uint shaderStorageBufferArrayDynamicIndexing;
-   uint shaderStorageImageArrayDynamicIndexing;
-   uint shaderClipDistance;
-   uint shaderCullDistance;
-   uint shaderFloat64;
-   uint shaderInt64;
-   uint shaderInt16;
-   uint shaderResourceResidency;
-   uint shaderResourceMinLod;
-   uint sparseBinding;
-   uint sparseResidencyBuffer;
-   uint sparseResidencyImage2D;
-   uint sparseResidencyImage3D;
-   uint sparseResidency2Samples;
-   uint sparseResidency4Samples;
-   uint sparseResidency8Samples;
-   uint sparseResidency16Samples;
-   uint sparseResidencyAliased;
-   uint variableMultisampleRate;
-   uint inheritedQueries;
+   uint robust_buffer_access;
+   uint full_draw_index_uint_32;
+   uint image_cube_array;
+   uint independent_blend;
+   uint geometry_shader;
+   uint tessellation_shader;
+   uint sample_rate_shading;
+   uint dual_src_blend;
+   uint logic_op;
+   uint multi_draw_indirect;
+   uint draw_indirect_first_instance;
+   uint depth_clamp;
+   uint depth_bias_clamp;
+   uint fill_mode_non_solid;
+   uint depth_bounds;
+   uint wide_lines;
+   uint large_points;
+   uint alpha_to_one;
+   uint multi_viewport;
+   uint sampler_anisotropy;
+   uint texture_compression_etc_2;
+   uint texture_compression_astc_ldr;
+   uint texture_compression_bc;
+   uint occlusion_query_precise;
+   uint pipeline_statistics_query;
+   uint vertex_pipeline_stores_and_atomics;
+   uint fragment_stores_and_atomics;
+   uint shader_tessellation_and_geometry_point_size;
+   uint shader_image_gather_extended;
+   uint shader_storage_image_extended_formats;
+   uint shader_storage_image_multisample;
+   uint shader_storage_image_read_without_format;
+   uint shader_storage_image_write_without_format;
+   uint shader_uniform_buffer_array_dynamic_indexing;
+   uint shader_sampled_image_array_dynamic_indexing;
+   uint shader_storage_buffer_array_dynamic_indexing;
+   uint shader_storage_image_array_dynamic_indexing;
+   uint shader_clip_distance;
+   uint shader_cull_distance;
+   uint shader_float_64;
+   uint shader_int_64;
+   uint shader_int_16;
+   uint shader_resource_residency;
+   uint shader_resource_min_lod;
+   uint sparse_binding;
+   uint sparse_residency_buffer;
+   uint sparse_residency_image_2_d;
+   uint sparse_residency_image_3_d;
+   uint sparse_residency_2_samples;
+   uint sparse_residency_4_samples;
+   uint sparse_residency_8_samples;
+   uint sparse_residency_16_samples;
+   uint sparse_residency_aliased;
+   uint variable_multisample_rate;
+   uint inherited_queries;
 }
 struct PhysicalDeviceSparseProperties {
-   uint residencyStandard2DBlockShape;
-   uint residencyStandard2DMultisampleBlockShape;
-   uint residencyStandard3DBlockShape;
-   uint residencyAlignedMipSize;
-   uint residencyNonResidentStrict;
+   uint residency_standard_2_d_block_shape;
+   uint residency_standard_2_d_multisample_block_shape;
+   uint residency_standard_3_d_block_shape;
+   uint residency_aligned_mip_size;
+   uint residency_non_resident_strict;
 }
 struct PhysicalDeviceLimits {
-   uint maxImageDimension1D;
-   uint maxImageDimension2D;
-   uint maxImageDimension3D;
-   uint maxImageDimensionCube;
-   uint maxImageArrayLayers;
-   uint maxTexelBufferElements;
-   uint maxUniformBufferRange;
-   uint maxStorageBufferRange;
-   uint maxPushConstantsSize;
-   uint maxMemoryAllocationCount;
-   uint maxSamplerAllocationCount;
-   DeviceSize bufferImageGranularity;
-   DeviceSize sparseAddressSpaceSize;
-   uint maxBoundDescriptorSets;
-   uint maxPerStageDescriptorSamplers;
-   uint maxPerStageDescriptorUniformBuffers;
-   uint maxPerStageDescriptorStorageBuffers;
-   uint maxPerStageDescriptorSampledImages;
-   uint maxPerStageDescriptorStorageImages;
-   uint maxPerStageDescriptorInputAttachments;
-   uint maxPerStageResources;
-   uint maxDescriptorSetSamplers;
-   uint maxDescriptorSetUniformBuffers;
-   uint maxDescriptorSetUniformBuffersDynamic;
-   uint maxDescriptorSetStorageBuffers;
-   uint maxDescriptorSetStorageBuffersDynamic;
-   uint maxDescriptorSetSampledImages;
-   uint maxDescriptorSetStorageImages;
-   uint maxDescriptorSetInputAttachments;
-   uint maxVertexInputAttributes;
-   uint maxVertexInputBindings;
-   uint maxVertexInputAttributeOffset;
-   uint maxVertexInputBindingStride;
-   uint maxVertexOutputComponents;
-   uint maxTessellationGenerationLevel;
-   uint maxTessellationPatchSize;
-   uint maxTessellationControlPerVertexInputComponents;
-   uint maxTessellationControlPerVertexOutputComponents;
-   uint maxTessellationControlPerPatchOutputComponents;
-   uint maxTessellationControlTotalOutputComponents;
-   uint maxTessellationEvaluationInputComponents;
-   uint maxTessellationEvaluationOutputComponents;
-   uint maxGeometryShaderInvocations;
-   uint maxGeometryInputComponents;
-   uint maxGeometryOutputComponents;
-   uint maxGeometryOutputVertices;
-   uint maxGeometryTotalOutputComponents;
-   uint maxFragmentInputComponents;
-   uint maxFragmentOutputAttachments;
-   uint maxFragmentDualSrcAttachments;
-   uint maxFragmentCombinedOutputResources;
-   uint maxComputeSharedMemorySize;
-   uint[3] maxComputeWorkGroupCount;
-   uint maxComputeWorkGroupInvocations;
-   uint[3] maxComputeWorkGroupSize;
-   uint subPixelPrecisionBits;
-   uint subTexelPrecisionBits;
-   uint mipmapPrecisionBits;
-   uint maxDrawIndexedIndexValue;
-   uint maxDrawIndirectCount;
-   float maxSamplerLodBias;
-   float maxSamplerAnisotropy;
-   uint maxViewports;
-   uint[2] maxViewportDimensions;
-   float[2] viewportBoundsRange;
-   uint viewportSubPixelBits;
-   sz minMemoryMapAlignment;
-   DeviceSize minTexelBufferOffsetAlignment;
-   DeviceSize minUniformBufferOffsetAlignment;
-   DeviceSize minStorageBufferOffsetAlignment;
-   int minTexelOffset;
-   uint maxTexelOffset;
-   int minTexelGatherOffset;
-   uint maxTexelGatherOffset;
-   float minInterpolationOffset;
-   float maxInterpolationOffset;
-   uint subPixelInterpolationOffsetBits;
-   uint maxFramebufferWidth;
-   uint maxFramebufferHeight;
-   uint maxFramebufferLayers;
-   SampleCountFlags framebufferColorSampleCounts;
-   SampleCountFlags framebufferDepthSampleCounts;
-   SampleCountFlags framebufferStencilSampleCounts;
-   SampleCountFlags framebufferNoAttachmentsSampleCounts;
-   uint maxColorAttachments;
-   SampleCountFlags sampledImageColorSampleCounts;
-   SampleCountFlags sampledImageIntegerSampleCounts;
-   SampleCountFlags sampledImageDepthSampleCounts;
-   SampleCountFlags sampledImageStencilSampleCounts;
-   SampleCountFlags storageImageSampleCounts;
-   uint maxSampleMaskWords;
-   uint timestampComputeAndGraphics;
-   float timestampPeriod;
-   uint maxClipDistances;
-   uint maxCullDistances;
-   uint maxCombinedClipAndCullDistances;
-   uint discreteQueuePriorities;
-   float[2] pointSizeRange;
-   float[2] lineWidthRange;
-   float pointSizeGranularity;
-   float lineWidthGranularity;
-   uint strictLines;
-   uint standardSampleLocations;
-   DeviceSize optimalBufferCopyOffsetAlignment;
-   DeviceSize optimalBufferCopyRowPitchAlignment;
-   DeviceSize nonCoherentAtomSize;
+   uint max_image_dimension_1_d;
+   uint max_image_dimension_2_d;
+   uint max_image_dimension_3_d;
+   uint max_image_dimension_cube;
+   uint max_image_array_layers;
+   uint max_texel_buffer_elements;
+   uint max_uniform_buffer_range;
+   uint max_storage_buffer_range;
+   uint max_push_constants_size;
+   uint max_memory_allocation_count;
+   uint max_sampler_allocation_count;
+   DeviceSize buffer_image_granularity;
+   DeviceSize sparse_address_space_size;
+   uint max_bound_descriptor_sets;
+   uint max_per_stage_descriptor_samplers;
+   uint max_per_stage_descriptor_uniform_buffers;
+   uint max_per_stage_descriptor_storage_buffers;
+   uint max_per_stage_descriptor_sampled_images;
+   uint max_per_stage_descriptor_storage_images;
+   uint max_per_stage_descriptor_input_attachments;
+   uint max_per_stage_resources;
+   uint max_descriptor_set_samplers;
+   uint max_descriptor_set_uniform_buffers;
+   uint max_descriptor_set_uniform_buffers_dynamic;
+   uint max_descriptor_set_storage_buffers;
+   uint max_descriptor_set_storage_buffers_dynamic;
+   uint max_descriptor_set_sampled_images;
+   uint max_descriptor_set_storage_images;
+   uint max_descriptor_set_input_attachments;
+   uint max_vertex_input_attributes;
+   uint max_vertex_input_bindings;
+   uint max_vertex_input_attribute_offset;
+   uint max_vertex_input_binding_stride;
+   uint max_vertex_output_components;
+   uint max_tessellation_generation_level;
+   uint max_tessellation_patch_size;
+   uint max_tessellation_control_per_vertex_input_components;
+   uint max_tessellation_control_per_vertex_output_components;
+   uint max_tessellation_control_per_patch_output_components;
+   uint max_tessellation_control_total_output_components;
+   uint max_tessellation_evaluation_input_components;
+   uint max_tessellation_evaluation_output_components;
+   uint max_geometry_shader_invocations;
+   uint max_geometry_input_components;
+   uint max_geometry_output_components;
+   uint max_geometry_output_vertices;
+   uint max_geometry_total_output_components;
+   uint max_fragment_input_components;
+   uint max_fragment_output_attachments;
+   uint max_fragment_dual_src_attachments;
+   uint max_fragment_combined_output_resources;
+   uint max_compute_shared_memory_size;
+   uint[3] max_compute_work_group_count;
+   uint max_compute_work_group_invocations;
+   uint[3] max_compute_work_group_size;
+   uint sub_pixel_precision_bits;
+   uint sub_texel_precision_bits;
+   uint mipmap_precision_bits;
+   uint max_draw_indexed_index_value;
+   uint max_draw_indirect_count;
+   float max_sampler_lod_bias;
+   float max_sampler_anisotropy;
+   uint max_viewports;
+   uint[2] max_viewport_dimensions;
+   float[2] viewport_bounds_range;
+   uint viewport_sub_pixel_bits;
+   sz min_memory_map_alignment;
+   DeviceSize min_texel_buffer_offset_alignment;
+   DeviceSize min_uniform_buffer_offset_alignment;
+   DeviceSize min_storage_buffer_offset_alignment;
+   int min_texel_offset;
+   uint max_texel_offset;
+   int min_texel_gather_offset;
+   uint max_texel_gather_offset;
+   float min_interpolation_offset;
+   float max_interpolation_offset;
+   uint sub_pixel_interpolation_offset_bits;
+   uint max_framebuffer_width;
+   uint max_framebuffer_height;
+   uint max_framebuffer_layers;
+   SampleCountFlags framebuffer_color_sample_counts;
+   SampleCountFlags framebuffer_depth_sample_counts;
+   SampleCountFlags framebuffer_stencil_sample_counts;
+   SampleCountFlags framebuffer_no_attachments_sample_counts;
+   uint max_color_attachments;
+   SampleCountFlags sampled_image_color_sample_counts;
+   SampleCountFlags sampled_image_integer_sample_counts;
+   SampleCountFlags sampled_image_depth_sample_counts;
+   SampleCountFlags sampled_image_stencil_sample_counts;
+   SampleCountFlags storage_image_sample_counts;
+   uint max_sample_mask_words;
+   uint timestamp_compute_and_graphics;
+   float timestamp_period;
+   uint max_clip_distances;
+   uint max_cull_distances;
+   uint max_combined_clip_and_cull_distances;
+   uint discrete_queue_priorities;
+   float[2] point_size_range;
+   float[2] line_width_range;
+   float point_size_granularity;
+   float line_width_granularity;
+   uint strict_lines;
+   uint standard_sample_locations;
+   DeviceSize optimal_buffer_copy_offset_alignment;
+   DeviceSize optimal_buffer_copy_row_pitch_alignment;
+   DeviceSize non_coherent_atom_size;
 }
 struct SemaphoreCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SemaphoreCreateFlags flags;
 }
 struct QueryPoolCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    QueryPoolCreateFlags flags;
-   QueryType queryType;
-   uint queryCount;
-   QueryPipelineStatisticFlags pipelineStatistics;
+   QueryType query_type;
+   uint query_count;
+   QueryPipelineStatisticFlags pipeline_statistics;
 }
 struct FramebufferCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    FramebufferCreateFlags flags;
-   RenderPass renderPass;
-   uint attachmentCount;
-   ImageView* pAttachments;
+   RenderPass render_pass;
+   uint attachment_count;
+   ImageView* p_attachments;
    uint width;
    uint height;
    uint layers;
 }
 struct DrawIndirectCommand {
-   uint vertexCount;
-   uint instanceCount;
-   uint firstVertex;
-   uint firstInstance;
+   uint vertex_count;
+   uint instance_count;
+   uint first_vertex;
+   uint first_instance;
 }
 struct DrawIndexedIndirectCommand {
-   uint indexCount;
-   uint instanceCount;
-   uint firstIndex;
-   int vertexOffset;
-   uint firstInstance;
+   uint index_count;
+   uint instance_count;
+   uint first_index;
+   int vertex_offset;
+   uint first_instance;
 }
 struct DispatchIndirectCommand {
    uint x;
@@ -5423,358 +5423,358 @@ struct DispatchIndirectCommand {
    uint z;
 }
 struct MultiDrawInfoEXT {
-   uint firstVertex;
-   uint vertexCount;
+   uint first_vertex;
+   uint vertex_count;
 }
 struct MultiDrawIndexedInfoEXT {
-   uint firstIndex;
-   uint indexCount;
-   int vertexOffset;
+   uint first_index;
+   uint index_count;
+   int vertex_offset;
 }
 struct SubmitInfo {
-   StructureType sType;
-   void* pNext;
-   uint waitSemaphoreCount;
-   Semaphore* pWaitSemaphores;
-   PipelineStageFlags* pWaitDstStageMask;
-   uint commandBufferCount;
-   CommandBuffer* pCommandBuffers;
-   uint signalSemaphoreCount;
-   Semaphore* pSignalSemaphores;
+   StructureType s_type;
+   void* p_next;
+   uint wait_semaphore_count;
+   Semaphore* p_wait_semaphores;
+   PipelineStageFlags* p_wait_dst_stage_mask;
+   uint command_buffer_count;
+   CommandBuffer* p_command_buffers;
+   uint signal_semaphore_count;
+   Semaphore* p_signal_semaphores;
 }
 struct DisplayPropertiesKHR {
    DisplayKHR display;
-   char* displayName;
-   Extent2D physicalDimensions;
-   Extent2D physicalResolution;
-   SurfaceTransformFlagsKHR supportedTransforms;
-   uint planeReorderPossible;
-   uint persistentContent;
+   char* display_name;
+   Extent2D physical_dimensions;
+   Extent2D physical_resolution;
+   SurfaceTransformFlagsKHR supported_transforms;
+   uint plane_reorder_possible;
+   uint persistent_content;
 }
 struct DisplayPlanePropertiesKHR {
-   DisplayKHR currentDisplay;
-   uint currentStackIndex;
+   DisplayKHR current_display;
+   uint current_stack_index;
 }
 struct DisplayModeParametersKHR {
-   Extent2D visibleRegion;
-   uint refreshRate;
+   Extent2D visible_region;
+   uint refresh_rate;
 }
 struct DisplayModePropertiesKHR {
-   DisplayModeKHR displayMode;
+   DisplayModeKHR display_mode;
    DisplayModeParametersKHR parameters;
 }
 struct DisplayModeCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DisplayModeCreateFlagsKHR flags;
    DisplayModeParametersKHR parameters;
 }
 struct DisplayPlaneCapabilitiesKHR {
-   DisplayPlaneAlphaFlagsKHR supportedAlpha;
-   Offset2D minSrcPosition;
-   Offset2D maxSrcPosition;
-   Extent2D minSrcExtent;
-   Extent2D maxSrcExtent;
-   Offset2D minDstPosition;
-   Offset2D maxDstPosition;
-   Extent2D minDstExtent;
-   Extent2D maxDstExtent;
+   DisplayPlaneAlphaFlagsKHR supported_alpha;
+   Offset2D min_src_position;
+   Offset2D max_src_position;
+   Extent2D min_src_extent;
+   Extent2D max_src_extent;
+   Offset2D min_dst_position;
+   Offset2D max_dst_position;
+   Extent2D min_dst_extent;
+   Extent2D max_dst_extent;
 }
 struct DisplaySurfaceCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DisplaySurfaceCreateFlagsKHR flags;
-   DisplayModeKHR displayMode;
-   uint planeIndex;
-   uint planeStackIndex;
+   DisplayModeKHR display_mode;
+   uint plane_index;
+   uint plane_stack_index;
    SurfaceTransformFlagBitsKHR transform;
-   float globalAlpha;
-   DisplayPlaneAlphaFlagBitsKHR alphaMode;
-   Extent2D imageExtent;
+   float global_alpha;
+   DisplayPlaneAlphaFlagBitsKHR alpha_mode;
+   Extent2D image_extent;
 }
 struct DisplayPresentInfoKHR {
-   StructureType sType;
-   void* pNext;
-   Rect2D srcRect;
-   Rect2D dstRect;
+   StructureType s_type;
+   void* p_next;
+   Rect2D src_rect;
+   Rect2D dst_rect;
    uint persistent;
 }
 struct SurfaceCapabilitiesKHR {
-   uint minImageCount;
-   uint maxImageCount;
-   Extent2D currentExtent;
-   Extent2D minImageExtent;
-   Extent2D maxImageExtent;
-   uint maxImageArrayLayers;
-   SurfaceTransformFlagsKHR supportedTransforms;
-   SurfaceTransformFlagBitsKHR currentTransform;
-   CompositeAlphaFlagsKHR supportedCompositeAlpha;
-   ImageUsageFlags supportedUsageFlags;
+   uint min_image_count;
+   uint max_image_count;
+   Extent2D current_extent;
+   Extent2D min_image_extent;
+   Extent2D max_image_extent;
+   uint max_image_array_layers;
+   SurfaceTransformFlagsKHR supported_transforms;
+   SurfaceTransformFlagBitsKHR current_transform;
+   CompositeAlphaFlagsKHR supported_composite_alpha;
+   ImageUsageFlags supported_usage_flags;
 }
 struct WaylandSurfaceCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    WaylandSurfaceCreateFlagsKHR flags;
    void* display;
    void* surface;
 }
 struct Win32SurfaceCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Win32SurfaceCreateFlagsKHR flags;
    void* hinstance;
    void* hwnd;
 }
 struct XlibSurfaceCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    XlibSurfaceCreateFlagsKHR flags;
    void* dpy;
    ulong window;
 }
 struct XcbSurfaceCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    XcbSurfaceCreateFlagsKHR flags;
    void* connection;
    uint window;
 }
 struct SurfaceFormatKHR {
    Format format;
-   ColorSpaceKHR colorSpace;
+   ColorSpaceKHR color_space;
 }
 struct SwapchainCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SwapchainCreateFlagsKHR flags;
    SurfaceKHR surface;
-   uint minImageCount;
-   Format imageFormat;
-   ColorSpaceKHR imageColorSpace;
-   Extent2D imageExtent;
-   uint imageArrayLayers;
-   ImageUsageFlags imageUsage;
-   SharingMode imageSharingMode;
-   uint queueFamilyIndexCount;
-   uint* pQueueFamilyIndices;
-   SurfaceTransformFlagBitsKHR preTransform;
-   CompositeAlphaFlagBitsKHR compositeAlpha;
-   PresentModeKHR presentMode;
+   uint min_image_count;
+   Format image_format;
+   ColorSpaceKHR image_color_space;
+   Extent2D image_extent;
+   uint image_array_layers;
+   ImageUsageFlags image_usage;
+   SharingMode image_sharing_mode;
+   uint queue_family_index_count;
+   uint* p_queue_family_indices;
+   SurfaceTransformFlagBitsKHR pre_transform;
+   CompositeAlphaFlagBitsKHR composite_alpha;
+   PresentModeKHR present_mode;
    uint clipped;
-   SwapchainKHR oldSwapchain;
+   SwapchainKHR old_swapchain;
 }
 struct PresentInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint waitSemaphoreCount;
-   Semaphore* pWaitSemaphores;
-   uint swapchainCount;
-   SwapchainKHR* pSwapchains;
-   uint* pImageIndices;
-   Result* pResults;
+   StructureType s_type;
+   void* p_next;
+   uint wait_semaphore_count;
+   Semaphore* p_wait_semaphores;
+   uint swapchain_count;
+   SwapchainKHR* p_swapchains;
+   uint* p_image_indices;
+   Result* p_results;
 }
 struct DebugReportCallbackCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DebugReportFlagsEXT flags;
-   PFN_vkDebugReportCallbackEXT pfnCallback;
-   void* pUserData;
+   PFN_vkDebugReportCallbackEXT pfn_callback;
+   void* p_user_data;
 }
 struct ValidationFlagsEXT {
-   StructureType sType;
-   void* pNext;
-   uint disabledValidationCheckCount;
-   ValidationCheckEXT* pDisabledValidationChecks;
+   StructureType s_type;
+   void* p_next;
+   uint disabled_validation_check_count;
+   ValidationCheckEXT* p_disabled_validation_checks;
 }
 struct ValidationFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint enabledValidationFeatureCount;
-   ValidationFeatureEnableEXT* pEnabledValidationFeatures;
-   uint disabledValidationFeatureCount;
-   ValidationFeatureDisableEXT* pDisabledValidationFeatures;
+   StructureType s_type;
+   void* p_next;
+   uint enabled_validation_feature_count;
+   ValidationFeatureEnableEXT* p_enabled_validation_features;
+   uint disabled_validation_feature_count;
+   ValidationFeatureDisableEXT* p_disabled_validation_features;
 }
 struct LayerSettingsCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint settingCount;
-   LayerSettingEXT* pSettings;
+   StructureType s_type;
+   void* p_next;
+   uint setting_count;
+   LayerSettingEXT* p_settings;
 }
 struct LayerSettingEXT {
-   char* pLayerName;
-   char* pSettingName;
+   char* p_layer_name;
+   char* p_setting_name;
    LayerSettingTypeEXT type;
-   uint valueCount;
-   void* pValues;
+   uint value_count;
+   void* p_values;
 }
 struct PipelineRasterizationStateRasterizationOrderAMD {
-   StructureType sType;
-   void* pNext;
-   RasterizationOrderAMD rasterizationOrder;
+   StructureType s_type;
+   void* p_next;
+   RasterizationOrderAMD rasterization_order;
 }
 struct DebugMarkerObjectNameInfoEXT {
-   StructureType sType;
-   void* pNext;
-   DebugReportObjectTypeEXT objectType;
+   StructureType s_type;
+   void* p_next;
+   DebugReportObjectTypeEXT object_type;
    ulong object;
-   char* pObjectName;
+   char* p_object_name;
 }
 struct DebugMarkerObjectTagInfoEXT {
-   StructureType sType;
-   void* pNext;
-   DebugReportObjectTypeEXT objectType;
+   StructureType s_type;
+   void* p_next;
+   DebugReportObjectTypeEXT object_type;
    ulong object;
-   ulong tagName;
-   sz tagSize;
-   void* pTag;
+   ulong tag_name;
+   sz tag_size;
+   void* p_tag;
 }
 struct DebugMarkerMarkerInfoEXT {
-   StructureType sType;
-   void* pNext;
-   char* pMarkerName;
+   StructureType s_type;
+   void* p_next;
+   char* p_marker_name;
    float[4] color;
 }
 struct DedicatedAllocationImageCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint dedicatedAllocation;
+   StructureType s_type;
+   void* p_next;
+   uint dedicated_allocation;
 }
 struct DedicatedAllocationBufferCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint dedicatedAllocation;
+   StructureType s_type;
+   void* p_next;
+   uint dedicated_allocation;
 }
 struct DedicatedAllocationMemoryAllocateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
    Buffer buffer;
 }
 struct ExternalImageFormatPropertiesNV {
-   ImageFormatProperties imageFormatProperties;
-   ExternalMemoryFeatureFlagsNV externalMemoryFeatures;
-   ExternalMemoryHandleTypeFlagsNV exportFromImportedHandleTypes;
-   ExternalMemoryHandleTypeFlagsNV compatibleHandleTypes;
+   ImageFormatProperties image_format_properties;
+   ExternalMemoryFeatureFlagsNV external_memory_features;
+   ExternalMemoryHandleTypeFlagsNV export_from_imported_handle_types;
+   ExternalMemoryHandleTypeFlagsNV compatible_handle_types;
 }
 struct ExternalMemoryImageCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlagsNV handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlagsNV handle_types;
 }
 struct ExportMemoryAllocateInfoNV {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlagsNV handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlagsNV handle_types;
 }
 struct ImportMemoryWin32HandleInfoNV {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlagsNV handleType;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlagsNV handle_type;
    void* handle;
 }
 struct ExportMemoryWin32HandleInfoNV {
-   StructureType sType;
-   void* pNext;
-   void* pAttributes;
-   uint dwAccess;
+   StructureType s_type;
+   void* p_next;
+   void* p_attributes;
+   uint dw_access;
 }
 struct Win32KeyedMutexAcquireReleaseInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint acquireCount;
-   DeviceMemory* pAcquireSyncs;
-   ulong* pAcquireKeys;
-   uint* pAcquireTimeoutMilliseconds;
-   uint releaseCount;
-   DeviceMemory* pReleaseSyncs;
-   ulong* pReleaseKeys;
+   StructureType s_type;
+   void* p_next;
+   uint acquire_count;
+   DeviceMemory* p_acquire_syncs;
+   ulong* p_acquire_keys;
+   uint* p_acquire_timeout_milliseconds;
+   uint release_count;
+   DeviceMemory* p_release_syncs;
+   ulong* p_release_keys;
 }
 struct PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint deviceGeneratedCommands;
+   StructureType s_type;
+   void* p_next;
+   uint device_generated_commands;
 }
 struct PhysicalDeviceDeviceGeneratedCommandsComputeFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint deviceGeneratedCompute;
-   uint deviceGeneratedComputePipelines;
-   uint deviceGeneratedComputeCaptureReplay;
+   StructureType s_type;
+   void* p_next;
+   uint device_generated_compute;
+   uint device_generated_compute_pipelines;
+   uint device_generated_compute_capture_replay;
 }
 struct DevicePrivateDataCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint privateDataSlotRequestCount;
+   StructureType s_type;
+   void* p_next;
+   uint private_data_slot_request_count;
 }
 struct DevicePrivateDataCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint privateDataSlotRequestCount;
+   StructureType s_type;
+   void* p_next;
+   uint private_data_slot_request_count;
 }
 struct PrivateDataSlotCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PrivateDataSlotCreateFlags flags;
 }
 struct PrivateDataSlotCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PrivateDataSlotCreateFlags flags;
 }
 struct PhysicalDevicePrivateDataFeatures {
-   StructureType sType;
-   void* pNext;
-   uint privateData;
+   StructureType s_type;
+   void* p_next;
+   uint private_data;
 }
 struct PhysicalDevicePrivateDataFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint privateData;
+   StructureType s_type;
+   void* p_next;
+   uint private_data;
 }
 struct PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   uint maxGraphicsShaderGroupCount;
-   uint maxIndirectSequenceCount;
-   uint maxIndirectCommandsTokenCount;
-   uint maxIndirectCommandsStreamCount;
-   uint maxIndirectCommandsTokenOffset;
-   uint maxIndirectCommandsStreamStride;
-   uint minSequencesCountBufferOffsetAlignment;
-   uint minSequencesIndexBufferOffsetAlignment;
-   uint minIndirectCommandsBufferOffsetAlignment;
+   StructureType s_type;
+   void* p_next;
+   uint max_graphics_shader_group_count;
+   uint max_indirect_sequence_count;
+   uint max_indirect_commands_token_count;
+   uint max_indirect_commands_stream_count;
+   uint max_indirect_commands_token_offset;
+   uint max_indirect_commands_stream_stride;
+   uint min_sequences_count_buffer_offset_alignment;
+   uint min_sequences_index_buffer_offset_alignment;
+   uint min_indirect_commands_buffer_offset_alignment;
 }
 struct PhysicalDeviceMultiDrawPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxMultiDrawCount;
+   StructureType s_type;
+   void* p_next;
+   uint max_multi_draw_count;
 }
 struct GraphicsShaderGroupCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint stageCount;
-   PipelineShaderStageCreateInfo* pStages;
-   PipelineVertexInputStateCreateInfo* pVertexInputState;
-   PipelineTessellationStateCreateInfo* pTessellationState;
+   StructureType s_type;
+   void* p_next;
+   uint stage_count;
+   PipelineShaderStageCreateInfo* p_stages;
+   PipelineVertexInputStateCreateInfo* p_vertex_input_state;
+   PipelineTessellationStateCreateInfo* p_tessellation_state;
 }
 struct GraphicsPipelineShaderGroupsCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint groupCount;
-   GraphicsShaderGroupCreateInfoNV* pGroups;
-   uint pipelineCount;
-   Pipeline* pPipelines;
+   StructureType s_type;
+   void* p_next;
+   uint group_count;
+   GraphicsShaderGroupCreateInfoNV* p_groups;
+   uint pipeline_count;
+   Pipeline* p_pipelines;
 }
 struct BindShaderGroupIndirectCommandNV {
-   uint groupIndex;
+   uint group_index;
 }
 struct BindIndexBufferIndirectCommandNV {
-   DeviceAddress bufferAddress;
+   DeviceAddress buffer_address;
    uint size;
-   IndexType indexType;
+   IndexType index_type;
 }
 struct BindVertexBufferIndirectCommandNV {
-   DeviceAddress bufferAddress;
+   DeviceAddress buffer_address;
    uint size;
    uint stride;
 }
@@ -5786,109 +5786,109 @@ struct IndirectCommandsStreamNV {
    DeviceSize offset;
 }
 struct IndirectCommandsLayoutTokenNV {
-   StructureType sType;
-   void* pNext;
-   IndirectCommandsTokenTypeNV tokenType;
+   StructureType s_type;
+   void* p_next;
+   IndirectCommandsTokenTypeNV token_type;
    uint stream;
    uint offset;
-   uint vertexBindingUnit;
-   uint vertexDynamicStride;
-   PipelineLayout pushconstantPipelineLayout;
-   ShaderStageFlags pushconstantShaderStageFlags;
-   uint pushconstantOffset;
-   uint pushconstantSize;
-   IndirectStateFlagsNV indirectStateFlags;
-   uint indexTypeCount;
-   IndexType* pIndexTypes;
-   uint* pIndexTypeValues;
+   uint vertex_binding_unit;
+   uint vertex_dynamic_stride;
+   PipelineLayout pushconstant_pipeline_layout;
+   ShaderStageFlags pushconstant_shader_stage_flags;
+   uint pushconstant_offset;
+   uint pushconstant_size;
+   IndirectStateFlagsNV indirect_state_flags;
+   uint index_type_count;
+   IndexType* p_index_types;
+   uint* p_index_type_values;
 }
 struct IndirectCommandsLayoutCreateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    IndirectCommandsLayoutUsageFlagsNV flags;
-   PipelineBindPoint pipelineBindPoint;
-   uint tokenCount;
-   IndirectCommandsLayoutTokenNV* pTokens;
-   uint streamCount;
-   uint* pStreamStrides;
+   PipelineBindPoint pipeline_bind_point;
+   uint token_count;
+   IndirectCommandsLayoutTokenNV* p_tokens;
+   uint stream_count;
+   uint* p_stream_strides;
 }
 struct GeneratedCommandsInfoNV {
-   StructureType sType;
-   void* pNext;
-   PipelineBindPoint pipelineBindPoint;
+   StructureType s_type;
+   void* p_next;
+   PipelineBindPoint pipeline_bind_point;
    Pipeline pipeline;
-   IndirectCommandsLayoutNV indirectCommandsLayout;
-   uint streamCount;
-   IndirectCommandsStreamNV* pStreams;
-   uint sequencesCount;
-   Buffer preprocessBuffer;
-   DeviceSize preprocessOffset;
-   DeviceSize preprocessSize;
-   Buffer sequencesCountBuffer;
-   DeviceSize sequencesCountOffset;
-   Buffer sequencesIndexBuffer;
-   DeviceSize sequencesIndexOffset;
+   IndirectCommandsLayoutNV indirect_commands_layout;
+   uint stream_count;
+   IndirectCommandsStreamNV* p_streams;
+   uint sequences_count;
+   Buffer preprocess_buffer;
+   DeviceSize preprocess_offset;
+   DeviceSize preprocess_size;
+   Buffer sequences_count_buffer;
+   DeviceSize sequences_count_offset;
+   Buffer sequences_index_buffer;
+   DeviceSize sequences_index_offset;
 }
 struct GeneratedCommandsMemoryRequirementsInfoNV {
-   StructureType sType;
-   void* pNext;
-   PipelineBindPoint pipelineBindPoint;
+   StructureType s_type;
+   void* p_next;
+   PipelineBindPoint pipeline_bind_point;
    Pipeline pipeline;
-   IndirectCommandsLayoutNV indirectCommandsLayout;
-   uint maxSequencesCount;
+   IndirectCommandsLayoutNV indirect_commands_layout;
+   uint max_sequences_count;
 }
 struct PipelineIndirectDeviceAddressInfoNV {
-   StructureType sType;
-   void* pNext;
-   PipelineBindPoint pipelineBindPoint;
+   StructureType s_type;
+   void* p_next;
+   PipelineBindPoint pipeline_bind_point;
    Pipeline pipeline;
 }
 struct BindPipelineIndirectCommandNV {
-   DeviceAddress pipelineAddress;
+   DeviceAddress pipeline_address;
 }
 struct PhysicalDeviceFeatures2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PhysicalDeviceFeatures features;
 }
 struct PhysicalDeviceFeatures2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PhysicalDeviceFeatures features;
 }
 struct PhysicalDeviceProperties2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PhysicalDeviceProperties properties;
 }
 struct PhysicalDeviceProperties2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PhysicalDeviceProperties properties;
 }
 struct FormatProperties2 {
-   StructureType sType;
-   void* pNext;
-   FormatProperties formatProperties;
+   StructureType s_type;
+   void* p_next;
+   FormatProperties format_properties;
 }
 struct FormatProperties2KHR {
-   StructureType sType;
-   void* pNext;
-   FormatProperties formatProperties;
+   StructureType s_type;
+   void* p_next;
+   FormatProperties format_properties;
 }
 struct ImageFormatProperties2 {
-   StructureType sType;
-   void* pNext;
-   ImageFormatProperties imageFormatProperties;
+   StructureType s_type;
+   void* p_next;
+   ImageFormatProperties image_format_properties;
 }
 struct ImageFormatProperties2KHR {
-   StructureType sType;
-   void* pNext;
-   ImageFormatProperties imageFormatProperties;
+   StructureType s_type;
+   void* p_next;
+   ImageFormatProperties image_format_properties;
 }
 struct PhysicalDeviceImageFormatInfo2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Format format;
    ImageType type;
    ImageTiling tiling;
@@ -5896,8 +5896,8 @@ struct PhysicalDeviceImageFormatInfo2 {
    ImageCreateFlags flags;
 }
 struct PhysicalDeviceImageFormatInfo2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Format format;
    ImageType type;
    ImageTiling tiling;
@@ -5905,38 +5905,38 @@ struct PhysicalDeviceImageFormatInfo2KHR {
    ImageCreateFlags flags;
 }
 struct QueueFamilyProperties2 {
-   StructureType sType;
-   void* pNext;
-   QueueFamilyProperties queueFamilyProperties;
+   StructureType s_type;
+   void* p_next;
+   QueueFamilyProperties queue_family_properties;
 }
 struct QueueFamilyProperties2KHR {
-   StructureType sType;
-   void* pNext;
-   QueueFamilyProperties queueFamilyProperties;
+   StructureType s_type;
+   void* p_next;
+   QueueFamilyProperties queue_family_properties;
 }
 struct PhysicalDeviceMemoryProperties2 {
-   StructureType sType;
-   void* pNext;
-   PhysicalDeviceMemoryProperties memoryProperties;
+   StructureType s_type;
+   void* p_next;
+   PhysicalDeviceMemoryProperties memory_properties;
 }
 struct PhysicalDeviceMemoryProperties2KHR {
-   StructureType sType;
-   void* pNext;
-   PhysicalDeviceMemoryProperties memoryProperties;
+   StructureType s_type;
+   void* p_next;
+   PhysicalDeviceMemoryProperties memory_properties;
 }
 struct SparseImageFormatProperties2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SparseImageFormatProperties properties;
 }
 struct SparseImageFormatProperties2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SparseImageFormatProperties properties;
 }
 struct PhysicalDeviceSparseImageFormatInfo2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Format format;
    ImageType type;
    SampleCountFlagBits samples;
@@ -5944,8 +5944,8 @@ struct PhysicalDeviceSparseImageFormatInfo2 {
    ImageTiling tiling;
 }
 struct PhysicalDeviceSparseImageFormatInfo2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Format format;
    ImageType type;
    SampleCountFlagBits samples;
@@ -5953,9 +5953,9 @@ struct PhysicalDeviceSparseImageFormatInfo2KHR {
    ImageTiling tiling;
 }
 struct PhysicalDevicePushDescriptorPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint maxPushDescriptors;
+   StructureType s_type;
+   void* p_next;
+   uint max_push_descriptors;
 }
 struct ConformanceVersion {
    uint major;
@@ -5970,30 +5970,30 @@ struct ConformanceVersionKHR {
    uint patch;
 }
 struct PhysicalDeviceDriverProperties {
-   StructureType sType;
-   void* pNext;
-   DriverId driverID;
-   char[MAX_DRIVER_NAME_SIZE] driverName;
-   char[MAX_DRIVER_INFO_SIZE] driverInfo;
-   ConformanceVersion conformanceVersion;
+   StructureType s_type;
+   void* p_next;
+   DriverId driver_id;
+   char[MAX_DRIVER_NAME_SIZE] driver_name;
+   char[MAX_DRIVER_INFO_SIZE] driver_info;
+   ConformanceVersion conformance_version;
 }
 struct PhysicalDeviceDriverPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   DriverId driverID;
-   char[MAX_DRIVER_NAME_SIZE] driverName;
-   char[MAX_DRIVER_INFO_SIZE] driverInfo;
-   ConformanceVersion conformanceVersion;
+   StructureType s_type;
+   void* p_next;
+   DriverId driver_id;
+   char[MAX_DRIVER_NAME_SIZE] driver_name;
+   char[MAX_DRIVER_INFO_SIZE] driver_info;
+   ConformanceVersion conformance_version;
 }
 struct PresentRegionsKHR {
-   StructureType sType;
-   void* pNext;
-   uint swapchainCount;
-   PresentRegionKHR* pRegions;
+   StructureType s_type;
+   void* p_next;
+   uint swapchain_count;
+   PresentRegionKHR* p_regions;
 }
 struct PresentRegionKHR {
-   uint rectangleCount;
-   RectLayerKHR* pRectangles;
+   uint rectangle_count;
+   RectLayerKHR* p_rectangles;
 }
 struct RectLayerKHR {
    Offset2D offset;
@@ -6001,639 +6001,639 @@ struct RectLayerKHR {
    uint layer;
 }
 struct PhysicalDeviceVariablePointersFeatures {
-   StructureType sType;
-   void* pNext;
-   uint variablePointersStorageBuffer;
-   uint variablePointers;
+   StructureType s_type;
+   void* p_next;
+   uint variable_pointers_storage_buffer;
+   uint variable_pointers;
 }
 struct PhysicalDeviceVariablePointersFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint variablePointersStorageBuffer;
-   uint variablePointers;
+   StructureType s_type;
+   void* p_next;
+   uint variable_pointers_storage_buffer;
+   uint variable_pointers;
 }
 struct PhysicalDeviceVariablePointerFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint variablePointersStorageBuffer;
-   uint variablePointers;
+   StructureType s_type;
+   void* p_next;
+   uint variable_pointers_storage_buffer;
+   uint variable_pointers;
 }
 struct PhysicalDeviceVariablePointerFeatures {
-   StructureType sType;
-   void* pNext;
-   uint variablePointersStorageBuffer;
-   uint variablePointers;
+   StructureType s_type;
+   void* p_next;
+   uint variable_pointers_storage_buffer;
+   uint variable_pointers;
 }
 struct ExternalMemoryProperties {
-   ExternalMemoryFeatureFlags externalMemoryFeatures;
-   ExternalMemoryHandleTypeFlags exportFromImportedHandleTypes;
-   ExternalMemoryHandleTypeFlags compatibleHandleTypes;
+   ExternalMemoryFeatureFlags external_memory_features;
+   ExternalMemoryHandleTypeFlags export_from_imported_handle_types;
+   ExternalMemoryHandleTypeFlags compatible_handle_types;
 }
 struct ExternalMemoryPropertiesKHR {
-   ExternalMemoryFeatureFlags externalMemoryFeatures;
-   ExternalMemoryHandleTypeFlags exportFromImportedHandleTypes;
-   ExternalMemoryHandleTypeFlags compatibleHandleTypes;
+   ExternalMemoryFeatureFlags external_memory_features;
+   ExternalMemoryHandleTypeFlags export_from_imported_handle_types;
+   ExternalMemoryHandleTypeFlags compatible_handle_types;
 }
 struct PhysicalDeviceExternalImageFormatInfo {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlagBits handleType;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlagBits handle_type;
 }
 struct PhysicalDeviceExternalImageFormatInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlagBits handleType;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlagBits handle_type;
 }
 struct ExternalImageFormatProperties {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryProperties externalMemoryProperties;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryProperties external_memory_properties;
 }
 struct ExternalImageFormatPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryProperties externalMemoryProperties;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryProperties external_memory_properties;
 }
 struct PhysicalDeviceExternalBufferInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    BufferCreateFlags flags;
    BufferUsageFlags usage;
-   ExternalMemoryHandleTypeFlagBits handleType;
+   ExternalMemoryHandleTypeFlagBits handle_type;
 }
 struct PhysicalDeviceExternalBufferInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    BufferCreateFlags flags;
    BufferUsageFlags usage;
-   ExternalMemoryHandleTypeFlagBits handleType;
+   ExternalMemoryHandleTypeFlagBits handle_type;
 }
 struct ExternalBufferProperties {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryProperties externalMemoryProperties;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryProperties external_memory_properties;
 }
 struct ExternalBufferPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryProperties externalMemoryProperties;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryProperties external_memory_properties;
 }
 struct PhysicalDeviceIDProperties {
-   StructureType sType;
-   void* pNext;
-   uint[UUID_SIZE] deviceUUID;
-   uint[UUID_SIZE] driverUUID;
-   uint[LUID_SIZE] deviceLUID;
-   uint deviceNodeMask;
-   uint deviceLUIDValid;
+   StructureType s_type;
+   void* p_next;
+   uint[UUID_SIZE] device_uuid;
+   uint[UUID_SIZE] driver_uuid;
+   uint[LUID_SIZE] device_luid;
+   uint device_node_mask;
+   uint device_luid_valid;
 }
 struct PhysicalDeviceIDPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint[UUID_SIZE] deviceUUID;
-   uint[UUID_SIZE] driverUUID;
-   uint[LUID_SIZE] deviceLUID;
-   uint deviceNodeMask;
-   uint deviceLUIDValid;
+   StructureType s_type;
+   void* p_next;
+   uint[UUID_SIZE] device_uuid;
+   uint[UUID_SIZE] driver_uuid;
+   uint[LUID_SIZE] device_luid;
+   uint device_node_mask;
+   uint device_luid_valid;
 }
 struct ExternalMemoryImageCreateInfo {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlags handle_types;
 }
 struct ExternalMemoryImageCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlags handle_types;
 }
 struct ExternalMemoryBufferCreateInfo {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlags handle_types;
 }
 struct ExternalMemoryBufferCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlags handle_types;
 }
 struct ExportMemoryAllocateInfo {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlags handle_types;
 }
 struct ExportMemoryAllocateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlags handle_types;
 }
 struct ImportMemoryWin32HandleInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlagBits handleType;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlagBits handle_type;
    void* handle;
    ushort* name;
 }
 struct ExportMemoryWin32HandleInfoKHR {
-   StructureType sType;
-   void* pNext;
-   void* pAttributes;
-   uint dwAccess;
+   StructureType s_type;
+   void* p_next;
+   void* p_attributes;
+   uint dw_access;
    ushort* name;
 }
 struct MemoryWin32HandlePropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint memoryTypeBits;
+   StructureType s_type;
+   void* p_next;
+   uint memory_type_bits;
 }
 struct MemoryGetWin32HandleInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceMemory memory;
-   ExternalMemoryHandleTypeFlagBits handleType;
+   ExternalMemoryHandleTypeFlagBits handle_type;
 }
 struct ImportMemoryFdInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlagBits handleType;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlagBits handle_type;
    int fd;
 }
 struct MemoryFdPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint memoryTypeBits;
+   StructureType s_type;
+   void* p_next;
+   uint memory_type_bits;
 }
 struct MemoryGetFdInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceMemory memory;
-   ExternalMemoryHandleTypeFlagBits handleType;
+   ExternalMemoryHandleTypeFlagBits handle_type;
 }
 struct Win32KeyedMutexAcquireReleaseInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint acquireCount;
-   DeviceMemory* pAcquireSyncs;
-   ulong* pAcquireKeys;
-   uint* pAcquireTimeouts;
-   uint releaseCount;
-   DeviceMemory* pReleaseSyncs;
-   ulong* pReleaseKeys;
+   StructureType s_type;
+   void* p_next;
+   uint acquire_count;
+   DeviceMemory* p_acquire_syncs;
+   ulong* p_acquire_keys;
+   uint* p_acquire_timeouts;
+   uint release_count;
+   DeviceMemory* p_release_syncs;
+   ulong* p_release_keys;
 }
 struct PhysicalDeviceExternalSemaphoreInfo {
-   StructureType sType;
-   void* pNext;
-   ExternalSemaphoreHandleTypeFlagBits handleType;
+   StructureType s_type;
+   void* p_next;
+   ExternalSemaphoreHandleTypeFlagBits handle_type;
 }
 struct PhysicalDeviceExternalSemaphoreInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalSemaphoreHandleTypeFlagBits handleType;
+   StructureType s_type;
+   void* p_next;
+   ExternalSemaphoreHandleTypeFlagBits handle_type;
 }
 struct ExternalSemaphoreProperties {
-   StructureType sType;
-   void* pNext;
-   ExternalSemaphoreHandleTypeFlags exportFromImportedHandleTypes;
-   ExternalSemaphoreHandleTypeFlags compatibleHandleTypes;
-   ExternalSemaphoreFeatureFlags externalSemaphoreFeatures;
+   StructureType s_type;
+   void* p_next;
+   ExternalSemaphoreHandleTypeFlags export_from_imported_handle_types;
+   ExternalSemaphoreHandleTypeFlags compatible_handle_types;
+   ExternalSemaphoreFeatureFlags external_semaphore_features;
 }
 struct ExternalSemaphorePropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalSemaphoreHandleTypeFlags exportFromImportedHandleTypes;
-   ExternalSemaphoreHandleTypeFlags compatibleHandleTypes;
-   ExternalSemaphoreFeatureFlags externalSemaphoreFeatures;
+   StructureType s_type;
+   void* p_next;
+   ExternalSemaphoreHandleTypeFlags export_from_imported_handle_types;
+   ExternalSemaphoreHandleTypeFlags compatible_handle_types;
+   ExternalSemaphoreFeatureFlags external_semaphore_features;
 }
 struct ExportSemaphoreCreateInfo {
-   StructureType sType;
-   void* pNext;
-   ExternalSemaphoreHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalSemaphoreHandleTypeFlags handle_types;
 }
 struct ExportSemaphoreCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalSemaphoreHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalSemaphoreHandleTypeFlags handle_types;
 }
 struct ImportSemaphoreWin32HandleInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Semaphore semaphore;
    SemaphoreImportFlags flags;
-   ExternalSemaphoreHandleTypeFlagBits handleType;
+   ExternalSemaphoreHandleTypeFlagBits handle_type;
    void* handle;
    ushort* name;
 }
 struct ExportSemaphoreWin32HandleInfoKHR {
-   StructureType sType;
-   void* pNext;
-   void* pAttributes;
-   uint dwAccess;
+   StructureType s_type;
+   void* p_next;
+   void* p_attributes;
+   uint dw_access;
    ushort* name;
 }
 struct D3D12FenceSubmitInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint waitSemaphoreValuesCount;
-   ulong* pWaitSemaphoreValues;
-   uint signalSemaphoreValuesCount;
-   ulong* pSignalSemaphoreValues;
+   StructureType s_type;
+   void* p_next;
+   uint wait_semaphore_values_count;
+   ulong* p_wait_semaphore_values;
+   uint signal_semaphore_values_count;
+   ulong* p_signal_semaphore_values;
 }
 struct SemaphoreGetWin32HandleInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Semaphore semaphore;
-   ExternalSemaphoreHandleTypeFlagBits handleType;
+   ExternalSemaphoreHandleTypeFlagBits handle_type;
 }
 struct ImportSemaphoreFdInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Semaphore semaphore;
    SemaphoreImportFlags flags;
-   ExternalSemaphoreHandleTypeFlagBits handleType;
+   ExternalSemaphoreHandleTypeFlagBits handle_type;
    int fd;
 }
 struct SemaphoreGetFdInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Semaphore semaphore;
-   ExternalSemaphoreHandleTypeFlagBits handleType;
+   ExternalSemaphoreHandleTypeFlagBits handle_type;
 }
 struct PhysicalDeviceExternalFenceInfo {
-   StructureType sType;
-   void* pNext;
-   ExternalFenceHandleTypeFlagBits handleType;
+   StructureType s_type;
+   void* p_next;
+   ExternalFenceHandleTypeFlagBits handle_type;
 }
 struct PhysicalDeviceExternalFenceInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalFenceHandleTypeFlagBits handleType;
+   StructureType s_type;
+   void* p_next;
+   ExternalFenceHandleTypeFlagBits handle_type;
 }
 struct ExternalFenceProperties {
-   StructureType sType;
-   void* pNext;
-   ExternalFenceHandleTypeFlags exportFromImportedHandleTypes;
-   ExternalFenceHandleTypeFlags compatibleHandleTypes;
-   ExternalFenceFeatureFlags externalFenceFeatures;
+   StructureType s_type;
+   void* p_next;
+   ExternalFenceHandleTypeFlags export_from_imported_handle_types;
+   ExternalFenceHandleTypeFlags compatible_handle_types;
+   ExternalFenceFeatureFlags external_fence_features;
 }
 struct ExternalFencePropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalFenceHandleTypeFlags exportFromImportedHandleTypes;
-   ExternalFenceHandleTypeFlags compatibleHandleTypes;
-   ExternalFenceFeatureFlags externalFenceFeatures;
+   StructureType s_type;
+   void* p_next;
+   ExternalFenceHandleTypeFlags export_from_imported_handle_types;
+   ExternalFenceHandleTypeFlags compatible_handle_types;
+   ExternalFenceFeatureFlags external_fence_features;
 }
 struct ExportFenceCreateInfo {
-   StructureType sType;
-   void* pNext;
-   ExternalFenceHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalFenceHandleTypeFlags handle_types;
 }
 struct ExportFenceCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ExternalFenceHandleTypeFlags handleTypes;
+   StructureType s_type;
+   void* p_next;
+   ExternalFenceHandleTypeFlags handle_types;
 }
 struct ImportFenceWin32HandleInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Fence fence;
    FenceImportFlags flags;
-   ExternalFenceHandleTypeFlagBits handleType;
+   ExternalFenceHandleTypeFlagBits handle_type;
    void* handle;
    ushort* name;
 }
 struct ExportFenceWin32HandleInfoKHR {
-   StructureType sType;
-   void* pNext;
-   void* pAttributes;
-   uint dwAccess;
+   StructureType s_type;
+   void* p_next;
+   void* p_attributes;
+   uint dw_access;
    ushort* name;
 }
 struct FenceGetWin32HandleInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Fence fence;
-   ExternalFenceHandleTypeFlagBits handleType;
+   ExternalFenceHandleTypeFlagBits handle_type;
 }
 struct ImportFenceFdInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Fence fence;
    FenceImportFlags flags;
-   ExternalFenceHandleTypeFlagBits handleType;
+   ExternalFenceHandleTypeFlagBits handle_type;
    int fd;
 }
 struct FenceGetFdInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Fence fence;
-   ExternalFenceHandleTypeFlagBits handleType;
+   ExternalFenceHandleTypeFlagBits handle_type;
 }
 struct PhysicalDeviceMultiviewFeatures {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint multiview;
-   uint multiviewGeometryShader;
-   uint multiviewTessellationShader;
+   uint multiview_geometry_shader;
+   uint multiview_tessellation_shader;
 }
 struct PhysicalDeviceMultiviewFeaturesKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint multiview;
-   uint multiviewGeometryShader;
-   uint multiviewTessellationShader;
+   uint multiview_geometry_shader;
+   uint multiview_tessellation_shader;
 }
 struct PhysicalDeviceMultiviewProperties {
-   StructureType sType;
-   void* pNext;
-   uint maxMultiviewViewCount;
-   uint maxMultiviewInstanceIndex;
+   StructureType s_type;
+   void* p_next;
+   uint max_multiview_view_count;
+   uint max_multiview_instance_index;
 }
 struct PhysicalDeviceMultiviewPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint maxMultiviewViewCount;
-   uint maxMultiviewInstanceIndex;
+   StructureType s_type;
+   void* p_next;
+   uint max_multiview_view_count;
+   uint max_multiview_instance_index;
 }
 struct RenderPassMultiviewCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint subpassCount;
-   uint* pViewMasks;
-   uint dependencyCount;
-   int* pViewOffsets;
-   uint correlationMaskCount;
-   uint* pCorrelationMasks;
+   StructureType s_type;
+   void* p_next;
+   uint subpass_count;
+   uint* p_view_masks;
+   uint dependency_count;
+   int* p_view_offsets;
+   uint correlation_mask_count;
+   uint* p_correlation_masks;
 }
 struct RenderPassMultiviewCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint subpassCount;
-   uint* pViewMasks;
-   uint dependencyCount;
-   int* pViewOffsets;
-   uint correlationMaskCount;
-   uint* pCorrelationMasks;
+   StructureType s_type;
+   void* p_next;
+   uint subpass_count;
+   uint* p_view_masks;
+   uint dependency_count;
+   int* p_view_offsets;
+   uint correlation_mask_count;
+   uint* p_correlation_masks;
 }
 struct SurfaceCapabilities2EXT {
-   StructureType sType;
-   void* pNext;
-   uint minImageCount;
-   uint maxImageCount;
-   Extent2D currentExtent;
-   Extent2D minImageExtent;
-   Extent2D maxImageExtent;
-   uint maxImageArrayLayers;
-   SurfaceTransformFlagsKHR supportedTransforms;
-   SurfaceTransformFlagBitsKHR currentTransform;
-   CompositeAlphaFlagsKHR supportedCompositeAlpha;
-   ImageUsageFlags supportedUsageFlags;
-   SurfaceCounterFlagsEXT supportedSurfaceCounters;
+   StructureType s_type;
+   void* p_next;
+   uint min_image_count;
+   uint max_image_count;
+   Extent2D current_extent;
+   Extent2D min_image_extent;
+   Extent2D max_image_extent;
+   uint max_image_array_layers;
+   SurfaceTransformFlagsKHR supported_transforms;
+   SurfaceTransformFlagBitsKHR current_transform;
+   CompositeAlphaFlagsKHR supported_composite_alpha;
+   ImageUsageFlags supported_usage_flags;
+   SurfaceCounterFlagsEXT supported_surface_counters;
 }
 struct DisplayPowerInfoEXT {
-   StructureType sType;
-   void* pNext;
-   DisplayPowerStateEXT powerState;
+   StructureType s_type;
+   void* p_next;
+   DisplayPowerStateEXT power_state;
 }
 struct DeviceEventInfoEXT {
-   StructureType sType;
-   void* pNext;
-   DeviceEventTypeEXT deviceEvent;
+   StructureType s_type;
+   void* p_next;
+   DeviceEventTypeEXT device_event;
 }
 struct DisplayEventInfoEXT {
-   StructureType sType;
-   void* pNext;
-   DisplayEventTypeEXT displayEvent;
+   StructureType s_type;
+   void* p_next;
+   DisplayEventTypeEXT display_event;
 }
 struct SwapchainCounterCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   SurfaceCounterFlagsEXT surfaceCounters;
+   StructureType s_type;
+   void* p_next;
+   SurfaceCounterFlagsEXT surface_counters;
 }
 struct PhysicalDeviceGroupProperties {
-   StructureType sType;
-   void* pNext;
-   uint physicalDeviceCount;
-   PhysicalDevice[MAX_DEVICE_GROUP_SIZE] physicalDevices;
-   uint subsetAllocation;
+   StructureType s_type;
+   void* p_next;
+   uint physical_device_count;
+   PhysicalDevice[MAX_DEVICE_GROUP_SIZE] physical_devices;
+   uint subset_allocation;
 }
 struct PhysicalDeviceGroupPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint physicalDeviceCount;
-   PhysicalDevice[MAX_DEVICE_GROUP_SIZE] physicalDevices;
-   uint subsetAllocation;
+   StructureType s_type;
+   void* p_next;
+   uint physical_device_count;
+   PhysicalDevice[MAX_DEVICE_GROUP_SIZE] physical_devices;
+   uint subset_allocation;
 }
 struct MemoryAllocateFlagsInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    MemoryAllocateFlags flags;
-   uint deviceMask;
+   uint device_mask;
 }
 struct MemoryAllocateFlagsInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    MemoryAllocateFlags flags;
-   uint deviceMask;
+   uint device_mask;
 }
 struct BindBufferMemoryInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
    DeviceMemory memory;
-   DeviceSize memoryOffset;
+   DeviceSize memory_offset;
 }
 struct BindBufferMemoryInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
    DeviceMemory memory;
-   DeviceSize memoryOffset;
+   DeviceSize memory_offset;
 }
 struct BindBufferMemoryDeviceGroupInfo {
-   StructureType sType;
-   void* pNext;
-   uint deviceIndexCount;
-   uint* pDeviceIndices;
+   StructureType s_type;
+   void* p_next;
+   uint device_index_count;
+   uint* p_device_indices;
 }
 struct BindBufferMemoryDeviceGroupInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint deviceIndexCount;
-   uint* pDeviceIndices;
+   StructureType s_type;
+   void* p_next;
+   uint device_index_count;
+   uint* p_device_indices;
 }
 struct BindImageMemoryInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
    DeviceMemory memory;
-   DeviceSize memoryOffset;
+   DeviceSize memory_offset;
 }
 struct BindImageMemoryInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
    DeviceMemory memory;
-   DeviceSize memoryOffset;
+   DeviceSize memory_offset;
 }
 struct BindImageMemoryDeviceGroupInfo {
-   StructureType sType;
-   void* pNext;
-   uint deviceIndexCount;
-   uint* pDeviceIndices;
-   uint splitInstanceBindRegionCount;
-   Rect2D* pSplitInstanceBindRegions;
+   StructureType s_type;
+   void* p_next;
+   uint device_index_count;
+   uint* p_device_indices;
+   uint split_instance_bind_region_count;
+   Rect2D* p_split_instance_bind_regions;
 }
 struct BindImageMemoryDeviceGroupInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint deviceIndexCount;
-   uint* pDeviceIndices;
-   uint splitInstanceBindRegionCount;
-   Rect2D* pSplitInstanceBindRegions;
+   StructureType s_type;
+   void* p_next;
+   uint device_index_count;
+   uint* p_device_indices;
+   uint split_instance_bind_region_count;
+   Rect2D* p_split_instance_bind_regions;
 }
 struct DeviceGroupRenderPassBeginInfo {
-   StructureType sType;
-   void* pNext;
-   uint deviceMask;
-   uint deviceRenderAreaCount;
-   Rect2D* pDeviceRenderAreas;
+   StructureType s_type;
+   void* p_next;
+   uint device_mask;
+   uint device_render_area_count;
+   Rect2D* p_device_render_areas;
 }
 struct DeviceGroupRenderPassBeginInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint deviceMask;
-   uint deviceRenderAreaCount;
-   Rect2D* pDeviceRenderAreas;
+   StructureType s_type;
+   void* p_next;
+   uint device_mask;
+   uint device_render_area_count;
+   Rect2D* p_device_render_areas;
 }
 struct DeviceGroupCommandBufferBeginInfo {
-   StructureType sType;
-   void* pNext;
-   uint deviceMask;
+   StructureType s_type;
+   void* p_next;
+   uint device_mask;
 }
 struct DeviceGroupCommandBufferBeginInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint deviceMask;
+   StructureType s_type;
+   void* p_next;
+   uint device_mask;
 }
 struct DeviceGroupSubmitInfo {
-   StructureType sType;
-   void* pNext;
-   uint waitSemaphoreCount;
-   uint* pWaitSemaphoreDeviceIndices;
-   uint commandBufferCount;
-   uint* pCommandBufferDeviceMasks;
-   uint signalSemaphoreCount;
-   uint* pSignalSemaphoreDeviceIndices;
+   StructureType s_type;
+   void* p_next;
+   uint wait_semaphore_count;
+   uint* p_wait_semaphore_device_indices;
+   uint command_buffer_count;
+   uint* p_command_buffer_device_masks;
+   uint signal_semaphore_count;
+   uint* p_signal_semaphore_device_indices;
 }
 struct DeviceGroupSubmitInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint waitSemaphoreCount;
-   uint* pWaitSemaphoreDeviceIndices;
-   uint commandBufferCount;
-   uint* pCommandBufferDeviceMasks;
-   uint signalSemaphoreCount;
-   uint* pSignalSemaphoreDeviceIndices;
+   StructureType s_type;
+   void* p_next;
+   uint wait_semaphore_count;
+   uint* p_wait_semaphore_device_indices;
+   uint command_buffer_count;
+   uint* p_command_buffer_device_masks;
+   uint signal_semaphore_count;
+   uint* p_signal_semaphore_device_indices;
 }
 struct DeviceGroupBindSparseInfo {
-   StructureType sType;
-   void* pNext;
-   uint resourceDeviceIndex;
-   uint memoryDeviceIndex;
+   StructureType s_type;
+   void* p_next;
+   uint resource_device_index;
+   uint memory_device_index;
 }
 struct DeviceGroupBindSparseInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint resourceDeviceIndex;
-   uint memoryDeviceIndex;
+   StructureType s_type;
+   void* p_next;
+   uint resource_device_index;
+   uint memory_device_index;
 }
 struct DeviceGroupPresentCapabilitiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint[MAX_DEVICE_GROUP_SIZE] presentMask;
+   StructureType s_type;
+   void* p_next;
+   uint[MAX_DEVICE_GROUP_SIZE] present_mask;
    DeviceGroupPresentModeFlagsKHR modes;
 }
 struct ImageSwapchainCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SwapchainKHR swapchain;
 }
 struct BindImageMemorySwapchainInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SwapchainKHR swapchain;
-   uint imageIndex;
+   uint image_index;
 }
 struct AcquireNextImageInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SwapchainKHR swapchain;
    ulong timeout;
    Semaphore semaphore;
    Fence fence;
-   uint deviceMask;
+   uint device_mask;
 }
 struct DeviceGroupPresentInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint swapchainCount;
-   uint* pDeviceMasks;
+   StructureType s_type;
+   void* p_next;
+   uint swapchain_count;
+   uint* p_device_masks;
    DeviceGroupPresentModeFlagBitsKHR mode;
 }
 struct DeviceGroupDeviceCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint physicalDeviceCount;
-   PhysicalDevice* pPhysicalDevices;
+   StructureType s_type;
+   void* p_next;
+   uint physical_device_count;
+   PhysicalDevice* p_physical_devices;
 }
 struct DeviceGroupDeviceCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint physicalDeviceCount;
-   PhysicalDevice* pPhysicalDevices;
+   StructureType s_type;
+   void* p_next;
+   uint physical_device_count;
+   PhysicalDevice* p_physical_devices;
 }
 struct DeviceGroupSwapchainCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceGroupPresentModeFlagsKHR modes;
 }
 struct DescriptorUpdateTemplateEntry {
-   uint dstBinding;
-   uint dstArrayElement;
-   uint descriptorCount;
-   DescriptorType descriptorType;
+   uint dst_binding;
+   uint dst_array_element;
+   uint descriptor_count;
+   DescriptorType descriptor_type;
    sz offset;
    sz stride;
 }
 struct DescriptorUpdateTemplateEntryKHR {
-   uint dstBinding;
-   uint dstArrayElement;
-   uint descriptorCount;
-   DescriptorType descriptorType;
+   uint dst_binding;
+   uint dst_array_element;
+   uint descriptor_count;
+   DescriptorType descriptor_type;
    sz offset;
    sz stride;
 }
 struct DescriptorUpdateTemplateCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DescriptorUpdateTemplateCreateFlags flags;
-   uint descriptorUpdateEntryCount;
-   DescriptorUpdateTemplateEntry* pDescriptorUpdateEntries;
-   DescriptorUpdateTemplateType templateType;
-   DescriptorSetLayout descriptorSetLayout;
-   PipelineBindPoint pipelineBindPoint;
-   PipelineLayout pipelineLayout;
+   uint descriptor_update_entry_count;
+   DescriptorUpdateTemplateEntry* p_descriptor_update_entries;
+   DescriptorUpdateTemplateType template_type;
+   DescriptorSetLayout descriptor_set_layout;
+   PipelineBindPoint pipeline_bind_point;
+   PipelineLayout pipeline_layout;
    uint set;
 }
 struct DescriptorUpdateTemplateCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DescriptorUpdateTemplateCreateFlags flags;
-   uint descriptorUpdateEntryCount;
-   DescriptorUpdateTemplateEntry* pDescriptorUpdateEntries;
-   DescriptorUpdateTemplateType templateType;
-   DescriptorSetLayout descriptorSetLayout;
-   PipelineBindPoint pipelineBindPoint;
-   PipelineLayout pipelineLayout;
+   uint descriptor_update_entry_count;
+   DescriptorUpdateTemplateEntry* p_descriptor_update_entries;
+   DescriptorUpdateTemplateType template_type;
+   DescriptorSetLayout descriptor_set_layout;
+   PipelineBindPoint pipeline_bind_point;
+   PipelineLayout pipeline_layout;
    uint set;
 }
 struct XYColorEXT {
@@ -6641,91 +6641,91 @@ struct XYColorEXT {
    float y;
 }
 struct PhysicalDevicePresentIdFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint presentId;
+   StructureType s_type;
+   void* p_next;
+   uint present_id;
 }
 struct PresentIdKHR {
-   StructureType sType;
-   void* pNext;
-   uint swapchainCount;
-   ulong* pPresentIds;
+   StructureType s_type;
+   void* p_next;
+   uint swapchain_count;
+   ulong* p_present_ids;
 }
 struct PhysicalDevicePresentWaitFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint presentWait;
+   StructureType s_type;
+   void* p_next;
+   uint present_wait;
 }
 struct HdrMetadataEXT {
-   StructureType sType;
-   void* pNext;
-   XYColorEXT displayPrimaryRed;
-   XYColorEXT displayPrimaryGreen;
-   XYColorEXT displayPrimaryBlue;
-   XYColorEXT whitePoint;
-   float maxLuminance;
-   float minLuminance;
-   float maxContentLightLevel;
-   float maxFrameAverageLightLevel;
+   StructureType s_type;
+   void* p_next;
+   XYColorEXT display_primary_red;
+   XYColorEXT display_primary_green;
+   XYColorEXT display_primary_blue;
+   XYColorEXT white_point;
+   float max_luminance;
+   float min_luminance;
+   float max_content_light_level;
+   float max_frame_average_light_level;
 }
 struct DisplayNativeHdrSurfaceCapabilitiesAMD {
-   StructureType sType;
-   void* pNext;
-   uint localDimmingSupport;
+   StructureType s_type;
+   void* p_next;
+   uint local_dimming_support;
 }
 struct SwapchainDisplayNativeHdrCreateInfoAMD {
-   StructureType sType;
-   void* pNext;
-   uint localDimmingEnable;
+   StructureType s_type;
+   void* p_next;
+   uint local_dimming_enable;
 }
 struct RefreshCycleDurationGOOGLE {
-   ulong refreshDuration;
+   ulong refresh_duration;
 }
 struct PastPresentationTimingGOOGLE {
-   uint presentID;
-   ulong desiredPresentTime;
-   ulong actualPresentTime;
-   ulong earliestPresentTime;
-   ulong presentMargin;
+   uint present_id;
+   ulong desired_present_time;
+   ulong actual_present_time;
+   ulong earliest_present_time;
+   ulong present_margin;
 }
 struct PresentTimesInfoGOOGLE {
-   StructureType sType;
-   void* pNext;
-   uint swapchainCount;
-   PresentTimeGOOGLE* pTimes;
+   StructureType s_type;
+   void* p_next;
+   uint swapchain_count;
+   PresentTimeGOOGLE* p_times;
 }
 struct PresentTimeGOOGLE {
-   uint presentID;
-   ulong desiredPresentTime;
+   uint present_id;
+   ulong desired_present_time;
 }
 struct IOSSurfaceCreateInfoMVK {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    IOSSurfaceCreateFlagsMVK flags;
-   void* pView;
+   void* p_view;
 }
 struct MacOSSurfaceCreateInfoMVK {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    MacOSSurfaceCreateFlagsMVK flags;
-   void* pView;
+   void* p_view;
 }
 struct MetalSurfaceCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    MetalSurfaceCreateFlagsEXT flags;
-   void* pLayer;
+   void* p_layer;
 }
 struct ViewportWScalingNV {
    float xcoeff;
    float ycoeff;
 }
 struct PipelineViewportWScalingStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint viewportWScalingEnable;
-   uint viewportCount;
-   ViewportWScalingNV* pViewportWScalings;
+   StructureType s_type;
+   void* p_next;
+   uint viewport_w_scaling_enable;
+   uint viewport_count;
+   ViewportWScalingNV* p_viewport_w_scalings;
 }
 struct ViewportSwizzleNV {
    ViewportCoordinateSwizzleNV x;
@@ -6734,1281 +6734,1281 @@ struct ViewportSwizzleNV {
    ViewportCoordinateSwizzleNV w;
 }
 struct PipelineViewportSwizzleStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineViewportSwizzleStateCreateFlagsNV flags;
-   uint viewportCount;
-   ViewportSwizzleNV* pViewportSwizzles;
+   uint viewport_count;
+   ViewportSwizzleNV* p_viewport_swizzles;
 }
 struct PhysicalDeviceDiscardRectanglePropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxDiscardRectangles;
+   StructureType s_type;
+   void* p_next;
+   uint max_discard_rectangles;
 }
 struct PipelineDiscardRectangleStateCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineDiscardRectangleStateCreateFlagsEXT flags;
-   DiscardRectangleModeEXT discardRectangleMode;
-   uint discardRectangleCount;
-   Rect2D* pDiscardRectangles;
+   DiscardRectangleModeEXT discard_rectangle_mode;
+   uint discard_rectangle_count;
+   Rect2D* p_discard_rectangles;
 }
 struct PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
-   StructureType sType;
-   void* pNext;
-   uint perViewPositionAllComponents;
+   StructureType s_type;
+   void* p_next;
+   uint per_view_position_all_components;
 }
 struct InputAttachmentAspectReference {
    uint subpass;
-   uint inputAttachmentIndex;
-   ImageAspectFlags aspectMask;
+   uint input_attachment_index;
+   ImageAspectFlags aspect_mask;
 }
 struct InputAttachmentAspectReferenceKHR {
    uint subpass;
-   uint inputAttachmentIndex;
-   ImageAspectFlags aspectMask;
+   uint input_attachment_index;
+   ImageAspectFlags aspect_mask;
 }
 struct RenderPassInputAttachmentAspectCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint aspectReferenceCount;
-   InputAttachmentAspectReference* pAspectReferences;
+   StructureType s_type;
+   void* p_next;
+   uint aspect_reference_count;
+   InputAttachmentAspectReference* p_aspect_references;
 }
 struct RenderPassInputAttachmentAspectCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint aspectReferenceCount;
-   InputAttachmentAspectReference* pAspectReferences;
+   StructureType s_type;
+   void* p_next;
+   uint aspect_reference_count;
+   InputAttachmentAspectReference* p_aspect_references;
 }
 struct PhysicalDeviceSurfaceInfo2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SurfaceKHR surface;
 }
 struct SurfaceCapabilities2KHR {
-   StructureType sType;
-   void* pNext;
-   SurfaceCapabilitiesKHR surfaceCapabilities;
+   StructureType s_type;
+   void* p_next;
+   SurfaceCapabilitiesKHR surface_capabilities;
 }
 struct SurfaceFormat2KHR {
-   StructureType sType;
-   void* pNext;
-   SurfaceFormatKHR surfaceFormat;
+   StructureType s_type;
+   void* p_next;
+   SurfaceFormatKHR surface_format;
 }
 struct DisplayProperties2KHR {
-   StructureType sType;
-   void* pNext;
-   DisplayPropertiesKHR displayProperties;
+   StructureType s_type;
+   void* p_next;
+   DisplayPropertiesKHR display_properties;
 }
 struct DisplayPlaneProperties2KHR {
-   StructureType sType;
-   void* pNext;
-   DisplayPlanePropertiesKHR displayPlaneProperties;
+   StructureType s_type;
+   void* p_next;
+   DisplayPlanePropertiesKHR display_plane_properties;
 }
 struct DisplayModeProperties2KHR {
-   StructureType sType;
-   void* pNext;
-   DisplayModePropertiesKHR displayModeProperties;
+   StructureType s_type;
+   void* p_next;
+   DisplayModePropertiesKHR display_mode_properties;
 }
 struct DisplayPlaneInfo2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DisplayModeKHR mode;
-   uint planeIndex;
+   uint plane_index;
 }
 struct DisplayPlaneCapabilities2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DisplayPlaneCapabilitiesKHR capabilities;
 }
 struct SharedPresentSurfaceCapabilitiesKHR {
-   StructureType sType;
-   void* pNext;
-   ImageUsageFlags sharedPresentSupportedUsageFlags;
+   StructureType s_type;
+   void* p_next;
+   ImageUsageFlags shared_present_supported_usage_flags;
 }
 struct PhysicalDevice16BitStorageFeatures {
-   StructureType sType;
-   void* pNext;
-   uint storageBuffer16BitAccess;
-   uint uniformAndStorageBuffer16BitAccess;
-   uint storagePushConstant16;
-   uint storageInputOutput16;
+   StructureType s_type;
+   void* p_next;
+   uint storage_buffer_16_bit_access;
+   uint uniform_and_storage_buffer_16_bit_access;
+   uint storage_push_constant_16;
+   uint storage_input_output_16;
 }
 struct PhysicalDevice16BitStorageFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint storageBuffer16BitAccess;
-   uint uniformAndStorageBuffer16BitAccess;
-   uint storagePushConstant16;
-   uint storageInputOutput16;
+   StructureType s_type;
+   void* p_next;
+   uint storage_buffer_16_bit_access;
+   uint uniform_and_storage_buffer_16_bit_access;
+   uint storage_push_constant_16;
+   uint storage_input_output_16;
 }
 struct PhysicalDeviceSubgroupProperties {
-   StructureType sType;
-   void* pNext;
-   uint subgroupSize;
-   ShaderStageFlags supportedStages;
-   SubgroupFeatureFlags supportedOperations;
-   uint quadOperationsInAllStages;
+   StructureType s_type;
+   void* p_next;
+   uint subgroup_size;
+   ShaderStageFlags supported_stages;
+   SubgroupFeatureFlags supported_operations;
+   uint quad_operations_in_all_stages;
 }
 struct PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
-   StructureType sType;
-   void* pNext;
-   uint shaderSubgroupExtendedTypes;
+   StructureType s_type;
+   void* p_next;
+   uint shader_subgroup_extended_types;
 }
 struct PhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderSubgroupExtendedTypes;
+   StructureType s_type;
+   void* p_next;
+   uint shader_subgroup_extended_types;
 }
 struct BufferMemoryRequirementsInfo2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
 }
 struct BufferMemoryRequirementsInfo2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
 }
 struct DeviceBufferMemoryRequirements {
-   StructureType sType;
-   void* pNext;
-   BufferCreateInfo* pCreateInfo;
+   StructureType s_type;
+   void* p_next;
+   BufferCreateInfo* p_create_info;
 }
 struct DeviceBufferMemoryRequirementsKHR {
-   StructureType sType;
-   void* pNext;
-   BufferCreateInfo* pCreateInfo;
+   StructureType s_type;
+   void* p_next;
+   BufferCreateInfo* p_create_info;
 }
 struct ImageMemoryRequirementsInfo2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
 }
 struct ImageMemoryRequirementsInfo2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
 }
 struct ImageSparseMemoryRequirementsInfo2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
 }
 struct ImageSparseMemoryRequirementsInfo2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
 }
 struct DeviceImageMemoryRequirements {
-   StructureType sType;
-   void* pNext;
-   ImageCreateInfo* pCreateInfo;
-   ImageAspectFlagBits planeAspect;
+   StructureType s_type;
+   void* p_next;
+   ImageCreateInfo* p_create_info;
+   ImageAspectFlagBits plane_aspect;
 }
 struct DeviceImageMemoryRequirementsKHR {
-   StructureType sType;
-   void* pNext;
-   ImageCreateInfo* pCreateInfo;
-   ImageAspectFlagBits planeAspect;
+   StructureType s_type;
+   void* p_next;
+   ImageCreateInfo* p_create_info;
+   ImageAspectFlagBits plane_aspect;
 }
 struct MemoryRequirements2 {
-   StructureType sType;
-   void* pNext;
-   MemoryRequirements memoryRequirements;
+   StructureType s_type;
+   void* p_next;
+   MemoryRequirements memory_requirements;
 }
 struct MemoryRequirements2KHR {
-   StructureType sType;
-   void* pNext;
-   MemoryRequirements memoryRequirements;
+   StructureType s_type;
+   void* p_next;
+   MemoryRequirements memory_requirements;
 }
 struct SparseImageMemoryRequirements2 {
-   StructureType sType;
-   void* pNext;
-   SparseImageMemoryRequirements memoryRequirements;
+   StructureType s_type;
+   void* p_next;
+   SparseImageMemoryRequirements memory_requirements;
 }
 struct SparseImageMemoryRequirements2KHR {
-   StructureType sType;
-   void* pNext;
-   SparseImageMemoryRequirements memoryRequirements;
+   StructureType s_type;
+   void* p_next;
+   SparseImageMemoryRequirements memory_requirements;
 }
 struct PhysicalDevicePointClippingProperties {
-   StructureType sType;
-   void* pNext;
-   PointClippingBehavior pointClippingBehavior;
+   StructureType s_type;
+   void* p_next;
+   PointClippingBehavior point_clipping_behavior;
 }
 struct PhysicalDevicePointClippingPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   PointClippingBehavior pointClippingBehavior;
+   StructureType s_type;
+   void* p_next;
+   PointClippingBehavior point_clipping_behavior;
 }
 struct MemoryDedicatedRequirements {
-   StructureType sType;
-   void* pNext;
-   uint prefersDedicatedAllocation;
-   uint requiresDedicatedAllocation;
+   StructureType s_type;
+   void* p_next;
+   uint prefers_dedicated_allocation;
+   uint requires_dedicated_allocation;
 }
 struct MemoryDedicatedRequirementsKHR {
-   StructureType sType;
-   void* pNext;
-   uint prefersDedicatedAllocation;
-   uint requiresDedicatedAllocation;
+   StructureType s_type;
+   void* p_next;
+   uint prefers_dedicated_allocation;
+   uint requires_dedicated_allocation;
 }
 struct MemoryDedicatedAllocateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
    Buffer buffer;
 }
 struct MemoryDedicatedAllocateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
    Buffer buffer;
 }
 struct ImageViewUsageCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ImageUsageFlags usage;
 }
 struct ImageViewSlicedCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint sliceOffset;
-   uint sliceCount;
+   StructureType s_type;
+   void* p_next;
+   uint slice_offset;
+   uint slice_count;
 }
 struct ImageViewUsageCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ImageUsageFlags usage;
 }
 struct PipelineTessellationDomainOriginStateCreateInfo {
-   StructureType sType;
-   void* pNext;
-   TessellationDomainOrigin domainOrigin;
+   StructureType s_type;
+   void* p_next;
+   TessellationDomainOrigin domain_origin;
 }
 struct PipelineTessellationDomainOriginStateCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   TessellationDomainOrigin domainOrigin;
+   StructureType s_type;
+   void* p_next;
+   TessellationDomainOrigin domain_origin;
 }
 struct SamplerYcbcrConversionInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SamplerYcbcrConversion conversion;
 }
 struct SamplerYcbcrConversionInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SamplerYcbcrConversion conversion;
 }
 struct SamplerYcbcrConversionCreateInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Format format;
-   SamplerYcbcrModelConversion ycbcrModel;
-   SamplerYcbcrRange ycbcrRange;
+   SamplerYcbcrModelConversion ycbcr_model;
+   SamplerYcbcrRange ycbcr_range;
    ComponentMapping components;
-   ChromaLocation xChromaOffset;
-   ChromaLocation yChromaOffset;
-   Filter chromaFilter;
-   uint forceExplicitReconstruction;
+   ChromaLocation x_chroma_offset;
+   ChromaLocation y_chroma_offset;
+   Filter chroma_filter;
+   uint force_explicit_reconstruction;
 }
 struct SamplerYcbcrConversionCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Format format;
-   SamplerYcbcrModelConversion ycbcrModel;
-   SamplerYcbcrRange ycbcrRange;
+   SamplerYcbcrModelConversion ycbcr_model;
+   SamplerYcbcrRange ycbcr_range;
    ComponentMapping components;
-   ChromaLocation xChromaOffset;
-   ChromaLocation yChromaOffset;
-   Filter chromaFilter;
-   uint forceExplicitReconstruction;
+   ChromaLocation x_chroma_offset;
+   ChromaLocation y_chroma_offset;
+   Filter chroma_filter;
+   uint force_explicit_reconstruction;
 }
 struct BindImagePlaneMemoryInfo {
-   StructureType sType;
-   void* pNext;
-   ImageAspectFlagBits planeAspect;
+   StructureType s_type;
+   void* p_next;
+   ImageAspectFlagBits plane_aspect;
 }
 struct BindImagePlaneMemoryInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ImageAspectFlagBits planeAspect;
+   StructureType s_type;
+   void* p_next;
+   ImageAspectFlagBits plane_aspect;
 }
 struct ImagePlaneMemoryRequirementsInfo {
-   StructureType sType;
-   void* pNext;
-   ImageAspectFlagBits planeAspect;
+   StructureType s_type;
+   void* p_next;
+   ImageAspectFlagBits plane_aspect;
 }
 struct ImagePlaneMemoryRequirementsInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ImageAspectFlagBits planeAspect;
+   StructureType s_type;
+   void* p_next;
+   ImageAspectFlagBits plane_aspect;
 }
 struct PhysicalDeviceSamplerYcbcrConversionFeatures {
-   StructureType sType;
-   void* pNext;
-   uint samplerYcbcrConversion;
+   StructureType s_type;
+   void* p_next;
+   uint sampler_ycbcr_conversion;
 }
 struct PhysicalDeviceSamplerYcbcrConversionFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint samplerYcbcrConversion;
+   StructureType s_type;
+   void* p_next;
+   uint sampler_ycbcr_conversion;
 }
 struct SamplerYcbcrConversionImageFormatProperties {
-   StructureType sType;
-   void* pNext;
-   uint combinedImageSamplerDescriptorCount;
+   StructureType s_type;
+   void* p_next;
+   uint combined_image_sampler_descriptor_count;
 }
 struct SamplerYcbcrConversionImageFormatPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint combinedImageSamplerDescriptorCount;
+   StructureType s_type;
+   void* p_next;
+   uint combined_image_sampler_descriptor_count;
 }
 struct TextureLODGatherFormatPropertiesAMD {
-   StructureType sType;
-   void* pNext;
-   uint supportsTextureGatherLODBiasAMD;
+   StructureType s_type;
+   void* p_next;
+   uint supports_texture_gather_lod_bias_amd;
 }
 struct ConditionalRenderingBeginInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
    DeviceSize offset;
    ConditionalRenderingFlagsEXT flags;
 }
 struct ProtectedSubmitInfo {
-   StructureType sType;
-   void* pNext;
-   uint protectedSubmit;
+   StructureType s_type;
+   void* p_next;
+   uint protected_submit;
 }
 struct PhysicalDeviceProtectedMemoryFeatures {
-   StructureType sType;
-   void* pNext;
-   uint protectedMemory;
+   StructureType s_type;
+   void* p_next;
+   uint protected_memory;
 }
 struct PhysicalDeviceProtectedMemoryProperties {
-   StructureType sType;
-   void* pNext;
-   uint protectedNoFault;
+   StructureType s_type;
+   void* p_next;
+   uint protected_no_fault;
 }
 struct DeviceQueueInfo2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceQueueCreateFlags flags;
-   uint queueFamilyIndex;
-   uint queueIndex;
+   uint queue_family_index;
+   uint queue_index;
 }
 struct PipelineCoverageToColorStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineCoverageToColorStateCreateFlagsNV flags;
-   uint coverageToColorEnable;
-   uint coverageToColorLocation;
+   uint coverage_to_color_enable;
+   uint coverage_to_color_location;
 }
 struct PhysicalDeviceSamplerFilterMinmaxProperties {
-   StructureType sType;
-   void* pNext;
-   uint filterMinmaxSingleComponentFormats;
-   uint filterMinmaxImageComponentMapping;
+   StructureType s_type;
+   void* p_next;
+   uint filter_minmax_single_component_formats;
+   uint filter_minmax_image_component_mapping;
 }
 struct PhysicalDeviceSamplerFilterMinmaxPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint filterMinmaxSingleComponentFormats;
-   uint filterMinmaxImageComponentMapping;
+   StructureType s_type;
+   void* p_next;
+   uint filter_minmax_single_component_formats;
+   uint filter_minmax_image_component_mapping;
 }
 struct SampleLocationEXT {
    float x;
    float y;
 }
 struct SampleLocationsInfoEXT {
-   StructureType sType;
-   void* pNext;
-   SampleCountFlagBits sampleLocationsPerPixel;
-   Extent2D sampleLocationGridSize;
-   uint sampleLocationsCount;
-   SampleLocationEXT* pSampleLocations;
+   StructureType s_type;
+   void* p_next;
+   SampleCountFlagBits sample_locations_per_pixel;
+   Extent2D sample_location_grid_size;
+   uint sample_locations_count;
+   SampleLocationEXT* p_sample_locations;
 }
 struct AttachmentSampleLocationsEXT {
-   uint attachmentIndex;
-   SampleLocationsInfoEXT sampleLocationsInfo;
+   uint attachment_index;
+   SampleLocationsInfoEXT sample_locations_info;
 }
 struct SubpassSampleLocationsEXT {
-   uint subpassIndex;
-   SampleLocationsInfoEXT sampleLocationsInfo;
+   uint subpass_index;
+   SampleLocationsInfoEXT sample_locations_info;
 }
 struct RenderPassSampleLocationsBeginInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint attachmentInitialSampleLocationsCount;
-   AttachmentSampleLocationsEXT* pAttachmentInitialSampleLocations;
-   uint postSubpassSampleLocationsCount;
-   SubpassSampleLocationsEXT* pPostSubpassSampleLocations;
+   StructureType s_type;
+   void* p_next;
+   uint attachment_initial_sample_locations_count;
+   AttachmentSampleLocationsEXT* p_attachment_initial_sample_locations;
+   uint post_subpass_sample_locations_count;
+   SubpassSampleLocationsEXT* p_post_subpass_sample_locations;
 }
 struct PipelineSampleLocationsStateCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint sampleLocationsEnable;
-   SampleLocationsInfoEXT sampleLocationsInfo;
+   StructureType s_type;
+   void* p_next;
+   uint sample_locations_enable;
+   SampleLocationsInfoEXT sample_locations_info;
 }
 struct PhysicalDeviceSampleLocationsPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   SampleCountFlags sampleLocationSampleCounts;
-   Extent2D maxSampleLocationGridSize;
-   float[2] sampleLocationCoordinateRange;
-   uint sampleLocationSubPixelBits;
-   uint variableSampleLocations;
+   StructureType s_type;
+   void* p_next;
+   SampleCountFlags sample_location_sample_counts;
+   Extent2D max_sample_location_grid_size;
+   float[2] sample_location_coordinate_range;
+   uint sample_location_sub_pixel_bits;
+   uint variable_sample_locations;
 }
 struct MultisamplePropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   Extent2D maxSampleLocationGridSize;
+   StructureType s_type;
+   void* p_next;
+   Extent2D max_sample_location_grid_size;
 }
 struct SamplerReductionModeCreateInfo {
-   StructureType sType;
-   void* pNext;
-   SamplerReductionMode reductionMode;
+   StructureType s_type;
+   void* p_next;
+   SamplerReductionMode reduction_mode;
 }
 struct SamplerReductionModeCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   SamplerReductionMode reductionMode;
+   StructureType s_type;
+   void* p_next;
+   SamplerReductionMode reduction_mode;
 }
 struct PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint advancedBlendCoherentOperations;
+   StructureType s_type;
+   void* p_next;
+   uint advanced_blend_coherent_operations;
 }
 struct PhysicalDeviceMultiDrawFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint multiDraw;
+   StructureType s_type;
+   void* p_next;
+   uint multi_draw;
 }
 struct PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint advancedBlendMaxColorAttachments;
-   uint advancedBlendIndependentBlend;
-   uint advancedBlendNonPremultipliedSrcColor;
-   uint advancedBlendNonPremultipliedDstColor;
-   uint advancedBlendCorrelatedOverlap;
-   uint advancedBlendAllOperations;
+   StructureType s_type;
+   void* p_next;
+   uint advanced_blend_max_color_attachments;
+   uint advanced_blend_independent_blend;
+   uint advanced_blend_non_premultiplied_src_color;
+   uint advanced_blend_non_premultiplied_dst_color;
+   uint advanced_blend_correlated_overlap;
+   uint advanced_blend_all_operations;
 }
 struct PipelineColorBlendAdvancedStateCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint srcPremultiplied;
-   uint dstPremultiplied;
-   BlendOverlapEXT blendOverlap;
+   StructureType s_type;
+   void* p_next;
+   uint src_premultiplied;
+   uint dst_premultiplied;
+   BlendOverlapEXT blend_overlap;
 }
 struct PhysicalDeviceInlineUniformBlockFeatures {
-   StructureType sType;
-   void* pNext;
-   uint inlineUniformBlock;
-   uint descriptorBindingInlineUniformBlockUpdateAfterBind;
+   StructureType s_type;
+   void* p_next;
+   uint inline_uniform_block;
+   uint descriptor_binding_inline_uniform_block_update_after_bind;
 }
 struct PhysicalDeviceInlineUniformBlockFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint inlineUniformBlock;
-   uint descriptorBindingInlineUniformBlockUpdateAfterBind;
+   StructureType s_type;
+   void* p_next;
+   uint inline_uniform_block;
+   uint descriptor_binding_inline_uniform_block_update_after_bind;
 }
 struct PhysicalDeviceInlineUniformBlockProperties {
-   StructureType sType;
-   void* pNext;
-   uint maxInlineUniformBlockSize;
-   uint maxPerStageDescriptorInlineUniformBlocks;
-   uint maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks;
-   uint maxDescriptorSetInlineUniformBlocks;
-   uint maxDescriptorSetUpdateAfterBindInlineUniformBlocks;
+   StructureType s_type;
+   void* p_next;
+   uint max_inline_uniform_block_size;
+   uint max_per_stage_descriptor_inline_uniform_blocks;
+   uint max_per_stage_descriptor_update_after_bind_inline_uniform_blocks;
+   uint max_descriptor_set_inline_uniform_blocks;
+   uint max_descriptor_set_update_after_bind_inline_uniform_blocks;
 }
 struct PhysicalDeviceInlineUniformBlockPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxInlineUniformBlockSize;
-   uint maxPerStageDescriptorInlineUniformBlocks;
-   uint maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks;
-   uint maxDescriptorSetInlineUniformBlocks;
-   uint maxDescriptorSetUpdateAfterBindInlineUniformBlocks;
+   StructureType s_type;
+   void* p_next;
+   uint max_inline_uniform_block_size;
+   uint max_per_stage_descriptor_inline_uniform_blocks;
+   uint max_per_stage_descriptor_update_after_bind_inline_uniform_blocks;
+   uint max_descriptor_set_inline_uniform_blocks;
+   uint max_descriptor_set_update_after_bind_inline_uniform_blocks;
 }
 struct WriteDescriptorSetInlineUniformBlock {
-   StructureType sType;
-   void* pNext;
-   uint dataSize;
-   void* pData;
+   StructureType s_type;
+   void* p_next;
+   uint data_size;
+   void* p_data;
 }
 struct WriteDescriptorSetInlineUniformBlockEXT {
-   StructureType sType;
-   void* pNext;
-   uint dataSize;
-   void* pData;
+   StructureType s_type;
+   void* p_next;
+   uint data_size;
+   void* p_data;
 }
 struct DescriptorPoolInlineUniformBlockCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint maxInlineUniformBlockBindings;
+   StructureType s_type;
+   void* p_next;
+   uint max_inline_uniform_block_bindings;
 }
 struct DescriptorPoolInlineUniformBlockCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxInlineUniformBlockBindings;
+   StructureType s_type;
+   void* p_next;
+   uint max_inline_uniform_block_bindings;
 }
 struct PipelineCoverageModulationStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineCoverageModulationStateCreateFlagsNV flags;
-   CoverageModulationModeNV coverageModulationMode;
-   uint coverageModulationTableEnable;
-   uint coverageModulationTableCount;
-   float* pCoverageModulationTable;
+   CoverageModulationModeNV coverage_modulation_mode;
+   uint coverage_modulation_table_enable;
+   uint coverage_modulation_table_count;
+   float* p_coverage_modulation_table;
 }
 struct ImageFormatListCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint viewFormatCount;
-   Format* pViewFormats;
+   StructureType s_type;
+   void* p_next;
+   uint view_format_count;
+   Format* p_view_formats;
 }
 struct ImageFormatListCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint viewFormatCount;
-   Format* pViewFormats;
+   StructureType s_type;
+   void* p_next;
+   uint view_format_count;
+   Format* p_view_formats;
 }
 struct ValidationCacheCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ValidationCacheCreateFlagsEXT flags;
-   sz initialDataSize;
-   void* pInitialData;
+   sz initial_data_size;
+   void* p_initial_data;
 }
 struct ShaderModuleValidationCacheCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ValidationCacheEXT validationCache;
+   StructureType s_type;
+   void* p_next;
+   ValidationCacheEXT validation_cache;
 }
 struct PhysicalDeviceMaintenance3Properties {
-   StructureType sType;
-   void* pNext;
-   uint maxPerSetDescriptors;
-   DeviceSize maxMemoryAllocationSize;
+   StructureType s_type;
+   void* p_next;
+   uint max_per_set_descriptors;
+   DeviceSize max_memory_allocation_size;
 }
 struct PhysicalDeviceMaintenance3PropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint maxPerSetDescriptors;
-   DeviceSize maxMemoryAllocationSize;
+   StructureType s_type;
+   void* p_next;
+   uint max_per_set_descriptors;
+   DeviceSize max_memory_allocation_size;
 }
 struct PhysicalDeviceMaintenance4Features {
-   StructureType sType;
-   void* pNext;
-   uint maintenance4;
+   StructureType s_type;
+   void* p_next;
+   uint maintenance_4;
 }
 struct PhysicalDeviceMaintenance4FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint maintenance4;
+   StructureType s_type;
+   void* p_next;
+   uint maintenance_4;
 }
 struct PhysicalDeviceMaintenance4Properties {
-   StructureType sType;
-   void* pNext;
-   DeviceSize maxBufferSize;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize max_buffer_size;
 }
 struct PhysicalDeviceMaintenance4PropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   DeviceSize maxBufferSize;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize max_buffer_size;
 }
 struct PhysicalDeviceMaintenance5FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint maintenance5;
+   StructureType s_type;
+   void* p_next;
+   uint maintenance_5;
 }
 struct PhysicalDeviceMaintenance5PropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint earlyFragmentMultisampleCoverageAfterSampleCounting;
-   uint earlyFragmentSampleMaskTestBeforeSampleCounting;
-   uint depthStencilSwizzleOneSupport;
-   uint polygonModePointSize;
-   uint nonStrictSinglePixelWideLinesUseParallelogram;
-   uint nonStrictWideLinesUseParallelogram;
+   StructureType s_type;
+   void* p_next;
+   uint early_fragment_multisample_coverage_after_sample_counting;
+   uint early_fragment_sample_mask_test_before_sample_counting;
+   uint depth_stencil_swizzle_one_support;
+   uint polygon_mode_point_size;
+   uint non_strict_single_pixel_wide_lines_use_parallelogram;
+   uint non_strict_wide_lines_use_parallelogram;
 }
 struct PhysicalDeviceMaintenance6FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint maintenance6;
+   StructureType s_type;
+   void* p_next;
+   uint maintenance_6;
 }
 struct PhysicalDeviceMaintenance6PropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint blockTexelViewCompatibleMultipleLayers;
-   uint maxCombinedImageSamplerDescriptorCount;
-   uint fragmentShadingRateClampCombinerInputs;
+   StructureType s_type;
+   void* p_next;
+   uint block_texel_view_compatible_multiple_layers;
+   uint max_combined_image_sampler_descriptor_count;
+   uint fragment_shading_rate_clamp_combiner_inputs;
 }
 struct PhysicalDeviceMaintenance7FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint maintenance7;
+   StructureType s_type;
+   void* p_next;
+   uint maintenance_7;
 }
 struct PhysicalDeviceMaintenance7PropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint robustFragmentShadingRateAttachmentAccess;
-   uint separateDepthStencilAttachmentAccess;
-   uint maxDescriptorSetTotalUniformBuffersDynamic;
-   uint maxDescriptorSetTotalStorageBuffersDynamic;
-   uint maxDescriptorSetTotalBuffersDynamic;
-   uint maxDescriptorSetUpdateAfterBindTotalUniformBuffersDynamic;
-   uint maxDescriptorSetUpdateAfterBindTotalStorageBuffersDynamic;
-   uint maxDescriptorSetUpdateAfterBindTotalBuffersDynamic;
+   StructureType s_type;
+   void* p_next;
+   uint robust_fragment_shading_rate_attachment_access;
+   uint separate_depth_stencil_attachment_access;
+   uint max_descriptor_set_total_uniform_buffers_dynamic;
+   uint max_descriptor_set_total_storage_buffers_dynamic;
+   uint max_descriptor_set_total_buffers_dynamic;
+   uint max_descriptor_set_update_after_bind_total_uniform_buffers_dynamic;
+   uint max_descriptor_set_update_after_bind_total_storage_buffers_dynamic;
+   uint max_descriptor_set_update_after_bind_total_buffers_dynamic;
 }
 struct PhysicalDeviceLayeredApiPropertiesListKHR {
-   StructureType sType;
-   void* pNext;
-   uint layeredApiCount;
-   PhysicalDeviceLayeredApiPropertiesKHR* pLayeredApis;
+   StructureType s_type;
+   void* p_next;
+   uint layered_api_count;
+   PhysicalDeviceLayeredApiPropertiesKHR* p_layered_apis;
 }
 struct PhysicalDeviceLayeredApiPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint vendorID;
-   uint deviceID;
-   PhysicalDeviceLayeredApiKHR layeredAPI;
-   char[MAX_PHYSICAL_DEVICE_NAME_SIZE] deviceName;
+   StructureType s_type;
+   void* p_next;
+   uint vendor_id;
+   uint device_id;
+   PhysicalDeviceLayeredApiKHR layered_api;
+   char[MAX_PHYSICAL_DEVICE_NAME_SIZE] device_name;
 }
 struct PhysicalDeviceLayeredApiVulkanPropertiesKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PhysicalDeviceProperties2 properties;
 }
 struct RenderingAreaInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint viewMask;
-   uint colorAttachmentCount;
-   Format* pColorAttachmentFormats;
-   Format depthAttachmentFormat;
-   Format stencilAttachmentFormat;
+   StructureType s_type;
+   void* p_next;
+   uint view_mask;
+   uint color_attachment_count;
+   Format* p_color_attachment_formats;
+   Format depth_attachment_format;
+   Format stencil_attachment_format;
 }
 struct DescriptorSetLayoutSupport {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint supported;
 }
 struct DescriptorSetLayoutSupportKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint supported;
 }
 struct PhysicalDeviceShaderDrawParametersFeatures {
-   StructureType sType;
-   void* pNext;
-   uint shaderDrawParameters;
+   StructureType s_type;
+   void* p_next;
+   uint shader_draw_parameters;
 }
 struct PhysicalDeviceShaderDrawParameterFeatures {
-   StructureType sType;
-   void* pNext;
-   uint shaderDrawParameters;
+   StructureType s_type;
+   void* p_next;
+   uint shader_draw_parameters;
 }
 struct PhysicalDeviceShaderFloat16Int8Features {
-   StructureType sType;
-   void* pNext;
-   uint shaderFloat16;
-   uint shaderInt8;
+   StructureType s_type;
+   void* p_next;
+   uint shader_float_16;
+   uint shader_int_8;
 }
 struct PhysicalDeviceShaderFloat16Int8FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderFloat16;
-   uint shaderInt8;
+   StructureType s_type;
+   void* p_next;
+   uint shader_float_16;
+   uint shader_int_8;
 }
 struct PhysicalDeviceFloat16Int8FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderFloat16;
-   uint shaderInt8;
+   StructureType s_type;
+   void* p_next;
+   uint shader_float_16;
+   uint shader_int_8;
 }
 struct PhysicalDeviceFloatControlsProperties {
-   StructureType sType;
-   void* pNext;
-   ShaderFloatControlsIndependence denormBehaviorIndependence;
-   ShaderFloatControlsIndependence roundingModeIndependence;
-   uint shaderSignedZeroInfNanPreserveFloat16;
-   uint shaderSignedZeroInfNanPreserveFloat32;
-   uint shaderSignedZeroInfNanPreserveFloat64;
-   uint shaderDenormPreserveFloat16;
-   uint shaderDenormPreserveFloat32;
-   uint shaderDenormPreserveFloat64;
-   uint shaderDenormFlushToZeroFloat16;
-   uint shaderDenormFlushToZeroFloat32;
-   uint shaderDenormFlushToZeroFloat64;
-   uint shaderRoundingModeRTEFloat16;
-   uint shaderRoundingModeRTEFloat32;
-   uint shaderRoundingModeRTEFloat64;
-   uint shaderRoundingModeRTZFloat16;
-   uint shaderRoundingModeRTZFloat32;
-   uint shaderRoundingModeRTZFloat64;
+   StructureType s_type;
+   void* p_next;
+   ShaderFloatControlsIndependence denorm_behavior_independence;
+   ShaderFloatControlsIndependence rounding_mode_independence;
+   uint shader_signed_zero_inf_nan_preserve_float_16;
+   uint shader_signed_zero_inf_nan_preserve_float_32;
+   uint shader_signed_zero_inf_nan_preserve_float_64;
+   uint shader_denorm_preserve_float_16;
+   uint shader_denorm_preserve_float_32;
+   uint shader_denorm_preserve_float_64;
+   uint shader_denorm_flush_to_zero_float_16;
+   uint shader_denorm_flush_to_zero_float_32;
+   uint shader_denorm_flush_to_zero_float_64;
+   uint shader_rounding_mode_rte_float_16;
+   uint shader_rounding_mode_rte_float_32;
+   uint shader_rounding_mode_rte_float_64;
+   uint shader_rounding_mode_rtz_float_16;
+   uint shader_rounding_mode_rtz_float_32;
+   uint shader_rounding_mode_rtz_float_64;
 }
 struct PhysicalDeviceFloatControlsPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   ShaderFloatControlsIndependence denormBehaviorIndependence;
-   ShaderFloatControlsIndependence roundingModeIndependence;
-   uint shaderSignedZeroInfNanPreserveFloat16;
-   uint shaderSignedZeroInfNanPreserveFloat32;
-   uint shaderSignedZeroInfNanPreserveFloat64;
-   uint shaderDenormPreserveFloat16;
-   uint shaderDenormPreserveFloat32;
-   uint shaderDenormPreserveFloat64;
-   uint shaderDenormFlushToZeroFloat16;
-   uint shaderDenormFlushToZeroFloat32;
-   uint shaderDenormFlushToZeroFloat64;
-   uint shaderRoundingModeRTEFloat16;
-   uint shaderRoundingModeRTEFloat32;
-   uint shaderRoundingModeRTEFloat64;
-   uint shaderRoundingModeRTZFloat16;
-   uint shaderRoundingModeRTZFloat32;
-   uint shaderRoundingModeRTZFloat64;
+   StructureType s_type;
+   void* p_next;
+   ShaderFloatControlsIndependence denorm_behavior_independence;
+   ShaderFloatControlsIndependence rounding_mode_independence;
+   uint shader_signed_zero_inf_nan_preserve_float_16;
+   uint shader_signed_zero_inf_nan_preserve_float_32;
+   uint shader_signed_zero_inf_nan_preserve_float_64;
+   uint shader_denorm_preserve_float_16;
+   uint shader_denorm_preserve_float_32;
+   uint shader_denorm_preserve_float_64;
+   uint shader_denorm_flush_to_zero_float_16;
+   uint shader_denorm_flush_to_zero_float_32;
+   uint shader_denorm_flush_to_zero_float_64;
+   uint shader_rounding_mode_rte_float_16;
+   uint shader_rounding_mode_rte_float_32;
+   uint shader_rounding_mode_rte_float_64;
+   uint shader_rounding_mode_rtz_float_16;
+   uint shader_rounding_mode_rtz_float_32;
+   uint shader_rounding_mode_rtz_float_64;
 }
 struct PhysicalDeviceHostQueryResetFeatures {
-   StructureType sType;
-   void* pNext;
-   uint hostQueryReset;
+   StructureType s_type;
+   void* p_next;
+   uint host_query_reset;
 }
 struct PhysicalDeviceHostQueryResetFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint hostQueryReset;
+   StructureType s_type;
+   void* p_next;
+   uint host_query_reset;
 }
 struct ShaderResourceUsageAMD {
-   uint numUsedVgprs;
-   uint numUsedSgprs;
-   uint ldsSizePerLocalWorkGroup;
-   sz ldsUsageSizeInBytes;
-   sz scratchMemUsageInBytes;
+   uint num_used_vgprs;
+   uint num_used_sgprs;
+   uint lds_size_per_local_work_group;
+   sz lds_usage_size_in_bytes;
+   sz scratch_mem_usage_in_bytes;
 }
 struct ShaderStatisticsInfoAMD {
-   ShaderStageFlags shaderStageMask;
-   ShaderResourceUsageAMD resourceUsage;
-   uint numPhysicalVgprs;
-   uint numPhysicalSgprs;
-   uint numAvailableVgprs;
-   uint numAvailableSgprs;
-   uint[3] computeWorkGroupSize;
+   ShaderStageFlags shader_stage_mask;
+   ShaderResourceUsageAMD resource_usage;
+   uint num_physical_vgprs;
+   uint num_physical_sgprs;
+   uint num_available_vgprs;
+   uint num_available_sgprs;
+   uint[3] compute_work_group_size;
 }
 struct DeviceQueueGlobalPriorityCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   QueueGlobalPriorityKHR globalPriority;
+   StructureType s_type;
+   void* p_next;
+   QueueGlobalPriorityKHR global_priority;
 }
 struct DeviceQueueGlobalPriorityCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   QueueGlobalPriorityKHR globalPriority;
+   StructureType s_type;
+   void* p_next;
+   QueueGlobalPriorityKHR global_priority;
 }
 struct PhysicalDeviceGlobalPriorityQueryFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint globalPriorityQuery;
+   StructureType s_type;
+   void* p_next;
+   uint global_priority_query;
 }
 struct PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint globalPriorityQuery;
+   StructureType s_type;
+   void* p_next;
+   uint global_priority_query;
 }
 struct QueueFamilyGlobalPriorityPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint priorityCount;
+   StructureType s_type;
+   void* p_next;
+   uint priority_count;
    QueueGlobalPriorityKHR[MAX_GLOBAL_PRIORITY_SIZE_KHR] priorities;
 }
 struct QueueFamilyGlobalPriorityPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint priorityCount;
+   StructureType s_type;
+   void* p_next;
+   uint priority_count;
    QueueGlobalPriorityKHR[MAX_GLOBAL_PRIORITY_SIZE_KHR] priorities;
 }
 struct DebugUtilsObjectNameInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ObjectType objectType;
-   ulong objectHandle;
-   char* pObjectName;
+   StructureType s_type;
+   void* p_next;
+   ObjectType object_type;
+   ulong object_handle;
+   char* p_object_name;
 }
 struct DebugUtilsObjectTagInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ObjectType objectType;
-   ulong objectHandle;
-   ulong tagName;
-   sz tagSize;
-   void* pTag;
+   StructureType s_type;
+   void* p_next;
+   ObjectType object_type;
+   ulong object_handle;
+   ulong tag_name;
+   sz tag_size;
+   void* p_tag;
 }
 struct DebugUtilsLabelEXT {
-   StructureType sType;
-   void* pNext;
-   char* pLabelName;
+   StructureType s_type;
+   void* p_next;
+   char* p_label_name;
    float[4] color;
 }
 struct DebugUtilsMessengerCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DebugUtilsMessengerCreateFlagsEXT flags;
-   DebugUtilsMessageSeverityFlagsEXT messageSeverity;
-   DebugUtilsMessageTypeFlagsEXT messageType;
-   PFN_vkDebugUtilsMessengerCallbackEXT pfnUserCallback;
-   void* pUserData;
+   DebugUtilsMessageSeverityFlagsEXT message_severity;
+   DebugUtilsMessageTypeFlagsEXT message_type;
+   PFN_vkDebugUtilsMessengerCallbackEXT pfn_user_callback;
+   void* p_user_data;
 }
 struct DebugUtilsMessengerCallbackDataEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DebugUtilsMessengerCallbackDataFlagsEXT flags;
-   char* pMessageIdName;
-   int messageIdNumber;
-   char* pMessage;
-   uint queueLabelCount;
-   DebugUtilsLabelEXT* pQueueLabels;
-   uint cmdBufLabelCount;
-   DebugUtilsLabelEXT* pCmdBufLabels;
-   uint objectCount;
-   DebugUtilsObjectNameInfoEXT* pObjects;
+   char* p_message_id_name;
+   int message_id_number;
+   char* p_message;
+   uint queue_label_count;
+   DebugUtilsLabelEXT* p_queue_labels;
+   uint cmd_buf_label_count;
+   DebugUtilsLabelEXT* p_cmd_buf_labels;
+   uint object_count;
+   DebugUtilsObjectNameInfoEXT* p_objects;
 }
 struct PhysicalDeviceDeviceMemoryReportFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint deviceMemoryReport;
+   StructureType s_type;
+   void* p_next;
+   uint device_memory_report;
 }
 struct DeviceMemoryReportCallbackDataEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceMemoryReportFlagsEXT flags;
    DeviceMemoryReportEventTypeEXT type;
-   ulong memoryObjectId;
+   ulong memory_object_id;
    DeviceSize size;
-   ObjectType objectType;
-   ulong objectHandle;
-   uint heapIndex;
+   ObjectType object_type;
+   ulong object_handle;
+   uint heap_index;
 }
 struct ImportMemoryHostPointerInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ExternalMemoryHandleTypeFlagBits handleType;
-   void* pHostPointer;
+   StructureType s_type;
+   void* p_next;
+   ExternalMemoryHandleTypeFlagBits handle_type;
+   void* p_host_pointer;
 }
 struct MemoryHostPointerPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint memoryTypeBits;
+   StructureType s_type;
+   void* p_next;
+   uint memory_type_bits;
 }
 struct PhysicalDeviceExternalMemoryHostPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   DeviceSize minImportedHostPointerAlignment;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize min_imported_host_pointer_alignment;
 }
 struct PhysicalDeviceConservativeRasterizationPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   float primitiveOverestimationSize;
-   float maxExtraPrimitiveOverestimationSize;
-   float extraPrimitiveOverestimationSizeGranularity;
-   uint primitiveUnderestimation;
-   uint conservativePointAndLineRasterization;
-   uint degenerateTrianglesRasterized;
-   uint degenerateLinesRasterized;
-   uint fullyCoveredFragmentShaderInputVariable;
-   uint conservativeRasterizationPostDepthCoverage;
+   StructureType s_type;
+   void* p_next;
+   float primitive_overestimation_size;
+   float max_extra_primitive_overestimation_size;
+   float extra_primitive_overestimation_size_granularity;
+   uint primitive_underestimation;
+   uint conservative_point_and_line_rasterization;
+   uint degenerate_triangles_rasterized;
+   uint degenerate_lines_rasterized;
+   uint fully_covered_fragment_shader_input_variable;
+   uint conservative_rasterization_post_depth_coverage;
 }
 struct CalibratedTimestampInfoKHR {
-   StructureType sType;
-   void* pNext;
-   TimeDomainKHR timeDomain;
+   StructureType s_type;
+   void* p_next;
+   TimeDomainKHR time_domain;
 }
 struct CalibratedTimestampInfoEXT {
-   StructureType sType;
-   void* pNext;
-   TimeDomainKHR timeDomain;
+   StructureType s_type;
+   void* p_next;
+   TimeDomainKHR time_domain;
 }
 struct PhysicalDeviceShaderCorePropertiesAMD {
-   StructureType sType;
-   void* pNext;
-   uint shaderEngineCount;
-   uint shaderArraysPerEngineCount;
-   uint computeUnitsPerShaderArray;
-   uint simdPerComputeUnit;
-   uint wavefrontsPerSimd;
-   uint wavefrontSize;
-   uint sgprsPerSimd;
-   uint minSgprAllocation;
-   uint maxSgprAllocation;
-   uint sgprAllocationGranularity;
-   uint vgprsPerSimd;
-   uint minVgprAllocation;
-   uint maxVgprAllocation;
-   uint vgprAllocationGranularity;
+   StructureType s_type;
+   void* p_next;
+   uint shader_engine_count;
+   uint shader_arrays_per_engine_count;
+   uint compute_units_per_shader_array;
+   uint simd_per_compute_unit;
+   uint wavefronts_per_simd;
+   uint wavefront_size;
+   uint sgprs_per_simd;
+   uint min_sgpr_allocation;
+   uint max_sgpr_allocation;
+   uint sgpr_allocation_granularity;
+   uint vgprs_per_simd;
+   uint min_vgpr_allocation;
+   uint max_vgpr_allocation;
+   uint vgpr_allocation_granularity;
 }
 struct PhysicalDeviceShaderCoreProperties2AMD {
-   StructureType sType;
-   void* pNext;
-   ShaderCorePropertiesFlagsAMD shaderCoreFeatures;
-   uint activeComputeUnitCount;
+   StructureType s_type;
+   void* p_next;
+   ShaderCorePropertiesFlagsAMD shader_core_features;
+   uint active_compute_unit_count;
 }
 struct PipelineRasterizationConservativeStateCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineRasterizationConservativeStateCreateFlagsEXT flags;
-   ConservativeRasterizationModeEXT conservativeRasterizationMode;
-   float extraPrimitiveOverestimationSize;
+   ConservativeRasterizationModeEXT conservative_rasterization_mode;
+   float extra_primitive_overestimation_size;
 }
 struct PhysicalDeviceDescriptorIndexingFeatures {
-   StructureType sType;
-   void* pNext;
-   uint shaderInputAttachmentArrayDynamicIndexing;
-   uint shaderUniformTexelBufferArrayDynamicIndexing;
-   uint shaderStorageTexelBufferArrayDynamicIndexing;
-   uint shaderUniformBufferArrayNonUniformIndexing;
-   uint shaderSampledImageArrayNonUniformIndexing;
-   uint shaderStorageBufferArrayNonUniformIndexing;
-   uint shaderStorageImageArrayNonUniformIndexing;
-   uint shaderInputAttachmentArrayNonUniformIndexing;
-   uint shaderUniformTexelBufferArrayNonUniformIndexing;
-   uint shaderStorageTexelBufferArrayNonUniformIndexing;
-   uint descriptorBindingUniformBufferUpdateAfterBind;
-   uint descriptorBindingSampledImageUpdateAfterBind;
-   uint descriptorBindingStorageImageUpdateAfterBind;
-   uint descriptorBindingStorageBufferUpdateAfterBind;
-   uint descriptorBindingUniformTexelBufferUpdateAfterBind;
-   uint descriptorBindingStorageTexelBufferUpdateAfterBind;
-   uint descriptorBindingUpdateUnusedWhilePending;
-   uint descriptorBindingPartiallyBound;
-   uint descriptorBindingVariableDescriptorCount;
-   uint runtimeDescriptorArray;
+   StructureType s_type;
+   void* p_next;
+   uint shader_input_attachment_array_dynamic_indexing;
+   uint shader_uniform_texel_buffer_array_dynamic_indexing;
+   uint shader_storage_texel_buffer_array_dynamic_indexing;
+   uint shader_uniform_buffer_array_non_uniform_indexing;
+   uint shader_sampled_image_array_non_uniform_indexing;
+   uint shader_storage_buffer_array_non_uniform_indexing;
+   uint shader_storage_image_array_non_uniform_indexing;
+   uint shader_input_attachment_array_non_uniform_indexing;
+   uint shader_uniform_texel_buffer_array_non_uniform_indexing;
+   uint shader_storage_texel_buffer_array_non_uniform_indexing;
+   uint descriptor_binding_uniform_buffer_update_after_bind;
+   uint descriptor_binding_sampled_image_update_after_bind;
+   uint descriptor_binding_storage_image_update_after_bind;
+   uint descriptor_binding_storage_buffer_update_after_bind;
+   uint descriptor_binding_uniform_texel_buffer_update_after_bind;
+   uint descriptor_binding_storage_texel_buffer_update_after_bind;
+   uint descriptor_binding_update_unused_while_pending;
+   uint descriptor_binding_partially_bound;
+   uint descriptor_binding_variable_descriptor_count;
+   uint runtime_descriptor_array;
 }
 struct PhysicalDeviceDescriptorIndexingFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderInputAttachmentArrayDynamicIndexing;
-   uint shaderUniformTexelBufferArrayDynamicIndexing;
-   uint shaderStorageTexelBufferArrayDynamicIndexing;
-   uint shaderUniformBufferArrayNonUniformIndexing;
-   uint shaderSampledImageArrayNonUniformIndexing;
-   uint shaderStorageBufferArrayNonUniformIndexing;
-   uint shaderStorageImageArrayNonUniformIndexing;
-   uint shaderInputAttachmentArrayNonUniformIndexing;
-   uint shaderUniformTexelBufferArrayNonUniformIndexing;
-   uint shaderStorageTexelBufferArrayNonUniformIndexing;
-   uint descriptorBindingUniformBufferUpdateAfterBind;
-   uint descriptorBindingSampledImageUpdateAfterBind;
-   uint descriptorBindingStorageImageUpdateAfterBind;
-   uint descriptorBindingStorageBufferUpdateAfterBind;
-   uint descriptorBindingUniformTexelBufferUpdateAfterBind;
-   uint descriptorBindingStorageTexelBufferUpdateAfterBind;
-   uint descriptorBindingUpdateUnusedWhilePending;
-   uint descriptorBindingPartiallyBound;
-   uint descriptorBindingVariableDescriptorCount;
-   uint runtimeDescriptorArray;
+   StructureType s_type;
+   void* p_next;
+   uint shader_input_attachment_array_dynamic_indexing;
+   uint shader_uniform_texel_buffer_array_dynamic_indexing;
+   uint shader_storage_texel_buffer_array_dynamic_indexing;
+   uint shader_uniform_buffer_array_non_uniform_indexing;
+   uint shader_sampled_image_array_non_uniform_indexing;
+   uint shader_storage_buffer_array_non_uniform_indexing;
+   uint shader_storage_image_array_non_uniform_indexing;
+   uint shader_input_attachment_array_non_uniform_indexing;
+   uint shader_uniform_texel_buffer_array_non_uniform_indexing;
+   uint shader_storage_texel_buffer_array_non_uniform_indexing;
+   uint descriptor_binding_uniform_buffer_update_after_bind;
+   uint descriptor_binding_sampled_image_update_after_bind;
+   uint descriptor_binding_storage_image_update_after_bind;
+   uint descriptor_binding_storage_buffer_update_after_bind;
+   uint descriptor_binding_uniform_texel_buffer_update_after_bind;
+   uint descriptor_binding_storage_texel_buffer_update_after_bind;
+   uint descriptor_binding_update_unused_while_pending;
+   uint descriptor_binding_partially_bound;
+   uint descriptor_binding_variable_descriptor_count;
+   uint runtime_descriptor_array;
 }
 struct PhysicalDeviceDescriptorIndexingProperties {
-   StructureType sType;
-   void* pNext;
-   uint maxUpdateAfterBindDescriptorsInAllPools;
-   uint shaderUniformBufferArrayNonUniformIndexingNative;
-   uint shaderSampledImageArrayNonUniformIndexingNative;
-   uint shaderStorageBufferArrayNonUniformIndexingNative;
-   uint shaderStorageImageArrayNonUniformIndexingNative;
-   uint shaderInputAttachmentArrayNonUniformIndexingNative;
-   uint robustBufferAccessUpdateAfterBind;
-   uint quadDivergentImplicitLod;
-   uint maxPerStageDescriptorUpdateAfterBindSamplers;
-   uint maxPerStageDescriptorUpdateAfterBindUniformBuffers;
-   uint maxPerStageDescriptorUpdateAfterBindStorageBuffers;
-   uint maxPerStageDescriptorUpdateAfterBindSampledImages;
-   uint maxPerStageDescriptorUpdateAfterBindStorageImages;
-   uint maxPerStageDescriptorUpdateAfterBindInputAttachments;
-   uint maxPerStageUpdateAfterBindResources;
-   uint maxDescriptorSetUpdateAfterBindSamplers;
-   uint maxDescriptorSetUpdateAfterBindUniformBuffers;
-   uint maxDescriptorSetUpdateAfterBindUniformBuffersDynamic;
-   uint maxDescriptorSetUpdateAfterBindStorageBuffers;
-   uint maxDescriptorSetUpdateAfterBindStorageBuffersDynamic;
-   uint maxDescriptorSetUpdateAfterBindSampledImages;
-   uint maxDescriptorSetUpdateAfterBindStorageImages;
-   uint maxDescriptorSetUpdateAfterBindInputAttachments;
+   StructureType s_type;
+   void* p_next;
+   uint max_update_after_bind_descriptors_in_all_pools;
+   uint shader_uniform_buffer_array_non_uniform_indexing_native;
+   uint shader_sampled_image_array_non_uniform_indexing_native;
+   uint shader_storage_buffer_array_non_uniform_indexing_native;
+   uint shader_storage_image_array_non_uniform_indexing_native;
+   uint shader_input_attachment_array_non_uniform_indexing_native;
+   uint robust_buffer_access_update_after_bind;
+   uint quad_divergent_implicit_lod;
+   uint max_per_stage_descriptor_update_after_bind_samplers;
+   uint max_per_stage_descriptor_update_after_bind_uniform_buffers;
+   uint max_per_stage_descriptor_update_after_bind_storage_buffers;
+   uint max_per_stage_descriptor_update_after_bind_sampled_images;
+   uint max_per_stage_descriptor_update_after_bind_storage_images;
+   uint max_per_stage_descriptor_update_after_bind_input_attachments;
+   uint max_per_stage_update_after_bind_resources;
+   uint max_descriptor_set_update_after_bind_samplers;
+   uint max_descriptor_set_update_after_bind_uniform_buffers;
+   uint max_descriptor_set_update_after_bind_uniform_buffers_dynamic;
+   uint max_descriptor_set_update_after_bind_storage_buffers;
+   uint max_descriptor_set_update_after_bind_storage_buffers_dynamic;
+   uint max_descriptor_set_update_after_bind_sampled_images;
+   uint max_descriptor_set_update_after_bind_storage_images;
+   uint max_descriptor_set_update_after_bind_input_attachments;
 }
 struct PhysicalDeviceDescriptorIndexingPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxUpdateAfterBindDescriptorsInAllPools;
-   uint shaderUniformBufferArrayNonUniformIndexingNative;
-   uint shaderSampledImageArrayNonUniformIndexingNative;
-   uint shaderStorageBufferArrayNonUniformIndexingNative;
-   uint shaderStorageImageArrayNonUniformIndexingNative;
-   uint shaderInputAttachmentArrayNonUniformIndexingNative;
-   uint robustBufferAccessUpdateAfterBind;
-   uint quadDivergentImplicitLod;
-   uint maxPerStageDescriptorUpdateAfterBindSamplers;
-   uint maxPerStageDescriptorUpdateAfterBindUniformBuffers;
-   uint maxPerStageDescriptorUpdateAfterBindStorageBuffers;
-   uint maxPerStageDescriptorUpdateAfterBindSampledImages;
-   uint maxPerStageDescriptorUpdateAfterBindStorageImages;
-   uint maxPerStageDescriptorUpdateAfterBindInputAttachments;
-   uint maxPerStageUpdateAfterBindResources;
-   uint maxDescriptorSetUpdateAfterBindSamplers;
-   uint maxDescriptorSetUpdateAfterBindUniformBuffers;
-   uint maxDescriptorSetUpdateAfterBindUniformBuffersDynamic;
-   uint maxDescriptorSetUpdateAfterBindStorageBuffers;
-   uint maxDescriptorSetUpdateAfterBindStorageBuffersDynamic;
-   uint maxDescriptorSetUpdateAfterBindSampledImages;
-   uint maxDescriptorSetUpdateAfterBindStorageImages;
-   uint maxDescriptorSetUpdateAfterBindInputAttachments;
+   StructureType s_type;
+   void* p_next;
+   uint max_update_after_bind_descriptors_in_all_pools;
+   uint shader_uniform_buffer_array_non_uniform_indexing_native;
+   uint shader_sampled_image_array_non_uniform_indexing_native;
+   uint shader_storage_buffer_array_non_uniform_indexing_native;
+   uint shader_storage_image_array_non_uniform_indexing_native;
+   uint shader_input_attachment_array_non_uniform_indexing_native;
+   uint robust_buffer_access_update_after_bind;
+   uint quad_divergent_implicit_lod;
+   uint max_per_stage_descriptor_update_after_bind_samplers;
+   uint max_per_stage_descriptor_update_after_bind_uniform_buffers;
+   uint max_per_stage_descriptor_update_after_bind_storage_buffers;
+   uint max_per_stage_descriptor_update_after_bind_sampled_images;
+   uint max_per_stage_descriptor_update_after_bind_storage_images;
+   uint max_per_stage_descriptor_update_after_bind_input_attachments;
+   uint max_per_stage_update_after_bind_resources;
+   uint max_descriptor_set_update_after_bind_samplers;
+   uint max_descriptor_set_update_after_bind_uniform_buffers;
+   uint max_descriptor_set_update_after_bind_uniform_buffers_dynamic;
+   uint max_descriptor_set_update_after_bind_storage_buffers;
+   uint max_descriptor_set_update_after_bind_storage_buffers_dynamic;
+   uint max_descriptor_set_update_after_bind_sampled_images;
+   uint max_descriptor_set_update_after_bind_storage_images;
+   uint max_descriptor_set_update_after_bind_input_attachments;
 }
 struct DescriptorSetLayoutBindingFlagsCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint bindingCount;
-   DescriptorBindingFlags* pBindingFlags;
+   StructureType s_type;
+   void* p_next;
+   uint binding_count;
+   DescriptorBindingFlags* p_binding_flags;
 }
 struct DescriptorSetLayoutBindingFlagsCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint bindingCount;
-   DescriptorBindingFlags* pBindingFlags;
+   StructureType s_type;
+   void* p_next;
+   uint binding_count;
+   DescriptorBindingFlags* p_binding_flags;
 }
 struct DescriptorSetVariableDescriptorCountAllocateInfo {
-   StructureType sType;
-   void* pNext;
-   uint descriptorSetCount;
-   uint* pDescriptorCounts;
+   StructureType s_type;
+   void* p_next;
+   uint descriptor_set_count;
+   uint* p_descriptor_counts;
 }
 struct DescriptorSetVariableDescriptorCountAllocateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint descriptorSetCount;
-   uint* pDescriptorCounts;
+   StructureType s_type;
+   void* p_next;
+   uint descriptor_set_count;
+   uint* p_descriptor_counts;
 }
 struct DescriptorSetVariableDescriptorCountLayoutSupport {
-   StructureType sType;
-   void* pNext;
-   uint maxVariableDescriptorCount;
+   StructureType s_type;
+   void* p_next;
+   uint max_variable_descriptor_count;
 }
 struct DescriptorSetVariableDescriptorCountLayoutSupportEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxVariableDescriptorCount;
+   StructureType s_type;
+   void* p_next;
+   uint max_variable_descriptor_count;
 }
 struct AttachmentDescription2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    AttachmentDescriptionFlags flags;
    Format format;
    SampleCountFlagBits samples;
-   AttachmentLoadOp loadOp;
-   AttachmentStoreOp storeOp;
-   AttachmentLoadOp stencilLoadOp;
-   AttachmentStoreOp stencilStoreOp;
-   ImageLayout initialLayout;
-   ImageLayout finalLayout;
+   AttachmentLoadOp load_op;
+   AttachmentStoreOp store_op;
+   AttachmentLoadOp stencil_load_op;
+   AttachmentStoreOp stencil_store_op;
+   ImageLayout initial_layout;
+   ImageLayout final_layout;
 }
 struct AttachmentDescription2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    AttachmentDescriptionFlags flags;
    Format format;
    SampleCountFlagBits samples;
-   AttachmentLoadOp loadOp;
-   AttachmentStoreOp storeOp;
-   AttachmentLoadOp stencilLoadOp;
-   AttachmentStoreOp stencilStoreOp;
-   ImageLayout initialLayout;
-   ImageLayout finalLayout;
+   AttachmentLoadOp load_op;
+   AttachmentStoreOp store_op;
+   AttachmentLoadOp stencil_load_op;
+   AttachmentStoreOp stencil_store_op;
+   ImageLayout initial_layout;
+   ImageLayout final_layout;
 }
 struct AttachmentReference2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint attachment;
    ImageLayout layout;
-   ImageAspectFlags aspectMask;
+   ImageAspectFlags aspect_mask;
 }
 struct AttachmentReference2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint attachment;
    ImageLayout layout;
-   ImageAspectFlags aspectMask;
+   ImageAspectFlags aspect_mask;
 }
 struct SubpassDescription2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SubpassDescriptionFlags flags;
-   PipelineBindPoint pipelineBindPoint;
-   uint viewMask;
-   uint inputAttachmentCount;
-   AttachmentReference2* pInputAttachments;
-   uint colorAttachmentCount;
-   AttachmentReference2* pColorAttachments;
-   AttachmentReference2* pResolveAttachments;
-   AttachmentReference2* pDepthStencilAttachment;
-   uint preserveAttachmentCount;
-   uint* pPreserveAttachments;
+   PipelineBindPoint pipeline_bind_point;
+   uint view_mask;
+   uint input_attachment_count;
+   AttachmentReference2* p_input_attachments;
+   uint color_attachment_count;
+   AttachmentReference2* p_color_attachments;
+   AttachmentReference2* p_resolve_attachments;
+   AttachmentReference2* p_depth_stencil_attachment;
+   uint preserve_attachment_count;
+   uint* p_preserve_attachments;
 }
 struct SubpassDescription2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SubpassDescriptionFlags flags;
-   PipelineBindPoint pipelineBindPoint;
-   uint viewMask;
-   uint inputAttachmentCount;
-   AttachmentReference2* pInputAttachments;
-   uint colorAttachmentCount;
-   AttachmentReference2* pColorAttachments;
-   AttachmentReference2* pResolveAttachments;
-   AttachmentReference2* pDepthStencilAttachment;
-   uint preserveAttachmentCount;
-   uint* pPreserveAttachments;
+   PipelineBindPoint pipeline_bind_point;
+   uint view_mask;
+   uint input_attachment_count;
+   AttachmentReference2* p_input_attachments;
+   uint color_attachment_count;
+   AttachmentReference2* p_color_attachments;
+   AttachmentReference2* p_resolve_attachments;
+   AttachmentReference2* p_depth_stencil_attachment;
+   uint preserve_attachment_count;
+   uint* p_preserve_attachments;
 }
 struct SubpassDependency2 {
-   StructureType sType;
-   void* pNext;
-   uint srcSubpass;
-   uint dstSubpass;
-   PipelineStageFlags srcStageMask;
-   PipelineStageFlags dstStageMask;
-   AccessFlags srcAccessMask;
-   AccessFlags dstAccessMask;
-   DependencyFlags dependencyFlags;
-   int viewOffset;
+   StructureType s_type;
+   void* p_next;
+   uint src_subpass;
+   uint dst_subpass;
+   PipelineStageFlags src_stage_mask;
+   PipelineStageFlags dst_stage_mask;
+   AccessFlags src_access_mask;
+   AccessFlags dst_access_mask;
+   DependencyFlags dependency_flags;
+   int view_offset;
 }
 struct SubpassDependency2KHR {
-   StructureType sType;
-   void* pNext;
-   uint srcSubpass;
-   uint dstSubpass;
-   PipelineStageFlags srcStageMask;
-   PipelineStageFlags dstStageMask;
-   AccessFlags srcAccessMask;
-   AccessFlags dstAccessMask;
-   DependencyFlags dependencyFlags;
-   int viewOffset;
+   StructureType s_type;
+   void* p_next;
+   uint src_subpass;
+   uint dst_subpass;
+   PipelineStageFlags src_stage_mask;
+   PipelineStageFlags dst_stage_mask;
+   AccessFlags src_access_mask;
+   AccessFlags dst_access_mask;
+   DependencyFlags dependency_flags;
+   int view_offset;
 }
 struct RenderPassCreateInfo2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    RenderPassCreateFlags flags;
-   uint attachmentCount;
-   AttachmentDescription2* pAttachments;
-   uint subpassCount;
-   SubpassDescription2* pSubpasses;
-   uint dependencyCount;
-   SubpassDependency2* pDependencies;
-   uint correlatedViewMaskCount;
-   uint* pCorrelatedViewMasks;
+   uint attachment_count;
+   AttachmentDescription2* p_attachments;
+   uint subpass_count;
+   SubpassDescription2* p_subpasses;
+   uint dependency_count;
+   SubpassDependency2* p_dependencies;
+   uint correlated_view_mask_count;
+   uint* p_correlated_view_masks;
 }
 struct RenderPassCreateInfo2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    RenderPassCreateFlags flags;
-   uint attachmentCount;
-   AttachmentDescription2* pAttachments;
-   uint subpassCount;
-   SubpassDescription2* pSubpasses;
-   uint dependencyCount;
-   SubpassDependency2* pDependencies;
-   uint correlatedViewMaskCount;
-   uint* pCorrelatedViewMasks;
+   uint attachment_count;
+   AttachmentDescription2* p_attachments;
+   uint subpass_count;
+   SubpassDescription2* p_subpasses;
+   uint dependency_count;
+   SubpassDependency2* p_dependencies;
+   uint correlated_view_mask_count;
+   uint* p_correlated_view_masks;
 }
 struct SubpassBeginInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SubpassContents contents;
 }
 struct SubpassBeginInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SubpassContents contents;
 }
 struct SubpassEndInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
 }
 struct SubpassEndInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
 }
 struct PhysicalDeviceTimelineSemaphoreFeatures {
-   StructureType sType;
-   void* pNext;
-   uint timelineSemaphore;
+   StructureType s_type;
+   void* p_next;
+   uint timeline_semaphore;
 }
 struct PhysicalDeviceTimelineSemaphoreFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint timelineSemaphore;
+   StructureType s_type;
+   void* p_next;
+   uint timeline_semaphore;
 }
 struct PhysicalDeviceTimelineSemaphoreProperties {
-   StructureType sType;
-   void* pNext;
-   ulong maxTimelineSemaphoreValueDifference;
+   StructureType s_type;
+   void* p_next;
+   ulong max_timeline_semaphore_value_difference;
 }
 struct PhysicalDeviceTimelineSemaphorePropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   ulong maxTimelineSemaphoreValueDifference;
+   StructureType s_type;
+   void* p_next;
+   ulong max_timeline_semaphore_value_difference;
 }
 struct SemaphoreTypeCreateInfo {
-   StructureType sType;
-   void* pNext;
-   SemaphoreType semaphoreType;
-   ulong initialValue;
+   StructureType s_type;
+   void* p_next;
+   SemaphoreType semaphore_type;
+   ulong initial_value;
 }
 struct SemaphoreTypeCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   SemaphoreType semaphoreType;
-   ulong initialValue;
+   StructureType s_type;
+   void* p_next;
+   SemaphoreType semaphore_type;
+   ulong initial_value;
 }
 struct TimelineSemaphoreSubmitInfo {
-   StructureType sType;
-   void* pNext;
-   uint waitSemaphoreValueCount;
-   ulong* pWaitSemaphoreValues;
-   uint signalSemaphoreValueCount;
-   ulong* pSignalSemaphoreValues;
+   StructureType s_type;
+   void* p_next;
+   uint wait_semaphore_value_count;
+   ulong* p_wait_semaphore_values;
+   uint signal_semaphore_value_count;
+   ulong* p_signal_semaphore_values;
 }
 struct TimelineSemaphoreSubmitInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint waitSemaphoreValueCount;
-   ulong* pWaitSemaphoreValues;
-   uint signalSemaphoreValueCount;
-   ulong* pSignalSemaphoreValues;
+   StructureType s_type;
+   void* p_next;
+   uint wait_semaphore_value_count;
+   ulong* p_wait_semaphore_values;
+   uint signal_semaphore_value_count;
+   ulong* p_signal_semaphore_values;
 }
 struct SemaphoreWaitInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SemaphoreWaitFlags flags;
-   uint semaphoreCount;
-   Semaphore* pSemaphores;
-   ulong* pValues;
+   uint semaphore_count;
+   Semaphore* p_semaphores;
+   ulong* p_values;
 }
 struct SemaphoreWaitInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SemaphoreWaitFlags flags;
-   uint semaphoreCount;
-   Semaphore* pSemaphores;
-   ulong* pValues;
+   uint semaphore_count;
+   Semaphore* p_semaphores;
+   ulong* p_values;
 }
 struct SemaphoreSignalInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Semaphore semaphore;
    ulong value;
 }
 struct SemaphoreSignalInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Semaphore semaphore;
    ulong value;
 }
@@ -8021,470 +8021,470 @@ struct VertexInputBindingDivisorDescriptionEXT {
    uint divisor;
 }
 struct PipelineVertexInputDivisorStateCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint vertexBindingDivisorCount;
-   VertexInputBindingDivisorDescriptionKHR* pVertexBindingDivisors;
+   StructureType s_type;
+   void* p_next;
+   uint vertex_binding_divisor_count;
+   VertexInputBindingDivisorDescriptionKHR* p_vertex_binding_divisors;
 }
 struct PipelineVertexInputDivisorStateCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint vertexBindingDivisorCount;
-   VertexInputBindingDivisorDescriptionKHR* pVertexBindingDivisors;
+   StructureType s_type;
+   void* p_next;
+   uint vertex_binding_divisor_count;
+   VertexInputBindingDivisorDescriptionKHR* p_vertex_binding_divisors;
 }
 struct PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxVertexAttribDivisor;
+   StructureType s_type;
+   void* p_next;
+   uint max_vertex_attrib_divisor;
 }
 struct PhysicalDeviceVertexAttributeDivisorPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint maxVertexAttribDivisor;
-   uint supportsNonZeroFirstInstance;
+   StructureType s_type;
+   void* p_next;
+   uint max_vertex_attrib_divisor;
+   uint supports_non_zero_first_instance;
 }
 struct PhysicalDevicePCIBusInfoPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint pciDomain;
-   uint pciBus;
-   uint pciDevice;
-   uint pciFunction;
+   StructureType s_type;
+   void* p_next;
+   uint pci_domain;
+   uint pci_bus;
+   uint pci_device;
+   uint pci_function;
 }
 struct CommandBufferInheritanceConditionalRenderingInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint conditionalRenderingEnable;
+   StructureType s_type;
+   void* p_next;
+   uint conditional_rendering_enable;
 }
 struct PhysicalDevice8BitStorageFeatures {
-   StructureType sType;
-   void* pNext;
-   uint storageBuffer8BitAccess;
-   uint uniformAndStorageBuffer8BitAccess;
-   uint storagePushConstant8;
+   StructureType s_type;
+   void* p_next;
+   uint storage_buffer_8_bit_access;
+   uint uniform_and_storage_buffer_8_bit_access;
+   uint storage_push_constant_8;
 }
 struct PhysicalDevice8BitStorageFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint storageBuffer8BitAccess;
-   uint uniformAndStorageBuffer8BitAccess;
-   uint storagePushConstant8;
+   StructureType s_type;
+   void* p_next;
+   uint storage_buffer_8_bit_access;
+   uint uniform_and_storage_buffer_8_bit_access;
+   uint storage_push_constant_8;
 }
 struct PhysicalDeviceConditionalRenderingFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint conditionalRendering;
-   uint inheritedConditionalRendering;
+   StructureType s_type;
+   void* p_next;
+   uint conditional_rendering;
+   uint inherited_conditional_rendering;
 }
 struct PhysicalDeviceVulkanMemoryModelFeatures {
-   StructureType sType;
-   void* pNext;
-   uint vulkanMemoryModel;
-   uint vulkanMemoryModelDeviceScope;
-   uint vulkanMemoryModelAvailabilityVisibilityChains;
+   StructureType s_type;
+   void* p_next;
+   uint vulkan_memory_model;
+   uint vulkan_memory_model_device_scope;
+   uint vulkan_memory_model_availability_visibility_chains;
 }
 struct PhysicalDeviceVulkanMemoryModelFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint vulkanMemoryModel;
-   uint vulkanMemoryModelDeviceScope;
-   uint vulkanMemoryModelAvailabilityVisibilityChains;
+   StructureType s_type;
+   void* p_next;
+   uint vulkan_memory_model;
+   uint vulkan_memory_model_device_scope;
+   uint vulkan_memory_model_availability_visibility_chains;
 }
 struct PhysicalDeviceShaderAtomicInt64Features {
-   StructureType sType;
-   void* pNext;
-   uint shaderBufferInt64Atomics;
-   uint shaderSharedInt64Atomics;
+   StructureType s_type;
+   void* p_next;
+   uint shader_buffer_int_64_atomics;
+   uint shader_shared_int_64_atomics;
 }
 struct PhysicalDeviceShaderAtomicInt64FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderBufferInt64Atomics;
-   uint shaderSharedInt64Atomics;
+   StructureType s_type;
+   void* p_next;
+   uint shader_buffer_int_64_atomics;
+   uint shader_shared_int_64_atomics;
 }
 struct PhysicalDeviceShaderAtomicFloatFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderBufferFloat32Atomics;
-   uint shaderBufferFloat32AtomicAdd;
-   uint shaderBufferFloat64Atomics;
-   uint shaderBufferFloat64AtomicAdd;
-   uint shaderSharedFloat32Atomics;
-   uint shaderSharedFloat32AtomicAdd;
-   uint shaderSharedFloat64Atomics;
-   uint shaderSharedFloat64AtomicAdd;
-   uint shaderImageFloat32Atomics;
-   uint shaderImageFloat32AtomicAdd;
-   uint sparseImageFloat32Atomics;
-   uint sparseImageFloat32AtomicAdd;
+   StructureType s_type;
+   void* p_next;
+   uint shader_buffer_float_32_atomics;
+   uint shader_buffer_float_32_atomic_add;
+   uint shader_buffer_float_64_atomics;
+   uint shader_buffer_float_64_atomic_add;
+   uint shader_shared_float_32_atomics;
+   uint shader_shared_float_32_atomic_add;
+   uint shader_shared_float_64_atomics;
+   uint shader_shared_float_64_atomic_add;
+   uint shader_image_float_32_atomics;
+   uint shader_image_float_32_atomic_add;
+   uint sparse_image_float_32_atomics;
+   uint sparse_image_float_32_atomic_add;
 }
 struct PhysicalDeviceShaderAtomicFloat2FeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderBufferFloat16Atomics;
-   uint shaderBufferFloat16AtomicAdd;
-   uint shaderBufferFloat16AtomicMinMax;
-   uint shaderBufferFloat32AtomicMinMax;
-   uint shaderBufferFloat64AtomicMinMax;
-   uint shaderSharedFloat16Atomics;
-   uint shaderSharedFloat16AtomicAdd;
-   uint shaderSharedFloat16AtomicMinMax;
-   uint shaderSharedFloat32AtomicMinMax;
-   uint shaderSharedFloat64AtomicMinMax;
-   uint shaderImageFloat32AtomicMinMax;
-   uint sparseImageFloat32AtomicMinMax;
+   StructureType s_type;
+   void* p_next;
+   uint shader_buffer_float_16_atomics;
+   uint shader_buffer_float_16_atomic_add;
+   uint shader_buffer_float_16_atomic_min_max;
+   uint shader_buffer_float_32_atomic_min_max;
+   uint shader_buffer_float_64_atomic_min_max;
+   uint shader_shared_float_16_atomics;
+   uint shader_shared_float_16_atomic_add;
+   uint shader_shared_float_16_atomic_min_max;
+   uint shader_shared_float_32_atomic_min_max;
+   uint shader_shared_float_64_atomic_min_max;
+   uint shader_image_float_32_atomic_min_max;
+   uint sparse_image_float_32_atomic_min_max;
 }
 struct PhysicalDeviceVertexAttributeDivisorFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint vertexAttributeInstanceRateDivisor;
-   uint vertexAttributeInstanceRateZeroDivisor;
+   StructureType s_type;
+   void* p_next;
+   uint vertex_attribute_instance_rate_divisor;
+   uint vertex_attribute_instance_rate_zero_divisor;
 }
 struct PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint vertexAttributeInstanceRateDivisor;
-   uint vertexAttributeInstanceRateZeroDivisor;
+   StructureType s_type;
+   void* p_next;
+   uint vertex_attribute_instance_rate_divisor;
+   uint vertex_attribute_instance_rate_zero_divisor;
 }
 struct QueueFamilyCheckpointPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   PipelineStageFlags checkpointExecutionStageMask;
+   StructureType s_type;
+   void* p_next;
+   PipelineStageFlags checkpoint_execution_stage_mask;
 }
 struct CheckpointDataNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineStageFlagBits stage;
-   void* pCheckpointMarker;
+   void* p_checkpoint_marker;
 }
 struct PhysicalDeviceDepthStencilResolveProperties {
-   StructureType sType;
-   void* pNext;
-   ResolveModeFlags supportedDepthResolveModes;
-   ResolveModeFlags supportedStencilResolveModes;
-   uint independentResolveNone;
-   uint independentResolve;
+   StructureType s_type;
+   void* p_next;
+   ResolveModeFlags supported_depth_resolve_modes;
+   ResolveModeFlags supported_stencil_resolve_modes;
+   uint independent_resolve_none;
+   uint independent_resolve;
 }
 struct PhysicalDeviceDepthStencilResolvePropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   ResolveModeFlags supportedDepthResolveModes;
-   ResolveModeFlags supportedStencilResolveModes;
-   uint independentResolveNone;
-   uint independentResolve;
+   StructureType s_type;
+   void* p_next;
+   ResolveModeFlags supported_depth_resolve_modes;
+   ResolveModeFlags supported_stencil_resolve_modes;
+   uint independent_resolve_none;
+   uint independent_resolve;
 }
 struct SubpassDescriptionDepthStencilResolve {
-   StructureType sType;
-   void* pNext;
-   ResolveModeFlagBits depthResolveMode;
-   ResolveModeFlagBits stencilResolveMode;
-   AttachmentReference2* pDepthStencilResolveAttachment;
+   StructureType s_type;
+   void* p_next;
+   ResolveModeFlagBits depth_resolve_mode;
+   ResolveModeFlagBits stencil_resolve_mode;
+   AttachmentReference2* p_depth_stencil_resolve_attachment;
 }
 struct SubpassDescriptionDepthStencilResolveKHR {
-   StructureType sType;
-   void* pNext;
-   ResolveModeFlagBits depthResolveMode;
-   ResolveModeFlagBits stencilResolveMode;
-   AttachmentReference2* pDepthStencilResolveAttachment;
+   StructureType s_type;
+   void* p_next;
+   ResolveModeFlagBits depth_resolve_mode;
+   ResolveModeFlagBits stencil_resolve_mode;
+   AttachmentReference2* p_depth_stencil_resolve_attachment;
 }
 struct ImageViewASTCDecodeModeEXT {
-   StructureType sType;
-   void* pNext;
-   Format decodeMode;
+   StructureType s_type;
+   void* p_next;
+   Format decode_mode;
 }
 struct PhysicalDeviceASTCDecodeFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint decodeModeSharedExponent;
+   StructureType s_type;
+   void* p_next;
+   uint decode_mode_shared_exponent;
 }
 struct PhysicalDeviceTransformFeedbackFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint transformFeedback;
-   uint geometryStreams;
+   StructureType s_type;
+   void* p_next;
+   uint transform_feedback;
+   uint geometry_streams;
 }
 struct PhysicalDeviceTransformFeedbackPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxTransformFeedbackStreams;
-   uint maxTransformFeedbackBuffers;
-   DeviceSize maxTransformFeedbackBufferSize;
-   uint maxTransformFeedbackStreamDataSize;
-   uint maxTransformFeedbackBufferDataSize;
-   uint maxTransformFeedbackBufferDataStride;
-   uint transformFeedbackQueries;
-   uint transformFeedbackStreamsLinesTriangles;
-   uint transformFeedbackRasterizationStreamSelect;
-   uint transformFeedbackDraw;
+   StructureType s_type;
+   void* p_next;
+   uint max_transform_feedback_streams;
+   uint max_transform_feedback_buffers;
+   DeviceSize max_transform_feedback_buffer_size;
+   uint max_transform_feedback_stream_data_size;
+   uint max_transform_feedback_buffer_data_size;
+   uint max_transform_feedback_buffer_data_stride;
+   uint transform_feedback_queries;
+   uint transform_feedback_streams_lines_triangles;
+   uint transform_feedback_rasterization_stream_select;
+   uint transform_feedback_draw;
 }
 struct PipelineRasterizationStateStreamCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineRasterizationStateStreamCreateFlagsEXT flags;
-   uint rasterizationStream;
+   uint rasterization_stream;
 }
 struct PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint representativeFragmentTest;
+   StructureType s_type;
+   void* p_next;
+   uint representative_fragment_test;
 }
 struct PipelineRepresentativeFragmentTestStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint representativeFragmentTestEnable;
+   StructureType s_type;
+   void* p_next;
+   uint representative_fragment_test_enable;
 }
 struct PhysicalDeviceExclusiveScissorFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint exclusiveScissor;
+   StructureType s_type;
+   void* p_next;
+   uint exclusive_scissor;
 }
 struct PipelineViewportExclusiveScissorStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint exclusiveScissorCount;
-   Rect2D* pExclusiveScissors;
+   StructureType s_type;
+   void* p_next;
+   uint exclusive_scissor_count;
+   Rect2D* p_exclusive_scissors;
 }
 struct PhysicalDeviceCornerSampledImageFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint cornerSampledImage;
+   StructureType s_type;
+   void* p_next;
+   uint corner_sampled_image;
 }
 struct PhysicalDeviceComputeShaderDerivativesFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint computeDerivativeGroupQuads;
-   uint computeDerivativeGroupLinear;
+   StructureType s_type;
+   void* p_next;
+   uint compute_derivative_group_quads;
+   uint compute_derivative_group_linear;
 }
 struct PhysicalDeviceComputeShaderDerivativesFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint computeDerivativeGroupQuads;
-   uint computeDerivativeGroupLinear;
+   StructureType s_type;
+   void* p_next;
+   uint compute_derivative_group_quads;
+   uint compute_derivative_group_linear;
 }
 struct PhysicalDeviceComputeShaderDerivativesPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint meshAndTaskShaderDerivatives;
+   StructureType s_type;
+   void* p_next;
+   uint mesh_and_task_shader_derivatives;
 }
 struct PhysicalDeviceShaderImageFootprintFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint imageFootprint;
+   StructureType s_type;
+   void* p_next;
+   uint image_footprint;
 }
 struct PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint dedicatedAllocationImageAliasing;
+   StructureType s_type;
+   void* p_next;
+   uint dedicated_allocation_image_aliasing;
 }
 struct PhysicalDeviceCopyMemoryIndirectFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint indirectCopy;
+   StructureType s_type;
+   void* p_next;
+   uint indirect_copy;
 }
 struct PhysicalDeviceCopyMemoryIndirectPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   QueueFlags supportedQueues;
+   StructureType s_type;
+   void* p_next;
+   QueueFlags supported_queues;
 }
 struct PhysicalDeviceMemoryDecompressionFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint memoryDecompression;
+   StructureType s_type;
+   void* p_next;
+   uint memory_decompression;
 }
 struct PhysicalDeviceMemoryDecompressionPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   MemoryDecompressionMethodFlagsNV decompressionMethods;
-   ulong maxDecompressionIndirectCount;
+   StructureType s_type;
+   void* p_next;
+   MemoryDecompressionMethodFlagsNV decompression_methods;
+   ulong max_decompression_indirect_count;
 }
 struct ShadingRatePaletteNV {
-   uint shadingRatePaletteEntryCount;
-   ShadingRatePaletteEntryNV* pShadingRatePaletteEntries;
+   uint shading_rate_palette_entry_count;
+   ShadingRatePaletteEntryNV* p_shading_rate_palette_entries;
 }
 struct PipelineViewportShadingRateImageStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint shadingRateImageEnable;
-   uint viewportCount;
-   ShadingRatePaletteNV* pShadingRatePalettes;
+   StructureType s_type;
+   void* p_next;
+   uint shading_rate_image_enable;
+   uint viewport_count;
+   ShadingRatePaletteNV* p_shading_rate_palettes;
 }
 struct PhysicalDeviceShadingRateImageFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint shadingRateImage;
-   uint shadingRateCoarseSampleOrder;
+   StructureType s_type;
+   void* p_next;
+   uint shading_rate_image;
+   uint shading_rate_coarse_sample_order;
 }
 struct PhysicalDeviceShadingRateImagePropertiesNV {
-   StructureType sType;
-   void* pNext;
-   Extent2D shadingRateTexelSize;
-   uint shadingRatePaletteSize;
-   uint shadingRateMaxCoarseSamples;
+   StructureType s_type;
+   void* p_next;
+   Extent2D shading_rate_texel_size;
+   uint shading_rate_palette_size;
+   uint shading_rate_max_coarse_samples;
 }
 struct PhysicalDeviceInvocationMaskFeaturesHUAWEI {
-   StructureType sType;
-   void* pNext;
-   uint invocationMask;
+   StructureType s_type;
+   void* p_next;
+   uint invocation_mask;
 }
 struct CoarseSampleLocationNV {
-   uint pixelX;
-   uint pixelY;
+   uint pixel_x;
+   uint pixel_y;
    uint sample;
 }
 struct CoarseSampleOrderCustomNV {
-   ShadingRatePaletteEntryNV shadingRate;
-   uint sampleCount;
-   uint sampleLocationCount;
-   CoarseSampleLocationNV* pSampleLocations;
+   ShadingRatePaletteEntryNV shading_rate;
+   uint sample_count;
+   uint sample_location_count;
+   CoarseSampleLocationNV* p_sample_locations;
 }
 struct PipelineViewportCoarseSampleOrderStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   CoarseSampleOrderTypeNV sampleOrderType;
-   uint customSampleOrderCount;
-   CoarseSampleOrderCustomNV* pCustomSampleOrders;
+   StructureType s_type;
+   void* p_next;
+   CoarseSampleOrderTypeNV sample_order_type;
+   uint custom_sample_order_count;
+   CoarseSampleOrderCustomNV* p_custom_sample_orders;
 }
 struct PhysicalDeviceMeshShaderFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint taskShader;
-   uint meshShader;
+   StructureType s_type;
+   void* p_next;
+   uint task_shader;
+   uint mesh_shader;
 }
 struct PhysicalDeviceMeshShaderPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   uint maxDrawMeshTasksCount;
-   uint maxTaskWorkGroupInvocations;
-   uint[3] maxTaskWorkGroupSize;
-   uint maxTaskTotalMemorySize;
-   uint maxTaskOutputCount;
-   uint maxMeshWorkGroupInvocations;
-   uint[3] maxMeshWorkGroupSize;
-   uint maxMeshTotalMemorySize;
-   uint maxMeshOutputVertices;
-   uint maxMeshOutputPrimitives;
-   uint maxMeshMultiviewViewCount;
-   uint meshOutputPerVertexGranularity;
-   uint meshOutputPerPrimitiveGranularity;
+   StructureType s_type;
+   void* p_next;
+   uint max_draw_mesh_tasks_count;
+   uint max_task_work_group_invocations;
+   uint[3] max_task_work_group_size;
+   uint max_task_total_memory_size;
+   uint max_task_output_count;
+   uint max_mesh_work_group_invocations;
+   uint[3] max_mesh_work_group_size;
+   uint max_mesh_total_memory_size;
+   uint max_mesh_output_vertices;
+   uint max_mesh_output_primitives;
+   uint max_mesh_multiview_view_count;
+   uint mesh_output_per_vertex_granularity;
+   uint mesh_output_per_primitive_granularity;
 }
 struct DrawMeshTasksIndirectCommandNV {
-   uint taskCount;
-   uint firstTask;
+   uint task_count;
+   uint first_task;
 }
 struct PhysicalDeviceMeshShaderFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint taskShader;
-   uint meshShader;
-   uint multiviewMeshShader;
-   uint primitiveFragmentShadingRateMeshShader;
-   uint meshShaderQueries;
+   StructureType s_type;
+   void* p_next;
+   uint task_shader;
+   uint mesh_shader;
+   uint multiview_mesh_shader;
+   uint primitive_fragment_shading_rate_mesh_shader;
+   uint mesh_shader_queries;
 }
 struct PhysicalDeviceMeshShaderPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxTaskWorkGroupTotalCount;
-   uint[3] maxTaskWorkGroupCount;
-   uint maxTaskWorkGroupInvocations;
-   uint[3] maxTaskWorkGroupSize;
-   uint maxTaskPayloadSize;
-   uint maxTaskSharedMemorySize;
-   uint maxTaskPayloadAndSharedMemorySize;
-   uint maxMeshWorkGroupTotalCount;
-   uint[3] maxMeshWorkGroupCount;
-   uint maxMeshWorkGroupInvocations;
-   uint[3] maxMeshWorkGroupSize;
-   uint maxMeshSharedMemorySize;
-   uint maxMeshPayloadAndSharedMemorySize;
-   uint maxMeshOutputMemorySize;
-   uint maxMeshPayloadAndOutputMemorySize;
-   uint maxMeshOutputComponents;
-   uint maxMeshOutputVertices;
-   uint maxMeshOutputPrimitives;
-   uint maxMeshOutputLayers;
-   uint maxMeshMultiviewViewCount;
-   uint meshOutputPerVertexGranularity;
-   uint meshOutputPerPrimitiveGranularity;
-   uint maxPreferredTaskWorkGroupInvocations;
-   uint maxPreferredMeshWorkGroupInvocations;
-   uint prefersLocalInvocationVertexOutput;
-   uint prefersLocalInvocationPrimitiveOutput;
-   uint prefersCompactVertexOutput;
-   uint prefersCompactPrimitiveOutput;
+   StructureType s_type;
+   void* p_next;
+   uint max_task_work_group_total_count;
+   uint[3] max_task_work_group_count;
+   uint max_task_work_group_invocations;
+   uint[3] max_task_work_group_size;
+   uint max_task_payload_size;
+   uint max_task_shared_memory_size;
+   uint max_task_payload_and_shared_memory_size;
+   uint max_mesh_work_group_total_count;
+   uint[3] max_mesh_work_group_count;
+   uint max_mesh_work_group_invocations;
+   uint[3] max_mesh_work_group_size;
+   uint max_mesh_shared_memory_size;
+   uint max_mesh_payload_and_shared_memory_size;
+   uint max_mesh_output_memory_size;
+   uint max_mesh_payload_and_output_memory_size;
+   uint max_mesh_output_components;
+   uint max_mesh_output_vertices;
+   uint max_mesh_output_primitives;
+   uint max_mesh_output_layers;
+   uint max_mesh_multiview_view_count;
+   uint mesh_output_per_vertex_granularity;
+   uint mesh_output_per_primitive_granularity;
+   uint max_preferred_task_work_group_invocations;
+   uint max_preferred_mesh_work_group_invocations;
+   uint prefers_local_invocation_vertex_output;
+   uint prefers_local_invocation_primitive_output;
+   uint prefers_compact_vertex_output;
+   uint prefers_compact_primitive_output;
 }
 struct DrawMeshTasksIndirectCommandEXT {
-   uint groupCountX;
-   uint groupCountY;
-   uint groupCountZ;
+   uint group_count_x;
+   uint group_count_y;
+   uint group_count_z;
 }
 struct RayTracingShaderGroupCreateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    RayTracingShaderGroupTypeKHR type;
-   uint generalShader;
-   uint closestHitShader;
-   uint anyHitShader;
-   uint intersectionShader;
+   uint general_shader;
+   uint closest_hit_shader;
+   uint any_hit_shader;
+   uint intersection_shader;
 }
 struct RayTracingShaderGroupCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    RayTracingShaderGroupTypeKHR type;
-   uint generalShader;
-   uint closestHitShader;
-   uint anyHitShader;
-   uint intersectionShader;
-   void* pShaderGroupCaptureReplayHandle;
+   uint general_shader;
+   uint closest_hit_shader;
+   uint any_hit_shader;
+   uint intersection_shader;
+   void* p_shader_group_capture_replay_handle;
 }
 struct RayTracingPipelineCreateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineCreateFlags flags;
-   uint stageCount;
-   PipelineShaderStageCreateInfo* pStages;
-   uint groupCount;
-   RayTracingShaderGroupCreateInfoNV* pGroups;
-   uint maxRecursionDepth;
+   uint stage_count;
+   PipelineShaderStageCreateInfo* p_stages;
+   uint group_count;
+   RayTracingShaderGroupCreateInfoNV* p_groups;
+   uint max_recursion_depth;
    PipelineLayout layout;
-   Pipeline basePipelineHandle;
-   int basePipelineIndex;
+   Pipeline base_pipeline_handle;
+   int base_pipeline_index;
 }
 struct RayTracingPipelineCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineCreateFlags flags;
-   uint stageCount;
-   PipelineShaderStageCreateInfo* pStages;
-   uint groupCount;
-   RayTracingShaderGroupCreateInfoKHR* pGroups;
-   uint maxPipelineRayRecursionDepth;
-   PipelineLibraryCreateInfoKHR* pLibraryInfo;
-   RayTracingPipelineInterfaceCreateInfoKHR* pLibraryInterface;
-   PipelineDynamicStateCreateInfo* pDynamicState;
+   uint stage_count;
+   PipelineShaderStageCreateInfo* p_stages;
+   uint group_count;
+   RayTracingShaderGroupCreateInfoKHR* p_groups;
+   uint max_pipeline_ray_recursion_depth;
+   PipelineLibraryCreateInfoKHR* p_library_info;
+   RayTracingPipelineInterfaceCreateInfoKHR* p_library_interface;
+   PipelineDynamicStateCreateInfo* p_dynamic_state;
    PipelineLayout layout;
-   Pipeline basePipelineHandle;
-   int basePipelineIndex;
+   Pipeline base_pipeline_handle;
+   int base_pipeline_index;
 }
 struct GeometryTrianglesNV {
-   StructureType sType;
-   void* pNext;
-   Buffer vertexData;
-   DeviceSize vertexOffset;
-   uint vertexCount;
-   DeviceSize vertexStride;
-   Format vertexFormat;
-   Buffer indexData;
-   DeviceSize indexOffset;
-   uint indexCount;
-   IndexType indexType;
-   Buffer transformData;
-   DeviceSize transformOffset;
+   StructureType s_type;
+   void* p_next;
+   Buffer vertex_data;
+   DeviceSize vertex_offset;
+   uint vertex_count;
+   DeviceSize vertex_stride;
+   Format vertex_format;
+   Buffer index_data;
+   DeviceSize index_offset;
+   uint index_count;
+   IndexType index_type;
+   Buffer transform_data;
+   DeviceSize transform_offset;
 }
 struct GeometryAABBNV {
-   StructureType sType;
-   void* pNext;
-   Buffer aabbData;
-   uint numAABBs;
+   StructureType s_type;
+   void* p_next;
+   Buffer aabb_data;
+   uint num_aab_bs;
    uint stride;
    DeviceSize offset;
 }
@@ -8493,100 +8493,100 @@ struct GeometryDataNV {
    GeometryAABBNV aabbs;
 }
 struct GeometryNV {
-   StructureType sType;
-   void* pNext;
-   GeometryTypeKHR geometryType;
+   StructureType s_type;
+   void* p_next;
+   GeometryTypeKHR geometry_type;
    GeometryDataNV geometry;
    GeometryFlagsKHR flags;
 }
 struct BindAccelerationStructureMemoryInfoNV {
-   StructureType sType;
-   void* pNext;
-   AccelerationStructureNV accelerationStructure;
+   StructureType s_type;
+   void* p_next;
+   AccelerationStructureNV acceleration_structure;
    DeviceMemory memory;
-   DeviceSize memoryOffset;
-   uint deviceIndexCount;
-   uint* pDeviceIndices;
+   DeviceSize memory_offset;
+   uint device_index_count;
+   uint* p_device_indices;
 }
 struct WriteDescriptorSetAccelerationStructureKHR {
-   StructureType sType;
-   void* pNext;
-   uint accelerationStructureCount;
-   AccelerationStructureKHR* pAccelerationStructures;
+   StructureType s_type;
+   void* p_next;
+   uint acceleration_structure_count;
+   AccelerationStructureKHR* p_acceleration_structures;
 }
 struct WriteDescriptorSetAccelerationStructureNV {
-   StructureType sType;
-   void* pNext;
-   uint accelerationStructureCount;
-   AccelerationStructureNV* pAccelerationStructures;
+   StructureType s_type;
+   void* p_next;
+   uint acceleration_structure_count;
+   AccelerationStructureNV* p_acceleration_structures;
 }
 struct AccelerationStructureMemoryRequirementsInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    AccelerationStructureMemoryRequirementsTypeNV type;
-   AccelerationStructureNV accelerationStructure;
+   AccelerationStructureNV acceleration_structure;
 }
 struct PhysicalDeviceAccelerationStructureFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint accelerationStructure;
-   uint accelerationStructureCaptureReplay;
-   uint accelerationStructureIndirectBuild;
-   uint accelerationStructureHostCommands;
-   uint descriptorBindingAccelerationStructureUpdateAfterBind;
+   StructureType s_type;
+   void* p_next;
+   uint acceleration_structure;
+   uint acceleration_structure_capture_replay;
+   uint acceleration_structure_indirect_build;
+   uint acceleration_structure_host_commands;
+   uint descriptor_binding_acceleration_structure_update_after_bind;
 }
 struct PhysicalDeviceRayTracingPipelineFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint rayTracingPipeline;
-   uint rayTracingPipelineShaderGroupHandleCaptureReplay;
-   uint rayTracingPipelineShaderGroupHandleCaptureReplayMixed;
-   uint rayTracingPipelineTraceRaysIndirect;
-   uint rayTraversalPrimitiveCulling;
+   StructureType s_type;
+   void* p_next;
+   uint ray_tracing_pipeline;
+   uint ray_tracing_pipeline_shader_group_handle_capture_replay;
+   uint ray_tracing_pipeline_shader_group_handle_capture_replay_mixed;
+   uint ray_tracing_pipeline_trace_rays_indirect;
+   uint ray_traversal_primitive_culling;
 }
 struct PhysicalDeviceRayQueryFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint rayQuery;
+   StructureType s_type;
+   void* p_next;
+   uint ray_query;
 }
 struct PhysicalDeviceAccelerationStructurePropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   ulong maxGeometryCount;
-   ulong maxInstanceCount;
-   ulong maxPrimitiveCount;
-   uint maxPerStageDescriptorAccelerationStructures;
-   uint maxPerStageDescriptorUpdateAfterBindAccelerationStructures;
-   uint maxDescriptorSetAccelerationStructures;
-   uint maxDescriptorSetUpdateAfterBindAccelerationStructures;
-   uint minAccelerationStructureScratchOffsetAlignment;
+   StructureType s_type;
+   void* p_next;
+   ulong max_geometry_count;
+   ulong max_instance_count;
+   ulong max_primitive_count;
+   uint max_per_stage_descriptor_acceleration_structures;
+   uint max_per_stage_descriptor_update_after_bind_acceleration_structures;
+   uint max_descriptor_set_acceleration_structures;
+   uint max_descriptor_set_update_after_bind_acceleration_structures;
+   uint min_acceleration_structure_scratch_offset_alignment;
 }
 struct PhysicalDeviceRayTracingPipelinePropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderGroupHandleSize;
-   uint maxRayRecursionDepth;
-   uint maxShaderGroupStride;
-   uint shaderGroupBaseAlignment;
-   uint shaderGroupHandleCaptureReplaySize;
-   uint maxRayDispatchInvocationCount;
-   uint shaderGroupHandleAlignment;
-   uint maxRayHitAttributeSize;
+   StructureType s_type;
+   void* p_next;
+   uint shader_group_handle_size;
+   uint max_ray_recursion_depth;
+   uint max_shader_group_stride;
+   uint shader_group_base_alignment;
+   uint shader_group_handle_capture_replay_size;
+   uint max_ray_dispatch_invocation_count;
+   uint shader_group_handle_alignment;
+   uint max_ray_hit_attribute_size;
 }
 struct PhysicalDeviceRayTracingPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   uint shaderGroupHandleSize;
-   uint maxRecursionDepth;
-   uint maxShaderGroupStride;
-   uint shaderGroupBaseAlignment;
-   ulong maxGeometryCount;
-   ulong maxInstanceCount;
-   ulong maxTriangleCount;
-   uint maxDescriptorSetAccelerationStructures;
+   StructureType s_type;
+   void* p_next;
+   uint shader_group_handle_size;
+   uint max_recursion_depth;
+   uint max_shader_group_stride;
+   uint shader_group_base_alignment;
+   ulong max_geometry_count;
+   ulong max_instance_count;
+   ulong max_triangle_count;
+   uint max_descriptor_set_acceleration_structures;
 }
 struct StridedDeviceAddressRegionKHR {
-   DeviceAddress deviceAddress;
+   DeviceAddress device_address;
    DeviceSize stride;
    DeviceSize size;
 }
@@ -8596,346 +8596,346 @@ struct TraceRaysIndirectCommandKHR {
    uint depth;
 }
 struct TraceRaysIndirectCommand2KHR {
-   DeviceAddress raygenShaderRecordAddress;
-   DeviceSize raygenShaderRecordSize;
-   DeviceAddress missShaderBindingTableAddress;
-   DeviceSize missShaderBindingTableSize;
-   DeviceSize missShaderBindingTableStride;
-   DeviceAddress hitShaderBindingTableAddress;
-   DeviceSize hitShaderBindingTableSize;
-   DeviceSize hitShaderBindingTableStride;
-   DeviceAddress callableShaderBindingTableAddress;
-   DeviceSize callableShaderBindingTableSize;
-   DeviceSize callableShaderBindingTableStride;
+   DeviceAddress raygen_shader_record_address;
+   DeviceSize raygen_shader_record_size;
+   DeviceAddress miss_shader_binding_table_address;
+   DeviceSize miss_shader_binding_table_size;
+   DeviceSize miss_shader_binding_table_stride;
+   DeviceAddress hit_shader_binding_table_address;
+   DeviceSize hit_shader_binding_table_size;
+   DeviceSize hit_shader_binding_table_stride;
+   DeviceAddress callable_shader_binding_table_address;
+   DeviceSize callable_shader_binding_table_size;
+   DeviceSize callable_shader_binding_table_stride;
    uint width;
    uint height;
    uint depth;
 }
 struct PhysicalDeviceRayTracingMaintenance1FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint rayTracingMaintenance1;
-   uint rayTracingPipelineTraceRaysIndirect2;
+   StructureType s_type;
+   void* p_next;
+   uint ray_tracing_maintenance_1;
+   uint ray_tracing_pipeline_trace_rays_indirect_2;
 }
 struct DrmFormatModifierPropertiesListEXT {
-   StructureType sType;
-   void* pNext;
-   uint drmFormatModifierCount;
-   DrmFormatModifierPropertiesEXT* pDrmFormatModifierProperties;
+   StructureType s_type;
+   void* p_next;
+   uint drm_format_modifier_count;
+   DrmFormatModifierPropertiesEXT* p_drm_format_modifier_properties;
 }
 struct DrmFormatModifierPropertiesEXT {
-   ulong drmFormatModifier;
-   uint drmFormatModifierPlaneCount;
-   FormatFeatureFlags drmFormatModifierTilingFeatures;
+   ulong drm_format_modifier;
+   uint drm_format_modifier_plane_count;
+   FormatFeatureFlags drm_format_modifier_tiling_features;
 }
 struct PhysicalDeviceImageDrmFormatModifierInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ulong drmFormatModifier;
-   SharingMode sharingMode;
-   uint queueFamilyIndexCount;
-   uint* pQueueFamilyIndices;
+   StructureType s_type;
+   void* p_next;
+   ulong drm_format_modifier;
+   SharingMode sharing_mode;
+   uint queue_family_index_count;
+   uint* p_queue_family_indices;
 }
 struct ImageDrmFormatModifierListCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint drmFormatModifierCount;
-   ulong* pDrmFormatModifiers;
+   StructureType s_type;
+   void* p_next;
+   uint drm_format_modifier_count;
+   ulong* p_drm_format_modifiers;
 }
 struct ImageDrmFormatModifierExplicitCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ulong drmFormatModifier;
-   uint drmFormatModifierPlaneCount;
-   SubresourceLayout* pPlaneLayouts;
+   StructureType s_type;
+   void* p_next;
+   ulong drm_format_modifier;
+   uint drm_format_modifier_plane_count;
+   SubresourceLayout* p_plane_layouts;
 }
 struct ImageDrmFormatModifierPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   ulong drmFormatModifier;
+   StructureType s_type;
+   void* p_next;
+   ulong drm_format_modifier;
 }
 struct ImageStencilUsageCreateInfo {
-   StructureType sType;
-   void* pNext;
-   ImageUsageFlags stencilUsage;
+   StructureType s_type;
+   void* p_next;
+   ImageUsageFlags stencil_usage;
 }
 struct ImageStencilUsageCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ImageUsageFlags stencilUsage;
+   StructureType s_type;
+   void* p_next;
+   ImageUsageFlags stencil_usage;
 }
 struct DeviceMemoryOverallocationCreateInfoAMD {
-   StructureType sType;
-   void* pNext;
-   MemoryOverallocationBehaviorAMD overallocationBehavior;
+   StructureType s_type;
+   void* p_next;
+   MemoryOverallocationBehaviorAMD overallocation_behavior;
 }
 struct PhysicalDeviceFragmentDensityMapFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint fragmentDensityMap;
-   uint fragmentDensityMapDynamic;
-   uint fragmentDensityMapNonSubsampledImages;
+   StructureType s_type;
+   void* p_next;
+   uint fragment_density_map;
+   uint fragment_density_map_dynamic;
+   uint fragment_density_map_non_subsampled_images;
 }
 struct PhysicalDeviceFragmentDensityMap2FeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint fragmentDensityMapDeferred;
+   StructureType s_type;
+   void* p_next;
+   uint fragment_density_map_deferred;
 }
 struct PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint fragmentDensityMapOffset;
+   StructureType s_type;
+   void* p_next;
+   uint fragment_density_map_offset;
 }
 struct PhysicalDeviceFragmentDensityMapPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   Extent2D minFragmentDensityTexelSize;
-   Extent2D maxFragmentDensityTexelSize;
-   uint fragmentDensityInvocations;
+   StructureType s_type;
+   void* p_next;
+   Extent2D min_fragment_density_texel_size;
+   Extent2D max_fragment_density_texel_size;
+   uint fragment_density_invocations;
 }
 struct PhysicalDeviceFragmentDensityMap2PropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint subsampledLoads;
-   uint subsampledCoarseReconstructionEarlyAccess;
-   uint maxSubsampledArrayLayers;
-   uint maxDescriptorSetSubsampledSamplers;
+   StructureType s_type;
+   void* p_next;
+   uint subsampled_loads;
+   uint subsampled_coarse_reconstruction_early_access;
+   uint max_subsampled_array_layers;
+   uint max_descriptor_set_subsampled_samplers;
 }
 struct PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM {
-   StructureType sType;
-   void* pNext;
-   Extent2D fragmentDensityOffsetGranularity;
+   StructureType s_type;
+   void* p_next;
+   Extent2D fragment_density_offset_granularity;
 }
 struct RenderPassFragmentDensityMapCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   AttachmentReference fragmentDensityMapAttachment;
+   StructureType s_type;
+   void* p_next;
+   AttachmentReference fragment_density_map_attachment;
 }
 struct SubpassFragmentDensityMapOffsetEndInfoQCOM {
-   StructureType sType;
-   void* pNext;
-   uint fragmentDensityOffsetCount;
-   Offset2D* pFragmentDensityOffsets;
+   StructureType s_type;
+   void* p_next;
+   uint fragment_density_offset_count;
+   Offset2D* p_fragment_density_offsets;
 }
 struct PhysicalDeviceScalarBlockLayoutFeatures {
-   StructureType sType;
-   void* pNext;
-   uint scalarBlockLayout;
+   StructureType s_type;
+   void* p_next;
+   uint scalar_block_layout;
 }
 struct PhysicalDeviceScalarBlockLayoutFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint scalarBlockLayout;
+   StructureType s_type;
+   void* p_next;
+   uint scalar_block_layout;
 }
 struct SurfaceProtectedCapabilitiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint supportsProtected;
+   StructureType s_type;
+   void* p_next;
+   uint supports_protected;
 }
 struct PhysicalDeviceUniformBufferStandardLayoutFeatures {
-   StructureType sType;
-   void* pNext;
-   uint uniformBufferStandardLayout;
+   StructureType s_type;
+   void* p_next;
+   uint uniform_buffer_standard_layout;
 }
 struct PhysicalDeviceUniformBufferStandardLayoutFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint uniformBufferStandardLayout;
+   StructureType s_type;
+   void* p_next;
+   uint uniform_buffer_standard_layout;
 }
 struct PhysicalDeviceDepthClipEnableFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint depthClipEnable;
+   StructureType s_type;
+   void* p_next;
+   uint depth_clip_enable;
 }
 struct PipelineRasterizationDepthClipStateCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineRasterizationDepthClipStateCreateFlagsEXT flags;
-   uint depthClipEnable;
+   uint depth_clip_enable;
 }
 struct PhysicalDeviceMemoryBudgetPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   DeviceSize[MAX_MEMORY_HEAPS] heapBudget;
-   DeviceSize[MAX_MEMORY_HEAPS] heapUsage;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize[MAX_MEMORY_HEAPS] heap_budget;
+   DeviceSize[MAX_MEMORY_HEAPS] heap_usage;
 }
 struct PhysicalDeviceMemoryPriorityFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint memoryPriority;
+   StructureType s_type;
+   void* p_next;
+   uint memory_priority;
 }
 struct MemoryPriorityAllocateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    float priority;
 }
 struct PhysicalDevicePageableDeviceLocalMemoryFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint pageableDeviceLocalMemory;
+   StructureType s_type;
+   void* p_next;
+   uint pageable_device_local_memory;
 }
 struct PhysicalDeviceBufferDeviceAddressFeatures {
-   StructureType sType;
-   void* pNext;
-   uint bufferDeviceAddress;
-   uint bufferDeviceAddressCaptureReplay;
-   uint bufferDeviceAddressMultiDevice;
+   StructureType s_type;
+   void* p_next;
+   uint buffer_device_address;
+   uint buffer_device_address_capture_replay;
+   uint buffer_device_address_multi_device;
 }
 struct PhysicalDeviceBufferDeviceAddressFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint bufferDeviceAddress;
-   uint bufferDeviceAddressCaptureReplay;
-   uint bufferDeviceAddressMultiDevice;
+   StructureType s_type;
+   void* p_next;
+   uint buffer_device_address;
+   uint buffer_device_address_capture_replay;
+   uint buffer_device_address_multi_device;
 }
 struct PhysicalDeviceBufferDeviceAddressFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint bufferDeviceAddress;
-   uint bufferDeviceAddressCaptureReplay;
-   uint bufferDeviceAddressMultiDevice;
+   StructureType s_type;
+   void* p_next;
+   uint buffer_device_address;
+   uint buffer_device_address_capture_replay;
+   uint buffer_device_address_multi_device;
 }
 struct PhysicalDeviceBufferAddressFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint bufferDeviceAddress;
-   uint bufferDeviceAddressCaptureReplay;
-   uint bufferDeviceAddressMultiDevice;
+   StructureType s_type;
+   void* p_next;
+   uint buffer_device_address;
+   uint buffer_device_address_capture_replay;
+   uint buffer_device_address_multi_device;
 }
 struct BufferDeviceAddressInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
 }
 struct BufferDeviceAddressInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
 }
 struct BufferDeviceAddressInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
 }
 struct BufferOpaqueCaptureAddressCreateInfo {
-   StructureType sType;
-   void* pNext;
-   ulong opaqueCaptureAddress;
+   StructureType s_type;
+   void* p_next;
+   ulong opaque_capture_address;
 }
 struct BufferOpaqueCaptureAddressCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ulong opaqueCaptureAddress;
+   StructureType s_type;
+   void* p_next;
+   ulong opaque_capture_address;
 }
 struct BufferDeviceAddressCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   DeviceAddress deviceAddress;
+   StructureType s_type;
+   void* p_next;
+   DeviceAddress device_address;
 }
 struct PhysicalDeviceImageViewImageFormatInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ImageViewType imageViewType;
+   StructureType s_type;
+   void* p_next;
+   ImageViewType image_view_type;
 }
 struct FilterCubicImageViewImageFormatPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint filterCubic;
-   uint filterCubicMinmax;
+   StructureType s_type;
+   void* p_next;
+   uint filter_cubic;
+   uint filter_cubic_minmax;
 }
 struct PhysicalDeviceImagelessFramebufferFeatures {
-   StructureType sType;
-   void* pNext;
-   uint imagelessFramebuffer;
+   StructureType s_type;
+   void* p_next;
+   uint imageless_framebuffer;
 }
 struct PhysicalDeviceImagelessFramebufferFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint imagelessFramebuffer;
+   StructureType s_type;
+   void* p_next;
+   uint imageless_framebuffer;
 }
 struct FramebufferAttachmentsCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint attachmentImageInfoCount;
-   FramebufferAttachmentImageInfo* pAttachmentImageInfos;
+   StructureType s_type;
+   void* p_next;
+   uint attachment_image_info_count;
+   FramebufferAttachmentImageInfo* p_attachment_image_infos;
 }
 struct FramebufferAttachmentsCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint attachmentImageInfoCount;
-   FramebufferAttachmentImageInfo* pAttachmentImageInfos;
+   StructureType s_type;
+   void* p_next;
+   uint attachment_image_info_count;
+   FramebufferAttachmentImageInfo* p_attachment_image_infos;
 }
 struct FramebufferAttachmentImageInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ImageCreateFlags flags;
    ImageUsageFlags usage;
    uint width;
    uint height;
-   uint layerCount;
-   uint viewFormatCount;
-   Format* pViewFormats;
+   uint layer_count;
+   uint view_format_count;
+   Format* p_view_formats;
 }
 struct FramebufferAttachmentImageInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ImageCreateFlags flags;
    ImageUsageFlags usage;
    uint width;
    uint height;
-   uint layerCount;
-   uint viewFormatCount;
-   Format* pViewFormats;
+   uint layer_count;
+   uint view_format_count;
+   Format* p_view_formats;
 }
 struct RenderPassAttachmentBeginInfo {
-   StructureType sType;
-   void* pNext;
-   uint attachmentCount;
-   ImageView* pAttachments;
+   StructureType s_type;
+   void* p_next;
+   uint attachment_count;
+   ImageView* p_attachments;
 }
 struct RenderPassAttachmentBeginInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint attachmentCount;
-   ImageView* pAttachments;
+   StructureType s_type;
+   void* p_next;
+   uint attachment_count;
+   ImageView* p_attachments;
 }
 struct PhysicalDeviceTextureCompressionASTCHDRFeatures {
-   StructureType sType;
-   void* pNext;
-   uint textureCompressionASTC_HDR;
+   StructureType s_type;
+   void* p_next;
+   uint texture_compression_astc_hdr;
 }
 struct PhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint textureCompressionASTC_HDR;
+   StructureType s_type;
+   void* p_next;
+   uint texture_compression_astc_hdr;
 }
 struct PhysicalDeviceCooperativeMatrixFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint cooperativeMatrix;
-   uint cooperativeMatrixRobustBufferAccess;
+   StructureType s_type;
+   void* p_next;
+   uint cooperative_matrix;
+   uint cooperative_matrix_robust_buffer_access;
 }
 struct PhysicalDeviceCooperativeMatrixPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   ShaderStageFlags cooperativeMatrixSupportedStages;
+   StructureType s_type;
+   void* p_next;
+   ShaderStageFlags cooperative_matrix_supported_stages;
 }
 struct PhysicalDeviceYcbcrImageArraysFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint ycbcrImageArrays;
+   StructureType s_type;
+   void* p_next;
+   uint ycbcr_image_arrays;
 }
 struct ImageViewHandleInfoNVX {
-   StructureType sType;
-   void* pNext;
-   ImageView imageView;
-   DescriptorType descriptorType;
+   StructureType s_type;
+   void* p_next;
+   ImageView image_view;
+   DescriptorType descriptor_type;
    Sampler sampler;
 }
 struct ImageViewAddressPropertiesNVX {
-   StructureType sType;
-   void* pNext;
-   DeviceAddress deviceAddress;
+   StructureType s_type;
+   void* p_next;
+   DeviceAddress device_address;
    DeviceSize size;
 }
 struct PipelineCreationFeedback {
@@ -8947,679 +8947,679 @@ struct PipelineCreationFeedbackEXT {
    ulong duration;
 }
 struct PipelineCreationFeedbackCreateInfo {
-   StructureType sType;
-   void* pNext;
-   PipelineCreationFeedback* pPipelineCreationFeedback;
-   uint pipelineStageCreationFeedbackCount;
-   PipelineCreationFeedback* pPipelineStageCreationFeedbacks;
+   StructureType s_type;
+   void* p_next;
+   PipelineCreationFeedback* p_pipeline_creation_feedback;
+   uint pipeline_stage_creation_feedback_count;
+   PipelineCreationFeedback* p_pipeline_stage_creation_feedbacks;
 }
 struct PipelineCreationFeedbackCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   PipelineCreationFeedback* pPipelineCreationFeedback;
-   uint pipelineStageCreationFeedbackCount;
-   PipelineCreationFeedback* pPipelineStageCreationFeedbacks;
+   StructureType s_type;
+   void* p_next;
+   PipelineCreationFeedback* p_pipeline_creation_feedback;
+   uint pipeline_stage_creation_feedback_count;
+   PipelineCreationFeedback* p_pipeline_stage_creation_feedbacks;
 }
 struct SurfaceFullScreenExclusiveInfoEXT {
-   StructureType sType;
-   void* pNext;
-   FullScreenExclusiveEXT fullScreenExclusive;
+   StructureType s_type;
+   void* p_next;
+   FullScreenExclusiveEXT full_screen_exclusive;
 }
 struct SurfaceFullScreenExclusiveWin32InfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    void* hmonitor;
 }
 struct SurfaceCapabilitiesFullScreenExclusiveEXT {
-   StructureType sType;
-   void* pNext;
-   uint fullScreenExclusiveSupported;
+   StructureType s_type;
+   void* p_next;
+   uint full_screen_exclusive_supported;
 }
 struct PhysicalDevicePresentBarrierFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint presentBarrier;
+   StructureType s_type;
+   void* p_next;
+   uint present_barrier;
 }
 struct SurfaceCapabilitiesPresentBarrierNV {
-   StructureType sType;
-   void* pNext;
-   uint presentBarrierSupported;
+   StructureType s_type;
+   void* p_next;
+   uint present_barrier_supported;
 }
 struct SwapchainPresentBarrierCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint presentBarrierEnable;
+   StructureType s_type;
+   void* p_next;
+   uint present_barrier_enable;
 }
 struct PhysicalDevicePerformanceQueryFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint performanceCounterQueryPools;
-   uint performanceCounterMultipleQueryPools;
+   StructureType s_type;
+   void* p_next;
+   uint performance_counter_query_pools;
+   uint performance_counter_multiple_query_pools;
 }
 struct PhysicalDevicePerformanceQueryPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint allowCommandBufferQueryCopies;
+   StructureType s_type;
+   void* p_next;
+   uint allow_command_buffer_query_copies;
 }
 struct PerformanceCounterKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PerformanceCounterUnitKHR unit;
    PerformanceCounterScopeKHR scope;
    PerformanceCounterStorageKHR storage;
    uint[UUID_SIZE] uuid;
 }
 struct PerformanceCounterDescriptionKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PerformanceCounterDescriptionFlagsKHR flags;
    char[MAX_DESCRIPTION_SIZE] name;
    char[MAX_DESCRIPTION_SIZE] category;
    char[MAX_DESCRIPTION_SIZE] description;
 }
 struct QueryPoolPerformanceCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint queueFamilyIndex;
-   uint counterIndexCount;
-   uint* pCounterIndices;
+   StructureType s_type;
+   void* p_next;
+   uint queue_family_index;
+   uint counter_index_count;
+   uint* p_counter_indices;
 }
 struct AcquireProfilingLockInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    AcquireProfilingLockFlagsKHR flags;
    ulong timeout;
 }
 struct PerformanceQuerySubmitInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint counterPassIndex;
+   StructureType s_type;
+   void* p_next;
+   uint counter_pass_index;
 }
 struct PerformanceQueryReservationInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint maxPerformanceQueriesPerPool;
+   StructureType s_type;
+   void* p_next;
+   uint max_performance_queries_per_pool;
 }
 struct HeadlessSurfaceCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    HeadlessSurfaceCreateFlagsEXT flags;
 }
 struct PhysicalDeviceCoverageReductionModeFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint coverageReductionMode;
+   StructureType s_type;
+   void* p_next;
+   uint coverage_reduction_mode;
 }
 struct PipelineCoverageReductionStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineCoverageReductionStateCreateFlagsNV flags;
-   CoverageReductionModeNV coverageReductionMode;
+   CoverageReductionModeNV coverage_reduction_mode;
 }
 struct FramebufferMixedSamplesCombinationNV {
-   StructureType sType;
-   void* pNext;
-   CoverageReductionModeNV coverageReductionMode;
-   SampleCountFlagBits rasterizationSamples;
-   SampleCountFlags depthStencilSamples;
-   SampleCountFlags colorSamples;
+   StructureType s_type;
+   void* p_next;
+   CoverageReductionModeNV coverage_reduction_mode;
+   SampleCountFlagBits rasterization_samples;
+   SampleCountFlags depth_stencil_samples;
+   SampleCountFlags color_samples;
 }
 struct PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
-   StructureType sType;
-   void* pNext;
-   uint shaderIntegerFunctions2;
+   StructureType s_type;
+   void* p_next;
+   uint shader_integer_functions_2;
 }
 struct PerformanceValueINTEL {
    PerformanceValueTypeINTEL type;
    PerformanceValueDataINTEL data;
 }
 struct InitializePerformanceApiInfoINTEL {
-   StructureType sType;
-   void* pNext;
-   void* pUserData;
+   StructureType s_type;
+   void* p_next;
+   void* p_user_data;
 }
 struct QueryPoolPerformanceQueryCreateInfoINTEL {
-   StructureType sType;
-   void* pNext;
-   QueryPoolSamplingModeINTEL performanceCountersSampling;
+   StructureType s_type;
+   void* p_next;
+   QueryPoolSamplingModeINTEL performance_counters_sampling;
 }
 struct QueryPoolCreateInfoINTEL {
-   StructureType sType;
-   void* pNext;
-   QueryPoolSamplingModeINTEL performanceCountersSampling;
+   StructureType s_type;
+   void* p_next;
+   QueryPoolSamplingModeINTEL performance_counters_sampling;
 }
 struct PerformanceMarkerInfoINTEL {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ulong marker;
 }
 struct PerformanceStreamMarkerInfoINTEL {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint marker;
 }
 struct PerformanceOverrideInfoINTEL {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PerformanceOverrideTypeINTEL type;
    uint enable;
    ulong parameter;
 }
 struct PerformanceConfigurationAcquireInfoINTEL {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PerformanceConfigurationTypeINTEL type;
 }
 struct PhysicalDeviceShaderClockFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderSubgroupClock;
-   uint shaderDeviceClock;
+   StructureType s_type;
+   void* p_next;
+   uint shader_subgroup_clock;
+   uint shader_device_clock;
 }
 struct PhysicalDeviceIndexTypeUint8FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint indexTypeUint8;
+   StructureType s_type;
+   void* p_next;
+   uint index_type_uint_8;
 }
 struct PhysicalDeviceIndexTypeUint8FeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint indexTypeUint8;
+   StructureType s_type;
+   void* p_next;
+   uint index_type_uint_8;
 }
 struct PhysicalDeviceShaderSMBuiltinsPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   uint shaderSMCount;
-   uint shaderWarpsPerSM;
+   StructureType s_type;
+   void* p_next;
+   uint shader_sm_count;
+   uint shader_warps_per_sm;
 }
 struct PhysicalDeviceShaderSMBuiltinsFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint shaderSMBuiltins;
+   StructureType s_type;
+   void* p_next;
+   uint shader_sm_builtins;
 }
 struct PhysicalDeviceFragmentShaderInterlockFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint fragmentShaderSampleInterlock;
-   uint fragmentShaderPixelInterlock;
-   uint fragmentShaderShadingRateInterlock;
+   StructureType s_type;
+   void* p_next;
+   uint fragment_shader_sample_interlock;
+   uint fragment_shader_pixel_interlock;
+   uint fragment_shader_shading_rate_interlock;
 }
 struct PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
-   StructureType sType;
-   void* pNext;
-   uint separateDepthStencilLayouts;
+   StructureType s_type;
+   void* p_next;
+   uint separate_depth_stencil_layouts;
 }
 struct PhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint separateDepthStencilLayouts;
+   StructureType s_type;
+   void* p_next;
+   uint separate_depth_stencil_layouts;
 }
 struct AttachmentReferenceStencilLayout {
-   StructureType sType;
-   void* pNext;
-   ImageLayout stencilLayout;
+   StructureType s_type;
+   void* p_next;
+   ImageLayout stencil_layout;
 }
 struct PhysicalDevicePrimitiveTopologyListRestartFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint primitiveTopologyListRestart;
-   uint primitiveTopologyPatchListRestart;
+   StructureType s_type;
+   void* p_next;
+   uint primitive_topology_list_restart;
+   uint primitive_topology_patch_list_restart;
 }
 struct AttachmentReferenceStencilLayoutKHR {
-   StructureType sType;
-   void* pNext;
-   ImageLayout stencilLayout;
+   StructureType s_type;
+   void* p_next;
+   ImageLayout stencil_layout;
 }
 struct AttachmentDescriptionStencilLayout {
-   StructureType sType;
-   void* pNext;
-   ImageLayout stencilInitialLayout;
-   ImageLayout stencilFinalLayout;
+   StructureType s_type;
+   void* p_next;
+   ImageLayout stencil_initial_layout;
+   ImageLayout stencil_final_layout;
 }
 struct AttachmentDescriptionStencilLayoutKHR {
-   StructureType sType;
-   void* pNext;
-   ImageLayout stencilInitialLayout;
-   ImageLayout stencilFinalLayout;
+   StructureType s_type;
+   void* p_next;
+   ImageLayout stencil_initial_layout;
+   ImageLayout stencil_final_layout;
 }
 struct PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint pipelineExecutableInfo;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_executable_info;
 }
 struct PipelineInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Pipeline pipeline;
 }
 struct PipelineInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Pipeline pipeline;
 }
 struct PipelineExecutablePropertiesKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ShaderStageFlags stages;
    char[MAX_DESCRIPTION_SIZE] name;
    char[MAX_DESCRIPTION_SIZE] description;
-   uint subgroupSize;
+   uint subgroup_size;
 }
 struct PipelineExecutableInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Pipeline pipeline;
-   uint executableIndex;
+   uint executable_index;
 }
 struct PipelineExecutableStatisticKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    char[MAX_DESCRIPTION_SIZE] name;
    char[MAX_DESCRIPTION_SIZE] description;
    PipelineExecutableStatisticFormatKHR format;
    PipelineExecutableStatisticValueKHR value;
 }
 struct PipelineExecutableInternalRepresentationKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    char[MAX_DESCRIPTION_SIZE] name;
    char[MAX_DESCRIPTION_SIZE] description;
-   uint isText;
-   sz dataSize;
-   void* pData;
+   uint is_text;
+   sz data_size;
+   void* p_data;
 }
 struct PhysicalDeviceShaderDemoteToHelperInvocationFeatures {
-   StructureType sType;
-   void* pNext;
-   uint shaderDemoteToHelperInvocation;
+   StructureType s_type;
+   void* p_next;
+   uint shader_demote_to_helper_invocation;
 }
 struct PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderDemoteToHelperInvocation;
+   StructureType s_type;
+   void* p_next;
+   uint shader_demote_to_helper_invocation;
 }
 struct PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint texelBufferAlignment;
+   StructureType s_type;
+   void* p_next;
+   uint texel_buffer_alignment;
 }
 struct PhysicalDeviceTexelBufferAlignmentProperties {
-   StructureType sType;
-   void* pNext;
-   DeviceSize storageTexelBufferOffsetAlignmentBytes;
-   uint storageTexelBufferOffsetSingleTexelAlignment;
-   DeviceSize uniformTexelBufferOffsetAlignmentBytes;
-   uint uniformTexelBufferOffsetSingleTexelAlignment;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize storage_texel_buffer_offset_alignment_bytes;
+   uint storage_texel_buffer_offset_single_texel_alignment;
+   DeviceSize uniform_texel_buffer_offset_alignment_bytes;
+   uint uniform_texel_buffer_offset_single_texel_alignment;
 }
 struct PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   DeviceSize storageTexelBufferOffsetAlignmentBytes;
-   uint storageTexelBufferOffsetSingleTexelAlignment;
-   DeviceSize uniformTexelBufferOffsetAlignmentBytes;
-   uint uniformTexelBufferOffsetSingleTexelAlignment;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize storage_texel_buffer_offset_alignment_bytes;
+   uint storage_texel_buffer_offset_single_texel_alignment;
+   DeviceSize uniform_texel_buffer_offset_alignment_bytes;
+   uint uniform_texel_buffer_offset_single_texel_alignment;
 }
 struct PhysicalDeviceSubgroupSizeControlFeatures {
-   StructureType sType;
-   void* pNext;
-   uint subgroupSizeControl;
-   uint computeFullSubgroups;
+   StructureType s_type;
+   void* p_next;
+   uint subgroup_size_control;
+   uint compute_full_subgroups;
 }
 struct PhysicalDeviceSubgroupSizeControlFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint subgroupSizeControl;
-   uint computeFullSubgroups;
+   StructureType s_type;
+   void* p_next;
+   uint subgroup_size_control;
+   uint compute_full_subgroups;
 }
 struct PhysicalDeviceSubgroupSizeControlProperties {
-   StructureType sType;
-   void* pNext;
-   uint minSubgroupSize;
-   uint maxSubgroupSize;
-   uint maxComputeWorkgroupSubgroups;
-   ShaderStageFlags requiredSubgroupSizeStages;
+   StructureType s_type;
+   void* p_next;
+   uint min_subgroup_size;
+   uint max_subgroup_size;
+   uint max_compute_workgroup_subgroups;
+   ShaderStageFlags required_subgroup_size_stages;
 }
 struct PhysicalDeviceSubgroupSizeControlPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint minSubgroupSize;
-   uint maxSubgroupSize;
-   uint maxComputeWorkgroupSubgroups;
-   ShaderStageFlags requiredSubgroupSizeStages;
+   StructureType s_type;
+   void* p_next;
+   uint min_subgroup_size;
+   uint max_subgroup_size;
+   uint max_compute_workgroup_subgroups;
+   ShaderStageFlags required_subgroup_size_stages;
 }
 struct PipelineShaderStageRequiredSubgroupSizeCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint requiredSubgroupSize;
+   StructureType s_type;
+   void* p_next;
+   uint required_subgroup_size;
 }
 struct PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint requiredSubgroupSize;
+   StructureType s_type;
+   void* p_next;
+   uint required_subgroup_size;
 }
 struct ShaderRequiredSubgroupSizeCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint requiredSubgroupSize;
+   StructureType s_type;
+   void* p_next;
+   uint required_subgroup_size;
 }
 struct SubpassShadingPipelineCreateInfoHUAWEI {
-   StructureType sType;
-   void* pNext;
-   RenderPass renderPass;
+   StructureType s_type;
+   void* p_next;
+   RenderPass render_pass;
    uint subpass;
 }
 struct PhysicalDeviceSubpassShadingPropertiesHUAWEI {
-   StructureType sType;
-   void* pNext;
-   uint maxSubpassShadingWorkgroupSizeAspectRatio;
+   StructureType s_type;
+   void* p_next;
+   uint max_subpass_shading_workgroup_size_aspect_ratio;
 }
 struct PhysicalDeviceClusterCullingShaderPropertiesHUAWEI {
-   StructureType sType;
-   void* pNext;
-   uint[3] maxWorkGroupCount;
-   uint[3] maxWorkGroupSize;
-   uint maxOutputClusterCount;
-   DeviceSize indirectBufferOffsetAlignment;
+   StructureType s_type;
+   void* p_next;
+   uint[3] max_work_group_count;
+   uint[3] max_work_group_size;
+   uint max_output_cluster_count;
+   DeviceSize indirect_buffer_offset_alignment;
 }
 struct MemoryOpaqueCaptureAddressAllocateInfo {
-   StructureType sType;
-   void* pNext;
-   ulong opaqueCaptureAddress;
+   StructureType s_type;
+   void* p_next;
+   ulong opaque_capture_address;
 }
 struct MemoryOpaqueCaptureAddressAllocateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ulong opaqueCaptureAddress;
+   StructureType s_type;
+   void* p_next;
+   ulong opaque_capture_address;
 }
 struct DeviceMemoryOpaqueCaptureAddressInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceMemory memory;
 }
 struct DeviceMemoryOpaqueCaptureAddressInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceMemory memory;
 }
 struct PhysicalDeviceLineRasterizationFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint rectangularLines;
-   uint bresenhamLines;
-   uint smoothLines;
-   uint stippledRectangularLines;
-   uint stippledBresenhamLines;
-   uint stippledSmoothLines;
+   StructureType s_type;
+   void* p_next;
+   uint rectangular_lines;
+   uint bresenham_lines;
+   uint smooth_lines;
+   uint stippled_rectangular_lines;
+   uint stippled_bresenham_lines;
+   uint stippled_smooth_lines;
 }
 struct PhysicalDeviceLineRasterizationFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint rectangularLines;
-   uint bresenhamLines;
-   uint smoothLines;
-   uint stippledRectangularLines;
-   uint stippledBresenhamLines;
-   uint stippledSmoothLines;
+   StructureType s_type;
+   void* p_next;
+   uint rectangular_lines;
+   uint bresenham_lines;
+   uint smooth_lines;
+   uint stippled_rectangular_lines;
+   uint stippled_bresenham_lines;
+   uint stippled_smooth_lines;
 }
 struct PhysicalDeviceLineRasterizationPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint lineSubPixelPrecisionBits;
+   StructureType s_type;
+   void* p_next;
+   uint line_sub_pixel_precision_bits;
 }
 struct PhysicalDeviceLineRasterizationPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint lineSubPixelPrecisionBits;
+   StructureType s_type;
+   void* p_next;
+   uint line_sub_pixel_precision_bits;
 }
 struct PipelineRasterizationLineStateCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   LineRasterizationModeKHR lineRasterizationMode;
-   uint stippledLineEnable;
-   uint lineStippleFactor;
-   uint lineStipplePattern;
+   StructureType s_type;
+   void* p_next;
+   LineRasterizationModeKHR line_rasterization_mode;
+   uint stippled_line_enable;
+   uint line_stipple_factor;
+   uint line_stipple_pattern;
 }
 struct PipelineRasterizationLineStateCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   LineRasterizationModeKHR lineRasterizationMode;
-   uint stippledLineEnable;
-   uint lineStippleFactor;
-   uint lineStipplePattern;
+   StructureType s_type;
+   void* p_next;
+   LineRasterizationModeKHR line_rasterization_mode;
+   uint stippled_line_enable;
+   uint line_stipple_factor;
+   uint line_stipple_pattern;
 }
 struct PhysicalDevicePipelineCreationCacheControlFeatures {
-   StructureType sType;
-   void* pNext;
-   uint pipelineCreationCacheControl;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_creation_cache_control;
 }
 struct PhysicalDevicePipelineCreationCacheControlFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint pipelineCreationCacheControl;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_creation_cache_control;
 }
 struct PhysicalDeviceVulkan11Features {
-   StructureType sType;
-   void* pNext;
-   uint storageBuffer16BitAccess;
-   uint uniformAndStorageBuffer16BitAccess;
-   uint storagePushConstant16;
-   uint storageInputOutput16;
+   StructureType s_type;
+   void* p_next;
+   uint storage_buffer_16_bit_access;
+   uint uniform_and_storage_buffer_16_bit_access;
+   uint storage_push_constant_16;
+   uint storage_input_output_16;
    uint multiview;
-   uint multiviewGeometryShader;
-   uint multiviewTessellationShader;
-   uint variablePointersStorageBuffer;
-   uint variablePointers;
-   uint protectedMemory;
-   uint samplerYcbcrConversion;
-   uint shaderDrawParameters;
+   uint multiview_geometry_shader;
+   uint multiview_tessellation_shader;
+   uint variable_pointers_storage_buffer;
+   uint variable_pointers;
+   uint protected_memory;
+   uint sampler_ycbcr_conversion;
+   uint shader_draw_parameters;
 }
 struct PhysicalDeviceVulkan11Properties {
-   StructureType sType;
-   void* pNext;
-   uint[UUID_SIZE] deviceUUID;
-   uint[UUID_SIZE] driverUUID;
-   uint[LUID_SIZE] deviceLUID;
-   uint deviceNodeMask;
-   uint deviceLUIDValid;
-   uint subgroupSize;
-   ShaderStageFlags subgroupSupportedStages;
-   SubgroupFeatureFlags subgroupSupportedOperations;
-   uint subgroupQuadOperationsInAllStages;
-   PointClippingBehavior pointClippingBehavior;
-   uint maxMultiviewViewCount;
-   uint maxMultiviewInstanceIndex;
-   uint protectedNoFault;
-   uint maxPerSetDescriptors;
-   DeviceSize maxMemoryAllocationSize;
+   StructureType s_type;
+   void* p_next;
+   uint[UUID_SIZE] device_uuid;
+   uint[UUID_SIZE] driver_uuid;
+   uint[LUID_SIZE] device_luid;
+   uint device_node_mask;
+   uint device_luid_valid;
+   uint subgroup_size;
+   ShaderStageFlags subgroup_supported_stages;
+   SubgroupFeatureFlags subgroup_supported_operations;
+   uint subgroup_quad_operations_in_all_stages;
+   PointClippingBehavior point_clipping_behavior;
+   uint max_multiview_view_count;
+   uint max_multiview_instance_index;
+   uint protected_no_fault;
+   uint max_per_set_descriptors;
+   DeviceSize max_memory_allocation_size;
 }
 struct PhysicalDeviceVulkan12Features {
-   StructureType sType;
-   void* pNext;
-   uint samplerMirrorClampToEdge;
-   uint drawIndirectCount;
-   uint storageBuffer8BitAccess;
-   uint uniformAndStorageBuffer8BitAccess;
-   uint storagePushConstant8;
-   uint shaderBufferInt64Atomics;
-   uint shaderSharedInt64Atomics;
-   uint shaderFloat16;
-   uint shaderInt8;
-   uint descriptorIndexing;
-   uint shaderInputAttachmentArrayDynamicIndexing;
-   uint shaderUniformTexelBufferArrayDynamicIndexing;
-   uint shaderStorageTexelBufferArrayDynamicIndexing;
-   uint shaderUniformBufferArrayNonUniformIndexing;
-   uint shaderSampledImageArrayNonUniformIndexing;
-   uint shaderStorageBufferArrayNonUniformIndexing;
-   uint shaderStorageImageArrayNonUniformIndexing;
-   uint shaderInputAttachmentArrayNonUniformIndexing;
-   uint shaderUniformTexelBufferArrayNonUniformIndexing;
-   uint shaderStorageTexelBufferArrayNonUniformIndexing;
-   uint descriptorBindingUniformBufferUpdateAfterBind;
-   uint descriptorBindingSampledImageUpdateAfterBind;
-   uint descriptorBindingStorageImageUpdateAfterBind;
-   uint descriptorBindingStorageBufferUpdateAfterBind;
-   uint descriptorBindingUniformTexelBufferUpdateAfterBind;
-   uint descriptorBindingStorageTexelBufferUpdateAfterBind;
-   uint descriptorBindingUpdateUnusedWhilePending;
-   uint descriptorBindingPartiallyBound;
-   uint descriptorBindingVariableDescriptorCount;
-   uint runtimeDescriptorArray;
-   uint samplerFilterMinmax;
-   uint scalarBlockLayout;
-   uint imagelessFramebuffer;
-   uint uniformBufferStandardLayout;
-   uint shaderSubgroupExtendedTypes;
-   uint separateDepthStencilLayouts;
-   uint hostQueryReset;
-   uint timelineSemaphore;
-   uint bufferDeviceAddress;
-   uint bufferDeviceAddressCaptureReplay;
-   uint bufferDeviceAddressMultiDevice;
-   uint vulkanMemoryModel;
-   uint vulkanMemoryModelDeviceScope;
-   uint vulkanMemoryModelAvailabilityVisibilityChains;
-   uint shaderOutputViewportIndex;
-   uint shaderOutputLayer;
-   uint subgroupBroadcastDynamicId;
+   StructureType s_type;
+   void* p_next;
+   uint sampler_mirror_clamp_to_edge;
+   uint draw_indirect_count;
+   uint storage_buffer_8_bit_access;
+   uint uniform_and_storage_buffer_8_bit_access;
+   uint storage_push_constant_8;
+   uint shader_buffer_int_64_atomics;
+   uint shader_shared_int_64_atomics;
+   uint shader_float_16;
+   uint shader_int_8;
+   uint descriptor_indexing;
+   uint shader_input_attachment_array_dynamic_indexing;
+   uint shader_uniform_texel_buffer_array_dynamic_indexing;
+   uint shader_storage_texel_buffer_array_dynamic_indexing;
+   uint shader_uniform_buffer_array_non_uniform_indexing;
+   uint shader_sampled_image_array_non_uniform_indexing;
+   uint shader_storage_buffer_array_non_uniform_indexing;
+   uint shader_storage_image_array_non_uniform_indexing;
+   uint shader_input_attachment_array_non_uniform_indexing;
+   uint shader_uniform_texel_buffer_array_non_uniform_indexing;
+   uint shader_storage_texel_buffer_array_non_uniform_indexing;
+   uint descriptor_binding_uniform_buffer_update_after_bind;
+   uint descriptor_binding_sampled_image_update_after_bind;
+   uint descriptor_binding_storage_image_update_after_bind;
+   uint descriptor_binding_storage_buffer_update_after_bind;
+   uint descriptor_binding_uniform_texel_buffer_update_after_bind;
+   uint descriptor_binding_storage_texel_buffer_update_after_bind;
+   uint descriptor_binding_update_unused_while_pending;
+   uint descriptor_binding_partially_bound;
+   uint descriptor_binding_variable_descriptor_count;
+   uint runtime_descriptor_array;
+   uint sampler_filter_minmax;
+   uint scalar_block_layout;
+   uint imageless_framebuffer;
+   uint uniform_buffer_standard_layout;
+   uint shader_subgroup_extended_types;
+   uint separate_depth_stencil_layouts;
+   uint host_query_reset;
+   uint timeline_semaphore;
+   uint buffer_device_address;
+   uint buffer_device_address_capture_replay;
+   uint buffer_device_address_multi_device;
+   uint vulkan_memory_model;
+   uint vulkan_memory_model_device_scope;
+   uint vulkan_memory_model_availability_visibility_chains;
+   uint shader_output_viewport_index;
+   uint shader_output_layer;
+   uint subgroup_broadcast_dynamic_id;
 }
 struct PhysicalDeviceVulkan12Properties {
-   StructureType sType;
-   void* pNext;
-   DriverId driverID;
-   char[MAX_DRIVER_NAME_SIZE] driverName;
-   char[MAX_DRIVER_INFO_SIZE] driverInfo;
-   ConformanceVersion conformanceVersion;
-   ShaderFloatControlsIndependence denormBehaviorIndependence;
-   ShaderFloatControlsIndependence roundingModeIndependence;
-   uint shaderSignedZeroInfNanPreserveFloat16;
-   uint shaderSignedZeroInfNanPreserveFloat32;
-   uint shaderSignedZeroInfNanPreserveFloat64;
-   uint shaderDenormPreserveFloat16;
-   uint shaderDenormPreserveFloat32;
-   uint shaderDenormPreserveFloat64;
-   uint shaderDenormFlushToZeroFloat16;
-   uint shaderDenormFlushToZeroFloat32;
-   uint shaderDenormFlushToZeroFloat64;
-   uint shaderRoundingModeRTEFloat16;
-   uint shaderRoundingModeRTEFloat32;
-   uint shaderRoundingModeRTEFloat64;
-   uint shaderRoundingModeRTZFloat16;
-   uint shaderRoundingModeRTZFloat32;
-   uint shaderRoundingModeRTZFloat64;
-   uint maxUpdateAfterBindDescriptorsInAllPools;
-   uint shaderUniformBufferArrayNonUniformIndexingNative;
-   uint shaderSampledImageArrayNonUniformIndexingNative;
-   uint shaderStorageBufferArrayNonUniformIndexingNative;
-   uint shaderStorageImageArrayNonUniformIndexingNative;
-   uint shaderInputAttachmentArrayNonUniformIndexingNative;
-   uint robustBufferAccessUpdateAfterBind;
-   uint quadDivergentImplicitLod;
-   uint maxPerStageDescriptorUpdateAfterBindSamplers;
-   uint maxPerStageDescriptorUpdateAfterBindUniformBuffers;
-   uint maxPerStageDescriptorUpdateAfterBindStorageBuffers;
-   uint maxPerStageDescriptorUpdateAfterBindSampledImages;
-   uint maxPerStageDescriptorUpdateAfterBindStorageImages;
-   uint maxPerStageDescriptorUpdateAfterBindInputAttachments;
-   uint maxPerStageUpdateAfterBindResources;
-   uint maxDescriptorSetUpdateAfterBindSamplers;
-   uint maxDescriptorSetUpdateAfterBindUniformBuffers;
-   uint maxDescriptorSetUpdateAfterBindUniformBuffersDynamic;
-   uint maxDescriptorSetUpdateAfterBindStorageBuffers;
-   uint maxDescriptorSetUpdateAfterBindStorageBuffersDynamic;
-   uint maxDescriptorSetUpdateAfterBindSampledImages;
-   uint maxDescriptorSetUpdateAfterBindStorageImages;
-   uint maxDescriptorSetUpdateAfterBindInputAttachments;
-   ResolveModeFlags supportedDepthResolveModes;
-   ResolveModeFlags supportedStencilResolveModes;
-   uint independentResolveNone;
-   uint independentResolve;
-   uint filterMinmaxSingleComponentFormats;
-   uint filterMinmaxImageComponentMapping;
-   ulong maxTimelineSemaphoreValueDifference;
-   SampleCountFlags framebufferIntegerColorSampleCounts;
+   StructureType s_type;
+   void* p_next;
+   DriverId driver_id;
+   char[MAX_DRIVER_NAME_SIZE] driver_name;
+   char[MAX_DRIVER_INFO_SIZE] driver_info;
+   ConformanceVersion conformance_version;
+   ShaderFloatControlsIndependence denorm_behavior_independence;
+   ShaderFloatControlsIndependence rounding_mode_independence;
+   uint shader_signed_zero_inf_nan_preserve_float_16;
+   uint shader_signed_zero_inf_nan_preserve_float_32;
+   uint shader_signed_zero_inf_nan_preserve_float_64;
+   uint shader_denorm_preserve_float_16;
+   uint shader_denorm_preserve_float_32;
+   uint shader_denorm_preserve_float_64;
+   uint shader_denorm_flush_to_zero_float_16;
+   uint shader_denorm_flush_to_zero_float_32;
+   uint shader_denorm_flush_to_zero_float_64;
+   uint shader_rounding_mode_rte_float_16;
+   uint shader_rounding_mode_rte_float_32;
+   uint shader_rounding_mode_rte_float_64;
+   uint shader_rounding_mode_rtz_float_16;
+   uint shader_rounding_mode_rtz_float_32;
+   uint shader_rounding_mode_rtz_float_64;
+   uint max_update_after_bind_descriptors_in_all_pools;
+   uint shader_uniform_buffer_array_non_uniform_indexing_native;
+   uint shader_sampled_image_array_non_uniform_indexing_native;
+   uint shader_storage_buffer_array_non_uniform_indexing_native;
+   uint shader_storage_image_array_non_uniform_indexing_native;
+   uint shader_input_attachment_array_non_uniform_indexing_native;
+   uint robust_buffer_access_update_after_bind;
+   uint quad_divergent_implicit_lod;
+   uint max_per_stage_descriptor_update_after_bind_samplers;
+   uint max_per_stage_descriptor_update_after_bind_uniform_buffers;
+   uint max_per_stage_descriptor_update_after_bind_storage_buffers;
+   uint max_per_stage_descriptor_update_after_bind_sampled_images;
+   uint max_per_stage_descriptor_update_after_bind_storage_images;
+   uint max_per_stage_descriptor_update_after_bind_input_attachments;
+   uint max_per_stage_update_after_bind_resources;
+   uint max_descriptor_set_update_after_bind_samplers;
+   uint max_descriptor_set_update_after_bind_uniform_buffers;
+   uint max_descriptor_set_update_after_bind_uniform_buffers_dynamic;
+   uint max_descriptor_set_update_after_bind_storage_buffers;
+   uint max_descriptor_set_update_after_bind_storage_buffers_dynamic;
+   uint max_descriptor_set_update_after_bind_sampled_images;
+   uint max_descriptor_set_update_after_bind_storage_images;
+   uint max_descriptor_set_update_after_bind_input_attachments;
+   ResolveModeFlags supported_depth_resolve_modes;
+   ResolveModeFlags supported_stencil_resolve_modes;
+   uint independent_resolve_none;
+   uint independent_resolve;
+   uint filter_minmax_single_component_formats;
+   uint filter_minmax_image_component_mapping;
+   ulong max_timeline_semaphore_value_difference;
+   SampleCountFlags framebuffer_integer_color_sample_counts;
 }
 struct PhysicalDeviceVulkan13Features {
-   StructureType sType;
-   void* pNext;
-   uint robustImageAccess;
-   uint inlineUniformBlock;
-   uint descriptorBindingInlineUniformBlockUpdateAfterBind;
-   uint pipelineCreationCacheControl;
-   uint privateData;
-   uint shaderDemoteToHelperInvocation;
-   uint shaderTerminateInvocation;
-   uint subgroupSizeControl;
-   uint computeFullSubgroups;
-   uint synchronization2;
-   uint textureCompressionASTC_HDR;
-   uint shaderZeroInitializeWorkgroupMemory;
-   uint dynamicRendering;
-   uint shaderIntegerDotProduct;
-   uint maintenance4;
+   StructureType s_type;
+   void* p_next;
+   uint robust_image_access;
+   uint inline_uniform_block;
+   uint descriptor_binding_inline_uniform_block_update_after_bind;
+   uint pipeline_creation_cache_control;
+   uint private_data;
+   uint shader_demote_to_helper_invocation;
+   uint shader_terminate_invocation;
+   uint subgroup_size_control;
+   uint compute_full_subgroups;
+   uint synchronization_2;
+   uint texture_compression_astc_hdr;
+   uint shader_zero_initialize_workgroup_memory;
+   uint dynamic_rendering;
+   uint shader_integer_dot_product;
+   uint maintenance_4;
 }
 struct PhysicalDeviceVulkan13Properties {
-   StructureType sType;
-   void* pNext;
-   uint minSubgroupSize;
-   uint maxSubgroupSize;
-   uint maxComputeWorkgroupSubgroups;
-   ShaderStageFlags requiredSubgroupSizeStages;
-   uint maxInlineUniformBlockSize;
-   uint maxPerStageDescriptorInlineUniformBlocks;
-   uint maxPerStageDescriptorUpdateAfterBindInlineUniformBlocks;
-   uint maxDescriptorSetInlineUniformBlocks;
-   uint maxDescriptorSetUpdateAfterBindInlineUniformBlocks;
-   uint maxInlineUniformTotalSize;
-   uint integerDotProduct8BitUnsignedAccelerated;
-   uint integerDotProduct8BitSignedAccelerated;
-   uint integerDotProduct8BitMixedSignednessAccelerated;
-   uint integerDotProduct4x8BitPackedUnsignedAccelerated;
-   uint integerDotProduct4x8BitPackedSignedAccelerated;
-   uint integerDotProduct4x8BitPackedMixedSignednessAccelerated;
-   uint integerDotProduct16BitUnsignedAccelerated;
-   uint integerDotProduct16BitSignedAccelerated;
-   uint integerDotProduct16BitMixedSignednessAccelerated;
-   uint integerDotProduct32BitUnsignedAccelerated;
-   uint integerDotProduct32BitSignedAccelerated;
-   uint integerDotProduct32BitMixedSignednessAccelerated;
-   uint integerDotProduct64BitUnsignedAccelerated;
-   uint integerDotProduct64BitSignedAccelerated;
-   uint integerDotProduct64BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating8BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating8BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating16BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating16BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating32BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating32BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating64BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating64BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated;
-   DeviceSize storageTexelBufferOffsetAlignmentBytes;
-   uint storageTexelBufferOffsetSingleTexelAlignment;
-   DeviceSize uniformTexelBufferOffsetAlignmentBytes;
-   uint uniformTexelBufferOffsetSingleTexelAlignment;
-   DeviceSize maxBufferSize;
+   StructureType s_type;
+   void* p_next;
+   uint min_subgroup_size;
+   uint max_subgroup_size;
+   uint max_compute_workgroup_subgroups;
+   ShaderStageFlags required_subgroup_size_stages;
+   uint max_inline_uniform_block_size;
+   uint max_per_stage_descriptor_inline_uniform_blocks;
+   uint max_per_stage_descriptor_update_after_bind_inline_uniform_blocks;
+   uint max_descriptor_set_inline_uniform_blocks;
+   uint max_descriptor_set_update_after_bind_inline_uniform_blocks;
+   uint max_inline_uniform_total_size;
+   uint integer_dot_product_8_bit_unsigned_accelerated;
+   uint integer_dot_product_8_bit_signed_accelerated;
+   uint integer_dot_product_8_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_4_x_8_bit_packed_unsigned_accelerated;
+   uint integer_dot_product_4_x_8_bit_packed_signed_accelerated;
+   uint integer_dot_product_4_x_8_bit_packed_mixed_signedness_accelerated;
+   uint integer_dot_product_16_bit_unsigned_accelerated;
+   uint integer_dot_product_16_bit_signed_accelerated;
+   uint integer_dot_product_16_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_32_bit_unsigned_accelerated;
+   uint integer_dot_product_32_bit_signed_accelerated;
+   uint integer_dot_product_32_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_64_bit_unsigned_accelerated;
+   uint integer_dot_product_64_bit_signed_accelerated;
+   uint integer_dot_product_64_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_8_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_8_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_8_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_4_x_8_bit_packed_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_4_x_8_bit_packed_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_4_x_8_bit_packed_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_16_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_16_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_16_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_32_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_32_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_32_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_64_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_64_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_64_bit_mixed_signedness_accelerated;
+   DeviceSize storage_texel_buffer_offset_alignment_bytes;
+   uint storage_texel_buffer_offset_single_texel_alignment;
+   DeviceSize uniform_texel_buffer_offset_alignment_bytes;
+   uint uniform_texel_buffer_offset_single_texel_alignment;
+   DeviceSize max_buffer_size;
 }
 struct PipelineCompilerControlCreateInfoAMD {
-   StructureType sType;
-   void* pNext;
-   PipelineCompilerControlFlagsAMD compilerControlFlags;
+   StructureType s_type;
+   void* p_next;
+   PipelineCompilerControlFlagsAMD compiler_control_flags;
 }
 struct PhysicalDeviceCoherentMemoryFeaturesAMD {
-   StructureType sType;
-   void* pNext;
-   uint deviceCoherentMemory;
+   StructureType s_type;
+   void* p_next;
+   uint device_coherent_memory;
 }
 struct PhysicalDeviceToolProperties {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    char[MAX_EXTENSION_NAME_SIZE] name;
    char[MAX_EXTENSION_NAME_SIZE] version;
    ToolPurposeFlags purposes;
@@ -9627,8 +9627,8 @@ struct PhysicalDeviceToolProperties {
    char[MAX_EXTENSION_NAME_SIZE] layer;
 }
 struct PhysicalDeviceToolPropertiesEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    char[MAX_EXTENSION_NAME_SIZE] name;
    char[MAX_EXTENSION_NAME_SIZE] version;
    ToolPurposeFlags purposes;
@@ -9636,108 +9636,108 @@ struct PhysicalDeviceToolPropertiesEXT {
    char[MAX_EXTENSION_NAME_SIZE] layer;
 }
 struct SamplerCustomBorderColorCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ClearColorValue customBorderColor;
+   StructureType s_type;
+   void* p_next;
+   ClearColorValue custom_border_color;
    Format format;
 }
 struct PhysicalDeviceCustomBorderColorPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxCustomBorderColorSamplers;
+   StructureType s_type;
+   void* p_next;
+   uint max_custom_border_color_samplers;
 }
 struct PhysicalDeviceCustomBorderColorFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint customBorderColors;
-   uint customBorderColorWithoutFormat;
+   StructureType s_type;
+   void* p_next;
+   uint custom_border_colors;
+   uint custom_border_color_without_format;
 }
 struct SamplerBorderColorComponentMappingCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ComponentMapping components;
    uint srgb;
 }
 struct PhysicalDeviceBorderColorSwizzleFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint borderColorSwizzle;
-   uint borderColorSwizzleFromImage;
+   StructureType s_type;
+   void* p_next;
+   uint border_color_swizzle;
+   uint border_color_swizzle_from_image;
 }
 struct AccelerationStructureGeometryTrianglesDataKHR {
-   StructureType sType;
-   void* pNext;
-   Format vertexFormat;
-   DeviceOrHostAddressConstKHR vertexData;
-   DeviceSize vertexStride;
-   uint maxVertex;
-   IndexType indexType;
-   DeviceOrHostAddressConstKHR indexData;
-   DeviceOrHostAddressConstKHR transformData;
+   StructureType s_type;
+   void* p_next;
+   Format vertex_format;
+   DeviceOrHostAddressConstKHR vertex_data;
+   DeviceSize vertex_stride;
+   uint max_vertex;
+   IndexType index_type;
+   DeviceOrHostAddressConstKHR index_data;
+   DeviceOrHostAddressConstKHR transform_data;
 }
 struct AccelerationStructureGeometryAabbsDataKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceOrHostAddressConstKHR data;
    DeviceSize stride;
 }
 struct AccelerationStructureGeometryInstancesDataKHR {
-   StructureType sType;
-   void* pNext;
-   uint arrayOfPointers;
+   StructureType s_type;
+   void* p_next;
+   uint array_of_pointers;
    DeviceOrHostAddressConstKHR data;
 }
 struct AccelerationStructureGeometryKHR {
-   StructureType sType;
-   void* pNext;
-   GeometryTypeKHR geometryType;
+   StructureType s_type;
+   void* p_next;
+   GeometryTypeKHR geometry_type;
    AccelerationStructureGeometryDataKHR geometry;
    GeometryFlagsKHR flags;
 }
 struct AccelerationStructureBuildGeometryInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    AccelerationStructureTypeKHR type;
    BuildAccelerationStructureFlagsKHR flags;
    BuildAccelerationStructureModeKHR mode;
-   AccelerationStructureKHR srcAccelerationStructure;
-   AccelerationStructureKHR dstAccelerationStructure;
-   uint geometryCount;
-   AccelerationStructureGeometryKHR* pGeometries;
-   AccelerationStructureGeometryKHR* ppGeometries;
-   DeviceOrHostAddressKHR scratchData;
+   AccelerationStructureKHR src_acceleration_structure;
+   AccelerationStructureKHR dst_acceleration_structure;
+   uint geometry_count;
+   AccelerationStructureGeometryKHR* p_geometries;
+   AccelerationStructureGeometryKHR** pp_geometries;
+   DeviceOrHostAddressKHR scratch_data;
 }
 struct AccelerationStructureBuildRangeInfoKHR {
-   uint primitiveCount;
-   uint primitiveOffset;
-   uint firstVertex;
-   uint transformOffset;
+   uint primitive_count;
+   uint primitive_offset;
+   uint first_vertex;
+   uint transform_offset;
 }
 struct AccelerationStructureCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   AccelerationStructureCreateFlagsKHR createFlags;
+   StructureType s_type;
+   void* p_next;
+   AccelerationStructureCreateFlagsKHR create_flags;
    Buffer buffer;
    DeviceSize offset;
    DeviceSize size;
    AccelerationStructureTypeKHR type;
-   DeviceAddress deviceAddress;
+   DeviceAddress device_address;
 }
 struct AabbPositionsKHR {
-   float minX;
-   float minY;
-   float minZ;
-   float maxX;
-   float maxY;
-   float maxZ;
+   float min_x;
+   float min_y;
+   float min_z;
+   float max_x;
+   float max_y;
+   float max_z;
 }
 struct AabbPositionsNV {
-   float minX;
-   float minY;
-   float minZ;
-   float maxX;
-   float maxY;
-   float maxZ;
+   float min_x;
+   float min_y;
+   float min_z;
+   float max_x;
+   float max_y;
+   float max_z;
 }
 struct TransformMatrixKHR {
    float[3][4] matrix;
@@ -9747,695 +9747,695 @@ struct TransformMatrixNV {
 }
 struct AccelerationStructureInstanceKHR {
    TransformMatrixKHR transform;
-   uint instanceCustomIndex;
+   uint instance_custom_index;
    uint mask;
-   uint instanceShaderBindingTableRecordOffset;
+   uint instance_shader_binding_table_record_offset;
    GeometryInstanceFlagsKHR flags;
-   ulong accelerationStructureReference;
+   ulong acceleration_structure_reference;
 }
 struct AccelerationStructureInstanceNV {
    TransformMatrixKHR transform;
-   uint instanceCustomIndex;
+   uint instance_custom_index;
    uint mask;
-   uint instanceShaderBindingTableRecordOffset;
+   uint instance_shader_binding_table_record_offset;
    GeometryInstanceFlagsKHR flags;
-   ulong accelerationStructureReference;
+   ulong acceleration_structure_reference;
 }
 struct AccelerationStructureDeviceAddressInfoKHR {
-   StructureType sType;
-   void* pNext;
-   AccelerationStructureKHR accelerationStructure;
+   StructureType s_type;
+   void* p_next;
+   AccelerationStructureKHR acceleration_structure;
 }
 struct AccelerationStructureVersionInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint* pVersionData;
+   StructureType s_type;
+   void* p_next;
+   uint* p_version_data;
 }
 struct CopyAccelerationStructureInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    AccelerationStructureKHR src;
    AccelerationStructureKHR dst;
    CopyAccelerationStructureModeKHR mode;
 }
 struct CopyAccelerationStructureToMemoryInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    AccelerationStructureKHR src;
    DeviceOrHostAddressKHR dst;
    CopyAccelerationStructureModeKHR mode;
 }
 struct CopyMemoryToAccelerationStructureInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceOrHostAddressConstKHR src;
    AccelerationStructureKHR dst;
    CopyAccelerationStructureModeKHR mode;
 }
 struct RayTracingPipelineInterfaceCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint maxPipelineRayPayloadSize;
-   uint maxPipelineRayHitAttributeSize;
+   StructureType s_type;
+   void* p_next;
+   uint max_pipeline_ray_payload_size;
+   uint max_pipeline_ray_hit_attribute_size;
 }
 struct PipelineLibraryCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint libraryCount;
-   Pipeline* pLibraries;
+   StructureType s_type;
+   void* p_next;
+   uint library_count;
+   Pipeline* p_libraries;
 }
 struct PhysicalDeviceExtendedDynamicStateFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint extendedDynamicState;
+   StructureType s_type;
+   void* p_next;
+   uint extended_dynamic_state;
 }
 struct PhysicalDeviceExtendedDynamicState2FeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint extendedDynamicState2;
-   uint extendedDynamicState2LogicOp;
-   uint extendedDynamicState2PatchControlPoints;
+   StructureType s_type;
+   void* p_next;
+   uint extended_dynamic_state_2;
+   uint extended_dynamic_state_2_logic_op;
+   uint extended_dynamic_state_2_patch_control_points;
 }
 struct PhysicalDeviceExtendedDynamicState3FeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint extendedDynamicState3TessellationDomainOrigin;
-   uint extendedDynamicState3DepthClampEnable;
-   uint extendedDynamicState3PolygonMode;
-   uint extendedDynamicState3RasterizationSamples;
-   uint extendedDynamicState3SampleMask;
-   uint extendedDynamicState3AlphaToCoverageEnable;
-   uint extendedDynamicState3AlphaToOneEnable;
-   uint extendedDynamicState3LogicOpEnable;
-   uint extendedDynamicState3ColorBlendEnable;
-   uint extendedDynamicState3ColorBlendEquation;
-   uint extendedDynamicState3ColorWriteMask;
-   uint extendedDynamicState3RasterizationStream;
-   uint extendedDynamicState3ConservativeRasterizationMode;
-   uint extendedDynamicState3ExtraPrimitiveOverestimationSize;
-   uint extendedDynamicState3DepthClipEnable;
-   uint extendedDynamicState3SampleLocationsEnable;
-   uint extendedDynamicState3ColorBlendAdvanced;
-   uint extendedDynamicState3ProvokingVertexMode;
-   uint extendedDynamicState3LineRasterizationMode;
-   uint extendedDynamicState3LineStippleEnable;
-   uint extendedDynamicState3DepthClipNegativeOneToOne;
-   uint extendedDynamicState3ViewportWScalingEnable;
-   uint extendedDynamicState3ViewportSwizzle;
-   uint extendedDynamicState3CoverageToColorEnable;
-   uint extendedDynamicState3CoverageToColorLocation;
-   uint extendedDynamicState3CoverageModulationMode;
-   uint extendedDynamicState3CoverageModulationTableEnable;
-   uint extendedDynamicState3CoverageModulationTable;
-   uint extendedDynamicState3CoverageReductionMode;
-   uint extendedDynamicState3RepresentativeFragmentTestEnable;
-   uint extendedDynamicState3ShadingRateImageEnable;
+   StructureType s_type;
+   void* p_next;
+   uint extended_dynamic_state_3_tessellation_domain_origin;
+   uint extended_dynamic_state_3_depth_clamp_enable;
+   uint extended_dynamic_state_3_polygon_mode;
+   uint extended_dynamic_state_3_rasterization_samples;
+   uint extended_dynamic_state_3_sample_mask;
+   uint extended_dynamic_state_3_alpha_to_coverage_enable;
+   uint extended_dynamic_state_3_alpha_to_one_enable;
+   uint extended_dynamic_state_3_logic_op_enable;
+   uint extended_dynamic_state_3_color_blend_enable;
+   uint extended_dynamic_state_3_color_blend_equation;
+   uint extended_dynamic_state_3_color_write_mask;
+   uint extended_dynamic_state_3_rasterization_stream;
+   uint extended_dynamic_state_3_conservative_rasterization_mode;
+   uint extended_dynamic_state_3_extra_primitive_overestimation_size;
+   uint extended_dynamic_state_3_depth_clip_enable;
+   uint extended_dynamic_state_3_sample_locations_enable;
+   uint extended_dynamic_state_3_color_blend_advanced;
+   uint extended_dynamic_state_3_provoking_vertex_mode;
+   uint extended_dynamic_state_3_line_rasterization_mode;
+   uint extended_dynamic_state_3_line_stipple_enable;
+   uint extended_dynamic_state_3_depth_clip_negative_one_to_one;
+   uint extended_dynamic_state_3_viewport_w_scaling_enable;
+   uint extended_dynamic_state_3_viewport_swizzle;
+   uint extended_dynamic_state_3_coverage_to_color_enable;
+   uint extended_dynamic_state_3_coverage_to_color_location;
+   uint extended_dynamic_state_3_coverage_modulation_mode;
+   uint extended_dynamic_state_3_coverage_modulation_table_enable;
+   uint extended_dynamic_state_3_coverage_modulation_table;
+   uint extended_dynamic_state_3_coverage_reduction_mode;
+   uint extended_dynamic_state_3_representative_fragment_test_enable;
+   uint extended_dynamic_state_3_shading_rate_image_enable;
 }
 struct PhysicalDeviceExtendedDynamicState3PropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint dynamicPrimitiveTopologyUnrestricted;
+   StructureType s_type;
+   void* p_next;
+   uint dynamic_primitive_topology_unrestricted;
 }
 struct ColorBlendEquationEXT {
-   BlendFactor srcColorBlendFactor;
-   BlendFactor dstColorBlendFactor;
-   BlendOp colorBlendOp;
-   BlendFactor srcAlphaBlendFactor;
-   BlendFactor dstAlphaBlendFactor;
-   BlendOp alphaBlendOp;
+   BlendFactor src_color_blend_factor;
+   BlendFactor dst_color_blend_factor;
+   BlendOp color_blend_op;
+   BlendFactor src_alpha_blend_factor;
+   BlendFactor dst_alpha_blend_factor;
+   BlendOp alpha_blend_op;
 }
 struct ColorBlendAdvancedEXT {
-   BlendOp advancedBlendOp;
-   uint srcPremultiplied;
-   uint dstPremultiplied;
-   BlendOverlapEXT blendOverlap;
-   uint clampResults;
+   BlendOp advanced_blend_op;
+   uint src_premultiplied;
+   uint dst_premultiplied;
+   BlendOverlapEXT blend_overlap;
+   uint clamp_results;
 }
 struct RenderPassTransformBeginInfoQCOM {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SurfaceTransformFlagBitsKHR transform;
 }
 struct CopyCommandTransformInfoQCOM {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SurfaceTransformFlagBitsKHR transform;
 }
 struct CommandBufferInheritanceRenderPassTransformInfoQCOM {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SurfaceTransformFlagBitsKHR transform;
-   Rect2D renderArea;
+   Rect2D render_area;
 }
 struct PhysicalDeviceDiagnosticsConfigFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint diagnosticsConfig;
+   StructureType s_type;
+   void* p_next;
+   uint diagnostics_config;
 }
 struct DeviceDiagnosticsConfigCreateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceDiagnosticsConfigFlagsNV flags;
 }
 struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures {
-   StructureType sType;
-   void* pNext;
-   uint shaderZeroInitializeWorkgroupMemory;
+   StructureType s_type;
+   void* p_next;
+   uint shader_zero_initialize_workgroup_memory;
 }
 struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderZeroInitializeWorkgroupMemory;
+   StructureType s_type;
+   void* p_next;
+   uint shader_zero_initialize_workgroup_memory;
 }
 struct PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderSubgroupUniformControlFlow;
+   StructureType s_type;
+   void* p_next;
+   uint shader_subgroup_uniform_control_flow;
 }
 struct PhysicalDeviceRobustness2FeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint robustBufferAccess2;
-   uint robustImageAccess2;
-   uint nullDescriptor;
+   StructureType s_type;
+   void* p_next;
+   uint robust_buffer_access_2;
+   uint robust_image_access_2;
+   uint null_descriptor;
 }
 struct PhysicalDeviceRobustness2PropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   DeviceSize robustStorageBufferAccessSizeAlignment;
-   DeviceSize robustUniformBufferAccessSizeAlignment;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize robust_storage_buffer_access_size_alignment;
+   DeviceSize robust_uniform_buffer_access_size_alignment;
 }
 struct PhysicalDeviceImageRobustnessFeatures {
-   StructureType sType;
-   void* pNext;
-   uint robustImageAccess;
+   StructureType s_type;
+   void* p_next;
+   uint robust_image_access;
 }
 struct PhysicalDeviceImageRobustnessFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint robustImageAccess;
+   StructureType s_type;
+   void* p_next;
+   uint robust_image_access;
 }
 struct PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint workgroupMemoryExplicitLayout;
-   uint workgroupMemoryExplicitLayoutScalarBlockLayout;
-   uint workgroupMemoryExplicitLayout8BitAccess;
-   uint workgroupMemoryExplicitLayout16BitAccess;
+   StructureType s_type;
+   void* p_next;
+   uint workgroup_memory_explicit_layout;
+   uint workgroup_memory_explicit_layout_scalar_block_layout;
+   uint workgroup_memory_explicit_layout_8_bit_access;
+   uint workgroup_memory_explicit_layout_16_bit_access;
 }
 struct PhysicalDevice4444FormatsFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint formatA4R4G4B4;
-   uint formatA4B4G4R4;
+   StructureType s_type;
+   void* p_next;
+   uint format_a_4_r_4_g_4_b_4;
+   uint format_a_4_b_4_g_4_r_4;
 }
 struct PhysicalDeviceSubpassShadingFeaturesHUAWEI {
-   StructureType sType;
-   void* pNext;
-   uint subpassShading;
+   StructureType s_type;
+   void* p_next;
+   uint subpass_shading;
 }
 struct PhysicalDeviceClusterCullingShaderFeaturesHUAWEI {
-   StructureType sType;
-   void* pNext;
-   uint clustercullingShader;
-   uint multiviewClusterCullingShader;
+   StructureType s_type;
+   void* p_next;
+   uint clusterculling_shader;
+   uint multiview_cluster_culling_shader;
 }
 struct PhysicalDeviceClusterCullingShaderVrsFeaturesHUAWEI {
-   StructureType sType;
-   void* pNext;
-   uint clusterShadingRate;
+   StructureType s_type;
+   void* p_next;
+   uint cluster_shading_rate;
 }
 struct BufferCopy2 {
-   StructureType sType;
-   void* pNext;
-   DeviceSize srcOffset;
-   DeviceSize dstOffset;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize src_offset;
+   DeviceSize dst_offset;
    DeviceSize size;
 }
 struct BufferCopy2KHR {
-   StructureType sType;
-   void* pNext;
-   DeviceSize srcOffset;
-   DeviceSize dstOffset;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize src_offset;
+   DeviceSize dst_offset;
    DeviceSize size;
 }
 struct ImageCopy2 {
-   StructureType sType;
-   void* pNext;
-   ImageSubresourceLayers srcSubresource;
-   Offset3D srcOffset;
-   ImageSubresourceLayers dstSubresource;
-   Offset3D dstOffset;
+   StructureType s_type;
+   void* p_next;
+   ImageSubresourceLayers src_subresource;
+   Offset3D src_offset;
+   ImageSubresourceLayers dst_subresource;
+   Offset3D dst_offset;
    Extent3D extent;
 }
 struct ImageCopy2KHR {
-   StructureType sType;
-   void* pNext;
-   ImageSubresourceLayers srcSubresource;
-   Offset3D srcOffset;
-   ImageSubresourceLayers dstSubresource;
-   Offset3D dstOffset;
+   StructureType s_type;
+   void* p_next;
+   ImageSubresourceLayers src_subresource;
+   Offset3D src_offset;
+   ImageSubresourceLayers dst_subresource;
+   Offset3D dst_offset;
    Extent3D extent;
 }
 struct ImageBlit2 {
-   StructureType sType;
-   void* pNext;
-   ImageSubresourceLayers srcSubresource;
-   Offset3D[2] srcOffsets;
-   ImageSubresourceLayers dstSubresource;
-   Offset3D[2] dstOffsets;
+   StructureType s_type;
+   void* p_next;
+   ImageSubresourceLayers src_subresource;
+   Offset3D[2] src_offsets;
+   ImageSubresourceLayers dst_subresource;
+   Offset3D[2] dst_offsets;
 }
 struct ImageBlit2KHR {
-   StructureType sType;
-   void* pNext;
-   ImageSubresourceLayers srcSubresource;
-   Offset3D[2] srcOffsets;
-   ImageSubresourceLayers dstSubresource;
-   Offset3D[2] dstOffsets;
+   StructureType s_type;
+   void* p_next;
+   ImageSubresourceLayers src_subresource;
+   Offset3D[2] src_offsets;
+   ImageSubresourceLayers dst_subresource;
+   Offset3D[2] dst_offsets;
 }
 struct BufferImageCopy2 {
-   StructureType sType;
-   void* pNext;
-   DeviceSize bufferOffset;
-   uint bufferRowLength;
-   uint bufferImageHeight;
-   ImageSubresourceLayers imageSubresource;
-   Offset3D imageOffset;
-   Extent3D imageExtent;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize buffer_offset;
+   uint buffer_row_length;
+   uint buffer_image_height;
+   ImageSubresourceLayers image_subresource;
+   Offset3D image_offset;
+   Extent3D image_extent;
 }
 struct BufferImageCopy2KHR {
-   StructureType sType;
-   void* pNext;
-   DeviceSize bufferOffset;
-   uint bufferRowLength;
-   uint bufferImageHeight;
-   ImageSubresourceLayers imageSubresource;
-   Offset3D imageOffset;
-   Extent3D imageExtent;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize buffer_offset;
+   uint buffer_row_length;
+   uint buffer_image_height;
+   ImageSubresourceLayers image_subresource;
+   Offset3D image_offset;
+   Extent3D image_extent;
 }
 struct ImageResolve2 {
-   StructureType sType;
-   void* pNext;
-   ImageSubresourceLayers srcSubresource;
-   Offset3D srcOffset;
-   ImageSubresourceLayers dstSubresource;
-   Offset3D dstOffset;
+   StructureType s_type;
+   void* p_next;
+   ImageSubresourceLayers src_subresource;
+   Offset3D src_offset;
+   ImageSubresourceLayers dst_subresource;
+   Offset3D dst_offset;
    Extent3D extent;
 }
 struct ImageResolve2KHR {
-   StructureType sType;
-   void* pNext;
-   ImageSubresourceLayers srcSubresource;
-   Offset3D srcOffset;
-   ImageSubresourceLayers dstSubresource;
-   Offset3D dstOffset;
+   StructureType s_type;
+   void* p_next;
+   ImageSubresourceLayers src_subresource;
+   Offset3D src_offset;
+   ImageSubresourceLayers dst_subresource;
+   Offset3D dst_offset;
    Extent3D extent;
 }
 struct CopyBufferInfo2 {
-   StructureType sType;
-   void* pNext;
-   Buffer srcBuffer;
-   Buffer dstBuffer;
-   uint regionCount;
-   BufferCopy2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Buffer src_buffer;
+   Buffer dst_buffer;
+   uint region_count;
+   BufferCopy2* p_regions;
 }
 struct CopyBufferInfo2KHR {
-   StructureType sType;
-   void* pNext;
-   Buffer srcBuffer;
-   Buffer dstBuffer;
-   uint regionCount;
-   BufferCopy2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Buffer src_buffer;
+   Buffer dst_buffer;
+   uint region_count;
+   BufferCopy2* p_regions;
 }
 struct CopyImageInfo2 {
-   StructureType sType;
-   void* pNext;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   ImageCopy2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Image src_image;
+   ImageLayout src_image_layout;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   ImageCopy2* p_regions;
 }
 struct CopyImageInfo2KHR {
-   StructureType sType;
-   void* pNext;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   ImageCopy2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Image src_image;
+   ImageLayout src_image_layout;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   ImageCopy2* p_regions;
 }
 struct BlitImageInfo2 {
-   StructureType sType;
-   void* pNext;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   ImageBlit2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Image src_image;
+   ImageLayout src_image_layout;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   ImageBlit2* p_regions;
    Filter filter;
 }
 struct BlitImageInfo2KHR {
-   StructureType sType;
-   void* pNext;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   ImageBlit2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Image src_image;
+   ImageLayout src_image_layout;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   ImageBlit2* p_regions;
    Filter filter;
 }
 struct CopyBufferToImageInfo2 {
-   StructureType sType;
-   void* pNext;
-   Buffer srcBuffer;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   BufferImageCopy2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Buffer src_buffer;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   BufferImageCopy2* p_regions;
 }
 struct CopyBufferToImageInfo2KHR {
-   StructureType sType;
-   void* pNext;
-   Buffer srcBuffer;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   BufferImageCopy2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Buffer src_buffer;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   BufferImageCopy2* p_regions;
 }
 struct CopyImageToBufferInfo2 {
-   StructureType sType;
-   void* pNext;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   Buffer dstBuffer;
-   uint regionCount;
-   BufferImageCopy2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Image src_image;
+   ImageLayout src_image_layout;
+   Buffer dst_buffer;
+   uint region_count;
+   BufferImageCopy2* p_regions;
 }
 struct CopyImageToBufferInfo2KHR {
-   StructureType sType;
-   void* pNext;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   Buffer dstBuffer;
-   uint regionCount;
-   BufferImageCopy2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Image src_image;
+   ImageLayout src_image_layout;
+   Buffer dst_buffer;
+   uint region_count;
+   BufferImageCopy2* p_regions;
 }
 struct ResolveImageInfo2 {
-   StructureType sType;
-   void* pNext;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   ImageResolve2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Image src_image;
+   ImageLayout src_image_layout;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   ImageResolve2* p_regions;
 }
 struct ResolveImageInfo2KHR {
-   StructureType sType;
-   void* pNext;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   ImageResolve2* pRegions;
+   StructureType s_type;
+   void* p_next;
+   Image src_image;
+   ImageLayout src_image_layout;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   ImageResolve2* p_regions;
 }
 struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderImageInt64Atomics;
-   uint sparseImageInt64Atomics;
+   StructureType s_type;
+   void* p_next;
+   uint shader_image_int_64_atomics;
+   uint sparse_image_int_64_atomics;
 }
 struct FragmentShadingRateAttachmentInfoKHR {
-   StructureType sType;
-   void* pNext;
-   AttachmentReference2* pFragmentShadingRateAttachment;
-   Extent2D shadingRateAttachmentTexelSize;
+   StructureType s_type;
+   void* p_next;
+   AttachmentReference2* p_fragment_shading_rate_attachment;
+   Extent2D shading_rate_attachment_texel_size;
 }
 struct PipelineFragmentShadingRateStateCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   Extent2D fragmentSize;
-   FragmentShadingRateCombinerOpKHR[2] combinerOps;
+   StructureType s_type;
+   void* p_next;
+   Extent2D fragment_size;
+   FragmentShadingRateCombinerOpKHR[2] combiner_ops;
 }
 struct PhysicalDeviceFragmentShadingRateFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint pipelineFragmentShadingRate;
-   uint primitiveFragmentShadingRate;
-   uint attachmentFragmentShadingRate;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_fragment_shading_rate;
+   uint primitive_fragment_shading_rate;
+   uint attachment_fragment_shading_rate;
 }
 struct PhysicalDeviceFragmentShadingRatePropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   Extent2D minFragmentShadingRateAttachmentTexelSize;
-   Extent2D maxFragmentShadingRateAttachmentTexelSize;
-   uint maxFragmentShadingRateAttachmentTexelSizeAspectRatio;
-   uint primitiveFragmentShadingRateWithMultipleViewports;
-   uint layeredShadingRateAttachments;
-   uint fragmentShadingRateNonTrivialCombinerOps;
-   Extent2D maxFragmentSize;
-   uint maxFragmentSizeAspectRatio;
-   uint maxFragmentShadingRateCoverageSamples;
-   SampleCountFlagBits maxFragmentShadingRateRasterizationSamples;
-   uint fragmentShadingRateWithShaderDepthStencilWrites;
-   uint fragmentShadingRateWithSampleMask;
-   uint fragmentShadingRateWithShaderSampleMask;
-   uint fragmentShadingRateWithConservativeRasterization;
-   uint fragmentShadingRateWithFragmentShaderInterlock;
-   uint fragmentShadingRateWithCustomSampleLocations;
-   uint fragmentShadingRateStrictMultiplyCombiner;
+   StructureType s_type;
+   void* p_next;
+   Extent2D min_fragment_shading_rate_attachment_texel_size;
+   Extent2D max_fragment_shading_rate_attachment_texel_size;
+   uint max_fragment_shading_rate_attachment_texel_size_aspect_ratio;
+   uint primitive_fragment_shading_rate_with_multiple_viewports;
+   uint layered_shading_rate_attachments;
+   uint fragment_shading_rate_non_trivial_combiner_ops;
+   Extent2D max_fragment_size;
+   uint max_fragment_size_aspect_ratio;
+   uint max_fragment_shading_rate_coverage_samples;
+   SampleCountFlagBits max_fragment_shading_rate_rasterization_samples;
+   uint fragment_shading_rate_with_shader_depth_stencil_writes;
+   uint fragment_shading_rate_with_sample_mask;
+   uint fragment_shading_rate_with_shader_sample_mask;
+   uint fragment_shading_rate_with_conservative_rasterization;
+   uint fragment_shading_rate_with_fragment_shader_interlock;
+   uint fragment_shading_rate_with_custom_sample_locations;
+   uint fragment_shading_rate_strict_multiply_combiner;
 }
 struct PhysicalDeviceFragmentShadingRateKHR {
-   StructureType sType;
-   void* pNext;
-   SampleCountFlags sampleCounts;
-   Extent2D fragmentSize;
+   StructureType s_type;
+   void* p_next;
+   SampleCountFlags sample_counts;
+   Extent2D fragment_size;
 }
 struct PhysicalDeviceShaderTerminateInvocationFeatures {
-   StructureType sType;
-   void* pNext;
-   uint shaderTerminateInvocation;
+   StructureType s_type;
+   void* p_next;
+   uint shader_terminate_invocation;
 }
 struct PhysicalDeviceShaderTerminateInvocationFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderTerminateInvocation;
+   StructureType s_type;
+   void* p_next;
+   uint shader_terminate_invocation;
 }
 struct PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint fragmentShadingRateEnums;
-   uint supersampleFragmentShadingRates;
-   uint noInvocationFragmentShadingRates;
+   StructureType s_type;
+   void* p_next;
+   uint fragment_shading_rate_enums;
+   uint supersample_fragment_shading_rates;
+   uint no_invocation_fragment_shading_rates;
 }
 struct PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   SampleCountFlagBits maxFragmentShadingRateInvocationCount;
+   StructureType s_type;
+   void* p_next;
+   SampleCountFlagBits max_fragment_shading_rate_invocation_count;
 }
 struct PipelineFragmentShadingRateEnumStateCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   FragmentShadingRateTypeNV shadingRateType;
-   FragmentShadingRateNV shadingRate;
-   FragmentShadingRateCombinerOpKHR[2] combinerOps;
+   StructureType s_type;
+   void* p_next;
+   FragmentShadingRateTypeNV shading_rate_type;
+   FragmentShadingRateNV shading_rate;
+   FragmentShadingRateCombinerOpKHR[2] combiner_ops;
 }
 struct AccelerationStructureBuildSizesInfoKHR {
-   StructureType sType;
-   void* pNext;
-   DeviceSize accelerationStructureSize;
-   DeviceSize updateScratchSize;
-   DeviceSize buildScratchSize;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize acceleration_structure_size;
+   DeviceSize update_scratch_size;
+   DeviceSize build_scratch_size;
 }
 struct PhysicalDeviceImage2DViewOf3DFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint image2DViewOf3D;
-   uint sampler2DViewOf3D;
+   StructureType s_type;
+   void* p_next;
+   uint image_2_d_view_of_3_d;
+   uint sampler_2_d_view_of_3_d;
 }
 struct PhysicalDeviceImageSlicedViewOf3DFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint imageSlicedViewOf3D;
+   StructureType s_type;
+   void* p_next;
+   uint image_sliced_view_of_3_d;
 }
 struct PhysicalDeviceAttachmentFeedbackLoopDynamicStateFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint attachmentFeedbackLoopDynamicState;
+   StructureType s_type;
+   void* p_next;
+   uint attachment_feedback_loop_dynamic_state;
 }
 struct PhysicalDeviceLegacyVertexAttributesFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint legacyVertexAttributes;
+   StructureType s_type;
+   void* p_next;
+   uint legacy_vertex_attributes;
 }
 struct PhysicalDeviceLegacyVertexAttributesPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint nativeUnalignedPerformance;
+   StructureType s_type;
+   void* p_next;
+   uint native_unaligned_performance;
 }
 struct PhysicalDeviceMutableDescriptorTypeFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint mutableDescriptorType;
+   StructureType s_type;
+   void* p_next;
+   uint mutable_descriptor_type;
 }
 struct PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
-   StructureType sType;
-   void* pNext;
-   uint mutableDescriptorType;
+   StructureType s_type;
+   void* p_next;
+   uint mutable_descriptor_type;
 }
 struct MutableDescriptorTypeListEXT {
-   uint descriptorTypeCount;
-   DescriptorType* pDescriptorTypes;
+   uint descriptor_type_count;
+   DescriptorType* p_descriptor_types;
 }
 struct MutableDescriptorTypeListVALVE {
-   uint descriptorTypeCount;
-   DescriptorType* pDescriptorTypes;
+   uint descriptor_type_count;
+   DescriptorType* p_descriptor_types;
 }
 struct MutableDescriptorTypeCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint mutableDescriptorTypeListCount;
-   MutableDescriptorTypeListEXT* pMutableDescriptorTypeLists;
+   StructureType s_type;
+   void* p_next;
+   uint mutable_descriptor_type_list_count;
+   MutableDescriptorTypeListEXT* p_mutable_descriptor_type_lists;
 }
 struct MutableDescriptorTypeCreateInfoVALVE {
-   StructureType sType;
-   void* pNext;
-   uint mutableDescriptorTypeListCount;
-   MutableDescriptorTypeListEXT* pMutableDescriptorTypeLists;
+   StructureType s_type;
+   void* p_next;
+   uint mutable_descriptor_type_list_count;
+   MutableDescriptorTypeListEXT* p_mutable_descriptor_type_lists;
 }
 struct PhysicalDeviceDepthClipControlFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint depthClipControl;
+   StructureType s_type;
+   void* p_next;
+   uint depth_clip_control;
 }
 struct PhysicalDeviceDeviceGeneratedCommandsFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint deviceGeneratedCommands;
-   uint dynamicGeneratedPipelineLayout;
+   StructureType s_type;
+   void* p_next;
+   uint device_generated_commands;
+   uint dynamic_generated_pipeline_layout;
 }
 struct PhysicalDeviceDeviceGeneratedCommandsPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxIndirectPipelineCount;
-   uint maxIndirectShaderObjectCount;
-   uint maxIndirectSequenceCount;
-   uint maxIndirectCommandsTokenCount;
-   uint maxIndirectCommandsTokenOffset;
-   uint maxIndirectCommandsIndirectStride;
-   IndirectCommandsInputModeFlagsEXT supportedIndirectCommandsInputModes;
-   ShaderStageFlags supportedIndirectCommandsShaderStages;
-   ShaderStageFlags supportedIndirectCommandsShaderStagesPipelineBinding;
-   ShaderStageFlags supportedIndirectCommandsShaderStagesShaderBinding;
-   uint deviceGeneratedCommandsTransformFeedback;
-   uint deviceGeneratedCommandsMultiDrawIndirectCount;
+   StructureType s_type;
+   void* p_next;
+   uint max_indirect_pipeline_count;
+   uint max_indirect_shader_object_count;
+   uint max_indirect_sequence_count;
+   uint max_indirect_commands_token_count;
+   uint max_indirect_commands_token_offset;
+   uint max_indirect_commands_indirect_stride;
+   IndirectCommandsInputModeFlagsEXT supported_indirect_commands_input_modes;
+   ShaderStageFlags supported_indirect_commands_shader_stages;
+   ShaderStageFlags supported_indirect_commands_shader_stages_pipeline_binding;
+   ShaderStageFlags supported_indirect_commands_shader_stages_shader_binding;
+   uint device_generated_commands_transform_feedback;
+   uint device_generated_commands_multi_draw_indirect_count;
 }
 struct GeneratedCommandsPipelineInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Pipeline pipeline;
 }
 struct GeneratedCommandsShaderInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderCount;
-   ShaderEXT* pShaders;
+   StructureType s_type;
+   void* p_next;
+   uint shader_count;
+   ShaderEXT* p_shaders;
 }
 struct GeneratedCommandsMemoryRequirementsInfoEXT {
-   StructureType sType;
-   void* pNext;
-   IndirectExecutionSetEXT indirectExecutionSet;
-   IndirectCommandsLayoutEXT indirectCommandsLayout;
-   uint maxSequenceCount;
-   uint maxDrawCount;
+   StructureType s_type;
+   void* p_next;
+   IndirectExecutionSetEXT indirect_execution_set;
+   IndirectCommandsLayoutEXT indirect_commands_layout;
+   uint max_sequence_count;
+   uint max_draw_count;
 }
 struct IndirectExecutionSetPipelineInfoEXT {
-   StructureType sType;
-   void* pNext;
-   Pipeline initialPipeline;
-   uint maxPipelineCount;
+   StructureType s_type;
+   void* p_next;
+   Pipeline initial_pipeline;
+   uint max_pipeline_count;
 }
 struct IndirectExecutionSetShaderLayoutInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint setLayoutCount;
-   DescriptorSetLayout* pSetLayouts;
+   StructureType s_type;
+   void* p_next;
+   uint set_layout_count;
+   DescriptorSetLayout* p_set_layouts;
 }
 struct IndirectExecutionSetShaderInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderCount;
-   ShaderEXT* pInitialShaders;
-   IndirectExecutionSetShaderLayoutInfoEXT* pSetLayoutInfos;
-   uint maxShaderCount;
-   uint pushConstantRangeCount;
-   PushConstantRange* pPushConstantRanges;
+   StructureType s_type;
+   void* p_next;
+   uint shader_count;
+   ShaderEXT* p_initial_shaders;
+   IndirectExecutionSetShaderLayoutInfoEXT* p_set_layout_infos;
+   uint max_shader_count;
+   uint push_constant_range_count;
+   PushConstantRange* p_push_constant_ranges;
 }
 struct IndirectExecutionSetCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    IndirectExecutionSetInfoTypeEXT type;
    IndirectExecutionSetInfoEXT info;
 }
 struct GeneratedCommandsInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ShaderStageFlags shaderStages;
-   IndirectExecutionSetEXT indirectExecutionSet;
-   IndirectCommandsLayoutEXT indirectCommandsLayout;
-   DeviceAddress indirectAddress;
-   DeviceSize indirectAddressSize;
-   DeviceAddress preprocessAddress;
-   DeviceSize preprocessSize;
-   uint maxSequenceCount;
-   DeviceAddress sequenceCountAddress;
-   uint maxDrawCount;
+   StructureType s_type;
+   void* p_next;
+   ShaderStageFlags shader_stages;
+   IndirectExecutionSetEXT indirect_execution_set;
+   IndirectCommandsLayoutEXT indirect_commands_layout;
+   DeviceAddress indirect_address;
+   DeviceSize indirect_address_size;
+   DeviceAddress preprocess_address;
+   DeviceSize preprocess_size;
+   uint max_sequence_count;
+   DeviceAddress sequence_count_address;
+   uint max_draw_count;
 }
 struct WriteIndirectExecutionSetPipelineEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint index;
    Pipeline pipeline;
 }
 struct WriteIndirectExecutionSetShaderEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint index;
    ShaderEXT shader;
 }
 struct IndirectCommandsLayoutCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    IndirectCommandsLayoutUsageFlagsEXT flags;
-   ShaderStageFlags shaderStages;
-   uint indirectStride;
-   PipelineLayout pipelineLayout;
-   uint tokenCount;
-   IndirectCommandsLayoutTokenEXT* pTokens;
+   ShaderStageFlags shader_stages;
+   uint indirect_stride;
+   PipelineLayout pipeline_layout;
+   uint token_count;
+   IndirectCommandsLayoutTokenEXT* p_tokens;
 }
 struct IndirectCommandsLayoutTokenEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    IndirectCommandsTokenTypeEXT type;
    IndirectCommandsTokenDataEXT data;
    uint offset;
 }
 struct DrawIndirectCountIndirectCommandEXT {
-   DeviceAddress bufferAddress;
+   DeviceAddress buffer_address;
    uint stride;
-   uint commandCount;
+   uint command_count;
 }
 struct IndirectCommandsVertexBufferTokenEXT {
-   uint vertexBindingUnit;
+   uint vertex_binding_unit;
 }
 struct BindVertexBufferIndirectCommandEXT {
-   DeviceAddress bufferAddress;
+   DeviceAddress buffer_address;
    uint size;
    uint stride;
 }
@@ -10443,1008 +10443,1008 @@ struct IndirectCommandsIndexBufferTokenEXT {
    IndirectCommandsInputModeFlagBitsEXT mode;
 }
 struct BindIndexBufferIndirectCommandEXT {
-   DeviceAddress bufferAddress;
+   DeviceAddress buffer_address;
    uint size;
-   IndexType indexType;
+   IndexType index_type;
 }
 struct IndirectCommandsPushConstantTokenEXT {
-   PushConstantRange updateRange;
+   PushConstantRange update_range;
 }
 struct IndirectCommandsExecutionSetTokenEXT {
    IndirectExecutionSetInfoTypeEXT type;
-   ShaderStageFlags shaderStages;
+   ShaderStageFlags shader_stages;
 }
 struct PipelineViewportDepthClipControlCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint negativeOneToOne;
+   StructureType s_type;
+   void* p_next;
+   uint negative_one_to_one;
 }
 struct PhysicalDeviceDepthClampControlFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint depthClampControl;
+   StructureType s_type;
+   void* p_next;
+   uint depth_clamp_control;
 }
 struct PipelineViewportDepthClampControlCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   DepthClampModeEXT depthClampMode;
-   DepthClampRangeEXT* pDepthClampRange;
+   StructureType s_type;
+   void* p_next;
+   DepthClampModeEXT depth_clamp_mode;
+   DepthClampRangeEXT* p_depth_clamp_range;
 }
 struct PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint vertexInputDynamicState;
+   StructureType s_type;
+   void* p_next;
+   uint vertex_input_dynamic_state;
 }
 struct PhysicalDeviceExternalMemoryRDMAFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint externalMemoryRDMA;
+   StructureType s_type;
+   void* p_next;
+   uint external_memory_rdma;
 }
 struct PhysicalDeviceShaderRelaxedExtendedInstructionFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderRelaxedExtendedInstruction;
+   StructureType s_type;
+   void* p_next;
+   uint shader_relaxed_extended_instruction;
 }
 struct VertexInputBindingDescription2EXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint binding;
    uint stride;
-   VertexInputRate inputRate;
+   VertexInputRate input_rate;
    uint divisor;
 }
 struct VertexInputAttributeDescription2EXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint location;
    uint binding;
    Format format;
    uint offset;
 }
 struct PhysicalDeviceColorWriteEnableFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint colorWriteEnable;
+   StructureType s_type;
+   void* p_next;
+   uint color_write_enable;
 }
 struct PipelineColorWriteCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint attachmentCount;
-   uint* pColorWriteEnables;
+   StructureType s_type;
+   void* p_next;
+   uint attachment_count;
+   uint* p_color_write_enables;
 }
 struct MemoryBarrier2 {
-   StructureType sType;
-   void* pNext;
-   PipelineStageFlags2 srcStageMask;
-   AccessFlags2 srcAccessMask;
-   PipelineStageFlags2 dstStageMask;
-   AccessFlags2 dstAccessMask;
+   StructureType s_type;
+   void* p_next;
+   PipelineStageFlags2 src_stage_mask;
+   AccessFlags2 src_access_mask;
+   PipelineStageFlags2 dst_stage_mask;
+   AccessFlags2 dst_access_mask;
 }
 struct MemoryBarrier2KHR {
-   StructureType sType;
-   void* pNext;
-   PipelineStageFlags2 srcStageMask;
-   AccessFlags2 srcAccessMask;
-   PipelineStageFlags2 dstStageMask;
-   AccessFlags2 dstAccessMask;
+   StructureType s_type;
+   void* p_next;
+   PipelineStageFlags2 src_stage_mask;
+   AccessFlags2 src_access_mask;
+   PipelineStageFlags2 dst_stage_mask;
+   AccessFlags2 dst_access_mask;
 }
 struct ImageMemoryBarrier2 {
-   StructureType sType;
-   void* pNext;
-   PipelineStageFlags2 srcStageMask;
-   AccessFlags2 srcAccessMask;
-   PipelineStageFlags2 dstStageMask;
-   AccessFlags2 dstAccessMask;
-   ImageLayout oldLayout;
-   ImageLayout newLayout;
-   uint srcQueueFamilyIndex;
-   uint dstQueueFamilyIndex;
+   StructureType s_type;
+   void* p_next;
+   PipelineStageFlags2 src_stage_mask;
+   AccessFlags2 src_access_mask;
+   PipelineStageFlags2 dst_stage_mask;
+   AccessFlags2 dst_access_mask;
+   ImageLayout old_layout;
+   ImageLayout new_layout;
+   uint src_queue_family_index;
+   uint dst_queue_family_index;
    Image image;
-   ImageSubresourceRange subresourceRange;
+   ImageSubresourceRange subresource_range;
 }
 struct ImageMemoryBarrier2KHR {
-   StructureType sType;
-   void* pNext;
-   PipelineStageFlags2 srcStageMask;
-   AccessFlags2 srcAccessMask;
-   PipelineStageFlags2 dstStageMask;
-   AccessFlags2 dstAccessMask;
-   ImageLayout oldLayout;
-   ImageLayout newLayout;
-   uint srcQueueFamilyIndex;
-   uint dstQueueFamilyIndex;
+   StructureType s_type;
+   void* p_next;
+   PipelineStageFlags2 src_stage_mask;
+   AccessFlags2 src_access_mask;
+   PipelineStageFlags2 dst_stage_mask;
+   AccessFlags2 dst_access_mask;
+   ImageLayout old_layout;
+   ImageLayout new_layout;
+   uint src_queue_family_index;
+   uint dst_queue_family_index;
    Image image;
-   ImageSubresourceRange subresourceRange;
+   ImageSubresourceRange subresource_range;
 }
 struct BufferMemoryBarrier2 {
-   StructureType sType;
-   void* pNext;
-   PipelineStageFlags2 srcStageMask;
-   AccessFlags2 srcAccessMask;
-   PipelineStageFlags2 dstStageMask;
-   AccessFlags2 dstAccessMask;
-   uint srcQueueFamilyIndex;
-   uint dstQueueFamilyIndex;
+   StructureType s_type;
+   void* p_next;
+   PipelineStageFlags2 src_stage_mask;
+   AccessFlags2 src_access_mask;
+   PipelineStageFlags2 dst_stage_mask;
+   AccessFlags2 dst_access_mask;
+   uint src_queue_family_index;
+   uint dst_queue_family_index;
    Buffer buffer;
    DeviceSize offset;
    DeviceSize size;
 }
 struct BufferMemoryBarrier2KHR {
-   StructureType sType;
-   void* pNext;
-   PipelineStageFlags2 srcStageMask;
-   AccessFlags2 srcAccessMask;
-   PipelineStageFlags2 dstStageMask;
-   AccessFlags2 dstAccessMask;
-   uint srcQueueFamilyIndex;
-   uint dstQueueFamilyIndex;
+   StructureType s_type;
+   void* p_next;
+   PipelineStageFlags2 src_stage_mask;
+   AccessFlags2 src_access_mask;
+   PipelineStageFlags2 dst_stage_mask;
+   AccessFlags2 dst_access_mask;
+   uint src_queue_family_index;
+   uint dst_queue_family_index;
    Buffer buffer;
    DeviceSize offset;
    DeviceSize size;
 }
 struct DependencyInfo {
-   StructureType sType;
-   void* pNext;
-   DependencyFlags dependencyFlags;
-   uint memoryBarrierCount;
-   MemoryBarrier2* pMemoryBarriers;
-   uint bufferMemoryBarrierCount;
-   BufferMemoryBarrier2* pBufferMemoryBarriers;
-   uint imageMemoryBarrierCount;
-   ImageMemoryBarrier2* pImageMemoryBarriers;
+   StructureType s_type;
+   void* p_next;
+   DependencyFlags dependency_flags;
+   uint memory_barrier_count;
+   MemoryBarrier2* p_memory_barriers;
+   uint buffer_memory_barrier_count;
+   BufferMemoryBarrier2* p_buffer_memory_barriers;
+   uint image_memory_barrier_count;
+   ImageMemoryBarrier2* p_image_memory_barriers;
 }
 struct DependencyInfoKHR {
-   StructureType sType;
-   void* pNext;
-   DependencyFlags dependencyFlags;
-   uint memoryBarrierCount;
-   MemoryBarrier2* pMemoryBarriers;
-   uint bufferMemoryBarrierCount;
-   BufferMemoryBarrier2* pBufferMemoryBarriers;
-   uint imageMemoryBarrierCount;
-   ImageMemoryBarrier2* pImageMemoryBarriers;
+   StructureType s_type;
+   void* p_next;
+   DependencyFlags dependency_flags;
+   uint memory_barrier_count;
+   MemoryBarrier2* p_memory_barriers;
+   uint buffer_memory_barrier_count;
+   BufferMemoryBarrier2* p_buffer_memory_barriers;
+   uint image_memory_barrier_count;
+   ImageMemoryBarrier2* p_image_memory_barriers;
 }
 struct SemaphoreSubmitInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Semaphore semaphore;
    ulong value;
-   PipelineStageFlags2 stageMask;
-   uint deviceIndex;
+   PipelineStageFlags2 stage_mask;
+   uint device_index;
 }
 struct SemaphoreSubmitInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Semaphore semaphore;
    ulong value;
-   PipelineStageFlags2 stageMask;
-   uint deviceIndex;
+   PipelineStageFlags2 stage_mask;
+   uint device_index;
 }
 struct CommandBufferSubmitInfo {
-   StructureType sType;
-   void* pNext;
-   CommandBuffer commandBuffer;
-   uint deviceMask;
+   StructureType s_type;
+   void* p_next;
+   CommandBuffer command_buffer;
+   uint device_mask;
 }
 struct CommandBufferSubmitInfoKHR {
-   StructureType sType;
-   void* pNext;
-   CommandBuffer commandBuffer;
-   uint deviceMask;
+   StructureType s_type;
+   void* p_next;
+   CommandBuffer command_buffer;
+   uint device_mask;
 }
 struct SubmitInfo2 {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SubmitFlags flags;
-   uint waitSemaphoreInfoCount;
-   SemaphoreSubmitInfo* pWaitSemaphoreInfos;
-   uint commandBufferInfoCount;
-   CommandBufferSubmitInfo* pCommandBufferInfos;
-   uint signalSemaphoreInfoCount;
-   SemaphoreSubmitInfo* pSignalSemaphoreInfos;
+   uint wait_semaphore_info_count;
+   SemaphoreSubmitInfo* p_wait_semaphore_infos;
+   uint command_buffer_info_count;
+   CommandBufferSubmitInfo* p_command_buffer_infos;
+   uint signal_semaphore_info_count;
+   SemaphoreSubmitInfo* p_signal_semaphore_infos;
 }
 struct SubmitInfo2KHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SubmitFlags flags;
-   uint waitSemaphoreInfoCount;
-   SemaphoreSubmitInfo* pWaitSemaphoreInfos;
-   uint commandBufferInfoCount;
-   CommandBufferSubmitInfo* pCommandBufferInfos;
-   uint signalSemaphoreInfoCount;
-   SemaphoreSubmitInfo* pSignalSemaphoreInfos;
+   uint wait_semaphore_info_count;
+   SemaphoreSubmitInfo* p_wait_semaphore_infos;
+   uint command_buffer_info_count;
+   CommandBufferSubmitInfo* p_command_buffer_infos;
+   uint signal_semaphore_info_count;
+   SemaphoreSubmitInfo* p_signal_semaphore_infos;
 }
 struct QueueFamilyCheckpointProperties2NV {
-   StructureType sType;
-   void* pNext;
-   PipelineStageFlags2 checkpointExecutionStageMask;
+   StructureType s_type;
+   void* p_next;
+   PipelineStageFlags2 checkpoint_execution_stage_mask;
 }
 struct CheckpointData2NV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineStageFlags2 stage;
-   void* pCheckpointMarker;
+   void* p_checkpoint_marker;
 }
 struct PhysicalDeviceSynchronization2Features {
-   StructureType sType;
-   void* pNext;
-   uint synchronization2;
+   StructureType s_type;
+   void* p_next;
+   uint synchronization_2;
 }
 struct PhysicalDeviceSynchronization2FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint synchronization2;
+   StructureType s_type;
+   void* p_next;
+   uint synchronization_2;
 }
 struct PhysicalDeviceHostImageCopyFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint hostImageCopy;
+   StructureType s_type;
+   void* p_next;
+   uint host_image_copy;
 }
 struct PhysicalDeviceHostImageCopyPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint copySrcLayoutCount;
-   ImageLayout* pCopySrcLayouts;
-   uint copyDstLayoutCount;
-   ImageLayout* pCopyDstLayouts;
-   uint[UUID_SIZE] optimalTilingLayoutUUID;
-   uint identicalMemoryTypeRequirements;
+   StructureType s_type;
+   void* p_next;
+   uint copy_src_layout_count;
+   ImageLayout* p_copy_src_layouts;
+   uint copy_dst_layout_count;
+   ImageLayout* p_copy_dst_layouts;
+   uint[UUID_SIZE] optimal_tiling_layout_uuid;
+   uint identical_memory_type_requirements;
 }
 struct MemoryToImageCopyEXT {
-   StructureType sType;
-   void* pNext;
-   void* pHostPointer;
-   uint memoryRowLength;
-   uint memoryImageHeight;
-   ImageSubresourceLayers imageSubresource;
-   Offset3D imageOffset;
-   Extent3D imageExtent;
+   StructureType s_type;
+   void* p_next;
+   void* p_host_pointer;
+   uint memory_row_length;
+   uint memory_image_height;
+   ImageSubresourceLayers image_subresource;
+   Offset3D image_offset;
+   Extent3D image_extent;
 }
 struct ImageToMemoryCopyEXT {
-   StructureType sType;
-   void* pNext;
-   void* pHostPointer;
-   uint memoryRowLength;
-   uint memoryImageHeight;
-   ImageSubresourceLayers imageSubresource;
-   Offset3D imageOffset;
-   Extent3D imageExtent;
+   StructureType s_type;
+   void* p_next;
+   void* p_host_pointer;
+   uint memory_row_length;
+   uint memory_image_height;
+   ImageSubresourceLayers image_subresource;
+   Offset3D image_offset;
+   Extent3D image_extent;
 }
 struct CopyMemoryToImageInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    HostImageCopyFlagsEXT flags;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   MemoryToImageCopyEXT* pRegions;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   MemoryToImageCopyEXT* p_regions;
 }
 struct CopyImageToMemoryInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    HostImageCopyFlagsEXT flags;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   uint regionCount;
-   ImageToMemoryCopyEXT* pRegions;
+   Image src_image;
+   ImageLayout src_image_layout;
+   uint region_count;
+   ImageToMemoryCopyEXT* p_regions;
 }
 struct CopyImageToImageInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    HostImageCopyFlagsEXT flags;
-   Image srcImage;
-   ImageLayout srcImageLayout;
-   Image dstImage;
-   ImageLayout dstImageLayout;
-   uint regionCount;
-   ImageCopy2* pRegions;
+   Image src_image;
+   ImageLayout src_image_layout;
+   Image dst_image;
+   ImageLayout dst_image_layout;
+   uint region_count;
+   ImageCopy2* p_regions;
 }
 struct HostImageLayoutTransitionInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
-   ImageLayout oldLayout;
-   ImageLayout newLayout;
-   ImageSubresourceRange subresourceRange;
+   ImageLayout old_layout;
+   ImageLayout new_layout;
+   ImageSubresourceRange subresource_range;
 }
 struct SubresourceHostMemcpySizeEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceSize size;
 }
 struct HostImageCopyDevicePerformanceQueryEXT {
-   StructureType sType;
-   void* pNext;
-   uint optimalDeviceAccess;
-   uint identicalMemoryLayout;
+   StructureType s_type;
+   void* p_next;
+   uint optimal_device_access;
+   uint identical_memory_layout;
 }
 struct PhysicalDevicePrimitivesGeneratedQueryFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint primitivesGeneratedQuery;
-   uint primitivesGeneratedQueryWithRasterizerDiscard;
-   uint primitivesGeneratedQueryWithNonZeroStreams;
+   StructureType s_type;
+   void* p_next;
+   uint primitives_generated_query;
+   uint primitives_generated_query_with_rasterizer_discard;
+   uint primitives_generated_query_with_non_zero_streams;
 }
 struct PhysicalDeviceLegacyDitheringFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint legacyDithering;
+   StructureType s_type;
+   void* p_next;
+   uint legacy_dithering;
 }
 struct PhysicalDeviceMultisampledRenderToSingleSampledFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint multisampledRenderToSingleSampled;
+   StructureType s_type;
+   void* p_next;
+   uint multisampled_render_to_single_sampled;
 }
 struct SubpassResolvePerformanceQueryEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint optimal;
 }
 struct MultisampledRenderToSingleSampledInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint multisampledRenderToSingleSampledEnable;
-   SampleCountFlagBits rasterizationSamples;
+   StructureType s_type;
+   void* p_next;
+   uint multisampled_render_to_single_sampled_enable;
+   SampleCountFlagBits rasterization_samples;
 }
 struct PhysicalDevicePipelineProtectedAccessFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint pipelineProtectedAccess;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_protected_access;
 }
 struct QueueFamilyVideoPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   VideoCodecOperationFlagsKHR videoCodecOperations;
+   StructureType s_type;
+   void* p_next;
+   VideoCodecOperationFlagsKHR video_codec_operations;
 }
 struct QueueFamilyQueryResultStatusPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint queryResultStatusSupport;
+   StructureType s_type;
+   void* p_next;
+   uint query_result_status_support;
 }
 struct VideoProfileListInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint profileCount;
-   VideoProfileInfoKHR* pProfiles;
+   StructureType s_type;
+   void* p_next;
+   uint profile_count;
+   VideoProfileInfoKHR* p_profiles;
 }
 struct PhysicalDeviceVideoFormatInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ImageUsageFlags imageUsage;
+   StructureType s_type;
+   void* p_next;
+   ImageUsageFlags image_usage;
 }
 struct VideoFormatPropertiesKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Format format;
-   ComponentMapping componentMapping;
-   ImageCreateFlags imageCreateFlags;
-   ImageType imageType;
-   ImageTiling imageTiling;
-   ImageUsageFlags imageUsageFlags;
+   ComponentMapping component_mapping;
+   ImageCreateFlags image_create_flags;
+   ImageType image_type;
+   ImageTiling image_tiling;
+   ImageUsageFlags image_usage_flags;
 }
 struct VideoProfileInfoKHR {
-   StructureType sType;
-   void* pNext;
-   VideoCodecOperationFlagBitsKHR videoCodecOperation;
-   VideoChromaSubsamplingFlagsKHR chromaSubsampling;
-   VideoComponentBitDepthFlagsKHR lumaBitDepth;
-   VideoComponentBitDepthFlagsKHR chromaBitDepth;
+   StructureType s_type;
+   void* p_next;
+   VideoCodecOperationFlagBitsKHR video_codec_operation;
+   VideoChromaSubsamplingFlagsKHR chroma_subsampling;
+   VideoComponentBitDepthFlagsKHR luma_bit_depth;
+   VideoComponentBitDepthFlagsKHR chroma_bit_depth;
 }
 struct VideoCapabilitiesKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoCapabilityFlagsKHR flags;
-   DeviceSize minBitstreamBufferOffsetAlignment;
-   DeviceSize minBitstreamBufferSizeAlignment;
-   Extent2D pictureAccessGranularity;
-   Extent2D minCodedExtent;
-   Extent2D maxCodedExtent;
-   uint maxDpbSlots;
-   uint maxActiveReferencePictures;
-   ExtensionProperties stdHeaderVersion;
+   DeviceSize min_bitstream_buffer_offset_alignment;
+   DeviceSize min_bitstream_buffer_size_alignment;
+   Extent2D picture_access_granularity;
+   Extent2D min_coded_extent;
+   Extent2D max_coded_extent;
+   uint max_dpb_slots;
+   uint max_active_reference_pictures;
+   ExtensionProperties std_header_version;
 }
 struct VideoSessionMemoryRequirementsKHR {
-   StructureType sType;
-   void* pNext;
-   uint memoryBindIndex;
-   MemoryRequirements memoryRequirements;
+   StructureType s_type;
+   void* p_next;
+   uint memory_bind_index;
+   MemoryRequirements memory_requirements;
 }
 struct BindVideoSessionMemoryInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint memoryBindIndex;
+   StructureType s_type;
+   void* p_next;
+   uint memory_bind_index;
    DeviceMemory memory;
-   DeviceSize memoryOffset;
-   DeviceSize memorySize;
+   DeviceSize memory_offset;
+   DeviceSize memory_size;
 }
 struct VideoPictureResourceInfoKHR {
-   StructureType sType;
-   void* pNext;
-   Offset2D codedOffset;
-   Extent2D codedExtent;
-   uint baseArrayLayer;
-   ImageView imageViewBinding;
+   StructureType s_type;
+   void* p_next;
+   Offset2D coded_offset;
+   Extent2D coded_extent;
+   uint base_array_layer;
+   ImageView image_view_binding;
 }
 struct VideoReferenceSlotInfoKHR {
-   StructureType sType;
-   void* pNext;
-   int slotIndex;
-   VideoPictureResourceInfoKHR* pPictureResource;
+   StructureType s_type;
+   void* p_next;
+   int slot_index;
+   VideoPictureResourceInfoKHR* p_picture_resource;
 }
 struct VideoDecodeCapabilitiesKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoDecodeCapabilityFlagsKHR flags;
 }
 struct VideoDecodeUsageInfoKHR {
-   StructureType sType;
-   void* pNext;
-   VideoDecodeUsageFlagsKHR videoUsageHints;
+   StructureType s_type;
+   void* p_next;
+   VideoDecodeUsageFlagsKHR video_usage_hints;
 }
 struct VideoDecodeInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoDecodeFlagsKHR flags;
-   Buffer srcBuffer;
-   DeviceSize srcBufferOffset;
-   DeviceSize srcBufferRange;
-   VideoPictureResourceInfoKHR dstPictureResource;
-   VideoReferenceSlotInfoKHR* pSetupReferenceSlot;
-   uint referenceSlotCount;
-   VideoReferenceSlotInfoKHR* pReferenceSlots;
+   Buffer src_buffer;
+   DeviceSize src_buffer_offset;
+   DeviceSize src_buffer_range;
+   VideoPictureResourceInfoKHR dst_picture_resource;
+   VideoReferenceSlotInfoKHR* p_setup_reference_slot;
+   uint reference_slot_count;
+   VideoReferenceSlotInfoKHR* p_reference_slots;
 }
 struct PhysicalDeviceVideoMaintenance1FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint videoMaintenance1;
+   StructureType s_type;
+   void* p_next;
+   uint video_maintenance_1;
 }
 struct VideoInlineQueryInfoKHR {
-   StructureType sType;
-   void* pNext;
-   QueryPool queryPool;
-   uint firstQuery;
-   uint queryCount;
+   StructureType s_type;
+   void* p_next;
+   QueryPool query_pool;
+   uint first_query;
+   uint query_count;
 }
 struct VideoSessionCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint queueFamilyIndex;
+   StructureType s_type;
+   void* p_next;
+   uint queue_family_index;
    VideoSessionCreateFlagsKHR flags;
-   VideoProfileInfoKHR* pVideoProfile;
-   Format pictureFormat;
-   Extent2D maxCodedExtent;
-   Format referencePictureFormat;
-   uint maxDpbSlots;
-   uint maxActiveReferencePictures;
-   ExtensionProperties* pStdHeaderVersion;
+   VideoProfileInfoKHR* p_video_profile;
+   Format picture_format;
+   Extent2D max_coded_extent;
+   Format reference_picture_format;
+   uint max_dpb_slots;
+   uint max_active_reference_pictures;
+   ExtensionProperties* p_std_header_version;
 }
 struct VideoSessionParametersCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoSessionParametersCreateFlagsKHR flags;
-   VideoSessionParametersKHR videoSessionParametersTemplate;
-   VideoSessionKHR videoSession;
+   VideoSessionParametersKHR video_session_parameters_template;
+   VideoSessionKHR video_session;
 }
 struct VideoSessionParametersUpdateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint updateSequenceCount;
+   StructureType s_type;
+   void* p_next;
+   uint update_sequence_count;
 }
 struct VideoEncodeSessionParametersGetInfoKHR {
-   StructureType sType;
-   void* pNext;
-   VideoSessionParametersKHR videoSessionParameters;
+   StructureType s_type;
+   void* p_next;
+   VideoSessionParametersKHR video_session_parameters;
 }
 struct VideoEncodeSessionParametersFeedbackInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint hasOverrides;
+   StructureType s_type;
+   void* p_next;
+   uint has_overrides;
 }
 struct VideoBeginCodingInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoBeginCodingFlagsKHR flags;
-   VideoSessionKHR videoSession;
-   VideoSessionParametersKHR videoSessionParameters;
-   uint referenceSlotCount;
-   VideoReferenceSlotInfoKHR* pReferenceSlots;
+   VideoSessionKHR video_session;
+   VideoSessionParametersKHR video_session_parameters;
+   uint reference_slot_count;
+   VideoReferenceSlotInfoKHR* p_reference_slots;
 }
 struct VideoEndCodingInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoEndCodingFlagsKHR flags;
 }
 struct VideoCodingControlInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoCodingControlFlagsKHR flags;
 }
 struct VideoEncodeUsageInfoKHR {
-   StructureType sType;
-   void* pNext;
-   VideoEncodeUsageFlagsKHR videoUsageHints;
-   VideoEncodeContentFlagsKHR videoContentHints;
-   VideoEncodeTuningModeKHR tuningMode;
+   StructureType s_type;
+   void* p_next;
+   VideoEncodeUsageFlagsKHR video_usage_hints;
+   VideoEncodeContentFlagsKHR video_content_hints;
+   VideoEncodeTuningModeKHR tuning_mode;
 }
 struct VideoEncodeInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoEncodeFlagsKHR flags;
-   Buffer dstBuffer;
-   DeviceSize dstBufferOffset;
-   DeviceSize dstBufferRange;
-   VideoPictureResourceInfoKHR srcPictureResource;
-   VideoReferenceSlotInfoKHR* pSetupReferenceSlot;
-   uint referenceSlotCount;
-   VideoReferenceSlotInfoKHR* pReferenceSlots;
-   uint precedingExternallyEncodedBytes;
+   Buffer dst_buffer;
+   DeviceSize dst_buffer_offset;
+   DeviceSize dst_buffer_range;
+   VideoPictureResourceInfoKHR src_picture_resource;
+   VideoReferenceSlotInfoKHR* p_setup_reference_slot;
+   uint reference_slot_count;
+   VideoReferenceSlotInfoKHR* p_reference_slots;
+   uint preceding_externally_encoded_bytes;
 }
 struct QueryPoolVideoEncodeFeedbackCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   VideoEncodeFeedbackFlagsKHR encodeFeedbackFlags;
+   StructureType s_type;
+   void* p_next;
+   VideoEncodeFeedbackFlagsKHR encode_feedback_flags;
 }
 struct VideoEncodeQualityLevelInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint qualityLevel;
+   StructureType s_type;
+   void* p_next;
+   uint quality_level;
 }
 struct PhysicalDeviceVideoEncodeQualityLevelInfoKHR {
-   StructureType sType;
-   void* pNext;
-   VideoProfileInfoKHR* pVideoProfile;
-   uint qualityLevel;
+   StructureType s_type;
+   void* p_next;
+   VideoProfileInfoKHR* p_video_profile;
+   uint quality_level;
 }
 struct VideoEncodeQualityLevelPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   VideoEncodeRateControlModeFlagBitsKHR preferredRateControlMode;
-   uint preferredRateControlLayerCount;
+   StructureType s_type;
+   void* p_next;
+   VideoEncodeRateControlModeFlagBitsKHR preferred_rate_control_mode;
+   uint preferred_rate_control_layer_count;
 }
 struct VideoEncodeRateControlInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoEncodeRateControlFlagsKHR flags;
-   VideoEncodeRateControlModeFlagBitsKHR rateControlMode;
-   uint layerCount;
-   VideoEncodeRateControlLayerInfoKHR* pLayers;
-   uint virtualBufferSizeInMs;
-   uint initialVirtualBufferSizeInMs;
+   VideoEncodeRateControlModeFlagBitsKHR rate_control_mode;
+   uint layer_count;
+   VideoEncodeRateControlLayerInfoKHR* p_layers;
+   uint virtual_buffer_size_in_ms;
+   uint initial_virtual_buffer_size_in_ms;
 }
 struct VideoEncodeRateControlLayerInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ulong averageBitrate;
-   ulong maxBitrate;
-   uint frameRateNumerator;
-   uint frameRateDenominator;
+   StructureType s_type;
+   void* p_next;
+   ulong average_bitrate;
+   ulong max_bitrate;
+   uint frame_rate_numerator;
+   uint frame_rate_denominator;
 }
 struct VideoEncodeCapabilitiesKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoEncodeCapabilityFlagsKHR flags;
-   VideoEncodeRateControlModeFlagsKHR rateControlModes;
-   uint maxRateControlLayers;
-   ulong maxBitrate;
-   uint maxQualityLevels;
-   Extent2D encodeInputPictureGranularity;
-   VideoEncodeFeedbackFlagsKHR supportedEncodeFeedbackFlags;
+   VideoEncodeRateControlModeFlagsKHR rate_control_modes;
+   uint max_rate_control_layers;
+   ulong max_bitrate;
+   uint max_quality_levels;
+   Extent2D encode_input_picture_granularity;
+   VideoEncodeFeedbackFlagsKHR supported_encode_feedback_flags;
 }
 struct VideoEncodeH264QualityLevelPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   VideoEncodeH264RateControlFlagsKHR preferredRateControlFlags;
-   uint preferredGopFrameCount;
-   uint preferredIdrPeriod;
-   uint preferredConsecutiveBFrameCount;
-   uint preferredTemporalLayerCount;
-   VideoEncodeH264QpKHR preferredConstantQp;
-   uint preferredMaxL0ReferenceCount;
-   uint preferredMaxL1ReferenceCount;
-   uint preferredStdEntropyCodingModeFlag;
+   StructureType s_type;
+   void* p_next;
+   VideoEncodeH264RateControlFlagsKHR preferred_rate_control_flags;
+   uint preferred_gop_frame_count;
+   uint preferred_idr_period;
+   uint preferred_consecutive_b_frame_count;
+   uint preferred_temporal_layer_count;
+   VideoEncodeH264QpKHR preferred_constant_qp;
+   uint preferred_max_l_0_reference_count;
+   uint preferred_max_l_1_reference_count;
+   uint preferred_std_entropy_coding_mode_flag;
 }
 struct VideoEncodeH264SessionParametersGetInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint writeStdSPS;
-   uint writeStdPPS;
-   uint stdSPSId;
-   uint stdPPSId;
+   StructureType s_type;
+   void* p_next;
+   uint write_std_sps;
+   uint write_std_pps;
+   uint std_sps_id;
+   uint std_pps_id;
 }
 struct VideoEncodeH264SessionParametersFeedbackInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint hasStdSPSOverrides;
-   uint hasStdPPSOverrides;
+   StructureType s_type;
+   void* p_next;
+   uint has_std_sps_overrides;
+   uint has_std_pps_overrides;
 }
 struct VideoEncodeH264RateControlInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoEncodeH264RateControlFlagsKHR flags;
-   uint gopFrameCount;
-   uint idrPeriod;
-   uint consecutiveBFrameCount;
-   uint temporalLayerCount;
+   uint gop_frame_count;
+   uint idr_period;
+   uint consecutive_b_frame_count;
+   uint temporal_layer_count;
 }
 struct VideoEncodeH264QpKHR {
-   int qpI;
-   int qpP;
-   int qpB;
+   int qp_i;
+   int qp_p;
+   int qp_b;
 }
 struct VideoEncodeH264FrameSizeKHR {
-   uint frameISize;
-   uint framePSize;
-   uint frameBSize;
+   uint frame_i_size;
+   uint frame_p_size;
+   uint frame_b_size;
 }
 struct VideoEncodeH264GopRemainingFrameInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint useGopRemainingFrames;
-   uint gopRemainingI;
-   uint gopRemainingP;
-   uint gopRemainingB;
+   StructureType s_type;
+   void* p_next;
+   uint use_gop_remaining_frames;
+   uint gop_remaining_i;
+   uint gop_remaining_p;
+   uint gop_remaining_b;
 }
 struct VideoEncodeH264RateControlLayerInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint useMinQp;
-   VideoEncodeH264QpKHR minQp;
-   uint useMaxQp;
-   VideoEncodeH264QpKHR maxQp;
-   uint useMaxFrameSize;
-   VideoEncodeH264FrameSizeKHR maxFrameSize;
+   StructureType s_type;
+   void* p_next;
+   uint use_min_qp;
+   VideoEncodeH264QpKHR min_qp;
+   uint use_max_qp;
+   VideoEncodeH264QpKHR max_qp;
+   uint use_max_frame_size;
+   VideoEncodeH264FrameSizeKHR max_frame_size;
 }
 struct VideoEncodeH265QualityLevelPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   VideoEncodeH265RateControlFlagsKHR preferredRateControlFlags;
-   uint preferredGopFrameCount;
-   uint preferredIdrPeriod;
-   uint preferredConsecutiveBFrameCount;
-   uint preferredSubLayerCount;
-   VideoEncodeH265QpKHR preferredConstantQp;
-   uint preferredMaxL0ReferenceCount;
-   uint preferredMaxL1ReferenceCount;
+   StructureType s_type;
+   void* p_next;
+   VideoEncodeH265RateControlFlagsKHR preferred_rate_control_flags;
+   uint preferred_gop_frame_count;
+   uint preferred_idr_period;
+   uint preferred_consecutive_b_frame_count;
+   uint preferred_sub_layer_count;
+   VideoEncodeH265QpKHR preferred_constant_qp;
+   uint preferred_max_l_0_reference_count;
+   uint preferred_max_l_1_reference_count;
 }
 struct VideoEncodeH265SessionParametersGetInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint writeStdVPS;
-   uint writeStdSPS;
-   uint writeStdPPS;
-   uint stdVPSId;
-   uint stdSPSId;
-   uint stdPPSId;
+   StructureType s_type;
+   void* p_next;
+   uint write_std_vps;
+   uint write_std_sps;
+   uint write_std_pps;
+   uint std_vps_id;
+   uint std_sps_id;
+   uint std_pps_id;
 }
 struct VideoEncodeH265SessionParametersFeedbackInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint hasStdVPSOverrides;
-   uint hasStdSPSOverrides;
-   uint hasStdPPSOverrides;
+   StructureType s_type;
+   void* p_next;
+   uint has_std_vps_overrides;
+   uint has_std_sps_overrides;
+   uint has_std_pps_overrides;
 }
 struct VideoEncodeH265RateControlInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    VideoEncodeH265RateControlFlagsKHR flags;
-   uint gopFrameCount;
-   uint idrPeriod;
-   uint consecutiveBFrameCount;
-   uint subLayerCount;
+   uint gop_frame_count;
+   uint idr_period;
+   uint consecutive_b_frame_count;
+   uint sub_layer_count;
 }
 struct VideoEncodeH265QpKHR {
-   int qpI;
-   int qpP;
-   int qpB;
+   int qp_i;
+   int qp_p;
+   int qp_b;
 }
 struct VideoEncodeH265FrameSizeKHR {
-   uint frameISize;
-   uint framePSize;
-   uint frameBSize;
+   uint frame_i_size;
+   uint frame_p_size;
+   uint frame_b_size;
 }
 struct VideoEncodeH265GopRemainingFrameInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint useGopRemainingFrames;
-   uint gopRemainingI;
-   uint gopRemainingP;
-   uint gopRemainingB;
+   StructureType s_type;
+   void* p_next;
+   uint use_gop_remaining_frames;
+   uint gop_remaining_i;
+   uint gop_remaining_p;
+   uint gop_remaining_b;
 }
 struct VideoEncodeH265RateControlLayerInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint useMinQp;
-   VideoEncodeH265QpKHR minQp;
-   uint useMaxQp;
-   VideoEncodeH265QpKHR maxQp;
-   uint useMaxFrameSize;
-   VideoEncodeH265FrameSizeKHR maxFrameSize;
+   StructureType s_type;
+   void* p_next;
+   uint use_min_qp;
+   VideoEncodeH265QpKHR min_qp;
+   uint use_max_qp;
+   VideoEncodeH265QpKHR max_qp;
+   uint use_max_frame_size;
+   VideoEncodeH265FrameSizeKHR max_frame_size;
 }
 struct PhysicalDeviceInheritedViewportScissorFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint inheritedViewportScissor2D;
+   StructureType s_type;
+   void* p_next;
+   uint inherited_viewport_scissor_2_d;
 }
 struct CommandBufferInheritanceViewportScissorInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint viewportScissor2D;
-   uint viewportDepthCount;
-   Viewport* pViewportDepths;
+   StructureType s_type;
+   void* p_next;
+   uint viewport_scissor_2_d;
+   uint viewport_depth_count;
+   Viewport* p_viewport_depths;
 }
 struct PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint ycbcr2plane444Formats;
+   StructureType s_type;
+   void* p_next;
+   uint ycbcr_2_plane_444_formats;
 }
 struct PhysicalDeviceProvokingVertexFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint provokingVertexLast;
-   uint transformFeedbackPreservesProvokingVertex;
+   StructureType s_type;
+   void* p_next;
+   uint provoking_vertex_last;
+   uint transform_feedback_preserves_provoking_vertex;
 }
 struct PhysicalDeviceProvokingVertexPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint provokingVertexModePerPipeline;
-   uint transformFeedbackPreservesTriangleFanProvokingVertex;
+   StructureType s_type;
+   void* p_next;
+   uint provoking_vertex_mode_per_pipeline;
+   uint transform_feedback_preserves_triangle_fan_provoking_vertex;
 }
 struct PipelineRasterizationProvokingVertexStateCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ProvokingVertexModeEXT provokingVertexMode;
+   StructureType s_type;
+   void* p_next;
+   ProvokingVertexModeEXT provoking_vertex_mode;
 }
 struct CuModuleCreateInfoNVX {
-   StructureType sType;
-   void* pNext;
-   sz dataSize;
-   void* pData;
+   StructureType s_type;
+   void* p_next;
+   sz data_size;
+   void* p_data;
 }
 struct CuFunctionCreateInfoNVX {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    CuModuleNVX mod;
-   char* pName;
+   char* p_name;
 }
 struct CuLaunchInfoNVX {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    CuFunctionNVX function;
-   uint gridDimX;
-   uint gridDimY;
-   uint gridDimZ;
-   uint blockDimX;
-   uint blockDimY;
-   uint blockDimZ;
-   uint sharedMemBytes;
-   sz paramCount;
-   void* pParams;
-   sz extraCount;
-   void* pExtras;
+   uint grid_dim_x;
+   uint grid_dim_y;
+   uint grid_dim_z;
+   uint block_dim_x;
+   uint block_dim_y;
+   uint block_dim_z;
+   uint shared_mem_bytes;
+   sz param_count;
+   void** p_params;
+   sz extra_count;
+   void** p_extras;
 }
 struct PhysicalDeviceDescriptorBufferFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint descriptorBuffer;
-   uint descriptorBufferCaptureReplay;
-   uint descriptorBufferImageLayoutIgnored;
-   uint descriptorBufferPushDescriptors;
+   StructureType s_type;
+   void* p_next;
+   uint descriptor_buffer;
+   uint descriptor_buffer_capture_replay;
+   uint descriptor_buffer_image_layout_ignored;
+   uint descriptor_buffer_push_descriptors;
 }
 struct PhysicalDeviceDescriptorBufferPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint combinedImageSamplerDescriptorSingleArray;
-   uint bufferlessPushDescriptors;
-   uint allowSamplerImageViewPostSubmitCreation;
-   DeviceSize descriptorBufferOffsetAlignment;
-   uint maxDescriptorBufferBindings;
-   uint maxResourceDescriptorBufferBindings;
-   uint maxSamplerDescriptorBufferBindings;
-   uint maxEmbeddedImmutableSamplerBindings;
-   uint maxEmbeddedImmutableSamplers;
-   sz bufferCaptureReplayDescriptorDataSize;
-   sz imageCaptureReplayDescriptorDataSize;
-   sz imageViewCaptureReplayDescriptorDataSize;
-   sz samplerCaptureReplayDescriptorDataSize;
-   sz accelerationStructureCaptureReplayDescriptorDataSize;
-   sz samplerDescriptorSize;
-   sz combinedImageSamplerDescriptorSize;
-   sz sampledImageDescriptorSize;
-   sz storageImageDescriptorSize;
-   sz uniformTexelBufferDescriptorSize;
-   sz robustUniformTexelBufferDescriptorSize;
-   sz storageTexelBufferDescriptorSize;
-   sz robustStorageTexelBufferDescriptorSize;
-   sz uniformBufferDescriptorSize;
-   sz robustUniformBufferDescriptorSize;
-   sz storageBufferDescriptorSize;
-   sz robustStorageBufferDescriptorSize;
-   sz inputAttachmentDescriptorSize;
-   sz accelerationStructureDescriptorSize;
-   DeviceSize maxSamplerDescriptorBufferRange;
-   DeviceSize maxResourceDescriptorBufferRange;
-   DeviceSize samplerDescriptorBufferAddressSpaceSize;
-   DeviceSize resourceDescriptorBufferAddressSpaceSize;
-   DeviceSize descriptorBufferAddressSpaceSize;
+   StructureType s_type;
+   void* p_next;
+   uint combined_image_sampler_descriptor_single_array;
+   uint bufferless_push_descriptors;
+   uint allow_sampler_image_view_post_submit_creation;
+   DeviceSize descriptor_buffer_offset_alignment;
+   uint max_descriptor_buffer_bindings;
+   uint max_resource_descriptor_buffer_bindings;
+   uint max_sampler_descriptor_buffer_bindings;
+   uint max_embedded_immutable_sampler_bindings;
+   uint max_embedded_immutable_samplers;
+   sz buffer_capture_replay_descriptor_data_size;
+   sz image_capture_replay_descriptor_data_size;
+   sz image_view_capture_replay_descriptor_data_size;
+   sz sampler_capture_replay_descriptor_data_size;
+   sz acceleration_structure_capture_replay_descriptor_data_size;
+   sz sampler_descriptor_size;
+   sz combined_image_sampler_descriptor_size;
+   sz sampled_image_descriptor_size;
+   sz storage_image_descriptor_size;
+   sz uniform_texel_buffer_descriptor_size;
+   sz robust_uniform_texel_buffer_descriptor_size;
+   sz storage_texel_buffer_descriptor_size;
+   sz robust_storage_texel_buffer_descriptor_size;
+   sz uniform_buffer_descriptor_size;
+   sz robust_uniform_buffer_descriptor_size;
+   sz storage_buffer_descriptor_size;
+   sz robust_storage_buffer_descriptor_size;
+   sz input_attachment_descriptor_size;
+   sz acceleration_structure_descriptor_size;
+   DeviceSize max_sampler_descriptor_buffer_range;
+   DeviceSize max_resource_descriptor_buffer_range;
+   DeviceSize sampler_descriptor_buffer_address_space_size;
+   DeviceSize resource_descriptor_buffer_address_space_size;
+   DeviceSize descriptor_buffer_address_space_size;
 }
 struct PhysicalDeviceDescriptorBufferDensityMapPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   sz combinedImageSamplerDensityMapDescriptorSize;
+   StructureType s_type;
+   void* p_next;
+   sz combined_image_sampler_density_map_descriptor_size;
 }
 struct DescriptorAddressInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceAddress address;
    DeviceSize range;
    Format format;
 }
 struct DescriptorBufferBindingInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceAddress address;
    BufferUsageFlags usage;
 }
 struct DescriptorBufferBindingPushDescriptorBufferHandleEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
 }
 struct DescriptorGetInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DescriptorType type;
    DescriptorDataEXT data;
 }
 struct BufferCaptureDescriptorDataInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Buffer buffer;
 }
 struct ImageCaptureDescriptorDataInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
 }
 struct ImageViewCaptureDescriptorDataInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ImageView imageView;
+   StructureType s_type;
+   void* p_next;
+   ImageView image_view;
 }
 struct SamplerCaptureDescriptorDataInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Sampler sampler;
 }
 struct AccelerationStructureCaptureDescriptorDataInfoEXT {
-   StructureType sType;
-   void* pNext;
-   AccelerationStructureKHR accelerationStructure;
-   AccelerationStructureNV accelerationStructureNV;
+   StructureType s_type;
+   void* p_next;
+   AccelerationStructureKHR acceleration_structure;
+   AccelerationStructureNV acceleration_structure_nv;
 }
 struct OpaqueCaptureDescriptorDataCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   void* opaqueCaptureDescriptorData;
+   StructureType s_type;
+   void* p_next;
+   void* opaque_capture_descriptor_data;
 }
 struct PhysicalDeviceShaderIntegerDotProductFeatures {
-   StructureType sType;
-   void* pNext;
-   uint shaderIntegerDotProduct;
+   StructureType s_type;
+   void* p_next;
+   uint shader_integer_dot_product;
 }
 struct PhysicalDeviceShaderIntegerDotProductFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderIntegerDotProduct;
+   StructureType s_type;
+   void* p_next;
+   uint shader_integer_dot_product;
 }
 struct PhysicalDeviceShaderIntegerDotProductProperties {
-   StructureType sType;
-   void* pNext;
-   uint integerDotProduct8BitUnsignedAccelerated;
-   uint integerDotProduct8BitSignedAccelerated;
-   uint integerDotProduct8BitMixedSignednessAccelerated;
-   uint integerDotProduct4x8BitPackedUnsignedAccelerated;
-   uint integerDotProduct4x8BitPackedSignedAccelerated;
-   uint integerDotProduct4x8BitPackedMixedSignednessAccelerated;
-   uint integerDotProduct16BitUnsignedAccelerated;
-   uint integerDotProduct16BitSignedAccelerated;
-   uint integerDotProduct16BitMixedSignednessAccelerated;
-   uint integerDotProduct32BitUnsignedAccelerated;
-   uint integerDotProduct32BitSignedAccelerated;
-   uint integerDotProduct32BitMixedSignednessAccelerated;
-   uint integerDotProduct64BitUnsignedAccelerated;
-   uint integerDotProduct64BitSignedAccelerated;
-   uint integerDotProduct64BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating8BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating8BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating16BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating16BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating32BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating32BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating64BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating64BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated;
+   StructureType s_type;
+   void* p_next;
+   uint integer_dot_product_8_bit_unsigned_accelerated;
+   uint integer_dot_product_8_bit_signed_accelerated;
+   uint integer_dot_product_8_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_4_x_8_bit_packed_unsigned_accelerated;
+   uint integer_dot_product_4_x_8_bit_packed_signed_accelerated;
+   uint integer_dot_product_4_x_8_bit_packed_mixed_signedness_accelerated;
+   uint integer_dot_product_16_bit_unsigned_accelerated;
+   uint integer_dot_product_16_bit_signed_accelerated;
+   uint integer_dot_product_16_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_32_bit_unsigned_accelerated;
+   uint integer_dot_product_32_bit_signed_accelerated;
+   uint integer_dot_product_32_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_64_bit_unsigned_accelerated;
+   uint integer_dot_product_64_bit_signed_accelerated;
+   uint integer_dot_product_64_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_8_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_8_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_8_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_4_x_8_bit_packed_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_4_x_8_bit_packed_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_4_x_8_bit_packed_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_16_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_16_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_16_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_32_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_32_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_32_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_64_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_64_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_64_bit_mixed_signedness_accelerated;
 }
 struct PhysicalDeviceShaderIntegerDotProductPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint integerDotProduct8BitUnsignedAccelerated;
-   uint integerDotProduct8BitSignedAccelerated;
-   uint integerDotProduct8BitMixedSignednessAccelerated;
-   uint integerDotProduct4x8BitPackedUnsignedAccelerated;
-   uint integerDotProduct4x8BitPackedSignedAccelerated;
-   uint integerDotProduct4x8BitPackedMixedSignednessAccelerated;
-   uint integerDotProduct16BitUnsignedAccelerated;
-   uint integerDotProduct16BitSignedAccelerated;
-   uint integerDotProduct16BitMixedSignednessAccelerated;
-   uint integerDotProduct32BitUnsignedAccelerated;
-   uint integerDotProduct32BitSignedAccelerated;
-   uint integerDotProduct32BitMixedSignednessAccelerated;
-   uint integerDotProduct64BitUnsignedAccelerated;
-   uint integerDotProduct64BitSignedAccelerated;
-   uint integerDotProduct64BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating8BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating8BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating8BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating4x8BitPackedUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating4x8BitPackedSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating4x8BitPackedMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating16BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating16BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating16BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating32BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating32BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating32BitMixedSignednessAccelerated;
-   uint integerDotProductAccumulatingSaturating64BitUnsignedAccelerated;
-   uint integerDotProductAccumulatingSaturating64BitSignedAccelerated;
-   uint integerDotProductAccumulatingSaturating64BitMixedSignednessAccelerated;
+   StructureType s_type;
+   void* p_next;
+   uint integer_dot_product_8_bit_unsigned_accelerated;
+   uint integer_dot_product_8_bit_signed_accelerated;
+   uint integer_dot_product_8_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_4_x_8_bit_packed_unsigned_accelerated;
+   uint integer_dot_product_4_x_8_bit_packed_signed_accelerated;
+   uint integer_dot_product_4_x_8_bit_packed_mixed_signedness_accelerated;
+   uint integer_dot_product_16_bit_unsigned_accelerated;
+   uint integer_dot_product_16_bit_signed_accelerated;
+   uint integer_dot_product_16_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_32_bit_unsigned_accelerated;
+   uint integer_dot_product_32_bit_signed_accelerated;
+   uint integer_dot_product_32_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_64_bit_unsigned_accelerated;
+   uint integer_dot_product_64_bit_signed_accelerated;
+   uint integer_dot_product_64_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_8_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_8_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_8_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_4_x_8_bit_packed_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_4_x_8_bit_packed_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_4_x_8_bit_packed_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_16_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_16_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_16_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_32_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_32_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_32_bit_mixed_signedness_accelerated;
+   uint integer_dot_product_accumulating_saturating_64_bit_unsigned_accelerated;
+   uint integer_dot_product_accumulating_saturating_64_bit_signed_accelerated;
+   uint integer_dot_product_accumulating_saturating_64_bit_mixed_signedness_accelerated;
 }
 struct PhysicalDeviceDrmPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint hasPrimary;
-   uint hasRender;
-   long primaryMajor;
-   long primaryMinor;
-   long renderMajor;
-   long renderMinor;
+   StructureType s_type;
+   void* p_next;
+   uint has_primary;
+   uint has_render;
+   long primary_major;
+   long primary_minor;
+   long render_major;
+   long render_minor;
 }
 struct PhysicalDeviceFragmentShaderBarycentricFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint fragmentShaderBarycentric;
+   StructureType s_type;
+   void* p_next;
+   uint fragment_shader_barycentric;
 }
 struct PhysicalDeviceFragmentShaderBarycentricPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint triStripVertexOrderIndependentOfProvokingVertex;
+   StructureType s_type;
+   void* p_next;
+   uint tri_strip_vertex_order_independent_of_provoking_vertex;
 }
 struct PhysicalDeviceRayTracingMotionBlurFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint rayTracingMotionBlur;
-   uint rayTracingMotionBlurPipelineTraceRaysIndirect;
+   StructureType s_type;
+   void* p_next;
+   uint ray_tracing_motion_blur;
+   uint ray_tracing_motion_blur_pipeline_trace_rays_indirect;
 }
 struct PhysicalDeviceRayTracingValidationFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint rayTracingValidation;
+   StructureType s_type;
+   void* p_next;
+   uint ray_tracing_validation;
 }
 struct AccelerationStructureGeometryMotionTrianglesDataNV {
-   StructureType sType;
-   void* pNext;
-   DeviceOrHostAddressConstKHR vertexData;
+   StructureType s_type;
+   void* p_next;
+   DeviceOrHostAddressConstKHR vertex_data;
 }
 struct AccelerationStructureMotionInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint maxInstances;
+   StructureType s_type;
+   void* p_next;
+   uint max_instances;
    AccelerationStructureMotionInfoFlagsNV flags;
 }
 struct SRTDataNV {
@@ -11466,22 +11466,22 @@ struct SRTDataNV {
    float tz;
 }
 struct AccelerationStructureSRTMotionInstanceNV {
-   SRTDataNV transformT0;
-   SRTDataNV transformT1;
-   uint instanceCustomIndex;
+   SRTDataNV transform_t_0;
+   SRTDataNV transform_t_1;
+   uint instance_custom_index;
    uint mask;
-   uint instanceShaderBindingTableRecordOffset;
+   uint instance_shader_binding_table_record_offset;
    GeometryInstanceFlagsKHR flags;
-   ulong accelerationStructureReference;
+   ulong acceleration_structure_reference;
 }
 struct AccelerationStructureMatrixMotionInstanceNV {
-   TransformMatrixKHR transformT0;
-   TransformMatrixKHR transformT1;
-   uint instanceCustomIndex;
+   TransformMatrixKHR transform_t_0;
+   TransformMatrixKHR transform_t_1;
+   uint instance_custom_index;
    uint mask;
-   uint instanceShaderBindingTableRecordOffset;
+   uint instance_shader_binding_table_record_offset;
    GeometryInstanceFlagsKHR flags;
-   ulong accelerationStructureReference;
+   ulong acceleration_structure_reference;
 }
 struct AccelerationStructureMotionInstanceNV {
    AccelerationStructureMotionInstanceTypeNV type;
@@ -11489,1391 +11489,1391 @@ struct AccelerationStructureMotionInstanceNV {
    AccelerationStructureMotionInstanceDataNV data;
 }
 struct MemoryGetRemoteAddressInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceMemory memory;
-   ExternalMemoryHandleTypeFlagBits handleType;
+   ExternalMemoryHandleTypeFlagBits handle_type;
 }
 struct PhysicalDeviceRGBA10X6FormatsFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint formatRgba10x6WithoutYCbCrSampler;
+   StructureType s_type;
+   void* p_next;
+   uint format_rgba_10_x_6_without_y_cb_cr_sampler;
 }
 struct FormatProperties3 {
-   StructureType sType;
-   void* pNext;
-   FormatFeatureFlags2 linearTilingFeatures;
-   FormatFeatureFlags2 optimalTilingFeatures;
-   FormatFeatureFlags2 bufferFeatures;
+   StructureType s_type;
+   void* p_next;
+   FormatFeatureFlags2 linear_tiling_features;
+   FormatFeatureFlags2 optimal_tiling_features;
+   FormatFeatureFlags2 buffer_features;
 }
 struct FormatProperties3KHR {
-   StructureType sType;
-   void* pNext;
-   FormatFeatureFlags2 linearTilingFeatures;
-   FormatFeatureFlags2 optimalTilingFeatures;
-   FormatFeatureFlags2 bufferFeatures;
+   StructureType s_type;
+   void* p_next;
+   FormatFeatureFlags2 linear_tiling_features;
+   FormatFeatureFlags2 optimal_tiling_features;
+   FormatFeatureFlags2 buffer_features;
 }
 struct DrmFormatModifierPropertiesList2EXT {
-   StructureType sType;
-   void* pNext;
-   uint drmFormatModifierCount;
-   DrmFormatModifierProperties2EXT* pDrmFormatModifierProperties;
+   StructureType s_type;
+   void* p_next;
+   uint drm_format_modifier_count;
+   DrmFormatModifierProperties2EXT* p_drm_format_modifier_properties;
 }
 struct DrmFormatModifierProperties2EXT {
-   ulong drmFormatModifier;
-   uint drmFormatModifierPlaneCount;
-   FormatFeatureFlags2 drmFormatModifierTilingFeatures;
+   ulong drm_format_modifier;
+   uint drm_format_modifier_plane_count;
+   FormatFeatureFlags2 drm_format_modifier_tiling_features;
 }
 struct PipelineRenderingCreateInfo {
-   StructureType sType;
-   void* pNext;
-   uint viewMask;
-   uint colorAttachmentCount;
-   Format* pColorAttachmentFormats;
-   Format depthAttachmentFormat;
-   Format stencilAttachmentFormat;
+   StructureType s_type;
+   void* p_next;
+   uint view_mask;
+   uint color_attachment_count;
+   Format* p_color_attachment_formats;
+   Format depth_attachment_format;
+   Format stencil_attachment_format;
 }
 struct PipelineRenderingCreateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint viewMask;
-   uint colorAttachmentCount;
-   Format* pColorAttachmentFormats;
-   Format depthAttachmentFormat;
-   Format stencilAttachmentFormat;
+   StructureType s_type;
+   void* p_next;
+   uint view_mask;
+   uint color_attachment_count;
+   Format* p_color_attachment_formats;
+   Format depth_attachment_format;
+   Format stencil_attachment_format;
 }
 struct RenderingInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    RenderingFlags flags;
-   Rect2D renderArea;
-   uint layerCount;
-   uint viewMask;
-   uint colorAttachmentCount;
-   RenderingAttachmentInfo* pColorAttachments;
-   RenderingAttachmentInfo* pDepthAttachment;
-   RenderingAttachmentInfo* pStencilAttachment;
+   Rect2D render_area;
+   uint layer_count;
+   uint view_mask;
+   uint color_attachment_count;
+   RenderingAttachmentInfo* p_color_attachments;
+   RenderingAttachmentInfo* p_depth_attachment;
+   RenderingAttachmentInfo* p_stencil_attachment;
 }
 struct RenderingInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    RenderingFlags flags;
-   Rect2D renderArea;
-   uint layerCount;
-   uint viewMask;
-   uint colorAttachmentCount;
-   RenderingAttachmentInfo* pColorAttachments;
-   RenderingAttachmentInfo* pDepthAttachment;
-   RenderingAttachmentInfo* pStencilAttachment;
+   Rect2D render_area;
+   uint layer_count;
+   uint view_mask;
+   uint color_attachment_count;
+   RenderingAttachmentInfo* p_color_attachments;
+   RenderingAttachmentInfo* p_depth_attachment;
+   RenderingAttachmentInfo* p_stencil_attachment;
 }
 struct RenderingAttachmentInfo {
-   StructureType sType;
-   void* pNext;
-   ImageView imageView;
-   ImageLayout imageLayout;
-   ResolveModeFlagBits resolveMode;
-   ImageView resolveImageView;
-   ImageLayout resolveImageLayout;
-   AttachmentLoadOp loadOp;
-   AttachmentStoreOp storeOp;
-   ClearValue clearValue;
+   StructureType s_type;
+   void* p_next;
+   ImageView image_view;
+   ImageLayout image_layout;
+   ResolveModeFlagBits resolve_mode;
+   ImageView resolve_image_view;
+   ImageLayout resolve_image_layout;
+   AttachmentLoadOp load_op;
+   AttachmentStoreOp store_op;
+   ClearValue clear_value;
 }
 struct RenderingAttachmentInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ImageView imageView;
-   ImageLayout imageLayout;
-   ResolveModeFlagBits resolveMode;
-   ImageView resolveImageView;
-   ImageLayout resolveImageLayout;
-   AttachmentLoadOp loadOp;
-   AttachmentStoreOp storeOp;
-   ClearValue clearValue;
+   StructureType s_type;
+   void* p_next;
+   ImageView image_view;
+   ImageLayout image_layout;
+   ResolveModeFlagBits resolve_mode;
+   ImageView resolve_image_view;
+   ImageLayout resolve_image_layout;
+   AttachmentLoadOp load_op;
+   AttachmentStoreOp store_op;
+   ClearValue clear_value;
 }
 struct RenderingFragmentShadingRateAttachmentInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ImageView imageView;
-   ImageLayout imageLayout;
-   Extent2D shadingRateAttachmentTexelSize;
+   StructureType s_type;
+   void* p_next;
+   ImageView image_view;
+   ImageLayout image_layout;
+   Extent2D shading_rate_attachment_texel_size;
 }
 struct RenderingFragmentDensityMapAttachmentInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ImageView imageView;
-   ImageLayout imageLayout;
+   StructureType s_type;
+   void* p_next;
+   ImageView image_view;
+   ImageLayout image_layout;
 }
 struct PhysicalDeviceDynamicRenderingFeatures {
-   StructureType sType;
-   void* pNext;
-   uint dynamicRendering;
+   StructureType s_type;
+   void* p_next;
+   uint dynamic_rendering;
 }
 struct PhysicalDeviceDynamicRenderingFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint dynamicRendering;
+   StructureType s_type;
+   void* p_next;
+   uint dynamic_rendering;
 }
 struct CommandBufferInheritanceRenderingInfo {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    RenderingFlags flags;
-   uint viewMask;
-   uint colorAttachmentCount;
-   Format* pColorAttachmentFormats;
-   Format depthAttachmentFormat;
-   Format stencilAttachmentFormat;
-   SampleCountFlagBits rasterizationSamples;
+   uint view_mask;
+   uint color_attachment_count;
+   Format* p_color_attachment_formats;
+   Format depth_attachment_format;
+   Format stencil_attachment_format;
+   SampleCountFlagBits rasterization_samples;
 }
 struct CommandBufferInheritanceRenderingInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    RenderingFlags flags;
-   uint viewMask;
-   uint colorAttachmentCount;
-   Format* pColorAttachmentFormats;
-   Format depthAttachmentFormat;
-   Format stencilAttachmentFormat;
-   SampleCountFlagBits rasterizationSamples;
+   uint view_mask;
+   uint color_attachment_count;
+   Format* p_color_attachment_formats;
+   Format depth_attachment_format;
+   Format stencil_attachment_format;
+   SampleCountFlagBits rasterization_samples;
 }
 struct AttachmentSampleCountInfoAMD {
-   StructureType sType;
-   void* pNext;
-   uint colorAttachmentCount;
-   SampleCountFlagBits* pColorAttachmentSamples;
-   SampleCountFlagBits depthStencilAttachmentSamples;
+   StructureType s_type;
+   void* p_next;
+   uint color_attachment_count;
+   SampleCountFlagBits* p_color_attachment_samples;
+   SampleCountFlagBits depth_stencil_attachment_samples;
 }
 struct AttachmentSampleCountInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint colorAttachmentCount;
-   SampleCountFlagBits* pColorAttachmentSamples;
-   SampleCountFlagBits depthStencilAttachmentSamples;
+   StructureType s_type;
+   void* p_next;
+   uint color_attachment_count;
+   SampleCountFlagBits* p_color_attachment_samples;
+   SampleCountFlagBits depth_stencil_attachment_samples;
 }
 struct MultiviewPerViewAttributesInfoNVX {
-   StructureType sType;
-   void* pNext;
-   uint perViewAttributes;
-   uint perViewAttributesPositionXOnly;
+   StructureType s_type;
+   void* p_next;
+   uint per_view_attributes;
+   uint per_view_attributes_position_x_only;
 }
 struct PhysicalDeviceImageViewMinLodFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint minLod;
+   StructureType s_type;
+   void* p_next;
+   uint min_lod;
 }
 struct ImageViewMinLodCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   float minLod;
+   StructureType s_type;
+   void* p_next;
+   float min_lod;
 }
 struct PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint rasterizationOrderColorAttachmentAccess;
-   uint rasterizationOrderDepthAttachmentAccess;
-   uint rasterizationOrderStencilAttachmentAccess;
+   StructureType s_type;
+   void* p_next;
+   uint rasterization_order_color_attachment_access;
+   uint rasterization_order_depth_attachment_access;
+   uint rasterization_order_stencil_attachment_access;
 }
 struct PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM {
-   StructureType sType;
-   void* pNext;
-   uint rasterizationOrderColorAttachmentAccess;
-   uint rasterizationOrderDepthAttachmentAccess;
-   uint rasterizationOrderStencilAttachmentAccess;
+   StructureType s_type;
+   void* p_next;
+   uint rasterization_order_color_attachment_access;
+   uint rasterization_order_depth_attachment_access;
+   uint rasterization_order_stencil_attachment_access;
 }
 struct PhysicalDeviceLinearColorAttachmentFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint linearColorAttachment;
+   StructureType s_type;
+   void* p_next;
+   uint linear_color_attachment;
 }
 struct PhysicalDeviceGraphicsPipelineLibraryFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint graphicsPipelineLibrary;
+   StructureType s_type;
+   void* p_next;
+   uint graphics_pipeline_library;
 }
 struct PhysicalDevicePipelineBinaryFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint pipelineBinaries;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_binaries;
 }
 struct DevicePipelineBinaryInternalCacheControlKHR {
-   StructureType sType;
-   void* pNext;
-   uint disableInternalCache;
+   StructureType s_type;
+   void* p_next;
+   uint disable_internal_cache;
 }
 struct PhysicalDevicePipelineBinaryPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint pipelineBinaryInternalCache;
-   uint pipelineBinaryInternalCacheControl;
-   uint pipelineBinaryPrefersInternalCache;
-   uint pipelineBinaryPrecompiledInternalCache;
-   uint pipelineBinaryCompressedData;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_binary_internal_cache;
+   uint pipeline_binary_internal_cache_control;
+   uint pipeline_binary_prefers_internal_cache;
+   uint pipeline_binary_precompiled_internal_cache;
+   uint pipeline_binary_compressed_data;
 }
 struct PhysicalDeviceGraphicsPipelineLibraryPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint graphicsPipelineLibraryFastLinking;
-   uint graphicsPipelineLibraryIndependentInterpolationDecoration;
+   StructureType s_type;
+   void* p_next;
+   uint graphics_pipeline_library_fast_linking;
+   uint graphics_pipeline_library_independent_interpolation_decoration;
 }
 struct GraphicsPipelineLibraryCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    GraphicsPipelineLibraryFlagsEXT flags;
 }
 struct PhysicalDeviceDescriptorSetHostMappingFeaturesVALVE {
-   StructureType sType;
-   void* pNext;
-   uint descriptorSetHostMapping;
+   StructureType s_type;
+   void* p_next;
+   uint descriptor_set_host_mapping;
 }
 struct DescriptorSetBindingReferenceVALVE {
-   StructureType sType;
-   void* pNext;
-   DescriptorSetLayout descriptorSetLayout;
+   StructureType s_type;
+   void* p_next;
+   DescriptorSetLayout descriptor_set_layout;
    uint binding;
 }
 struct DescriptorSetLayoutHostMappingInfoVALVE {
-   StructureType sType;
-   void* pNext;
-   sz descriptorOffset;
-   uint descriptorSize;
+   StructureType s_type;
+   void* p_next;
+   sz descriptor_offset;
+   uint descriptor_size;
 }
 struct PhysicalDeviceNestedCommandBufferFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint nestedCommandBuffer;
-   uint nestedCommandBufferRendering;
-   uint nestedCommandBufferSimultaneousUse;
+   StructureType s_type;
+   void* p_next;
+   uint nested_command_buffer;
+   uint nested_command_buffer_rendering;
+   uint nested_command_buffer_simultaneous_use;
 }
 struct PhysicalDeviceNestedCommandBufferPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxCommandBufferNestingLevel;
+   StructureType s_type;
+   void* p_next;
+   uint max_command_buffer_nesting_level;
 }
 struct PhysicalDeviceShaderModuleIdentifierFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderModuleIdentifier;
+   StructureType s_type;
+   void* p_next;
+   uint shader_module_identifier;
 }
 struct PhysicalDeviceShaderModuleIdentifierPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint[UUID_SIZE] shaderModuleIdentifierAlgorithmUUID;
+   StructureType s_type;
+   void* p_next;
+   uint[UUID_SIZE] shader_module_identifier_algorithm_uuid;
 }
 struct PipelineShaderStageModuleIdentifierCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint identifierSize;
-   uint* pIdentifier;
+   StructureType s_type;
+   void* p_next;
+   uint identifier_size;
+   uint* p_identifier;
 }
 struct ShaderModuleIdentifierEXT {
-   StructureType sType;
-   void* pNext;
-   uint identifierSize;
+   StructureType s_type;
+   void* p_next;
+   uint identifier_size;
    uint[MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT] identifier;
 }
 struct ImageCompressionControlEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ImageCompressionFlagsEXT flags;
-   uint compressionControlPlaneCount;
-   ImageCompressionFixedRateFlagsEXT* pFixedRateFlags;
+   uint compression_control_plane_count;
+   ImageCompressionFixedRateFlagsEXT* p_fixed_rate_flags;
 }
 struct PhysicalDeviceImageCompressionControlFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint imageCompressionControl;
+   StructureType s_type;
+   void* p_next;
+   uint image_compression_control;
 }
 struct ImageCompressionPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   ImageCompressionFlagsEXT imageCompressionFlags;
-   ImageCompressionFixedRateFlagsEXT imageCompressionFixedRateFlags;
+   StructureType s_type;
+   void* p_next;
+   ImageCompressionFlagsEXT image_compression_flags;
+   ImageCompressionFixedRateFlagsEXT image_compression_fixed_rate_flags;
 }
 struct PhysicalDeviceImageCompressionControlSwapchainFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint imageCompressionControlSwapchain;
+   StructureType s_type;
+   void* p_next;
+   uint image_compression_control_swapchain;
 }
 struct ImageSubresource2KHR {
-   StructureType sType;
-   void* pNext;
-   ImageSubresource imageSubresource;
+   StructureType s_type;
+   void* p_next;
+   ImageSubresource image_subresource;
 }
 struct ImageSubresource2EXT {
-   StructureType sType;
-   void* pNext;
-   ImageSubresource imageSubresource;
+   StructureType s_type;
+   void* p_next;
+   ImageSubresource image_subresource;
 }
 struct SubresourceLayout2KHR {
-   StructureType sType;
-   void* pNext;
-   SubresourceLayout subresourceLayout;
+   StructureType s_type;
+   void* p_next;
+   SubresourceLayout subresource_layout;
 }
 struct SubresourceLayout2EXT {
-   StructureType sType;
-   void* pNext;
-   SubresourceLayout subresourceLayout;
+   StructureType s_type;
+   void* p_next;
+   SubresourceLayout subresource_layout;
 }
 struct RenderPassCreationControlEXT {
-   StructureType sType;
-   void* pNext;
-   uint disallowMerging;
+   StructureType s_type;
+   void* p_next;
+   uint disallow_merging;
 }
 struct RenderPassCreationFeedbackInfoEXT {
-   uint postMergeSubpassCount;
+   uint post_merge_subpass_count;
 }
 struct RenderPassCreationFeedbackCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   RenderPassCreationFeedbackInfoEXT* pRenderPassFeedback;
+   StructureType s_type;
+   void* p_next;
+   RenderPassCreationFeedbackInfoEXT* p_render_pass_feedback;
 }
 struct RenderPassSubpassFeedbackInfoEXT {
-   SubpassMergeStatusEXT subpassMergeStatus;
+   SubpassMergeStatusEXT subpass_merge_status;
    char[MAX_DESCRIPTION_SIZE] description;
-   uint postMergeIndex;
+   uint post_merge_index;
 }
 struct RenderPassSubpassFeedbackCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   RenderPassSubpassFeedbackInfoEXT* pSubpassFeedback;
+   StructureType s_type;
+   void* p_next;
+   RenderPassSubpassFeedbackInfoEXT* p_subpass_feedback;
 }
 struct PhysicalDeviceSubpassMergeFeedbackFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint subpassMergeFeedback;
+   StructureType s_type;
+   void* p_next;
+   uint subpass_merge_feedback;
 }
 struct MicromapBuildInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    MicromapTypeEXT type;
    BuildMicromapFlagsEXT flags;
    BuildMicromapModeEXT mode;
-   MicromapEXT dstMicromap;
-   uint usageCountsCount;
-   MicromapUsageEXT* pUsageCounts;
-   MicromapUsageEXT* ppUsageCounts;
+   MicromapEXT dst_micromap;
+   uint usage_counts_count;
+   MicromapUsageEXT* p_usage_counts;
+   MicromapUsageEXT** pp_usage_counts;
    DeviceOrHostAddressConstKHR data;
-   DeviceOrHostAddressKHR scratchData;
-   DeviceOrHostAddressConstKHR triangleArray;
-   DeviceSize triangleArrayStride;
+   DeviceOrHostAddressKHR scratch_data;
+   DeviceOrHostAddressConstKHR triangle_array;
+   DeviceSize triangle_array_stride;
 }
 struct MicromapCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   MicromapCreateFlagsEXT createFlags;
+   StructureType s_type;
+   void* p_next;
+   MicromapCreateFlagsEXT create_flags;
    Buffer buffer;
    DeviceSize offset;
    DeviceSize size;
    MicromapTypeEXT type;
-   DeviceAddress deviceAddress;
+   DeviceAddress device_address;
 }
 struct MicromapVersionInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint* pVersionData;
+   StructureType s_type;
+   void* p_next;
+   uint* p_version_data;
 }
 struct CopyMicromapInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    MicromapEXT src;
    MicromapEXT dst;
    CopyMicromapModeEXT mode;
 }
 struct CopyMicromapToMemoryInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    MicromapEXT src;
    DeviceOrHostAddressKHR dst;
    CopyMicromapModeEXT mode;
 }
 struct CopyMemoryToMicromapInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceOrHostAddressConstKHR src;
    MicromapEXT dst;
    CopyMicromapModeEXT mode;
 }
 struct MicromapBuildSizesInfoEXT {
-   StructureType sType;
-   void* pNext;
-   DeviceSize micromapSize;
-   DeviceSize buildScratchSize;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize micromap_size;
+   DeviceSize build_scratch_size;
    uint discardable;
 }
 struct MicromapUsageEXT {
    uint count;
-   uint subdivisionLevel;
+   uint subdivision_level;
    uint format;
 }
 struct MicromapTriangleEXT {
-   uint dataOffset;
-   uint subdivisionLevel;
+   uint data_offset;
+   uint subdivision_level;
    uint format;
 }
 struct PhysicalDeviceOpacityMicromapFeaturesEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint micromap;
-   uint micromapCaptureReplay;
-   uint micromapHostCommands;
+   uint micromap_capture_replay;
+   uint micromap_host_commands;
 }
 struct PhysicalDeviceOpacityMicromapPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint maxOpacity2StateSubdivisionLevel;
-   uint maxOpacity4StateSubdivisionLevel;
+   StructureType s_type;
+   void* p_next;
+   uint max_opacity_2_state_subdivision_level;
+   uint max_opacity_4_state_subdivision_level;
 }
 struct AccelerationStructureTrianglesOpacityMicromapEXT {
-   StructureType sType;
-   void* pNext;
-   IndexType indexType;
-   DeviceOrHostAddressConstKHR indexBuffer;
-   DeviceSize indexStride;
-   uint baseTriangle;
-   uint usageCountsCount;
-   MicromapUsageEXT* pUsageCounts;
-   MicromapUsageEXT* ppUsageCounts;
+   StructureType s_type;
+   void* p_next;
+   IndexType index_type;
+   DeviceOrHostAddressConstKHR index_buffer;
+   DeviceSize index_stride;
+   uint base_triangle;
+   uint usage_counts_count;
+   MicromapUsageEXT* p_usage_counts;
+   MicromapUsageEXT** pp_usage_counts;
    MicromapEXT micromap;
 }
 struct PipelinePropertiesIdentifierEXT {
-   StructureType sType;
-   void* pNext;
-   uint[UUID_SIZE] pipelineIdentifier;
+   StructureType s_type;
+   void* p_next;
+   uint[UUID_SIZE] pipeline_identifier;
 }
 struct PhysicalDevicePipelinePropertiesFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint pipelinePropertiesIdentifier;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_properties_identifier;
 }
 struct PhysicalDeviceShaderEarlyAndLateFragmentTestsFeaturesAMD {
-   StructureType sType;
-   void* pNext;
-   uint shaderEarlyAndLateFragmentTests;
+   StructureType s_type;
+   void* p_next;
+   uint shader_early_and_late_fragment_tests;
 }
 struct ExternalMemoryAcquireUnmodifiedEXT {
-   StructureType sType;
-   void* pNext;
-   uint acquireUnmodifiedMemory;
+   StructureType s_type;
+   void* p_next;
+   uint acquire_unmodified_memory;
 }
 struct ExportMetalObjectCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ExportMetalObjectTypeFlagBitsEXT exportObjectType;
+   StructureType s_type;
+   void* p_next;
+   ExportMetalObjectTypeFlagBitsEXT export_object_type;
 }
 struct ExportMetalObjectsInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
 }
 struct ExportMetalDeviceInfoEXT {
-   StructureType sType;
-   void* pNext;
-   void* mtlDevice;
+   StructureType s_type;
+   void* p_next;
+   void* mtl_device;
 }
 struct ExportMetalCommandQueueInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Queue queue;
-   void* mtlCommandQueue;
+   void* mtl_command_queue;
 }
 struct ExportMetalBufferInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceMemory memory;
-   void* mtlBuffer;
+   void* mtl_buffer;
 }
 struct ImportMetalBufferInfoEXT {
-   StructureType sType;
-   void* pNext;
-   void* mtlBuffer;
+   StructureType s_type;
+   void* p_next;
+   void* mtl_buffer;
 }
 struct ExportMetalTextureInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
-   ImageView imageView;
-   BufferView bufferView;
+   ImageView image_view;
+   BufferView buffer_view;
    ImageAspectFlagBits plane;
-   void* mtlTexture;
+   void* mtl_texture;
 }
 struct ImportMetalTextureInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ImageAspectFlagBits plane;
-   void* mtlTexture;
+   void* mtl_texture;
 }
 struct ExportMetalIOSurfaceInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Image image;
-   void* ioSurface;
+   void* io_surface;
 }
 struct ImportMetalIOSurfaceInfoEXT {
-   StructureType sType;
-   void* pNext;
-   void* ioSurface;
+   StructureType s_type;
+   void* p_next;
+   void* io_surface;
 }
 struct ExportMetalSharedEventInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Semaphore semaphore;
    Event event;
-   void* mtlSharedEvent;
+   void* mtl_shared_event;
 }
 struct ImportMetalSharedEventInfoEXT {
-   StructureType sType;
-   void* pNext;
-   void* mtlSharedEvent;
+   StructureType s_type;
+   void* p_next;
+   void* mtl_shared_event;
 }
 struct PhysicalDeviceNonSeamlessCubeMapFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint nonSeamlessCubeMap;
+   StructureType s_type;
+   void* p_next;
+   uint non_seamless_cube_map;
 }
 struct PhysicalDevicePipelineRobustnessFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint pipelineRobustness;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_robustness;
 }
 struct PipelineRobustnessCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   PipelineRobustnessBufferBehaviorEXT storageBuffers;
-   PipelineRobustnessBufferBehaviorEXT uniformBuffers;
-   PipelineRobustnessBufferBehaviorEXT vertexInputs;
+   StructureType s_type;
+   void* p_next;
+   PipelineRobustnessBufferBehaviorEXT storage_buffers;
+   PipelineRobustnessBufferBehaviorEXT uniform_buffers;
+   PipelineRobustnessBufferBehaviorEXT vertex_inputs;
    PipelineRobustnessImageBehaviorEXT images;
 }
 struct PhysicalDevicePipelineRobustnessPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   PipelineRobustnessBufferBehaviorEXT defaultRobustnessStorageBuffers;
-   PipelineRobustnessBufferBehaviorEXT defaultRobustnessUniformBuffers;
-   PipelineRobustnessBufferBehaviorEXT defaultRobustnessVertexInputs;
-   PipelineRobustnessImageBehaviorEXT defaultRobustnessImages;
+   StructureType s_type;
+   void* p_next;
+   PipelineRobustnessBufferBehaviorEXT default_robustness_storage_buffers;
+   PipelineRobustnessBufferBehaviorEXT default_robustness_uniform_buffers;
+   PipelineRobustnessBufferBehaviorEXT default_robustness_vertex_inputs;
+   PipelineRobustnessImageBehaviorEXT default_robustness_images;
 }
 struct ImageViewSampleWeightCreateInfoQCOM {
-   StructureType sType;
-   void* pNext;
-   Offset2D filterCenter;
-   Extent2D filterSize;
-   uint numPhases;
+   StructureType s_type;
+   void* p_next;
+   Offset2D filter_center;
+   Extent2D filter_size;
+   uint num_phases;
 }
 struct PhysicalDeviceImageProcessingFeaturesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint textureSampleWeighted;
-   uint textureBoxFilter;
-   uint textureBlockMatch;
+   StructureType s_type;
+   void* p_next;
+   uint texture_sample_weighted;
+   uint texture_box_filter;
+   uint texture_block_match;
 }
 struct PhysicalDeviceImageProcessingPropertiesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint maxWeightFilterPhases;
-   Extent2D maxWeightFilterDimension;
-   Extent2D maxBlockMatchRegion;
-   Extent2D maxBoxFilterBlockSize;
+   StructureType s_type;
+   void* p_next;
+   uint max_weight_filter_phases;
+   Extent2D max_weight_filter_dimension;
+   Extent2D max_block_match_region;
+   Extent2D max_box_filter_block_size;
 }
 struct PhysicalDeviceTilePropertiesFeaturesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint tileProperties;
+   StructureType s_type;
+   void* p_next;
+   uint tile_properties;
 }
 struct TilePropertiesQCOM {
-   StructureType sType;
-   void* pNext;
-   Extent3D tileSize;
-   Extent2D apronSize;
+   StructureType s_type;
+   void* p_next;
+   Extent3D tile_size;
+   Extent2D apron_size;
    Offset2D origin;
 }
 struct PhysicalDeviceAmigoProfilingFeaturesSEC {
-   StructureType sType;
-   void* pNext;
-   uint amigoProfiling;
+   StructureType s_type;
+   void* p_next;
+   uint amigo_profiling;
 }
 struct AmigoProfilingSubmitInfoSEC {
-   StructureType sType;
-   void* pNext;
-   ulong firstDrawTimestamp;
-   ulong swapBufferTimestamp;
+   StructureType s_type;
+   void* p_next;
+   ulong first_draw_timestamp;
+   ulong swap_buffer_timestamp;
 }
 struct PhysicalDeviceAttachmentFeedbackLoopLayoutFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint attachmentFeedbackLoopLayout;
+   StructureType s_type;
+   void* p_next;
+   uint attachment_feedback_loop_layout;
 }
 struct PhysicalDeviceDepthClampZeroOneFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint depthClampZeroOne;
+   StructureType s_type;
+   void* p_next;
+   uint depth_clamp_zero_one;
 }
 struct PhysicalDeviceAddressBindingReportFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint reportAddressBinding;
+   StructureType s_type;
+   void* p_next;
+   uint report_address_binding;
 }
 struct DeviceAddressBindingCallbackDataEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    DeviceAddressBindingFlagsEXT flags;
-   DeviceAddress baseAddress;
+   DeviceAddress base_address;
    DeviceSize size;
-   DeviceAddressBindingTypeEXT bindingType;
+   DeviceAddressBindingTypeEXT binding_type;
 }
 struct PhysicalDeviceOpticalFlowFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint opticalFlow;
+   StructureType s_type;
+   void* p_next;
+   uint optical_flow;
 }
 struct PhysicalDeviceOpticalFlowPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   OpticalFlowGridSizeFlagsNV supportedOutputGridSizes;
-   OpticalFlowGridSizeFlagsNV supportedHintGridSizes;
-   uint hintSupported;
-   uint costSupported;
-   uint bidirectionalFlowSupported;
-   uint globalFlowSupported;
-   uint minWidth;
-   uint minHeight;
-   uint maxWidth;
-   uint maxHeight;
-   uint maxNumRegionsOfInterest;
+   StructureType s_type;
+   void* p_next;
+   OpticalFlowGridSizeFlagsNV supported_output_grid_sizes;
+   OpticalFlowGridSizeFlagsNV supported_hint_grid_sizes;
+   uint hint_supported;
+   uint cost_supported;
+   uint bidirectional_flow_supported;
+   uint global_flow_supported;
+   uint min_width;
+   uint min_height;
+   uint max_width;
+   uint max_height;
+   uint max_num_regions_of_interest;
 }
 struct OpticalFlowImageFormatInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    OpticalFlowUsageFlagsNV usage;
 }
 struct OpticalFlowImageFormatPropertiesNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    Format format;
 }
 struct OpticalFlowSessionCreateInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint width;
    uint height;
-   Format imageFormat;
-   Format flowVectorFormat;
-   Format costFormat;
-   OpticalFlowGridSizeFlagsNV outputGridSize;
-   OpticalFlowGridSizeFlagsNV hintGridSize;
-   OpticalFlowPerformanceLevelNV performanceLevel;
+   Format image_format;
+   Format flow_vector_format;
+   Format cost_format;
+   OpticalFlowGridSizeFlagsNV output_grid_size;
+   OpticalFlowGridSizeFlagsNV hint_grid_size;
+   OpticalFlowPerformanceLevelNV performance_level;
    OpticalFlowSessionCreateFlagsNV flags;
 }
 struct OpticalFlowSessionCreatePrivateDataInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    uint id;
    uint size;
-   void* pPrivateData;
+   void* p_private_data;
 }
 struct OpticalFlowExecuteInfoNV {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    OpticalFlowExecuteFlagsNV flags;
-   uint regionCount;
-   Rect2D* pRegions;
+   uint region_count;
+   Rect2D* p_regions;
 }
 struct PhysicalDeviceFaultFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint deviceFault;
-   uint deviceFaultVendorBinary;
+   StructureType s_type;
+   void* p_next;
+   uint device_fault;
+   uint device_fault_vendor_binary;
 }
 struct DeviceFaultAddressInfoEXT {
-   DeviceFaultAddressTypeEXT addressType;
-   DeviceAddress reportedAddress;
-   DeviceSize addressPrecision;
+   DeviceFaultAddressTypeEXT address_type;
+   DeviceAddress reported_address;
+   DeviceSize address_precision;
 }
 struct DeviceFaultVendorInfoEXT {
    char[MAX_DESCRIPTION_SIZE] description;
-   ulong vendorFaultCode;
-   ulong vendorFaultData;
+   ulong vendor_fault_code;
+   ulong vendor_fault_data;
 }
 struct DeviceFaultCountsEXT {
-   StructureType sType;
-   void* pNext;
-   uint addressInfoCount;
-   uint vendorInfoCount;
-   DeviceSize vendorBinarySize;
+   StructureType s_type;
+   void* p_next;
+   uint address_info_count;
+   uint vendor_info_count;
+   DeviceSize vendor_binary_size;
 }
 struct DeviceFaultInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    char[MAX_DESCRIPTION_SIZE] description;
-   DeviceFaultAddressInfoEXT* pAddressInfos;
-   DeviceFaultVendorInfoEXT* pVendorInfos;
-   void* pVendorBinaryData;
+   DeviceFaultAddressInfoEXT* p_address_infos;
+   DeviceFaultVendorInfoEXT* p_vendor_infos;
+   void* p_vendor_binary_data;
 }
 struct DeviceFaultVendorBinaryHeaderVersionOneEXT {
-   uint headerSize;
-   DeviceFaultVendorBinaryHeaderVersionEXT headerVersion;
-   uint vendorID;
-   uint deviceID;
-   uint driverVersion;
-   uint[UUID_SIZE] pipelineCacheUUID;
-   uint applicationNameOffset;
-   uint applicationVersion;
-   uint engineNameOffset;
-   uint engineVersion;
-   uint apiVersion;
+   uint header_size;
+   DeviceFaultVendorBinaryHeaderVersionEXT header_version;
+   uint vendor_id;
+   uint device_id;
+   uint driver_version;
+   uint[UUID_SIZE] pipeline_cache_uuid;
+   uint application_name_offset;
+   uint application_version;
+   uint engine_name_offset;
+   uint engine_version;
+   uint api_version;
 }
 struct PhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint pipelineLibraryGroupHandles;
+   StructureType s_type;
+   void* p_next;
+   uint pipeline_library_group_handles;
 }
 struct DepthBiasInfoEXT {
-   StructureType sType;
-   void* pNext;
-   float depthBiasConstantFactor;
-   float depthBiasClamp;
-   float depthBiasSlopeFactor;
+   StructureType s_type;
+   void* p_next;
+   float depth_bias_constant_factor;
+   float depth_bias_clamp;
+   float depth_bias_slope_factor;
 }
 struct DepthBiasRepresentationInfoEXT {
-   StructureType sType;
-   void* pNext;
-   DepthBiasRepresentationEXT depthBiasRepresentation;
-   uint depthBiasExact;
+   StructureType s_type;
+   void* p_next;
+   DepthBiasRepresentationEXT depth_bias_representation;
+   uint depth_bias_exact;
 }
 struct DecompressMemoryRegionNV {
-   DeviceAddress srcAddress;
-   DeviceAddress dstAddress;
-   DeviceSize compressedSize;
-   DeviceSize decompressedSize;
-   MemoryDecompressionMethodFlagsNV decompressionMethod;
+   DeviceAddress src_address;
+   DeviceAddress dst_address;
+   DeviceSize compressed_size;
+   DeviceSize decompressed_size;
+   MemoryDecompressionMethodFlagsNV decompression_method;
 }
 struct PhysicalDeviceShaderCoreBuiltinsPropertiesARM {
-   StructureType sType;
-   void* pNext;
-   ulong shaderCoreMask;
-   uint shaderCoreCount;
-   uint shaderWarpsPerCore;
+   StructureType s_type;
+   void* p_next;
+   ulong shader_core_mask;
+   uint shader_core_count;
+   uint shader_warps_per_core;
 }
 struct PhysicalDeviceShaderCoreBuiltinsFeaturesARM {
-   StructureType sType;
-   void* pNext;
-   uint shaderCoreBuiltins;
+   StructureType s_type;
+   void* p_next;
+   uint shader_core_builtins;
 }
 struct FrameBoundaryEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    FrameBoundaryFlagsEXT flags;
-   ulong frameID;
-   uint imageCount;
-   Image* pImages;
-   uint bufferCount;
-   Buffer* pBuffers;
-   ulong tagName;
-   sz tagSize;
-   void* pTag;
+   ulong frame_id;
+   uint image_count;
+   Image* p_images;
+   uint buffer_count;
+   Buffer* p_buffers;
+   ulong tag_name;
+   sz tag_size;
+   void* p_tag;
 }
 struct PhysicalDeviceFrameBoundaryFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint frameBoundary;
+   StructureType s_type;
+   void* p_next;
+   uint frame_boundary;
 }
 struct PhysicalDeviceDynamicRenderingUnusedAttachmentsFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint dynamicRenderingUnusedAttachments;
+   StructureType s_type;
+   void* p_next;
+   uint dynamic_rendering_unused_attachments;
 }
 struct SurfacePresentModeEXT {
-   StructureType sType;
-   void* pNext;
-   PresentModeKHR presentMode;
+   StructureType s_type;
+   void* p_next;
+   PresentModeKHR present_mode;
 }
 struct SurfacePresentScalingCapabilitiesEXT {
-   StructureType sType;
-   void* pNext;
-   PresentScalingFlagsEXT supportedPresentScaling;
-   PresentGravityFlagsEXT supportedPresentGravityX;
-   PresentGravityFlagsEXT supportedPresentGravityY;
-   Extent2D minScaledImageExtent;
-   Extent2D maxScaledImageExtent;
+   StructureType s_type;
+   void* p_next;
+   PresentScalingFlagsEXT supported_present_scaling;
+   PresentGravityFlagsEXT supported_present_gravity_x;
+   PresentGravityFlagsEXT supported_present_gravity_y;
+   Extent2D min_scaled_image_extent;
+   Extent2D max_scaled_image_extent;
 }
 struct SurfacePresentModeCompatibilityEXT {
-   StructureType sType;
-   void* pNext;
-   uint presentModeCount;
-   PresentModeKHR* pPresentModes;
+   StructureType s_type;
+   void* p_next;
+   uint present_mode_count;
+   PresentModeKHR* p_present_modes;
 }
 struct PhysicalDeviceSwapchainMaintenance1FeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint swapchainMaintenance1;
+   StructureType s_type;
+   void* p_next;
+   uint swapchain_maintenance_1;
 }
 struct SwapchainPresentFenceInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint swapchainCount;
-   Fence* pFences;
+   StructureType s_type;
+   void* p_next;
+   uint swapchain_count;
+   Fence* p_fences;
 }
 struct SwapchainPresentModesCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint presentModeCount;
-   PresentModeKHR* pPresentModes;
+   StructureType s_type;
+   void* p_next;
+   uint present_mode_count;
+   PresentModeKHR* p_present_modes;
 }
 struct SwapchainPresentModeInfoEXT {
-   StructureType sType;
-   void* pNext;
-   uint swapchainCount;
-   PresentModeKHR* pPresentModes;
+   StructureType s_type;
+   void* p_next;
+   uint swapchain_count;
+   PresentModeKHR* p_present_modes;
 }
 struct SwapchainPresentScalingCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
-   PresentScalingFlagsEXT scalingBehavior;
-   PresentGravityFlagsEXT presentGravityX;
-   PresentGravityFlagsEXT presentGravityY;
+   StructureType s_type;
+   void* p_next;
+   PresentScalingFlagsEXT scaling_behavior;
+   PresentGravityFlagsEXT present_gravity_x;
+   PresentGravityFlagsEXT present_gravity_y;
 }
 struct ReleaseSwapchainImagesInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    SwapchainKHR swapchain;
-   uint imageIndexCount;
-   uint* pImageIndices;
+   uint image_index_count;
+   uint* p_image_indices;
 }
 struct PhysicalDeviceDepthBiasControlFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint depthBiasControl;
-   uint leastRepresentableValueForceUnormRepresentation;
-   uint floatRepresentation;
-   uint depthBiasExact;
+   StructureType s_type;
+   void* p_next;
+   uint depth_bias_control;
+   uint least_representable_value_force_unorm_representation;
+   uint float_representation;
+   uint depth_bias_exact;
 }
 struct PhysicalDeviceRayTracingInvocationReorderFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint rayTracingInvocationReorder;
+   StructureType s_type;
+   void* p_next;
+   uint ray_tracing_invocation_reorder;
 }
 struct PhysicalDeviceRayTracingInvocationReorderPropertiesNV {
-   StructureType sType;
-   void* pNext;
-   RayTracingInvocationReorderModeNV rayTracingInvocationReorderReorderingHint;
+   StructureType s_type;
+   void* p_next;
+   RayTracingInvocationReorderModeNV ray_tracing_invocation_reorder_reordering_hint;
 }
 struct PhysicalDeviceExtendedSparseAddressSpaceFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint extendedSparseAddressSpace;
+   StructureType s_type;
+   void* p_next;
+   uint extended_sparse_address_space;
 }
 struct PhysicalDeviceExtendedSparseAddressSpacePropertiesNV {
-   StructureType sType;
-   void* pNext;
-   DeviceSize extendedSparseAddressSpaceSize;
-   ImageUsageFlags extendedSparseImageUsageFlags;
-   BufferUsageFlags extendedSparseBufferUsageFlags;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize extended_sparse_address_space_size;
+   ImageUsageFlags extended_sparse_image_usage_flags;
+   BufferUsageFlags extended_sparse_buffer_usage_flags;
 }
 struct PhysicalDeviceMultiviewPerViewViewportsFeaturesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint multiviewPerViewViewports;
+   StructureType s_type;
+   void* p_next;
+   uint multiview_per_view_viewports;
 }
 struct PhysicalDeviceRayTracingPositionFetchFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint rayTracingPositionFetch;
+   StructureType s_type;
+   void* p_next;
+   uint ray_tracing_position_fetch;
 }
 struct DeviceImageSubresourceInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ImageCreateInfo* pCreateInfo;
-   ImageSubresource2KHR* pSubresource;
+   StructureType s_type;
+   void* p_next;
+   ImageCreateInfo* p_create_info;
+   ImageSubresource2KHR* p_subresource;
 }
 struct PhysicalDeviceShaderCorePropertiesARM {
-   StructureType sType;
-   void* pNext;
-   uint pixelRate;
-   uint texelRate;
-   uint fmaRate;
+   StructureType s_type;
+   void* p_next;
+   uint pixel_rate;
+   uint texel_rate;
+   uint fma_rate;
 }
 struct PhysicalDeviceMultiviewPerViewRenderAreasFeaturesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint multiviewPerViewRenderAreas;
+   StructureType s_type;
+   void* p_next;
+   uint multiview_per_view_render_areas;
 }
 struct MultiviewPerViewRenderAreasRenderPassBeginInfoQCOM {
-   StructureType sType;
-   void* pNext;
-   uint perViewRenderAreaCount;
-   Rect2D* pPerViewRenderAreas;
+   StructureType s_type;
+   void* p_next;
+   uint per_view_render_area_count;
+   Rect2D* p_per_view_render_areas;
 }
 struct QueryLowLatencySupportNV {
-   StructureType sType;
-   void* pNext;
-   void* pQueriedLowLatencyData;
+   StructureType s_type;
+   void* p_next;
+   void* p_queried_low_latency_data;
 }
 struct MemoryMapInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    MemoryMapFlags flags;
    DeviceMemory memory;
    DeviceSize offset;
    DeviceSize size;
 }
 struct MemoryUnmapInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    MemoryUnmapFlagsKHR flags;
    DeviceMemory memory;
 }
 struct PhysicalDeviceShaderObjectFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderObject;
+   StructureType s_type;
+   void* p_next;
+   uint shader_object;
 }
 struct PhysicalDeviceShaderObjectPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint[UUID_SIZE] shaderBinaryUUID;
-   uint shaderBinaryVersion;
+   StructureType s_type;
+   void* p_next;
+   uint[UUID_SIZE] shader_binary_uuid;
+   uint shader_binary_version;
 }
 struct ShaderCreateInfoEXT {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    ShaderCreateFlagsEXT flags;
    ShaderStageFlagBits stage;
-   ShaderStageFlags nextStage;
-   ShaderCodeTypeEXT codeType;
-   sz codeSize;
-   void* pCode;
-   char* pName;
-   uint setLayoutCount;
-   DescriptorSetLayout* pSetLayouts;
-   uint pushConstantRangeCount;
-   PushConstantRange* pPushConstantRanges;
-   SpecializationInfo* pSpecializationInfo;
+   ShaderStageFlags next_stage;
+   ShaderCodeTypeEXT code_type;
+   sz code_size;
+   void* p_code;
+   char* p_name;
+   uint set_layout_count;
+   DescriptorSetLayout* p_set_layouts;
+   uint push_constant_range_count;
+   PushConstantRange* p_push_constant_ranges;
+   SpecializationInfo* p_specialization_info;
 }
 struct PhysicalDeviceShaderTileImageFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderTileImageColorReadAccess;
-   uint shaderTileImageDepthReadAccess;
-   uint shaderTileImageStencilReadAccess;
+   StructureType s_type;
+   void* p_next;
+   uint shader_tile_image_color_read_access;
+   uint shader_tile_image_depth_read_access;
+   uint shader_tile_image_stencil_read_access;
 }
 struct PhysicalDeviceShaderTileImagePropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderTileImageCoherentReadAccelerated;
-   uint shaderTileImageReadSampleFromPixelRateInvocation;
-   uint shaderTileImageReadFromHelperInvocation;
+   StructureType s_type;
+   void* p_next;
+   uint shader_tile_image_coherent_read_accelerated;
+   uint shader_tile_image_read_sample_from_pixel_rate_invocation;
+   uint shader_tile_image_read_from_helper_invocation;
 }
 struct PhysicalDeviceCooperativeMatrixFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint cooperativeMatrix;
-   uint cooperativeMatrixRobustBufferAccess;
+   StructureType s_type;
+   void* p_next;
+   uint cooperative_matrix;
+   uint cooperative_matrix_robust_buffer_access;
 }
 struct CooperativeMatrixPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   uint mSize;
-   uint nSize;
-   uint kSize;
-   ComponentTypeKHR aType;
-   ComponentTypeKHR bType;
-   ComponentTypeKHR cType;
-   ComponentTypeKHR resultType;
-   uint saturatingAccumulation;
+   StructureType s_type;
+   void* p_next;
+   uint m_size;
+   uint n_size;
+   uint k_size;
+   ComponentTypeKHR a_type;
+   ComponentTypeKHR b_type;
+   ComponentTypeKHR c_type;
+   ComponentTypeKHR result_type;
+   uint saturating_accumulation;
    ScopeKHR scope;
 }
 struct PhysicalDeviceCooperativeMatrixPropertiesKHR {
-   StructureType sType;
-   void* pNext;
-   ShaderStageFlags cooperativeMatrixSupportedStages;
+   StructureType s_type;
+   void* p_next;
+   ShaderStageFlags cooperative_matrix_supported_stages;
 }
 struct PhysicalDeviceAntiLagFeaturesAMD {
-   StructureType sType;
-   void* pNext;
-   uint antiLag;
+   StructureType s_type;
+   void* p_next;
+   uint anti_lag;
 }
 struct AntiLagDataAMD {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    AntiLagModeAMD mode;
-   uint maxFPS;
-   AntiLagPresentationInfoAMD* pPresentationInfo;
+   uint max_fps;
+   AntiLagPresentationInfoAMD* p_presentation_info;
 }
 struct AntiLagPresentationInfoAMD {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    AntiLagStageAMD stage;
-   ulong frameIndex;
+   ulong frame_index;
 }
 struct BindMemoryStatusKHR {
-   StructureType sType;
-   void* pNext;
-   Result* pResult;
+   StructureType s_type;
+   void* p_next;
+   Result* p_result;
 }
 struct BindDescriptorSetsInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ShaderStageFlags stageFlags;
+   StructureType s_type;
+   void* p_next;
+   ShaderStageFlags stage_flags;
    PipelineLayout layout;
-   uint firstSet;
-   uint descriptorSetCount;
-   DescriptorSet* pDescriptorSets;
-   uint dynamicOffsetCount;
-   uint* pDynamicOffsets;
+   uint first_set;
+   uint descriptor_set_count;
+   DescriptorSet* p_descriptor_sets;
+   uint dynamic_offset_count;
+   uint* p_dynamic_offsets;
 }
 struct PushConstantsInfoKHR {
-   StructureType sType;
-   void* pNext;
+   StructureType s_type;
+   void* p_next;
    PipelineLayout layout;
-   ShaderStageFlags stageFlags;
+   ShaderStageFlags stage_flags;
    uint offset;
    uint size;
-   void* pValues;
+   void* p_values;
 }
 struct PushDescriptorSetInfoKHR {
-   StructureType sType;
-   void* pNext;
-   ShaderStageFlags stageFlags;
+   StructureType s_type;
+   void* p_next;
+   ShaderStageFlags stage_flags;
    PipelineLayout layout;
    uint set;
-   uint descriptorWriteCount;
-   WriteDescriptorSet* pDescriptorWrites;
+   uint descriptor_write_count;
+   WriteDescriptorSet* p_descriptor_writes;
 }
 struct PushDescriptorSetWithTemplateInfoKHR {
-   StructureType sType;
-   void* pNext;
-   DescriptorUpdateTemplate descriptorUpdateTemplate;
+   StructureType s_type;
+   void* p_next;
+   DescriptorUpdateTemplate descriptor_update_template;
    PipelineLayout layout;
    uint set;
-   void* pData;
+   void* p_data;
 }
 struct SetDescriptorBufferOffsetsInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ShaderStageFlags stageFlags;
+   StructureType s_type;
+   void* p_next;
+   ShaderStageFlags stage_flags;
    PipelineLayout layout;
-   uint firstSet;
-   uint setCount;
-   uint* pBufferIndices;
-   DeviceSize* pOffsets;
+   uint first_set;
+   uint set_count;
+   uint* p_buffer_indices;
+   DeviceSize* p_offsets;
 }
 struct BindDescriptorBufferEmbeddedSamplersInfoEXT {
-   StructureType sType;
-   void* pNext;
-   ShaderStageFlags stageFlags;
+   StructureType s_type;
+   void* p_next;
+   ShaderStageFlags stage_flags;
    PipelineLayout layout;
    uint set;
 }
 struct PhysicalDeviceCubicClampFeaturesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint cubicRangeClamp;
+   StructureType s_type;
+   void* p_next;
+   uint cubic_range_clamp;
 }
 struct PhysicalDeviceYcbcrDegammaFeaturesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint ycbcrDegamma;
+   StructureType s_type;
+   void* p_next;
+   uint ycbcr_degamma;
 }
 struct SamplerYcbcrConversionYcbcrDegammaCreateInfoQCOM {
-   StructureType sType;
-   void* pNext;
-   uint enableYDegamma;
-   uint enableCbCrDegamma;
+   StructureType s_type;
+   void* p_next;
+   uint enable_y_degamma;
+   uint enable_cb_cr_degamma;
 }
 struct PhysicalDeviceCubicWeightsFeaturesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint selectableCubicWeights;
+   StructureType s_type;
+   void* p_next;
+   uint selectable_cubic_weights;
 }
 struct SamplerCubicWeightsCreateInfoQCOM {
-   StructureType sType;
-   void* pNext;
-   CubicFilterWeightsQCOM cubicWeights;
+   StructureType s_type;
+   void* p_next;
+   CubicFilterWeightsQCOM cubic_weights;
 }
 struct BlitImageCubicWeightsInfoQCOM {
-   StructureType sType;
-   void* pNext;
-   CubicFilterWeightsQCOM cubicWeights;
+   StructureType s_type;
+   void* p_next;
+   CubicFilterWeightsQCOM cubic_weights;
 }
 struct PhysicalDeviceImageProcessing2FeaturesQCOM {
-   StructureType sType;
-   void* pNext;
-   uint textureBlockMatch2;
+   StructureType s_type;
+   void* p_next;
+   uint texture_block_match_2;
 }
 struct PhysicalDeviceImageProcessing2PropertiesQCOM {
-   StructureType sType;
-   void* pNext;
-   Extent2D maxBlockMatchWindow;
+   StructureType s_type;
+   void* p_next;
+   Extent2D max_block_match_window;
 }
 struct SamplerBlockMatchWindowCreateInfoQCOM {
-   StructureType sType;
-   void* pNext;
-   Extent2D windowExtent;
-   BlockMatchWindowCompareModeQCOM windowCompareMode;
+   StructureType s_type;
+   void* p_next;
+   Extent2D window_extent;
+   BlockMatchWindowCompareModeQCOM window_compare_mode;
 }
 struct PhysicalDeviceDescriptorPoolOverallocationFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint descriptorPoolOverallocation;
+   StructureType s_type;
+   void* p_next;
+   uint descriptor_pool_overallocation;
 }
 struct PhysicalDeviceLayeredDriverPropertiesMSFT {
-   StructureType sType;
-   void* pNext;
-   LayeredDriverUnderlyingApiMSFT underlyingAPI;
+   StructureType s_type;
+   void* p_next;
+   LayeredDriverUnderlyingApiMSFT underlying_api;
 }
 struct PhysicalDevicePerStageDescriptorSetFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint perStageDescriptorSet;
-   uint dynamicPipelineLayout;
+   StructureType s_type;
+   void* p_next;
+   uint per_stage_descriptor_set;
+   uint dynamic_pipeline_layout;
 }
 struct LatencySleepModeInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint lowLatencyMode;
-   uint lowLatencyBoost;
-   uint minimumIntervalUs;
+   StructureType s_type;
+   void* p_next;
+   uint low_latency_mode;
+   uint low_latency_boost;
+   uint minimum_interval_us;
 }
 struct LatencySleepInfoNV {
-   StructureType sType;
-   void* pNext;
-   Semaphore signalSemaphore;
+   StructureType s_type;
+   void* p_next;
+   Semaphore signal_semaphore;
    ulong value;
 }
 struct SetLatencyMarkerInfoNV {
-   StructureType sType;
-   void* pNext;
-   ulong presentID;
+   StructureType s_type;
+   void* p_next;
+   ulong present_id;
    LatencyMarkerNV marker;
 }
 struct GetLatencyMarkerInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint timingCount;
-   LatencyTimingsFrameReportNV* pTimings;
+   StructureType s_type;
+   void* p_next;
+   uint timing_count;
+   LatencyTimingsFrameReportNV* p_timings;
 }
 struct LatencyTimingsFrameReportNV {
-   StructureType sType;
-   void* pNext;
-   ulong presentID;
-   ulong inputSampleTimeUs;
-   ulong simStartTimeUs;
-   ulong simEndTimeUs;
-   ulong renderSubmitStartTimeUs;
-   ulong renderSubmitEndTimeUs;
-   ulong presentStartTimeUs;
-   ulong presentEndTimeUs;
-   ulong driverStartTimeUs;
-   ulong driverEndTimeUs;
-   ulong osRenderQueueStartTimeUs;
-   ulong osRenderQueueEndTimeUs;
-   ulong gpuRenderStartTimeUs;
-   ulong gpuRenderEndTimeUs;
+   StructureType s_type;
+   void* p_next;
+   ulong present_id;
+   ulong input_sample_time_us;
+   ulong sim_start_time_us;
+   ulong sim_end_time_us;
+   ulong render_submit_start_time_us;
+   ulong render_submit_end_time_us;
+   ulong present_start_time_us;
+   ulong present_end_time_us;
+   ulong driver_start_time_us;
+   ulong driver_end_time_us;
+   ulong os_render_queue_start_time_us;
+   ulong os_render_queue_end_time_us;
+   ulong gpu_render_start_time_us;
+   ulong gpu_render_end_time_us;
 }
 struct OutOfBandQueueTypeInfoNV {
-   StructureType sType;
-   void* pNext;
-   OutOfBandQueueTypeNV queueType;
+   StructureType s_type;
+   void* p_next;
+   OutOfBandQueueTypeNV queue_type;
 }
 struct LatencySubmissionPresentIdNV {
-   StructureType sType;
-   void* pNext;
-   ulong presentID;
+   StructureType s_type;
+   void* p_next;
+   ulong present_id;
 }
 struct SwapchainLatencyCreateInfoNV {
-   StructureType sType;
-   void* pNext;
-   uint latencyModeEnable;
+   StructureType s_type;
+   void* p_next;
+   uint latency_mode_enable;
 }
 struct LatencySurfaceCapabilitiesNV {
-   StructureType sType;
-   void* pNext;
-   uint presentModeCount;
-   PresentModeKHR* pPresentModes;
+   StructureType s_type;
+   void* p_next;
+   uint present_mode_count;
+   PresentModeKHR* p_present_modes;
 }
 struct DeviceQueueShaderCoreControlCreateInfoARM {
-   StructureType sType;
-   void* pNext;
-   uint shaderCoreCount;
+   StructureType s_type;
+   void* p_next;
+   uint shader_core_count;
 }
 struct PhysicalDeviceSchedulingControlsFeaturesARM {
-   StructureType sType;
-   void* pNext;
-   uint schedulingControls;
+   StructureType s_type;
+   void* p_next;
+   uint scheduling_controls;
 }
 struct PhysicalDeviceSchedulingControlsPropertiesARM {
-   StructureType sType;
-   void* pNext;
-   PhysicalDeviceSchedulingControlsFlagsARM schedulingControlsFlags;
+   StructureType s_type;
+   void* p_next;
+   PhysicalDeviceSchedulingControlsFlagsARM scheduling_controls_flags;
 }
 struct PhysicalDeviceRelaxedLineRasterizationFeaturesIMG {
-   StructureType sType;
-   void* pNext;
-   uint relaxedLineRasterization;
+   StructureType s_type;
+   void* p_next;
+   uint relaxed_line_rasterization;
 }
 struct PhysicalDeviceRenderPassStripedFeaturesARM {
-   StructureType sType;
-   void* pNext;
-   uint renderPassStriped;
+   StructureType s_type;
+   void* p_next;
+   uint render_pass_striped;
 }
 struct PhysicalDeviceRenderPassStripedPropertiesARM {
-   StructureType sType;
-   void* pNext;
-   Extent2D renderPassStripeGranularity;
-   uint maxRenderPassStripes;
+   StructureType s_type;
+   void* p_next;
+   Extent2D render_pass_stripe_granularity;
+   uint max_render_pass_stripes;
 }
 struct RenderPassStripeInfoARM {
-   StructureType sType;
-   void* pNext;
-   Rect2D stripeArea;
+   StructureType s_type;
+   void* p_next;
+   Rect2D stripe_area;
 }
 struct RenderPassStripeBeginInfoARM {
-   StructureType sType;
-   void* pNext;
-   uint stripeInfoCount;
-   RenderPassStripeInfoARM* pStripeInfos;
+   StructureType s_type;
+   void* p_next;
+   uint stripe_info_count;
+   RenderPassStripeInfoARM* p_stripe_infos;
 }
 struct RenderPassStripeSubmitInfoARM {
-   StructureType sType;
-   void* pNext;
-   uint stripeSemaphoreInfoCount;
-   SemaphoreSubmitInfo* pStripeSemaphoreInfos;
+   StructureType s_type;
+   void* p_next;
+   uint stripe_semaphore_info_count;
+   SemaphoreSubmitInfo* p_stripe_semaphore_infos;
 }
 struct PhysicalDeviceShaderMaximalReconvergenceFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderMaximalReconvergence;
+   StructureType s_type;
+   void* p_next;
+   uint shader_maximal_reconvergence;
 }
 struct PhysicalDeviceShaderSubgroupRotateFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderSubgroupRotate;
-   uint shaderSubgroupRotateClustered;
+   StructureType s_type;
+   void* p_next;
+   uint shader_subgroup_rotate;
+   uint shader_subgroup_rotate_clustered;
 }
 struct PhysicalDeviceShaderExpectAssumeFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderExpectAssume;
+   StructureType s_type;
+   void* p_next;
+   uint shader_expect_assume;
 }
 struct PhysicalDeviceShaderFloatControls2FeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderFloatControls2;
+   StructureType s_type;
+   void* p_next;
+   uint shader_float_controls_2;
 }
 struct PhysicalDeviceDynamicRenderingLocalReadFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint dynamicRenderingLocalRead;
+   StructureType s_type;
+   void* p_next;
+   uint dynamic_rendering_local_read;
 }
 struct RenderingAttachmentLocationInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint colorAttachmentCount;
-   uint* pColorAttachmentLocations;
+   StructureType s_type;
+   void* p_next;
+   uint color_attachment_count;
+   uint* p_color_attachment_locations;
 }
 struct RenderingInputAttachmentIndexInfoKHR {
-   StructureType sType;
-   void* pNext;
-   uint colorAttachmentCount;
-   uint* pColorAttachmentInputIndices;
-   uint* pDepthInputAttachmentIndex;
-   uint* pStencilInputAttachmentIndex;
+   StructureType s_type;
+   void* p_next;
+   uint color_attachment_count;
+   uint* p_color_attachment_input_indices;
+   uint* p_depth_input_attachment_index;
+   uint* p_stencil_input_attachment_index;
 }
 struct PhysicalDeviceShaderQuadControlFeaturesKHR {
-   StructureType sType;
-   void* pNext;
-   uint shaderQuadControl;
+   StructureType s_type;
+   void* p_next;
+   uint shader_quad_control;
 }
 struct PhysicalDeviceShaderAtomicFloat16VectorFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint shaderFloat16VectorAtomics;
+   StructureType s_type;
+   void* p_next;
+   uint shader_float_16_vector_atomics;
 }
 struct PhysicalDeviceMapMemoryPlacedFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint memoryMapPlaced;
-   uint memoryMapRangePlaced;
-   uint memoryUnmapReserve;
+   StructureType s_type;
+   void* p_next;
+   uint memory_map_placed;
+   uint memory_map_range_placed;
+   uint memory_unmap_reserve;
 }
 struct PhysicalDeviceMapMemoryPlacedPropertiesEXT {
-   StructureType sType;
-   void* pNext;
-   DeviceSize minPlacedMemoryMapAlignment;
+   StructureType s_type;
+   void* p_next;
+   DeviceSize min_placed_memory_map_alignment;
 }
 struct MemoryMapPlacedInfoEXT {
-   StructureType sType;
-   void* pNext;
-   void* pPlacedAddress;
+   StructureType s_type;
+   void* p_next;
+   void* p_placed_address;
 }
 struct PhysicalDeviceRawAccessChainsFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint shaderRawAccessChains;
+   StructureType s_type;
+   void* p_next;
+   uint shader_raw_access_chains;
 }
 struct PhysicalDeviceCommandBufferInheritanceFeaturesNV {
-   StructureType sType;
-   void* pNext;
-   uint commandBufferInheritance;
+   StructureType s_type;
+   void* p_next;
+   uint command_buffer_inheritance;
 }
 struct PhysicalDeviceImageAlignmentControlFeaturesMESA {
-   StructureType sType;
-   void* pNext;
-   uint imageAlignmentControl;
+   StructureType s_type;
+   void* p_next;
+   uint image_alignment_control;
 }
 struct PhysicalDeviceImageAlignmentControlPropertiesMESA {
-   StructureType sType;
-   void* pNext;
-   uint supportedImageAlignmentMask;
+   StructureType s_type;
+   void* p_next;
+   uint supported_image_alignment_mask;
 }
 struct ImageAlignmentControlCreateInfoMESA {
-   StructureType sType;
-   void* pNext;
-   uint maximumRequestedAlignment;
+   StructureType s_type;
+   void* p_next;
+   uint maximum_requested_alignment;
 }
 struct PhysicalDeviceShaderReplicatedCompositesFeaturesEXT {
-   StructureType sType;
-   void* pNext;
-   uint shaderReplicatedComposites;
+   StructureType s_type;
+   void* p_next;
+   uint shader_replicated_composites;
 }
 struct DepthClampRangeEXT {
-   float minDepthClamp;
-   float maxDepthClamp;
+   float min_depth_clamp;
+   float max_depth_clamp;
 }
 
 union ClearColorValue { 
-   float[4] float32;
-   int[4] int32;
-   uint[4] uint32;
+   float[4] float_32;
+   int[4] int_32;
+   uint[4] uint_32;
 }
 union ClearValue { 
    ClearColorValue color;
-   ClearDepthStencilValue depthStencil;
+   ClearDepthStencilValue depth_stencil;
 }
 union PerformanceCounterResultKHR { 
-   int int32;
-   long int64;
-   uint uint32;
-   ulong uint64;
-   float float32;
-   double float64;
+   int int_32;
+   long int_64;
+   uint uint_32;
+   ulong uint_64;
+   float float_32;
+   double float_64;
 }
 union PerformanceValueDataINTEL { 
-   uint value32;
-   ulong value64;
-   float valueFloat;
-   uint valueBool;
-   char* valueString;
+   uint value_32;
+   ulong value_64;
+   float value_float;
+   uint value_bool;
+   char* value_string;
 }
 union PipelineExecutableStatisticValueKHR { 
-   uint b32;
-   long i64;
-   ulong u64;
-   double f64;
+   uint b_32;
+   long i_64;
+   ulong u_64;
+   double f_64;
 }
 union DeviceOrHostAddressKHR { 
-   DeviceAddress deviceAddress;
-   void* hostAddress;
+   DeviceAddress device_address;
+   void* host_address;
 }
 union DeviceOrHostAddressConstKHR { 
-   DeviceAddress deviceAddress;
-   void* hostAddress;
+   DeviceAddress device_address;
+   void* host_address;
 }
 union AccelerationStructureGeometryDataKHR { 
    AccelerationStructureGeometryTrianglesDataKHR triangles;
@@ -12881,30 +12881,30 @@ union AccelerationStructureGeometryDataKHR {
    AccelerationStructureGeometryInstancesDataKHR instances;
 }
 union IndirectExecutionSetInfoEXT { 
-   IndirectExecutionSetPipelineInfoEXT* pPipelineInfo;
-   IndirectExecutionSetShaderInfoEXT* pShaderInfo;
+   IndirectExecutionSetPipelineInfoEXT* p_pipeline_info;
+   IndirectExecutionSetShaderInfoEXT* p_shader_info;
 }
 union IndirectCommandsTokenDataEXT { 
-   IndirectCommandsPushConstantTokenEXT* pPushConstant;
-   IndirectCommandsVertexBufferTokenEXT* pVertexBuffer;
-   IndirectCommandsIndexBufferTokenEXT* pIndexBuffer;
-   IndirectCommandsExecutionSetTokenEXT* pExecutionSet;
+   IndirectCommandsPushConstantTokenEXT* p_push_constant;
+   IndirectCommandsVertexBufferTokenEXT* p_vertex_buffer;
+   IndirectCommandsIndexBufferTokenEXT* p_index_buffer;
+   IndirectCommandsExecutionSetTokenEXT* p_execution_set;
 }
 union DescriptorDataEXT { 
-   Sampler* pSampler;
-   DescriptorImageInfo* pCombinedImageSampler;
-   DescriptorImageInfo* pInputAttachmentImage;
-   DescriptorImageInfo* pSampledImage;
-   DescriptorImageInfo* pStorageImage;
-   DescriptorAddressInfoEXT* pUniformTexelBuffer;
-   DescriptorAddressInfoEXT* pStorageTexelBuffer;
-   DescriptorAddressInfoEXT* pUniformBuffer;
-   DescriptorAddressInfoEXT* pStorageBuffer;
-   DeviceAddress accelerationStructure;
+   Sampler* p_sampler;
+   DescriptorImageInfo* p_combined_image_sampler;
+   DescriptorImageInfo* p_input_attachment_image;
+   DescriptorImageInfo* p_sampled_image;
+   DescriptorImageInfo* p_storage_image;
+   DescriptorAddressInfoEXT* p_uniform_texel_buffer;
+   DescriptorAddressInfoEXT* p_storage_texel_buffer;
+   DescriptorAddressInfoEXT* p_uniform_buffer;
+   DescriptorAddressInfoEXT* p_storage_buffer;
+   DeviceAddress acceleration_structure;
 }
 union AccelerationStructureMotionInstanceDataNV { 
-   AccelerationStructureInstanceKHR staticInstance;
-   AccelerationStructureMatrixMotionInstanceNV matrixMotionInstance;
-   AccelerationStructureSRTMotionInstanceNV srtMotionInstance;
+   AccelerationStructureInstanceKHR static_instance;
+   AccelerationStructureMatrixMotionInstanceNV matrix_motion_instance;
+   AccelerationStructureSRTMotionInstanceNV srt_motion_instance;
 }
 
