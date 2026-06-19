@@ -1,0 +1,20 @@
+{
+  "provides" : "vk",
+  "targets" : {
+    "linux-x64" : {
+      "linked-libraries" : []
+    },
+    "linux-aarch64" : {
+      "linked-libraries" : []
+    },
+    "macos-x64" : {
+      "linked-libraries" : []
+    },
+    "macos-aarch64" : {
+      "linked-libraries" : []
+    },
+    "windows-x64" : {
+      "linked-libraries" : []
+    }
+  }
+}
