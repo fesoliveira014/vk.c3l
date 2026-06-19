@@ -2,19 +2,19 @@
   "provides" : "vk",
   "targets" : {
     "linux-x64" : {
-      "linked-libraries" : []
+      "linked-libraries" : [":libvulkan.so.1"]
     },
     "linux-aarch64" : {
-      "linked-libraries" : []
+      "linked-libraries" : [":libvulkan.so.1"]
     },
     "macos-x64" : {
-      "linked-libraries" : []
+      "linked-libraries" : ["vulkan"]
     },
     "macos-aarch64" : {
-      "linked-libraries" : []
+      "linked-libraries" : ["vulkan"]
     },
     "windows-x64" : {
-      "linked-libraries" : []
+      "linked-libraries" : ["vulkan-1"]
     }
   }
 }
