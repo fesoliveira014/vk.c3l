@@ -140,40 +140,40 @@ extern fn void cmd_begin_render_pass(CommandBuffer, RenderPassBeginInfo*, Subpas
 extern fn void cmd_next_subpass(CommandBuffer, SubpassContents) @cname("vkCmdNextSubpass"); 
 extern fn void cmd_end_render_pass(CommandBuffer) @cname("vkCmdEndRenderPass"); 
 extern fn void cmd_execute_commands(CommandBuffer, uint, CommandBuffer*) @cname("vkCmdExecuteCommands"); 
-extern fn void get_physical_device_features_2(PhysicalDevice, PhysicalDeviceFeatures2*) @cname("vkGetPhysicalDeviceFeatures2"); 
-extern fn void get_physical_device_properties_2(PhysicalDevice, PhysicalDeviceProperties2*) @cname("vkGetPhysicalDeviceProperties2"); 
-extern fn void get_physical_device_format_properties_2(PhysicalDevice, Format, FormatProperties2*) @cname("vkGetPhysicalDeviceFormatProperties2"); 
-extern fn Result get_physical_device_image_format_properties_2(PhysicalDevice, PhysicalDeviceImageFormatInfo2*, ImageFormatProperties2*) @cname("vkGetPhysicalDeviceImageFormatProperties2"); 
-extern fn void get_physical_device_queue_family_properties_2(PhysicalDevice, uint*, QueueFamilyProperties2*) @cname("vkGetPhysicalDeviceQueueFamilyProperties2"); 
-extern fn void get_physical_device_memory_properties_2(PhysicalDevice, PhysicalDeviceMemoryProperties2*) @cname("vkGetPhysicalDeviceMemoryProperties2"); 
-extern fn void get_physical_device_sparse_image_format_properties_2(PhysicalDevice, PhysicalDeviceSparseImageFormatInfo2*, uint*, SparseImageFormatProperties2*) @cname("vkGetPhysicalDeviceSparseImageFormatProperties2"); 
+extern fn void get_physical_device_features2(PhysicalDevice, PhysicalDeviceFeatures2*) @cname("vkGetPhysicalDeviceFeatures2"); 
+extern fn void get_physical_device_properties2(PhysicalDevice, PhysicalDeviceProperties2*) @cname("vkGetPhysicalDeviceProperties2"); 
+extern fn void get_physical_device_format_properties2(PhysicalDevice, Format, FormatProperties2*) @cname("vkGetPhysicalDeviceFormatProperties2"); 
+extern fn Result get_physical_device_image_format_properties2(PhysicalDevice, PhysicalDeviceImageFormatInfo2*, ImageFormatProperties2*) @cname("vkGetPhysicalDeviceImageFormatProperties2"); 
+extern fn void get_physical_device_queue_family_properties2(PhysicalDevice, uint*, QueueFamilyProperties2*) @cname("vkGetPhysicalDeviceQueueFamilyProperties2"); 
+extern fn void get_physical_device_memory_properties2(PhysicalDevice, PhysicalDeviceMemoryProperties2*) @cname("vkGetPhysicalDeviceMemoryProperties2"); 
+extern fn void get_physical_device_sparse_image_format_properties2(PhysicalDevice, PhysicalDeviceSparseImageFormatInfo2*, uint*, SparseImageFormatProperties2*) @cname("vkGetPhysicalDeviceSparseImageFormatProperties2"); 
 extern fn void trim_command_pool(Device, CommandPool, CommandPoolTrimFlags) @cname("vkTrimCommandPool"); 
 extern fn void get_physical_device_external_buffer_properties(PhysicalDevice, PhysicalDeviceExternalBufferInfo*, ExternalBufferProperties*) @cname("vkGetPhysicalDeviceExternalBufferProperties"); 
 extern fn void get_physical_device_external_semaphore_properties(PhysicalDevice, PhysicalDeviceExternalSemaphoreInfo*, ExternalSemaphoreProperties*) @cname("vkGetPhysicalDeviceExternalSemaphoreProperties"); 
 extern fn void get_physical_device_external_fence_properties(PhysicalDevice, PhysicalDeviceExternalFenceInfo*, ExternalFenceProperties*) @cname("vkGetPhysicalDeviceExternalFenceProperties"); 
 extern fn Result enumerate_physical_device_groups(Instance, uint*, PhysicalDeviceGroupProperties*) @cname("vkEnumeratePhysicalDeviceGroups"); 
 extern fn void get_device_group_peer_memory_features(Device, uint, uint, uint, PeerMemoryFeatureFlags*) @cname("vkGetDeviceGroupPeerMemoryFeatures"); 
-extern fn Result bind_buffer_memory_2(Device, uint, BindBufferMemoryInfo*) @cname("vkBindBufferMemory2"); 
-extern fn Result bind_image_memory_2(Device, uint, BindImageMemoryInfo*) @cname("vkBindImageMemory2"); 
+extern fn Result bind_buffer_memory2(Device, uint, BindBufferMemoryInfo*) @cname("vkBindBufferMemory2"); 
+extern fn Result bind_image_memory2(Device, uint, BindImageMemoryInfo*) @cname("vkBindImageMemory2"); 
 extern fn void cmd_set_device_mask(CommandBuffer, uint) @cname("vkCmdSetDeviceMask"); 
 extern fn void cmd_dispatch_base(CommandBuffer, uint, uint, uint, uint, uint, uint) @cname("vkCmdDispatchBase"); 
 extern fn Result create_descriptor_update_template(Device, DescriptorUpdateTemplateCreateInfo*, AllocationCallbacks*, DescriptorUpdateTemplate*) @cname("vkCreateDescriptorUpdateTemplate"); 
 extern fn void destroy_descriptor_update_template(Device, DescriptorUpdateTemplate, AllocationCallbacks*) @cname("vkDestroyDescriptorUpdateTemplate"); 
 extern fn void update_descriptor_set_with_template(Device, DescriptorSet, DescriptorUpdateTemplate, void*) @cname("vkUpdateDescriptorSetWithTemplate"); 
-extern fn void get_buffer_memory_requirements_2(Device, BufferMemoryRequirementsInfo2*, MemoryRequirements2*) @cname("vkGetBufferMemoryRequirements2"); 
-extern fn void get_image_memory_requirements_2(Device, ImageMemoryRequirementsInfo2*, MemoryRequirements2*) @cname("vkGetImageMemoryRequirements2"); 
-extern fn void get_image_sparse_memory_requirements_2(Device, ImageSparseMemoryRequirementsInfo2*, uint*, SparseImageMemoryRequirements2*) @cname("vkGetImageSparseMemoryRequirements2"); 
+extern fn void get_buffer_memory_requirements2(Device, BufferMemoryRequirementsInfo2*, MemoryRequirements2*) @cname("vkGetBufferMemoryRequirements2"); 
+extern fn void get_image_memory_requirements2(Device, ImageMemoryRequirementsInfo2*, MemoryRequirements2*) @cname("vkGetImageMemoryRequirements2"); 
+extern fn void get_image_sparse_memory_requirements2(Device, ImageSparseMemoryRequirementsInfo2*, uint*, SparseImageMemoryRequirements2*) @cname("vkGetImageSparseMemoryRequirements2"); 
 extern fn void get_device_buffer_memory_requirements(Device, DeviceBufferMemoryRequirements*, MemoryRequirements2*) @cname("vkGetDeviceBufferMemoryRequirements"); 
 extern fn void get_device_image_memory_requirements(Device, DeviceImageMemoryRequirements*, MemoryRequirements2*) @cname("vkGetDeviceImageMemoryRequirements"); 
 extern fn void get_device_image_sparse_memory_requirements(Device, DeviceImageMemoryRequirements*, uint*, SparseImageMemoryRequirements2*) @cname("vkGetDeviceImageSparseMemoryRequirements"); 
 extern fn Result create_sampler_ycbcr_conversion(Device, SamplerYcbcrConversionCreateInfo*, AllocationCallbacks*, SamplerYcbcrConversion*) @cname("vkCreateSamplerYcbcrConversion"); 
 extern fn void destroy_sampler_ycbcr_conversion(Device, SamplerYcbcrConversion, AllocationCallbacks*) @cname("vkDestroySamplerYcbcrConversion"); 
-extern fn void get_device_queue_2(Device, DeviceQueueInfo2*, Queue*) @cname("vkGetDeviceQueue2"); 
+extern fn void get_device_queue2(Device, DeviceQueueInfo2*, Queue*) @cname("vkGetDeviceQueue2"); 
 extern fn void get_descriptor_set_layout_support(Device, DescriptorSetLayoutCreateInfo*, DescriptorSetLayoutSupport*) @cname("vkGetDescriptorSetLayoutSupport"); 
-extern fn Result create_render_pass_2(Device, RenderPassCreateInfo2*, AllocationCallbacks*, RenderPass*) @cname("vkCreateRenderPass2"); 
-extern fn void cmd_begin_render_pass_2(CommandBuffer, RenderPassBeginInfo*, SubpassBeginInfo*) @cname("vkCmdBeginRenderPass2"); 
-extern fn void cmd_next_subpass_2(CommandBuffer, SubpassBeginInfo*, SubpassEndInfo*) @cname("vkCmdNextSubpass2"); 
-extern fn void cmd_end_render_pass_2(CommandBuffer, SubpassEndInfo*) @cname("vkCmdEndRenderPass2"); 
+extern fn Result create_render_pass2(Device, RenderPassCreateInfo2*, AllocationCallbacks*, RenderPass*) @cname("vkCreateRenderPass2"); 
+extern fn void cmd_begin_render_pass2(CommandBuffer, RenderPassBeginInfo*, SubpassBeginInfo*) @cname("vkCmdBeginRenderPass2"); 
+extern fn void cmd_next_subpass2(CommandBuffer, SubpassBeginInfo*, SubpassEndInfo*) @cname("vkCmdNextSubpass2"); 
+extern fn void cmd_end_render_pass2(CommandBuffer, SubpassEndInfo*) @cname("vkCmdEndRenderPass2"); 
 extern fn Result get_semaphore_counter_value(Device, Semaphore, ulong*) @cname("vkGetSemaphoreCounterValue"); 
 extern fn Result wait_semaphores(Device, SemaphoreWaitInfo*, ulong) @cname("vkWaitSemaphores"); 
 extern fn Result signal_semaphore(Device, SemaphoreSignalInfo*) @cname("vkSignalSemaphore"); 
@@ -188,7 +188,7 @@ extern fn void cmd_set_front_face(CommandBuffer, FrontFace) @cname("vkCmdSetFron
 extern fn void cmd_set_primitive_topology(CommandBuffer, PrimitiveTopology) @cname("vkCmdSetPrimitiveTopology"); 
 extern fn void cmd_set_viewport_with_count(CommandBuffer, uint, Viewport*) @cname("vkCmdSetViewportWithCount"); 
 extern fn void cmd_set_scissor_with_count(CommandBuffer, uint, Rect2D*) @cname("vkCmdSetScissorWithCount"); 
-extern fn void cmd_bind_vertex_buffers_2(CommandBuffer, uint, uint, Buffer*, DeviceSize*, DeviceSize*, DeviceSize*) @cname("vkCmdBindVertexBuffers2"); 
+extern fn void cmd_bind_vertex_buffers2(CommandBuffer, uint, uint, Buffer*, DeviceSize*, DeviceSize*, DeviceSize*) @cname("vkCmdBindVertexBuffers2"); 
 extern fn void cmd_set_depth_test_enable(CommandBuffer, uint) @cname("vkCmdSetDepthTestEnable"); 
 extern fn void cmd_set_depth_write_enable(CommandBuffer, uint) @cname("vkCmdSetDepthWriteEnable"); 
 extern fn void cmd_set_depth_compare_op(CommandBuffer, CompareOp) @cname("vkCmdSetDepthCompareOp"); 
@@ -202,18 +202,18 @@ extern fn Result create_private_data_slot(Device, PrivateDataSlotCreateInfo*, Al
 extern fn void destroy_private_data_slot(Device, PrivateDataSlot, AllocationCallbacks*) @cname("vkDestroyPrivateDataSlot"); 
 extern fn Result set_private_data(Device, ObjectType, ulong, PrivateDataSlot, ulong) @cname("vkSetPrivateData"); 
 extern fn void get_private_data(Device, ObjectType, ulong, PrivateDataSlot, ulong*) @cname("vkGetPrivateData"); 
-extern fn void cmd_copy_buffer_2(CommandBuffer, CopyBufferInfo2*) @cname("vkCmdCopyBuffer2"); 
-extern fn void cmd_copy_image_2(CommandBuffer, CopyImageInfo2*) @cname("vkCmdCopyImage2"); 
-extern fn void cmd_blit_image_2(CommandBuffer, BlitImageInfo2*) @cname("vkCmdBlitImage2"); 
-extern fn void cmd_copy_buffer_to_image_2(CommandBuffer, CopyBufferToImageInfo2*) @cname("vkCmdCopyBufferToImage2"); 
-extern fn void cmd_copy_image_to_buffer_2(CommandBuffer, CopyImageToBufferInfo2*) @cname("vkCmdCopyImageToBuffer2"); 
-extern fn void cmd_resolve_image_2(CommandBuffer, ResolveImageInfo2*) @cname("vkCmdResolveImage2"); 
-extern fn void cmd_set_event_2(CommandBuffer, Event, DependencyInfo*) @cname("vkCmdSetEvent2"); 
-extern fn void cmd_reset_event_2(CommandBuffer, Event, PipelineStageFlags2) @cname("vkCmdResetEvent2"); 
-extern fn void cmd_wait_events_2(CommandBuffer, uint, Event*, DependencyInfo*) @cname("vkCmdWaitEvents2"); 
-extern fn void cmd_pipeline_barrier_2(CommandBuffer, DependencyInfo*) @cname("vkCmdPipelineBarrier2"); 
-extern fn Result queue_submit_2(Queue, uint, SubmitInfo2*, Fence) @cname("vkQueueSubmit2"); 
-extern fn void cmd_write_timestamp_2(CommandBuffer, PipelineStageFlags2, QueryPool, uint) @cname("vkCmdWriteTimestamp2"); 
+extern fn void cmd_copy_buffer2(CommandBuffer, CopyBufferInfo2*) @cname("vkCmdCopyBuffer2"); 
+extern fn void cmd_copy_image2(CommandBuffer, CopyImageInfo2*) @cname("vkCmdCopyImage2"); 
+extern fn void cmd_blit_image2(CommandBuffer, BlitImageInfo2*) @cname("vkCmdBlitImage2"); 
+extern fn void cmd_copy_buffer_to_image2(CommandBuffer, CopyBufferToImageInfo2*) @cname("vkCmdCopyBufferToImage2"); 
+extern fn void cmd_copy_image_to_buffer2(CommandBuffer, CopyImageToBufferInfo2*) @cname("vkCmdCopyImageToBuffer2"); 
+extern fn void cmd_resolve_image2(CommandBuffer, ResolveImageInfo2*) @cname("vkCmdResolveImage2"); 
+extern fn void cmd_set_event2(CommandBuffer, Event, DependencyInfo*) @cname("vkCmdSetEvent2"); 
+extern fn void cmd_reset_event2(CommandBuffer, Event, PipelineStageFlags2) @cname("vkCmdResetEvent2"); 
+extern fn void cmd_wait_events2(CommandBuffer, uint, Event*, DependencyInfo*) @cname("vkCmdWaitEvents2"); 
+extern fn void cmd_pipeline_barrier2(CommandBuffer, DependencyInfo*) @cname("vkCmdPipelineBarrier2"); 
+extern fn Result queue_submit2(Queue, uint, SubmitInfo2*, Fence) @cname("vkQueueSubmit2"); 
+extern fn void cmd_write_timestamp2(CommandBuffer, PipelineStageFlags2, QueryPool, uint) @cname("vkCmdWriteTimestamp2"); 
 extern fn void cmd_begin_rendering(CommandBuffer, RenderingInfo*) @cname("vkCmdBeginRendering"); 
 extern fn void cmd_end_rendering(CommandBuffer) @cname("vkCmdEndRendering"); 
 
@@ -701,8 +701,8 @@ struct VK_extension_bindings {
   PFN_vkQueuePresentKHR vk_queue_present_khr;
   PFN_vkCreateWaylandSurfaceKHR vk_create_wayland_surface_khr;
   PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR vk_get_physical_device_wayland_presentation_support_khr;
-  PFN_vkCreateWin32SurfaceKHR vk_create_win_32_surface_khr;
-  PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR vk_get_physical_device_win_32_presentation_support_khr;
+  PFN_vkCreateWin32SurfaceKHR vk_create_win32surface_khr;
+  PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR vk_get_physical_device_win32presentation_support_khr;
   PFN_vkCreateXlibSurfaceKHR vk_create_xlib_surface_khr;
   PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR vk_get_physical_device_xlib_presentation_support_khr;
   PFN_vkCreateXcbSurfaceKHR vk_create_xcb_surface_khr;
@@ -716,7 +716,7 @@ struct VK_extension_bindings {
   PFN_vkCmdDebugMarkerEndEXT vk_cmd_debug_marker_end_ext;
   PFN_vkCmdDebugMarkerInsertEXT vk_cmd_debug_marker_insert_ext;
   PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV vk_get_physical_device_external_image_format_properties_nv;
-  PFN_vkGetMemoryWin32HandleNV vk_get_memory_win_32_handle_nv;
+  PFN_vkGetMemoryWin32HandleNV vk_get_memory_win32handle_nv;
   PFN_vkCmdExecuteGeneratedCommandsNV vk_cmd_execute_generated_commands_nv;
   PFN_vkCmdPreprocessGeneratedCommandsNV vk_cmd_preprocess_generated_commands_nv;
   PFN_vkCmdBindPipelineShaderGroupNV vk_cmd_bind_pipeline_shader_group_nv;
@@ -732,29 +732,29 @@ struct VK_extension_bindings {
   PFN_vkDestroyIndirectExecutionSetEXT vk_destroy_indirect_execution_set_ext;
   PFN_vkUpdateIndirectExecutionSetPipelineEXT vk_update_indirect_execution_set_pipeline_ext;
   PFN_vkUpdateIndirectExecutionSetShaderEXT vk_update_indirect_execution_set_shader_ext;
-  PFN_vkGetPhysicalDeviceFeatures2KHR vk_get_physical_device_features_2_khr;
-  PFN_vkGetPhysicalDeviceProperties2KHR vk_get_physical_device_properties_2_khr;
-  PFN_vkGetPhysicalDeviceFormatProperties2KHR vk_get_physical_device_format_properties_2_khr;
-  PFN_vkGetPhysicalDeviceImageFormatProperties2KHR vk_get_physical_device_image_format_properties_2_khr;
-  PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR vk_get_physical_device_queue_family_properties_2_khr;
-  PFN_vkGetPhysicalDeviceMemoryProperties2KHR vk_get_physical_device_memory_properties_2_khr;
-  PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR vk_get_physical_device_sparse_image_format_properties_2_khr;
+  PFN_vkGetPhysicalDeviceFeatures2KHR vk_get_physical_device_features2_khr;
+  PFN_vkGetPhysicalDeviceProperties2KHR vk_get_physical_device_properties2_khr;
+  PFN_vkGetPhysicalDeviceFormatProperties2KHR vk_get_physical_device_format_properties2_khr;
+  PFN_vkGetPhysicalDeviceImageFormatProperties2KHR vk_get_physical_device_image_format_properties2_khr;
+  PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR vk_get_physical_device_queue_family_properties2_khr;
+  PFN_vkGetPhysicalDeviceMemoryProperties2KHR vk_get_physical_device_memory_properties2_khr;
+  PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR vk_get_physical_device_sparse_image_format_properties2_khr;
   PFN_vkCmdPushDescriptorSetKHR vk_cmd_push_descriptor_set_khr;
   PFN_vkTrimCommandPoolKHR vk_trim_command_pool_khr;
   PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR vk_get_physical_device_external_buffer_properties_khr;
-  PFN_vkGetMemoryWin32HandleKHR vk_get_memory_win_32_handle_khr;
-  PFN_vkGetMemoryWin32HandlePropertiesKHR vk_get_memory_win_32_handle_properties_khr;
+  PFN_vkGetMemoryWin32HandleKHR vk_get_memory_win32handle_khr;
+  PFN_vkGetMemoryWin32HandlePropertiesKHR vk_get_memory_win32handle_properties_khr;
   PFN_vkGetMemoryFdKHR vk_get_memory_fd_khr;
   PFN_vkGetMemoryFdPropertiesKHR vk_get_memory_fd_properties_khr;
   PFN_vkGetMemoryRemoteAddressNV vk_get_memory_remote_address_nv;
   PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR vk_get_physical_device_external_semaphore_properties_khr;
-  PFN_vkGetSemaphoreWin32HandleKHR vk_get_semaphore_win_32_handle_khr;
-  PFN_vkImportSemaphoreWin32HandleKHR vk_import_semaphore_win_32_handle_khr;
+  PFN_vkGetSemaphoreWin32HandleKHR vk_get_semaphore_win32handle_khr;
+  PFN_vkImportSemaphoreWin32HandleKHR vk_import_semaphore_win32handle_khr;
   PFN_vkGetSemaphoreFdKHR vk_get_semaphore_fd_khr;
   PFN_vkImportSemaphoreFdKHR vk_import_semaphore_fd_khr;
   PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR vk_get_physical_device_external_fence_properties_khr;
-  PFN_vkGetFenceWin32HandleKHR vk_get_fence_win_32_handle_khr;
-  PFN_vkImportFenceWin32HandleKHR vk_import_fence_win_32_handle_khr;
+  PFN_vkGetFenceWin32HandleKHR vk_get_fence_win32handle_khr;
+  PFN_vkImportFenceWin32HandleKHR vk_import_fence_win32handle_khr;
   PFN_vkGetFenceFdKHR vk_get_fence_fd_khr;
   PFN_vkImportFenceFdKHR vk_import_fence_fd_khr;
   PFN_vkReleaseDisplayEXT vk_release_display_ext;
@@ -765,15 +765,15 @@ struct VK_extension_bindings {
   PFN_vkRegisterDeviceEventEXT vk_register_device_event_ext;
   PFN_vkRegisterDisplayEventEXT vk_register_display_event_ext;
   PFN_vkGetSwapchainCounterEXT vk_get_swapchain_counter_ext;
-  PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT vk_get_physical_device_surface_capabilities_2_ext;
+  PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT vk_get_physical_device_surface_capabilities2_ext;
   PFN_vkEnumeratePhysicalDeviceGroupsKHR vk_enumerate_physical_device_groups_khr;
   PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR vk_get_device_group_peer_memory_features_khr;
-  PFN_vkBindBufferMemory2KHR vk_bind_buffer_memory_2_khr;
-  PFN_vkBindImageMemory2KHR vk_bind_image_memory_2_khr;
+  PFN_vkBindBufferMemory2KHR vk_bind_buffer_memory2_khr;
+  PFN_vkBindImageMemory2KHR vk_bind_image_memory2_khr;
   PFN_vkCmdSetDeviceMaskKHR vk_cmd_set_device_mask_khr;
   PFN_vkGetDeviceGroupPresentCapabilitiesKHR vk_get_device_group_present_capabilities_khr;
   PFN_vkGetDeviceGroupSurfacePresentModesKHR vk_get_device_group_surface_present_modes_khr;
-  PFN_vkAcquireNextImage2KHR vk_acquire_next_image_2_khr;
+  PFN_vkAcquireNextImage2KHR vk_acquire_next_image2_khr;
   PFN_vkCmdDispatchBaseKHR vk_cmd_dispatch_base_khr;
   PFN_vkGetPhysicalDevicePresentRectanglesKHR vk_get_physical_device_present_rectangles_khr;
   PFN_vkCreateDescriptorUpdateTemplateKHR vk_create_descriptor_update_template_khr;
@@ -793,15 +793,15 @@ struct VK_extension_bindings {
   PFN_vkCmdSetDiscardRectangleModeEXT vk_cmd_set_discard_rectangle_mode_ext;
   PFN_vkCmdSetSampleLocationsEXT vk_cmd_set_sample_locations_ext;
   PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT vk_get_physical_device_multisample_properties_ext;
-  PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR vk_get_physical_device_surface_capabilities_2_khr;
-  PFN_vkGetPhysicalDeviceSurfaceFormats2KHR vk_get_physical_device_surface_formats_2_khr;
-  PFN_vkGetPhysicalDeviceDisplayProperties2KHR vk_get_physical_device_display_properties_2_khr;
-  PFN_vkGetPhysicalDeviceDisplayPlaneProperties2KHR vk_get_physical_device_display_plane_properties_2_khr;
-  PFN_vkGetDisplayModeProperties2KHR vk_get_display_mode_properties_2_khr;
-  PFN_vkGetDisplayPlaneCapabilities2KHR vk_get_display_plane_capabilities_2_khr;
-  PFN_vkGetBufferMemoryRequirements2KHR vk_get_buffer_memory_requirements_2_khr;
-  PFN_vkGetImageMemoryRequirements2KHR vk_get_image_memory_requirements_2_khr;
-  PFN_vkGetImageSparseMemoryRequirements2KHR vk_get_image_sparse_memory_requirements_2_khr;
+  PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR vk_get_physical_device_surface_capabilities2_khr;
+  PFN_vkGetPhysicalDeviceSurfaceFormats2KHR vk_get_physical_device_surface_formats2_khr;
+  PFN_vkGetPhysicalDeviceDisplayProperties2KHR vk_get_physical_device_display_properties2_khr;
+  PFN_vkGetPhysicalDeviceDisplayPlaneProperties2KHR vk_get_physical_device_display_plane_properties2_khr;
+  PFN_vkGetDisplayModeProperties2KHR vk_get_display_mode_properties2_khr;
+  PFN_vkGetDisplayPlaneCapabilities2KHR vk_get_display_plane_capabilities2_khr;
+  PFN_vkGetBufferMemoryRequirements2KHR vk_get_buffer_memory_requirements2_khr;
+  PFN_vkGetImageMemoryRequirements2KHR vk_get_image_memory_requirements2_khr;
+  PFN_vkGetImageSparseMemoryRequirements2KHR vk_get_image_sparse_memory_requirements2_khr;
   PFN_vkGetDeviceBufferMemoryRequirementsKHR vk_get_device_buffer_memory_requirements_khr;
   PFN_vkGetDeviceImageMemoryRequirementsKHR vk_get_device_image_memory_requirements_khr;
   PFN_vkGetDeviceImageSparseMemoryRequirementsKHR vk_get_device_image_sparse_memory_requirements_khr;
@@ -831,10 +831,10 @@ struct VK_extension_bindings {
   PFN_vkSubmitDebugUtilsMessageEXT vk_submit_debug_utils_message_ext;
   PFN_vkGetMemoryHostPointerPropertiesEXT vk_get_memory_host_pointer_properties_ext;
   PFN_vkCmdWriteBufferMarkerAMD vk_cmd_write_buffer_marker_amd;
-  PFN_vkCreateRenderPass2KHR vk_create_render_pass_2_khr;
-  PFN_vkCmdBeginRenderPass2KHR vk_cmd_begin_render_pass_2_khr;
-  PFN_vkCmdNextSubpass2KHR vk_cmd_next_subpass_2_khr;
-  PFN_vkCmdEndRenderPass2KHR vk_cmd_end_render_pass_2_khr;
+  PFN_vkCreateRenderPass2KHR vk_create_render_pass2_khr;
+  PFN_vkCmdBeginRenderPass2KHR vk_cmd_begin_render_pass2_khr;
+  PFN_vkCmdNextSubpass2KHR vk_cmd_next_subpass2_khr;
+  PFN_vkCmdEndRenderPass2KHR vk_cmd_end_render_pass2_khr;
   PFN_vkGetSemaphoreCounterValueKHR vk_get_semaphore_counter_value_khr;
   PFN_vkWaitSemaphoresKHR vk_wait_semaphores_khr;
   PFN_vkSignalSemaphoreKHR vk_signal_semaphore_khr;
@@ -886,14 +886,14 @@ struct VK_extension_bindings {
   PFN_vkCreateRayTracingPipelinesNV vk_create_ray_tracing_pipelines_nv;
   PFN_vkCreateRayTracingPipelinesKHR vk_create_ray_tracing_pipelines_khr;
   PFN_vkCmdTraceRaysIndirectKHR vk_cmd_trace_rays_indirect_khr;
-  PFN_vkCmdTraceRaysIndirect2KHR vk_cmd_trace_rays_indirect_2_khr;
+  PFN_vkCmdTraceRaysIndirect2KHR vk_cmd_trace_rays_indirect2_khr;
   PFN_vkGetDeviceAccelerationStructureCompatibilityKHR vk_get_device_acceleration_structure_compatibility_khr;
   PFN_vkGetRayTracingShaderGroupStackSizeKHR vk_get_ray_tracing_shader_group_stack_size_khr;
   PFN_vkCmdSetRayTracingPipelineStackSizeKHR vk_cmd_set_ray_tracing_pipeline_stack_size_khr;
   PFN_vkGetImageViewHandleNVX vk_get_image_view_handle_nvx;
   PFN_vkGetImageViewAddressNVX vk_get_image_view_address_nvx;
-  PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT vk_get_physical_device_surface_present_modes_2_ext;
-  PFN_vkGetDeviceGroupSurfacePresentModes2EXT vk_get_device_group_surface_present_modes_2_ext;
+  PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT vk_get_physical_device_surface_present_modes2_ext;
+  PFN_vkGetDeviceGroupSurfacePresentModes2EXT vk_get_device_group_surface_present_modes2_ext;
   PFN_vkAcquireFullScreenExclusiveModeEXT vk_acquire_full_screen_exclusive_mode_ext;
   PFN_vkReleaseFullScreenExclusiveModeEXT vk_release_full_screen_exclusive_mode_ext;
   PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR vk_enumerate_physical_device_queue_family_performance_query_counters_khr;
@@ -940,8 +940,8 @@ struct VK_extension_bindings {
   PFN_vkCmdSetPrimitiveTopologyEXT vk_cmd_set_primitive_topology_ext;
   PFN_vkCmdSetViewportWithCountEXT vk_cmd_set_viewport_with_count_ext;
   PFN_vkCmdSetScissorWithCountEXT vk_cmd_set_scissor_with_count_ext;
-  PFN_vkCmdBindIndexBuffer2KHR vk_cmd_bind_index_buffer_2_khr;
-  PFN_vkCmdBindVertexBuffers2EXT vk_cmd_bind_vertex_buffers_2_ext;
+  PFN_vkCmdBindIndexBuffer2KHR vk_cmd_bind_index_buffer2_khr;
+  PFN_vkCmdBindVertexBuffers2EXT vk_cmd_bind_vertex_buffers2_ext;
   PFN_vkCmdSetDepthTestEnableEXT vk_cmd_set_depth_test_enable_ext;
   PFN_vkCmdSetDepthWriteEnableEXT vk_cmd_set_depth_write_enable_ext;
   PFN_vkCmdSetDepthCompareOpEXT vk_cmd_set_depth_compare_op_ext;
@@ -987,26 +987,26 @@ struct VK_extension_bindings {
   PFN_vkDestroyPrivateDataSlotEXT vk_destroy_private_data_slot_ext;
   PFN_vkSetPrivateDataEXT vk_set_private_data_ext;
   PFN_vkGetPrivateDataEXT vk_get_private_data_ext;
-  PFN_vkCmdCopyBuffer2KHR vk_cmd_copy_buffer_2_khr;
-  PFN_vkCmdCopyImage2KHR vk_cmd_copy_image_2_khr;
-  PFN_vkCmdBlitImage2KHR vk_cmd_blit_image_2_khr;
-  PFN_vkCmdCopyBufferToImage2KHR vk_cmd_copy_buffer_to_image_2_khr;
-  PFN_vkCmdCopyImageToBuffer2KHR vk_cmd_copy_image_to_buffer_2_khr;
-  PFN_vkCmdResolveImage2KHR vk_cmd_resolve_image_2_khr;
+  PFN_vkCmdCopyBuffer2KHR vk_cmd_copy_buffer2_khr;
+  PFN_vkCmdCopyImage2KHR vk_cmd_copy_image2_khr;
+  PFN_vkCmdBlitImage2KHR vk_cmd_blit_image2_khr;
+  PFN_vkCmdCopyBufferToImage2KHR vk_cmd_copy_buffer_to_image2_khr;
+  PFN_vkCmdCopyImageToBuffer2KHR vk_cmd_copy_image_to_buffer2_khr;
+  PFN_vkCmdResolveImage2KHR vk_cmd_resolve_image2_khr;
   PFN_vkCmdSetFragmentShadingRateKHR vk_cmd_set_fragment_shading_rate_khr;
   PFN_vkGetPhysicalDeviceFragmentShadingRatesKHR vk_get_physical_device_fragment_shading_rates_khr;
   PFN_vkCmdSetFragmentShadingRateEnumNV vk_cmd_set_fragment_shading_rate_enum_nv;
   PFN_vkGetAccelerationStructureBuildSizesKHR vk_get_acceleration_structure_build_sizes_khr;
   PFN_vkCmdSetVertexInputEXT vk_cmd_set_vertex_input_ext;
   PFN_vkCmdSetColorWriteEnableEXT vk_cmd_set_color_write_enable_ext;
-  PFN_vkCmdSetEvent2KHR vk_cmd_set_event_2_khr;
-  PFN_vkCmdResetEvent2KHR vk_cmd_reset_event_2_khr;
-  PFN_vkCmdWaitEvents2KHR vk_cmd_wait_events_2_khr;
-  PFN_vkCmdPipelineBarrier2KHR vk_cmd_pipeline_barrier_2_khr;
-  PFN_vkQueueSubmit2KHR vk_queue_submit_2_khr;
-  PFN_vkCmdWriteTimestamp2KHR vk_cmd_write_timestamp_2_khr;
-  PFN_vkCmdWriteBufferMarker2AMD vk_cmd_write_buffer_marker_2_amd;
-  PFN_vkGetQueueCheckpointData2NV vk_get_queue_checkpoint_data_2_nv;
+  PFN_vkCmdSetEvent2KHR vk_cmd_set_event2_khr;
+  PFN_vkCmdResetEvent2KHR vk_cmd_reset_event2_khr;
+  PFN_vkCmdWaitEvents2KHR vk_cmd_wait_events2_khr;
+  PFN_vkCmdPipelineBarrier2KHR vk_cmd_pipeline_barrier2_khr;
+  PFN_vkQueueSubmit2KHR vk_queue_submit2_khr;
+  PFN_vkCmdWriteTimestamp2KHR vk_cmd_write_timestamp2_khr;
+  PFN_vkCmdWriteBufferMarker2AMD vk_cmd_write_buffer_marker2_amd;
+  PFN_vkGetQueueCheckpointData2NV vk_get_queue_checkpoint_data2_nv;
   PFN_vkCopyMemoryToImageEXT vk_copy_memory_to_image_ext;
   PFN_vkCopyImageToMemoryEXT vk_copy_image_to_memory_ext;
   PFN_vkCopyImageToImageEXT vk_copy_image_to_image_ext;
@@ -1069,8 +1069,8 @@ struct VK_extension_bindings {
   PFN_vkGetMicromapBuildSizesEXT vk_get_micromap_build_sizes_ext;
   PFN_vkGetShaderModuleIdentifierEXT vk_get_shader_module_identifier_ext;
   PFN_vkGetShaderModuleCreateInfoIdentifierEXT vk_get_shader_module_create_info_identifier_ext;
-  PFN_vkGetImageSubresourceLayout2KHR vk_get_image_subresource_layout_2_khr;
-  PFN_vkGetImageSubresourceLayout2EXT vk_get_image_subresource_layout_2_ext;
+  PFN_vkGetImageSubresourceLayout2KHR vk_get_image_subresource_layout2_khr;
+  PFN_vkGetImageSubresourceLayout2EXT vk_get_image_subresource_layout2_ext;
   PFN_vkGetPipelinePropertiesEXT vk_get_pipeline_properties_ext;
   PFN_vkExportMetalObjectsEXT vk_export_metal_objects_ext;
   PFN_vkGetFramebufferTilePropertiesQCOM vk_get_framebuffer_tile_properties_qcom;
@@ -1081,22 +1081,22 @@ struct VK_extension_bindings {
   PFN_vkBindOpticalFlowSessionImageNV vk_bind_optical_flow_session_image_nv;
   PFN_vkCmdOpticalFlowExecuteNV vk_cmd_optical_flow_execute_nv;
   PFN_vkGetDeviceFaultInfoEXT vk_get_device_fault_info_ext;
-  PFN_vkCmdSetDepthBias2EXT vk_cmd_set_depth_bias_2_ext;
+  PFN_vkCmdSetDepthBias2EXT vk_cmd_set_depth_bias2_ext;
   PFN_vkReleaseSwapchainImagesEXT vk_release_swapchain_images_ext;
   PFN_vkGetDeviceImageSubresourceLayoutKHR vk_get_device_image_subresource_layout_khr;
-  PFN_vkMapMemory2KHR vk_map_memory_2_khr;
-  PFN_vkUnmapMemory2KHR vk_unmap_memory_2_khr;
+  PFN_vkMapMemory2KHR vk_map_memory2_khr;
+  PFN_vkUnmapMemory2KHR vk_unmap_memory2_khr;
   PFN_vkCreateShadersEXT vk_create_shaders_ext;
   PFN_vkDestroyShaderEXT vk_destroy_shader_ext;
   PFN_vkGetShaderBinaryDataEXT vk_get_shader_binary_data_ext;
   PFN_vkCmdBindShadersEXT vk_cmd_bind_shaders_ext;
   PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR vk_get_physical_device_cooperative_matrix_properties_khr;
-  PFN_vkCmdBindDescriptorSets2KHR vk_cmd_bind_descriptor_sets_2_khr;
-  PFN_vkCmdPushConstants2KHR vk_cmd_push_constants_2_khr;
-  PFN_vkCmdPushDescriptorSet2KHR vk_cmd_push_descriptor_set_2_khr;
-  PFN_vkCmdPushDescriptorSetWithTemplate2KHR vk_cmd_push_descriptor_set_with_template_2_khr;
-  PFN_vkCmdSetDescriptorBufferOffsets2EXT vk_cmd_set_descriptor_buffer_offsets_2_ext;
-  PFN_vkCmdBindDescriptorBufferEmbeddedSamplers2EXT vk_cmd_bind_descriptor_buffer_embedded_samplers_2_ext;
+  PFN_vkCmdBindDescriptorSets2KHR vk_cmd_bind_descriptor_sets2_khr;
+  PFN_vkCmdPushConstants2KHR vk_cmd_push_constants2_khr;
+  PFN_vkCmdPushDescriptorSet2KHR vk_cmd_push_descriptor_set2_khr;
+  PFN_vkCmdPushDescriptorSetWithTemplate2KHR vk_cmd_push_descriptor_set_with_template2_khr;
+  PFN_vkCmdSetDescriptorBufferOffsets2EXT vk_cmd_set_descriptor_buffer_offsets2_ext;
+  PFN_vkCmdBindDescriptorBufferEmbeddedSamplers2EXT vk_cmd_bind_descriptor_buffer_embedded_samplers2_ext;
   PFN_vkSetLatencySleepModeNV vk_set_latency_sleep_mode_nv;
   PFN_vkLatencySleepNV vk_latency_sleep_nv;
   PFN_vkSetLatencyMarkerNV vk_set_latency_marker_nv;
@@ -1148,8 +1148,8 @@ fn void load_extensions(Instance instance) {
    extensions.vk_queue_present_khr = (PFN_vkQueuePresentKHR)get_instance_proc_addr(instance,"vkQueuePresentKHR");
    extensions.vk_create_wayland_surface_khr = (PFN_vkCreateWaylandSurfaceKHR)get_instance_proc_addr(instance,"vkCreateWaylandSurfaceKHR");
    extensions.vk_get_physical_device_wayland_presentation_support_khr = (PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceWaylandPresentationSupportKHR");
-   extensions.vk_create_win_32_surface_khr = (PFN_vkCreateWin32SurfaceKHR)get_instance_proc_addr(instance,"vkCreateWin32SurfaceKHR");
-   extensions.vk_get_physical_device_win_32_presentation_support_khr = (PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceWin32PresentationSupportKHR");
+   extensions.vk_create_win32surface_khr = (PFN_vkCreateWin32SurfaceKHR)get_instance_proc_addr(instance,"vkCreateWin32SurfaceKHR");
+   extensions.vk_get_physical_device_win32presentation_support_khr = (PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceWin32PresentationSupportKHR");
    extensions.vk_create_xlib_surface_khr = (PFN_vkCreateXlibSurfaceKHR)get_instance_proc_addr(instance,"vkCreateXlibSurfaceKHR");
    extensions.vk_get_physical_device_xlib_presentation_support_khr = (PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceXlibPresentationSupportKHR");
    extensions.vk_create_xcb_surface_khr = (PFN_vkCreateXcbSurfaceKHR)get_instance_proc_addr(instance,"vkCreateXcbSurfaceKHR");
@@ -1163,7 +1163,7 @@ fn void load_extensions(Instance instance) {
    extensions.vk_cmd_debug_marker_end_ext = (PFN_vkCmdDebugMarkerEndEXT)get_instance_proc_addr(instance,"vkCmdDebugMarkerEndEXT");
    extensions.vk_cmd_debug_marker_insert_ext = (PFN_vkCmdDebugMarkerInsertEXT)get_instance_proc_addr(instance,"vkCmdDebugMarkerInsertEXT");
    extensions.vk_get_physical_device_external_image_format_properties_nv = (PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV)get_instance_proc_addr(instance,"vkGetPhysicalDeviceExternalImageFormatPropertiesNV");
-   extensions.vk_get_memory_win_32_handle_nv = (PFN_vkGetMemoryWin32HandleNV)get_instance_proc_addr(instance,"vkGetMemoryWin32HandleNV");
+   extensions.vk_get_memory_win32handle_nv = (PFN_vkGetMemoryWin32HandleNV)get_instance_proc_addr(instance,"vkGetMemoryWin32HandleNV");
    extensions.vk_cmd_execute_generated_commands_nv = (PFN_vkCmdExecuteGeneratedCommandsNV)get_instance_proc_addr(instance,"vkCmdExecuteGeneratedCommandsNV");
    extensions.vk_cmd_preprocess_generated_commands_nv = (PFN_vkCmdPreprocessGeneratedCommandsNV)get_instance_proc_addr(instance,"vkCmdPreprocessGeneratedCommandsNV");
    extensions.vk_cmd_bind_pipeline_shader_group_nv = (PFN_vkCmdBindPipelineShaderGroupNV)get_instance_proc_addr(instance,"vkCmdBindPipelineShaderGroupNV");
@@ -1179,29 +1179,29 @@ fn void load_extensions(Instance instance) {
    extensions.vk_destroy_indirect_execution_set_ext = (PFN_vkDestroyIndirectExecutionSetEXT)get_instance_proc_addr(instance,"vkDestroyIndirectExecutionSetEXT");
    extensions.vk_update_indirect_execution_set_pipeline_ext = (PFN_vkUpdateIndirectExecutionSetPipelineEXT)get_instance_proc_addr(instance,"vkUpdateIndirectExecutionSetPipelineEXT");
    extensions.vk_update_indirect_execution_set_shader_ext = (PFN_vkUpdateIndirectExecutionSetShaderEXT)get_instance_proc_addr(instance,"vkUpdateIndirectExecutionSetShaderEXT");
-   extensions.vk_get_physical_device_features_2_khr = (PFN_vkGetPhysicalDeviceFeatures2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceFeatures2KHR");
-   extensions.vk_get_physical_device_properties_2_khr = (PFN_vkGetPhysicalDeviceProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceProperties2KHR");
-   extensions.vk_get_physical_device_format_properties_2_khr = (PFN_vkGetPhysicalDeviceFormatProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceFormatProperties2KHR");
-   extensions.vk_get_physical_device_image_format_properties_2_khr = (PFN_vkGetPhysicalDeviceImageFormatProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceImageFormatProperties2KHR");
-   extensions.vk_get_physical_device_queue_family_properties_2_khr = (PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceQueueFamilyProperties2KHR");
-   extensions.vk_get_physical_device_memory_properties_2_khr = (PFN_vkGetPhysicalDeviceMemoryProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceMemoryProperties2KHR");
-   extensions.vk_get_physical_device_sparse_image_format_properties_2_khr = (PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSparseImageFormatProperties2KHR");
+   extensions.vk_get_physical_device_features2_khr = (PFN_vkGetPhysicalDeviceFeatures2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceFeatures2KHR");
+   extensions.vk_get_physical_device_properties2_khr = (PFN_vkGetPhysicalDeviceProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceProperties2KHR");
+   extensions.vk_get_physical_device_format_properties2_khr = (PFN_vkGetPhysicalDeviceFormatProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceFormatProperties2KHR");
+   extensions.vk_get_physical_device_image_format_properties2_khr = (PFN_vkGetPhysicalDeviceImageFormatProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceImageFormatProperties2KHR");
+   extensions.vk_get_physical_device_queue_family_properties2_khr = (PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceQueueFamilyProperties2KHR");
+   extensions.vk_get_physical_device_memory_properties2_khr = (PFN_vkGetPhysicalDeviceMemoryProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceMemoryProperties2KHR");
+   extensions.vk_get_physical_device_sparse_image_format_properties2_khr = (PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSparseImageFormatProperties2KHR");
    extensions.vk_cmd_push_descriptor_set_khr = (PFN_vkCmdPushDescriptorSetKHR)get_instance_proc_addr(instance,"vkCmdPushDescriptorSetKHR");
    extensions.vk_trim_command_pool_khr = (PFN_vkTrimCommandPoolKHR)get_instance_proc_addr(instance,"vkTrimCommandPoolKHR");
    extensions.vk_get_physical_device_external_buffer_properties_khr = (PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceExternalBufferPropertiesKHR");
-   extensions.vk_get_memory_win_32_handle_khr = (PFN_vkGetMemoryWin32HandleKHR)get_instance_proc_addr(instance,"vkGetMemoryWin32HandleKHR");
-   extensions.vk_get_memory_win_32_handle_properties_khr = (PFN_vkGetMemoryWin32HandlePropertiesKHR)get_instance_proc_addr(instance,"vkGetMemoryWin32HandlePropertiesKHR");
+   extensions.vk_get_memory_win32handle_khr = (PFN_vkGetMemoryWin32HandleKHR)get_instance_proc_addr(instance,"vkGetMemoryWin32HandleKHR");
+   extensions.vk_get_memory_win32handle_properties_khr = (PFN_vkGetMemoryWin32HandlePropertiesKHR)get_instance_proc_addr(instance,"vkGetMemoryWin32HandlePropertiesKHR");
    extensions.vk_get_memory_fd_khr = (PFN_vkGetMemoryFdKHR)get_instance_proc_addr(instance,"vkGetMemoryFdKHR");
    extensions.vk_get_memory_fd_properties_khr = (PFN_vkGetMemoryFdPropertiesKHR)get_instance_proc_addr(instance,"vkGetMemoryFdPropertiesKHR");
    extensions.vk_get_memory_remote_address_nv = (PFN_vkGetMemoryRemoteAddressNV)get_instance_proc_addr(instance,"vkGetMemoryRemoteAddressNV");
    extensions.vk_get_physical_device_external_semaphore_properties_khr = (PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceExternalSemaphorePropertiesKHR");
-   extensions.vk_get_semaphore_win_32_handle_khr = (PFN_vkGetSemaphoreWin32HandleKHR)get_instance_proc_addr(instance,"vkGetSemaphoreWin32HandleKHR");
-   extensions.vk_import_semaphore_win_32_handle_khr = (PFN_vkImportSemaphoreWin32HandleKHR)get_instance_proc_addr(instance,"vkImportSemaphoreWin32HandleKHR");
+   extensions.vk_get_semaphore_win32handle_khr = (PFN_vkGetSemaphoreWin32HandleKHR)get_instance_proc_addr(instance,"vkGetSemaphoreWin32HandleKHR");
+   extensions.vk_import_semaphore_win32handle_khr = (PFN_vkImportSemaphoreWin32HandleKHR)get_instance_proc_addr(instance,"vkImportSemaphoreWin32HandleKHR");
    extensions.vk_get_semaphore_fd_khr = (PFN_vkGetSemaphoreFdKHR)get_instance_proc_addr(instance,"vkGetSemaphoreFdKHR");
    extensions.vk_import_semaphore_fd_khr = (PFN_vkImportSemaphoreFdKHR)get_instance_proc_addr(instance,"vkImportSemaphoreFdKHR");
    extensions.vk_get_physical_device_external_fence_properties_khr = (PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceExternalFencePropertiesKHR");
-   extensions.vk_get_fence_win_32_handle_khr = (PFN_vkGetFenceWin32HandleKHR)get_instance_proc_addr(instance,"vkGetFenceWin32HandleKHR");
-   extensions.vk_import_fence_win_32_handle_khr = (PFN_vkImportFenceWin32HandleKHR)get_instance_proc_addr(instance,"vkImportFenceWin32HandleKHR");
+   extensions.vk_get_fence_win32handle_khr = (PFN_vkGetFenceWin32HandleKHR)get_instance_proc_addr(instance,"vkGetFenceWin32HandleKHR");
+   extensions.vk_import_fence_win32handle_khr = (PFN_vkImportFenceWin32HandleKHR)get_instance_proc_addr(instance,"vkImportFenceWin32HandleKHR");
    extensions.vk_get_fence_fd_khr = (PFN_vkGetFenceFdKHR)get_instance_proc_addr(instance,"vkGetFenceFdKHR");
    extensions.vk_import_fence_fd_khr = (PFN_vkImportFenceFdKHR)get_instance_proc_addr(instance,"vkImportFenceFdKHR");
    extensions.vk_release_display_ext = (PFN_vkReleaseDisplayEXT)get_instance_proc_addr(instance,"vkReleaseDisplayEXT");
@@ -1212,15 +1212,15 @@ fn void load_extensions(Instance instance) {
    extensions.vk_register_device_event_ext = (PFN_vkRegisterDeviceEventEXT)get_instance_proc_addr(instance,"vkRegisterDeviceEventEXT");
    extensions.vk_register_display_event_ext = (PFN_vkRegisterDisplayEventEXT)get_instance_proc_addr(instance,"vkRegisterDisplayEventEXT");
    extensions.vk_get_swapchain_counter_ext = (PFN_vkGetSwapchainCounterEXT)get_instance_proc_addr(instance,"vkGetSwapchainCounterEXT");
-   extensions.vk_get_physical_device_surface_capabilities_2_ext = (PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSurfaceCapabilities2EXT");
+   extensions.vk_get_physical_device_surface_capabilities2_ext = (PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSurfaceCapabilities2EXT");
    extensions.vk_enumerate_physical_device_groups_khr = (PFN_vkEnumeratePhysicalDeviceGroupsKHR)get_instance_proc_addr(instance,"vkEnumeratePhysicalDeviceGroupsKHR");
    extensions.vk_get_device_group_peer_memory_features_khr = (PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR)get_instance_proc_addr(instance,"vkGetDeviceGroupPeerMemoryFeaturesKHR");
-   extensions.vk_bind_buffer_memory_2_khr = (PFN_vkBindBufferMemory2KHR)get_instance_proc_addr(instance,"vkBindBufferMemory2KHR");
-   extensions.vk_bind_image_memory_2_khr = (PFN_vkBindImageMemory2KHR)get_instance_proc_addr(instance,"vkBindImageMemory2KHR");
+   extensions.vk_bind_buffer_memory2_khr = (PFN_vkBindBufferMemory2KHR)get_instance_proc_addr(instance,"vkBindBufferMemory2KHR");
+   extensions.vk_bind_image_memory2_khr = (PFN_vkBindImageMemory2KHR)get_instance_proc_addr(instance,"vkBindImageMemory2KHR");
    extensions.vk_cmd_set_device_mask_khr = (PFN_vkCmdSetDeviceMaskKHR)get_instance_proc_addr(instance,"vkCmdSetDeviceMaskKHR");
    extensions.vk_get_device_group_present_capabilities_khr = (PFN_vkGetDeviceGroupPresentCapabilitiesKHR)get_instance_proc_addr(instance,"vkGetDeviceGroupPresentCapabilitiesKHR");
    extensions.vk_get_device_group_surface_present_modes_khr = (PFN_vkGetDeviceGroupSurfacePresentModesKHR)get_instance_proc_addr(instance,"vkGetDeviceGroupSurfacePresentModesKHR");
-   extensions.vk_acquire_next_image_2_khr = (PFN_vkAcquireNextImage2KHR)get_instance_proc_addr(instance,"vkAcquireNextImage2KHR");
+   extensions.vk_acquire_next_image2_khr = (PFN_vkAcquireNextImage2KHR)get_instance_proc_addr(instance,"vkAcquireNextImage2KHR");
    extensions.vk_cmd_dispatch_base_khr = (PFN_vkCmdDispatchBaseKHR)get_instance_proc_addr(instance,"vkCmdDispatchBaseKHR");
    extensions.vk_get_physical_device_present_rectangles_khr = (PFN_vkGetPhysicalDevicePresentRectanglesKHR)get_instance_proc_addr(instance,"vkGetPhysicalDevicePresentRectanglesKHR");
    extensions.vk_create_descriptor_update_template_khr = (PFN_vkCreateDescriptorUpdateTemplateKHR)get_instance_proc_addr(instance,"vkCreateDescriptorUpdateTemplateKHR");
@@ -1240,15 +1240,15 @@ fn void load_extensions(Instance instance) {
    extensions.vk_cmd_set_discard_rectangle_mode_ext = (PFN_vkCmdSetDiscardRectangleModeEXT)get_instance_proc_addr(instance,"vkCmdSetDiscardRectangleModeEXT");
    extensions.vk_cmd_set_sample_locations_ext = (PFN_vkCmdSetSampleLocationsEXT)get_instance_proc_addr(instance,"vkCmdSetSampleLocationsEXT");
    extensions.vk_get_physical_device_multisample_properties_ext = (PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT)get_instance_proc_addr(instance,"vkGetPhysicalDeviceMultisamplePropertiesEXT");
-   extensions.vk_get_physical_device_surface_capabilities_2_khr = (PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSurfaceCapabilities2KHR");
-   extensions.vk_get_physical_device_surface_formats_2_khr = (PFN_vkGetPhysicalDeviceSurfaceFormats2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSurfaceFormats2KHR");
-   extensions.vk_get_physical_device_display_properties_2_khr = (PFN_vkGetPhysicalDeviceDisplayProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceDisplayProperties2KHR");
-   extensions.vk_get_physical_device_display_plane_properties_2_khr = (PFN_vkGetPhysicalDeviceDisplayPlaneProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceDisplayPlaneProperties2KHR");
-   extensions.vk_get_display_mode_properties_2_khr = (PFN_vkGetDisplayModeProperties2KHR)get_instance_proc_addr(instance,"vkGetDisplayModeProperties2KHR");
-   extensions.vk_get_display_plane_capabilities_2_khr = (PFN_vkGetDisplayPlaneCapabilities2KHR)get_instance_proc_addr(instance,"vkGetDisplayPlaneCapabilities2KHR");
-   extensions.vk_get_buffer_memory_requirements_2_khr = (PFN_vkGetBufferMemoryRequirements2KHR)get_instance_proc_addr(instance,"vkGetBufferMemoryRequirements2KHR");
-   extensions.vk_get_image_memory_requirements_2_khr = (PFN_vkGetImageMemoryRequirements2KHR)get_instance_proc_addr(instance,"vkGetImageMemoryRequirements2KHR");
-   extensions.vk_get_image_sparse_memory_requirements_2_khr = (PFN_vkGetImageSparseMemoryRequirements2KHR)get_instance_proc_addr(instance,"vkGetImageSparseMemoryRequirements2KHR");
+   extensions.vk_get_physical_device_surface_capabilities2_khr = (PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSurfaceCapabilities2KHR");
+   extensions.vk_get_physical_device_surface_formats2_khr = (PFN_vkGetPhysicalDeviceSurfaceFormats2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSurfaceFormats2KHR");
+   extensions.vk_get_physical_device_display_properties2_khr = (PFN_vkGetPhysicalDeviceDisplayProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceDisplayProperties2KHR");
+   extensions.vk_get_physical_device_display_plane_properties2_khr = (PFN_vkGetPhysicalDeviceDisplayPlaneProperties2KHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceDisplayPlaneProperties2KHR");
+   extensions.vk_get_display_mode_properties2_khr = (PFN_vkGetDisplayModeProperties2KHR)get_instance_proc_addr(instance,"vkGetDisplayModeProperties2KHR");
+   extensions.vk_get_display_plane_capabilities2_khr = (PFN_vkGetDisplayPlaneCapabilities2KHR)get_instance_proc_addr(instance,"vkGetDisplayPlaneCapabilities2KHR");
+   extensions.vk_get_buffer_memory_requirements2_khr = (PFN_vkGetBufferMemoryRequirements2KHR)get_instance_proc_addr(instance,"vkGetBufferMemoryRequirements2KHR");
+   extensions.vk_get_image_memory_requirements2_khr = (PFN_vkGetImageMemoryRequirements2KHR)get_instance_proc_addr(instance,"vkGetImageMemoryRequirements2KHR");
+   extensions.vk_get_image_sparse_memory_requirements2_khr = (PFN_vkGetImageSparseMemoryRequirements2KHR)get_instance_proc_addr(instance,"vkGetImageSparseMemoryRequirements2KHR");
    extensions.vk_get_device_buffer_memory_requirements_khr = (PFN_vkGetDeviceBufferMemoryRequirementsKHR)get_instance_proc_addr(instance,"vkGetDeviceBufferMemoryRequirementsKHR");
    extensions.vk_get_device_image_memory_requirements_khr = (PFN_vkGetDeviceImageMemoryRequirementsKHR)get_instance_proc_addr(instance,"vkGetDeviceImageMemoryRequirementsKHR");
    extensions.vk_get_device_image_sparse_memory_requirements_khr = (PFN_vkGetDeviceImageSparseMemoryRequirementsKHR)get_instance_proc_addr(instance,"vkGetDeviceImageSparseMemoryRequirementsKHR");
@@ -1278,10 +1278,10 @@ fn void load_extensions(Instance instance) {
    extensions.vk_submit_debug_utils_message_ext = (PFN_vkSubmitDebugUtilsMessageEXT)get_instance_proc_addr(instance,"vkSubmitDebugUtilsMessageEXT");
    extensions.vk_get_memory_host_pointer_properties_ext = (PFN_vkGetMemoryHostPointerPropertiesEXT)get_instance_proc_addr(instance,"vkGetMemoryHostPointerPropertiesEXT");
    extensions.vk_cmd_write_buffer_marker_amd = (PFN_vkCmdWriteBufferMarkerAMD)get_instance_proc_addr(instance,"vkCmdWriteBufferMarkerAMD");
-   extensions.vk_create_render_pass_2_khr = (PFN_vkCreateRenderPass2KHR)get_instance_proc_addr(instance,"vkCreateRenderPass2KHR");
-   extensions.vk_cmd_begin_render_pass_2_khr = (PFN_vkCmdBeginRenderPass2KHR)get_instance_proc_addr(instance,"vkCmdBeginRenderPass2KHR");
-   extensions.vk_cmd_next_subpass_2_khr = (PFN_vkCmdNextSubpass2KHR)get_instance_proc_addr(instance,"vkCmdNextSubpass2KHR");
-   extensions.vk_cmd_end_render_pass_2_khr = (PFN_vkCmdEndRenderPass2KHR)get_instance_proc_addr(instance,"vkCmdEndRenderPass2KHR");
+   extensions.vk_create_render_pass2_khr = (PFN_vkCreateRenderPass2KHR)get_instance_proc_addr(instance,"vkCreateRenderPass2KHR");
+   extensions.vk_cmd_begin_render_pass2_khr = (PFN_vkCmdBeginRenderPass2KHR)get_instance_proc_addr(instance,"vkCmdBeginRenderPass2KHR");
+   extensions.vk_cmd_next_subpass2_khr = (PFN_vkCmdNextSubpass2KHR)get_instance_proc_addr(instance,"vkCmdNextSubpass2KHR");
+   extensions.vk_cmd_end_render_pass2_khr = (PFN_vkCmdEndRenderPass2KHR)get_instance_proc_addr(instance,"vkCmdEndRenderPass2KHR");
    extensions.vk_get_semaphore_counter_value_khr = (PFN_vkGetSemaphoreCounterValueKHR)get_instance_proc_addr(instance,"vkGetSemaphoreCounterValueKHR");
    extensions.vk_wait_semaphores_khr = (PFN_vkWaitSemaphoresKHR)get_instance_proc_addr(instance,"vkWaitSemaphoresKHR");
    extensions.vk_signal_semaphore_khr = (PFN_vkSignalSemaphoreKHR)get_instance_proc_addr(instance,"vkSignalSemaphoreKHR");
@@ -1333,14 +1333,14 @@ fn void load_extensions(Instance instance) {
    extensions.vk_create_ray_tracing_pipelines_nv = (PFN_vkCreateRayTracingPipelinesNV)get_instance_proc_addr(instance,"vkCreateRayTracingPipelinesNV");
    extensions.vk_create_ray_tracing_pipelines_khr = (PFN_vkCreateRayTracingPipelinesKHR)get_instance_proc_addr(instance,"vkCreateRayTracingPipelinesKHR");
    extensions.vk_cmd_trace_rays_indirect_khr = (PFN_vkCmdTraceRaysIndirectKHR)get_instance_proc_addr(instance,"vkCmdTraceRaysIndirectKHR");
-   extensions.vk_cmd_trace_rays_indirect_2_khr = (PFN_vkCmdTraceRaysIndirect2KHR)get_instance_proc_addr(instance,"vkCmdTraceRaysIndirect2KHR");
+   extensions.vk_cmd_trace_rays_indirect2_khr = (PFN_vkCmdTraceRaysIndirect2KHR)get_instance_proc_addr(instance,"vkCmdTraceRaysIndirect2KHR");
    extensions.vk_get_device_acceleration_structure_compatibility_khr = (PFN_vkGetDeviceAccelerationStructureCompatibilityKHR)get_instance_proc_addr(instance,"vkGetDeviceAccelerationStructureCompatibilityKHR");
    extensions.vk_get_ray_tracing_shader_group_stack_size_khr = (PFN_vkGetRayTracingShaderGroupStackSizeKHR)get_instance_proc_addr(instance,"vkGetRayTracingShaderGroupStackSizeKHR");
    extensions.vk_cmd_set_ray_tracing_pipeline_stack_size_khr = (PFN_vkCmdSetRayTracingPipelineStackSizeKHR)get_instance_proc_addr(instance,"vkCmdSetRayTracingPipelineStackSizeKHR");
    extensions.vk_get_image_view_handle_nvx = (PFN_vkGetImageViewHandleNVX)get_instance_proc_addr(instance,"vkGetImageViewHandleNVX");
    extensions.vk_get_image_view_address_nvx = (PFN_vkGetImageViewAddressNVX)get_instance_proc_addr(instance,"vkGetImageViewAddressNVX");
-   extensions.vk_get_physical_device_surface_present_modes_2_ext = (PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSurfacePresentModes2EXT");
-   extensions.vk_get_device_group_surface_present_modes_2_ext = (PFN_vkGetDeviceGroupSurfacePresentModes2EXT)get_instance_proc_addr(instance,"vkGetDeviceGroupSurfacePresentModes2EXT");
+   extensions.vk_get_physical_device_surface_present_modes2_ext = (PFN_vkGetPhysicalDeviceSurfacePresentModes2EXT)get_instance_proc_addr(instance,"vkGetPhysicalDeviceSurfacePresentModes2EXT");
+   extensions.vk_get_device_group_surface_present_modes2_ext = (PFN_vkGetDeviceGroupSurfacePresentModes2EXT)get_instance_proc_addr(instance,"vkGetDeviceGroupSurfacePresentModes2EXT");
    extensions.vk_acquire_full_screen_exclusive_mode_ext = (PFN_vkAcquireFullScreenExclusiveModeEXT)get_instance_proc_addr(instance,"vkAcquireFullScreenExclusiveModeEXT");
    extensions.vk_release_full_screen_exclusive_mode_ext = (PFN_vkReleaseFullScreenExclusiveModeEXT)get_instance_proc_addr(instance,"vkReleaseFullScreenExclusiveModeEXT");
    extensions.vk_enumerate_physical_device_queue_family_performance_query_counters_khr = (PFN_vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR)get_instance_proc_addr(instance,"vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR");
@@ -1387,8 +1387,8 @@ fn void load_extensions(Instance instance) {
    extensions.vk_cmd_set_primitive_topology_ext = (PFN_vkCmdSetPrimitiveTopologyEXT)get_instance_proc_addr(instance,"vkCmdSetPrimitiveTopologyEXT");
    extensions.vk_cmd_set_viewport_with_count_ext = (PFN_vkCmdSetViewportWithCountEXT)get_instance_proc_addr(instance,"vkCmdSetViewportWithCountEXT");
    extensions.vk_cmd_set_scissor_with_count_ext = (PFN_vkCmdSetScissorWithCountEXT)get_instance_proc_addr(instance,"vkCmdSetScissorWithCountEXT");
-   extensions.vk_cmd_bind_index_buffer_2_khr = (PFN_vkCmdBindIndexBuffer2KHR)get_instance_proc_addr(instance,"vkCmdBindIndexBuffer2KHR");
-   extensions.vk_cmd_bind_vertex_buffers_2_ext = (PFN_vkCmdBindVertexBuffers2EXT)get_instance_proc_addr(instance,"vkCmdBindVertexBuffers2EXT");
+   extensions.vk_cmd_bind_index_buffer2_khr = (PFN_vkCmdBindIndexBuffer2KHR)get_instance_proc_addr(instance,"vkCmdBindIndexBuffer2KHR");
+   extensions.vk_cmd_bind_vertex_buffers2_ext = (PFN_vkCmdBindVertexBuffers2EXT)get_instance_proc_addr(instance,"vkCmdBindVertexBuffers2EXT");
    extensions.vk_cmd_set_depth_test_enable_ext = (PFN_vkCmdSetDepthTestEnableEXT)get_instance_proc_addr(instance,"vkCmdSetDepthTestEnableEXT");
    extensions.vk_cmd_set_depth_write_enable_ext = (PFN_vkCmdSetDepthWriteEnableEXT)get_instance_proc_addr(instance,"vkCmdSetDepthWriteEnableEXT");
    extensions.vk_cmd_set_depth_compare_op_ext = (PFN_vkCmdSetDepthCompareOpEXT)get_instance_proc_addr(instance,"vkCmdSetDepthCompareOpEXT");
@@ -1434,26 +1434,26 @@ fn void load_extensions(Instance instance) {
    extensions.vk_destroy_private_data_slot_ext = (PFN_vkDestroyPrivateDataSlotEXT)get_instance_proc_addr(instance,"vkDestroyPrivateDataSlotEXT");
    extensions.vk_set_private_data_ext = (PFN_vkSetPrivateDataEXT)get_instance_proc_addr(instance,"vkSetPrivateDataEXT");
    extensions.vk_get_private_data_ext = (PFN_vkGetPrivateDataEXT)get_instance_proc_addr(instance,"vkGetPrivateDataEXT");
-   extensions.vk_cmd_copy_buffer_2_khr = (PFN_vkCmdCopyBuffer2KHR)get_instance_proc_addr(instance,"vkCmdCopyBuffer2KHR");
-   extensions.vk_cmd_copy_image_2_khr = (PFN_vkCmdCopyImage2KHR)get_instance_proc_addr(instance,"vkCmdCopyImage2KHR");
-   extensions.vk_cmd_blit_image_2_khr = (PFN_vkCmdBlitImage2KHR)get_instance_proc_addr(instance,"vkCmdBlitImage2KHR");
-   extensions.vk_cmd_copy_buffer_to_image_2_khr = (PFN_vkCmdCopyBufferToImage2KHR)get_instance_proc_addr(instance,"vkCmdCopyBufferToImage2KHR");
-   extensions.vk_cmd_copy_image_to_buffer_2_khr = (PFN_vkCmdCopyImageToBuffer2KHR)get_instance_proc_addr(instance,"vkCmdCopyImageToBuffer2KHR");
-   extensions.vk_cmd_resolve_image_2_khr = (PFN_vkCmdResolveImage2KHR)get_instance_proc_addr(instance,"vkCmdResolveImage2KHR");
+   extensions.vk_cmd_copy_buffer2_khr = (PFN_vkCmdCopyBuffer2KHR)get_instance_proc_addr(instance,"vkCmdCopyBuffer2KHR");
+   extensions.vk_cmd_copy_image2_khr = (PFN_vkCmdCopyImage2KHR)get_instance_proc_addr(instance,"vkCmdCopyImage2KHR");
+   extensions.vk_cmd_blit_image2_khr = (PFN_vkCmdBlitImage2KHR)get_instance_proc_addr(instance,"vkCmdBlitImage2KHR");
+   extensions.vk_cmd_copy_buffer_to_image2_khr = (PFN_vkCmdCopyBufferToImage2KHR)get_instance_proc_addr(instance,"vkCmdCopyBufferToImage2KHR");
+   extensions.vk_cmd_copy_image_to_buffer2_khr = (PFN_vkCmdCopyImageToBuffer2KHR)get_instance_proc_addr(instance,"vkCmdCopyImageToBuffer2KHR");
+   extensions.vk_cmd_resolve_image2_khr = (PFN_vkCmdResolveImage2KHR)get_instance_proc_addr(instance,"vkCmdResolveImage2KHR");
    extensions.vk_cmd_set_fragment_shading_rate_khr = (PFN_vkCmdSetFragmentShadingRateKHR)get_instance_proc_addr(instance,"vkCmdSetFragmentShadingRateKHR");
    extensions.vk_get_physical_device_fragment_shading_rates_khr = (PFN_vkGetPhysicalDeviceFragmentShadingRatesKHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceFragmentShadingRatesKHR");
    extensions.vk_cmd_set_fragment_shading_rate_enum_nv = (PFN_vkCmdSetFragmentShadingRateEnumNV)get_instance_proc_addr(instance,"vkCmdSetFragmentShadingRateEnumNV");
    extensions.vk_get_acceleration_structure_build_sizes_khr = (PFN_vkGetAccelerationStructureBuildSizesKHR)get_instance_proc_addr(instance,"vkGetAccelerationStructureBuildSizesKHR");
    extensions.vk_cmd_set_vertex_input_ext = (PFN_vkCmdSetVertexInputEXT)get_instance_proc_addr(instance,"vkCmdSetVertexInputEXT");
    extensions.vk_cmd_set_color_write_enable_ext = (PFN_vkCmdSetColorWriteEnableEXT)get_instance_proc_addr(instance,"vkCmdSetColorWriteEnableEXT");
-   extensions.vk_cmd_set_event_2_khr = (PFN_vkCmdSetEvent2KHR)get_instance_proc_addr(instance,"vkCmdSetEvent2KHR");
-   extensions.vk_cmd_reset_event_2_khr = (PFN_vkCmdResetEvent2KHR)get_instance_proc_addr(instance,"vkCmdResetEvent2KHR");
-   extensions.vk_cmd_wait_events_2_khr = (PFN_vkCmdWaitEvents2KHR)get_instance_proc_addr(instance,"vkCmdWaitEvents2KHR");
-   extensions.vk_cmd_pipeline_barrier_2_khr = (PFN_vkCmdPipelineBarrier2KHR)get_instance_proc_addr(instance,"vkCmdPipelineBarrier2KHR");
-   extensions.vk_queue_submit_2_khr = (PFN_vkQueueSubmit2KHR)get_instance_proc_addr(instance,"vkQueueSubmit2KHR");
-   extensions.vk_cmd_write_timestamp_2_khr = (PFN_vkCmdWriteTimestamp2KHR)get_instance_proc_addr(instance,"vkCmdWriteTimestamp2KHR");
-   extensions.vk_cmd_write_buffer_marker_2_amd = (PFN_vkCmdWriteBufferMarker2AMD)get_instance_proc_addr(instance,"vkCmdWriteBufferMarker2AMD");
-   extensions.vk_get_queue_checkpoint_data_2_nv = (PFN_vkGetQueueCheckpointData2NV)get_instance_proc_addr(instance,"vkGetQueueCheckpointData2NV");
+   extensions.vk_cmd_set_event2_khr = (PFN_vkCmdSetEvent2KHR)get_instance_proc_addr(instance,"vkCmdSetEvent2KHR");
+   extensions.vk_cmd_reset_event2_khr = (PFN_vkCmdResetEvent2KHR)get_instance_proc_addr(instance,"vkCmdResetEvent2KHR");
+   extensions.vk_cmd_wait_events2_khr = (PFN_vkCmdWaitEvents2KHR)get_instance_proc_addr(instance,"vkCmdWaitEvents2KHR");
+   extensions.vk_cmd_pipeline_barrier2_khr = (PFN_vkCmdPipelineBarrier2KHR)get_instance_proc_addr(instance,"vkCmdPipelineBarrier2KHR");
+   extensions.vk_queue_submit2_khr = (PFN_vkQueueSubmit2KHR)get_instance_proc_addr(instance,"vkQueueSubmit2KHR");
+   extensions.vk_cmd_write_timestamp2_khr = (PFN_vkCmdWriteTimestamp2KHR)get_instance_proc_addr(instance,"vkCmdWriteTimestamp2KHR");
+   extensions.vk_cmd_write_buffer_marker2_amd = (PFN_vkCmdWriteBufferMarker2AMD)get_instance_proc_addr(instance,"vkCmdWriteBufferMarker2AMD");
+   extensions.vk_get_queue_checkpoint_data2_nv = (PFN_vkGetQueueCheckpointData2NV)get_instance_proc_addr(instance,"vkGetQueueCheckpointData2NV");
    extensions.vk_copy_memory_to_image_ext = (PFN_vkCopyMemoryToImageEXT)get_instance_proc_addr(instance,"vkCopyMemoryToImageEXT");
    extensions.vk_copy_image_to_memory_ext = (PFN_vkCopyImageToMemoryEXT)get_instance_proc_addr(instance,"vkCopyImageToMemoryEXT");
    extensions.vk_copy_image_to_image_ext = (PFN_vkCopyImageToImageEXT)get_instance_proc_addr(instance,"vkCopyImageToImageEXT");
@@ -1516,8 +1516,8 @@ fn void load_extensions(Instance instance) {
    extensions.vk_get_micromap_build_sizes_ext = (PFN_vkGetMicromapBuildSizesEXT)get_instance_proc_addr(instance,"vkGetMicromapBuildSizesEXT");
    extensions.vk_get_shader_module_identifier_ext = (PFN_vkGetShaderModuleIdentifierEXT)get_instance_proc_addr(instance,"vkGetShaderModuleIdentifierEXT");
    extensions.vk_get_shader_module_create_info_identifier_ext = (PFN_vkGetShaderModuleCreateInfoIdentifierEXT)get_instance_proc_addr(instance,"vkGetShaderModuleCreateInfoIdentifierEXT");
-   extensions.vk_get_image_subresource_layout_2_khr = (PFN_vkGetImageSubresourceLayout2KHR)get_instance_proc_addr(instance,"vkGetImageSubresourceLayout2KHR");
-   extensions.vk_get_image_subresource_layout_2_ext = (PFN_vkGetImageSubresourceLayout2EXT)get_instance_proc_addr(instance,"vkGetImageSubresourceLayout2EXT");
+   extensions.vk_get_image_subresource_layout2_khr = (PFN_vkGetImageSubresourceLayout2KHR)get_instance_proc_addr(instance,"vkGetImageSubresourceLayout2KHR");
+   extensions.vk_get_image_subresource_layout2_ext = (PFN_vkGetImageSubresourceLayout2EXT)get_instance_proc_addr(instance,"vkGetImageSubresourceLayout2EXT");
    extensions.vk_get_pipeline_properties_ext = (PFN_vkGetPipelinePropertiesEXT)get_instance_proc_addr(instance,"vkGetPipelinePropertiesEXT");
    extensions.vk_export_metal_objects_ext = (PFN_vkExportMetalObjectsEXT)get_instance_proc_addr(instance,"vkExportMetalObjectsEXT");
    extensions.vk_get_framebuffer_tile_properties_qcom = (PFN_vkGetFramebufferTilePropertiesQCOM)get_instance_proc_addr(instance,"vkGetFramebufferTilePropertiesQCOM");
@@ -1528,22 +1528,22 @@ fn void load_extensions(Instance instance) {
    extensions.vk_bind_optical_flow_session_image_nv = (PFN_vkBindOpticalFlowSessionImageNV)get_instance_proc_addr(instance,"vkBindOpticalFlowSessionImageNV");
    extensions.vk_cmd_optical_flow_execute_nv = (PFN_vkCmdOpticalFlowExecuteNV)get_instance_proc_addr(instance,"vkCmdOpticalFlowExecuteNV");
    extensions.vk_get_device_fault_info_ext = (PFN_vkGetDeviceFaultInfoEXT)get_instance_proc_addr(instance,"vkGetDeviceFaultInfoEXT");
-   extensions.vk_cmd_set_depth_bias_2_ext = (PFN_vkCmdSetDepthBias2EXT)get_instance_proc_addr(instance,"vkCmdSetDepthBias2EXT");
+   extensions.vk_cmd_set_depth_bias2_ext = (PFN_vkCmdSetDepthBias2EXT)get_instance_proc_addr(instance,"vkCmdSetDepthBias2EXT");
    extensions.vk_release_swapchain_images_ext = (PFN_vkReleaseSwapchainImagesEXT)get_instance_proc_addr(instance,"vkReleaseSwapchainImagesEXT");
    extensions.vk_get_device_image_subresource_layout_khr = (PFN_vkGetDeviceImageSubresourceLayoutKHR)get_instance_proc_addr(instance,"vkGetDeviceImageSubresourceLayoutKHR");
-   extensions.vk_map_memory_2_khr = (PFN_vkMapMemory2KHR)get_instance_proc_addr(instance,"vkMapMemory2KHR");
-   extensions.vk_unmap_memory_2_khr = (PFN_vkUnmapMemory2KHR)get_instance_proc_addr(instance,"vkUnmapMemory2KHR");
+   extensions.vk_map_memory2_khr = (PFN_vkMapMemory2KHR)get_instance_proc_addr(instance,"vkMapMemory2KHR");
+   extensions.vk_unmap_memory2_khr = (PFN_vkUnmapMemory2KHR)get_instance_proc_addr(instance,"vkUnmapMemory2KHR");
    extensions.vk_create_shaders_ext = (PFN_vkCreateShadersEXT)get_instance_proc_addr(instance,"vkCreateShadersEXT");
    extensions.vk_destroy_shader_ext = (PFN_vkDestroyShaderEXT)get_instance_proc_addr(instance,"vkDestroyShaderEXT");
    extensions.vk_get_shader_binary_data_ext = (PFN_vkGetShaderBinaryDataEXT)get_instance_proc_addr(instance,"vkGetShaderBinaryDataEXT");
    extensions.vk_cmd_bind_shaders_ext = (PFN_vkCmdBindShadersEXT)get_instance_proc_addr(instance,"vkCmdBindShadersEXT");
    extensions.vk_get_physical_device_cooperative_matrix_properties_khr = (PFN_vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR)get_instance_proc_addr(instance,"vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR");
-   extensions.vk_cmd_bind_descriptor_sets_2_khr = (PFN_vkCmdBindDescriptorSets2KHR)get_instance_proc_addr(instance,"vkCmdBindDescriptorSets2KHR");
-   extensions.vk_cmd_push_constants_2_khr = (PFN_vkCmdPushConstants2KHR)get_instance_proc_addr(instance,"vkCmdPushConstants2KHR");
-   extensions.vk_cmd_push_descriptor_set_2_khr = (PFN_vkCmdPushDescriptorSet2KHR)get_instance_proc_addr(instance,"vkCmdPushDescriptorSet2KHR");
-   extensions.vk_cmd_push_descriptor_set_with_template_2_khr = (PFN_vkCmdPushDescriptorSetWithTemplate2KHR)get_instance_proc_addr(instance,"vkCmdPushDescriptorSetWithTemplate2KHR");
-   extensions.vk_cmd_set_descriptor_buffer_offsets_2_ext = (PFN_vkCmdSetDescriptorBufferOffsets2EXT)get_instance_proc_addr(instance,"vkCmdSetDescriptorBufferOffsets2EXT");
-   extensions.vk_cmd_bind_descriptor_buffer_embedded_samplers_2_ext = (PFN_vkCmdBindDescriptorBufferEmbeddedSamplers2EXT)get_instance_proc_addr(instance,"vkCmdBindDescriptorBufferEmbeddedSamplers2EXT");
+   extensions.vk_cmd_bind_descriptor_sets2_khr = (PFN_vkCmdBindDescriptorSets2KHR)get_instance_proc_addr(instance,"vkCmdBindDescriptorSets2KHR");
+   extensions.vk_cmd_push_constants2_khr = (PFN_vkCmdPushConstants2KHR)get_instance_proc_addr(instance,"vkCmdPushConstants2KHR");
+   extensions.vk_cmd_push_descriptor_set2_khr = (PFN_vkCmdPushDescriptorSet2KHR)get_instance_proc_addr(instance,"vkCmdPushDescriptorSet2KHR");
+   extensions.vk_cmd_push_descriptor_set_with_template2_khr = (PFN_vkCmdPushDescriptorSetWithTemplate2KHR)get_instance_proc_addr(instance,"vkCmdPushDescriptorSetWithTemplate2KHR");
+   extensions.vk_cmd_set_descriptor_buffer_offsets2_ext = (PFN_vkCmdSetDescriptorBufferOffsets2EXT)get_instance_proc_addr(instance,"vkCmdSetDescriptorBufferOffsets2EXT");
+   extensions.vk_cmd_bind_descriptor_buffer_embedded_samplers2_ext = (PFN_vkCmdBindDescriptorBufferEmbeddedSamplers2EXT)get_instance_proc_addr(instance,"vkCmdBindDescriptorBufferEmbeddedSamplers2EXT");
    extensions.vk_set_latency_sleep_mode_nv = (PFN_vkSetLatencySleepModeNV)get_instance_proc_addr(instance,"vkSetLatencySleepModeNV");
    extensions.vk_latency_sleep_nv = (PFN_vkLatencySleepNV)get_instance_proc_addr(instance,"vkLatencySleepNV");
    extensions.vk_set_latency_marker_nv = (PFN_vkSetLatencyMarkerNV)get_instance_proc_addr(instance,"vkSetLatencyMarkerNV");
@@ -1571,7 +1571,7 @@ fn void cmd_end_conditional_rendering_ext (CommandBuffer commandBuffer) => exten
 fn void destroy_surface_khr (Instance instance, SurfaceKHR surface, AllocationCallbacks* pAllocator) => extensions.vk_destroy_surface_khr(instance, surface, pAllocator);
 fn void destroy_swapchain_khr (Device device, SwapchainKHR swapchain, AllocationCallbacks* pAllocator) => extensions.vk_destroy_swapchain_khr(device, swapchain, pAllocator);
 fn uint get_physical_device_wayland_presentation_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex, void* display) => extensions.vk_get_physical_device_wayland_presentation_support_khr(physicalDevice, queueFamilyIndex, display);
-fn uint get_physical_device_win_32_presentation_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex) => extensions.vk_get_physical_device_win_32_presentation_support_khr(physicalDevice, queueFamilyIndex);
+fn uint get_physical_device_win32presentation_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex) => extensions.vk_get_physical_device_win32presentation_support_khr(physicalDevice, queueFamilyIndex);
 fn uint get_physical_device_xlib_presentation_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex, void* dpy, ulong visualID) => extensions.vk_get_physical_device_xlib_presentation_support_khr(physicalDevice, queueFamilyIndex, dpy, visualID);
 fn uint get_physical_device_xcb_presentation_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex, void* connection, uint visual_id) => extensions.vk_get_physical_device_xcb_presentation_support_khr(physicalDevice, queueFamilyIndex, connection, visual_id);
 fn void destroy_debug_report_callback_ext (Instance instance, DebugReportCallbackEXT callback, AllocationCallbacks* pAllocator) => extensions.vk_destroy_debug_report_callback_ext(instance, callback, pAllocator);
@@ -1591,12 +1591,12 @@ fn void destroy_indirect_commands_layout_ext (Device device, IndirectCommandsLay
 fn void destroy_indirect_execution_set_ext (Device device, IndirectExecutionSetEXT indirectExecutionSet, AllocationCallbacks* pAllocator) => extensions.vk_destroy_indirect_execution_set_ext(device, indirectExecutionSet, pAllocator);
 fn void update_indirect_execution_set_pipeline_ext (Device device, IndirectExecutionSetEXT indirectExecutionSet, uint executionSetWriteCount, WriteIndirectExecutionSetPipelineEXT* pExecutionSetWrites) => extensions.vk_update_indirect_execution_set_pipeline_ext(device, indirectExecutionSet, executionSetWriteCount, pExecutionSetWrites);
 fn void update_indirect_execution_set_shader_ext (Device device, IndirectExecutionSetEXT indirectExecutionSet, uint executionSetWriteCount, WriteIndirectExecutionSetShaderEXT* pExecutionSetWrites) => extensions.vk_update_indirect_execution_set_shader_ext(device, indirectExecutionSet, executionSetWriteCount, pExecutionSetWrites);
-fn void get_physical_device_features_2_khr (PhysicalDevice physicalDevice, PhysicalDeviceFeatures2* pFeatures) => extensions.vk_get_physical_device_features_2_khr(physicalDevice, pFeatures);
-fn void get_physical_device_properties_2_khr (PhysicalDevice physicalDevice, PhysicalDeviceProperties2* pProperties) => extensions.vk_get_physical_device_properties_2_khr(physicalDevice, pProperties);
-fn void get_physical_device_format_properties_2_khr (PhysicalDevice physicalDevice, Format format, FormatProperties2* pFormatProperties) => extensions.vk_get_physical_device_format_properties_2_khr(physicalDevice, format, pFormatProperties);
-fn void get_physical_device_queue_family_properties_2_khr (PhysicalDevice physicalDevice, uint* pQueueFamilyPropertyCount, QueueFamilyProperties2* pQueueFamilyProperties) => extensions.vk_get_physical_device_queue_family_properties_2_khr(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties);
-fn void get_physical_device_memory_properties_2_khr (PhysicalDevice physicalDevice, PhysicalDeviceMemoryProperties2* pMemoryProperties) => extensions.vk_get_physical_device_memory_properties_2_khr(physicalDevice, pMemoryProperties);
-fn void get_physical_device_sparse_image_format_properties_2_khr (PhysicalDevice physicalDevice, PhysicalDeviceSparseImageFormatInfo2* pFormatInfo, uint* pPropertyCount, SparseImageFormatProperties2* pProperties) => extensions.vk_get_physical_device_sparse_image_format_properties_2_khr(physicalDevice, pFormatInfo, pPropertyCount, pProperties);
+fn void get_physical_device_features2_khr (PhysicalDevice physicalDevice, PhysicalDeviceFeatures2* pFeatures) => extensions.vk_get_physical_device_features2_khr(physicalDevice, pFeatures);
+fn void get_physical_device_properties2_khr (PhysicalDevice physicalDevice, PhysicalDeviceProperties2* pProperties) => extensions.vk_get_physical_device_properties2_khr(physicalDevice, pProperties);
+fn void get_physical_device_format_properties2_khr (PhysicalDevice physicalDevice, Format format, FormatProperties2* pFormatProperties) => extensions.vk_get_physical_device_format_properties2_khr(physicalDevice, format, pFormatProperties);
+fn void get_physical_device_queue_family_properties2_khr (PhysicalDevice physicalDevice, uint* pQueueFamilyPropertyCount, QueueFamilyProperties2* pQueueFamilyProperties) => extensions.vk_get_physical_device_queue_family_properties2_khr(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties);
+fn void get_physical_device_memory_properties2_khr (PhysicalDevice physicalDevice, PhysicalDeviceMemoryProperties2* pMemoryProperties) => extensions.vk_get_physical_device_memory_properties2_khr(physicalDevice, pMemoryProperties);
+fn void get_physical_device_sparse_image_format_properties2_khr (PhysicalDevice physicalDevice, PhysicalDeviceSparseImageFormatInfo2* pFormatInfo, uint* pPropertyCount, SparseImageFormatProperties2* pProperties) => extensions.vk_get_physical_device_sparse_image_format_properties2_khr(physicalDevice, pFormatInfo, pPropertyCount, pProperties);
 fn void cmd_push_descriptor_set_khr (CommandBuffer commandBuffer, PipelineBindPoint pipelineBindPoint, PipelineLayout layout, uint set, uint descriptorWriteCount, WriteDescriptorSet* pDescriptorWrites) => extensions.vk_cmd_push_descriptor_set_khr(commandBuffer, pipelineBindPoint, layout, set, descriptorWriteCount, pDescriptorWrites);
 fn void trim_command_pool_khr (Device device, CommandPool commandPool, CommandPoolTrimFlags flags) => extensions.vk_trim_command_pool_khr(device, commandPool, flags);
 fn void get_physical_device_external_buffer_properties_khr (PhysicalDevice physicalDevice, PhysicalDeviceExternalBufferInfo* pExternalBufferInfo, ExternalBufferProperties* pExternalBufferProperties) => extensions.vk_get_physical_device_external_buffer_properties_khr(physicalDevice, pExternalBufferInfo, pExternalBufferProperties);
@@ -1615,9 +1615,9 @@ fn void cmd_set_discard_rectangle_enable_ext (CommandBuffer commandBuffer, uint 
 fn void cmd_set_discard_rectangle_mode_ext (CommandBuffer commandBuffer, DiscardRectangleModeEXT discardRectangleMode) => extensions.vk_cmd_set_discard_rectangle_mode_ext(commandBuffer, discardRectangleMode);
 fn void cmd_set_sample_locations_ext (CommandBuffer commandBuffer, SampleLocationsInfoEXT* pSampleLocationsInfo) => extensions.vk_cmd_set_sample_locations_ext(commandBuffer, pSampleLocationsInfo);
 fn void get_physical_device_multisample_properties_ext (PhysicalDevice physicalDevice, SampleCountFlagBits samples, MultisamplePropertiesEXT* pMultisampleProperties) => extensions.vk_get_physical_device_multisample_properties_ext(physicalDevice, samples, pMultisampleProperties);
-fn void get_buffer_memory_requirements_2_khr (Device device, BufferMemoryRequirementsInfo2* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_buffer_memory_requirements_2_khr(device, pInfo, pMemoryRequirements);
-fn void get_image_memory_requirements_2_khr (Device device, ImageMemoryRequirementsInfo2* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_image_memory_requirements_2_khr(device, pInfo, pMemoryRequirements);
-fn void get_image_sparse_memory_requirements_2_khr (Device device, ImageSparseMemoryRequirementsInfo2* pInfo, uint* pSparseMemoryRequirementCount, SparseImageMemoryRequirements2* pSparseMemoryRequirements) => extensions.vk_get_image_sparse_memory_requirements_2_khr(device, pInfo, pSparseMemoryRequirementCount, pSparseMemoryRequirements);
+fn void get_buffer_memory_requirements2_khr (Device device, BufferMemoryRequirementsInfo2* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_buffer_memory_requirements2_khr(device, pInfo, pMemoryRequirements);
+fn void get_image_memory_requirements2_khr (Device device, ImageMemoryRequirementsInfo2* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_image_memory_requirements2_khr(device, pInfo, pMemoryRequirements);
+fn void get_image_sparse_memory_requirements2_khr (Device device, ImageSparseMemoryRequirementsInfo2* pInfo, uint* pSparseMemoryRequirementCount, SparseImageMemoryRequirements2* pSparseMemoryRequirements) => extensions.vk_get_image_sparse_memory_requirements2_khr(device, pInfo, pSparseMemoryRequirementCount, pSparseMemoryRequirements);
 fn void get_device_buffer_memory_requirements_khr (Device device, DeviceBufferMemoryRequirements* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_device_buffer_memory_requirements_khr(device, pInfo, pMemoryRequirements);
 fn void get_device_image_memory_requirements_khr (Device device, DeviceImageMemoryRequirements* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_device_image_memory_requirements_khr(device, pInfo, pMemoryRequirements);
 fn void get_device_image_sparse_memory_requirements_khr (Device device, DeviceImageMemoryRequirements* pInfo, uint* pSparseMemoryRequirementCount, SparseImageMemoryRequirements2* pSparseMemoryRequirements) => extensions.vk_get_device_image_sparse_memory_requirements_khr(device, pInfo, pSparseMemoryRequirementCount, pSparseMemoryRequirements);
@@ -1634,9 +1634,9 @@ fn void cmd_insert_debug_utils_label_ext (CommandBuffer commandBuffer, DebugUtil
 fn void destroy_debug_utils_messenger_ext (Instance instance, DebugUtilsMessengerEXT messenger, AllocationCallbacks* pAllocator) => extensions.vk_destroy_debug_utils_messenger_ext(instance, messenger, pAllocator);
 fn void submit_debug_utils_message_ext (Instance instance, DebugUtilsMessageSeverityFlagBitsEXT messageSeverity, DebugUtilsMessageTypeFlagsEXT messageTypes, DebugUtilsMessengerCallbackDataEXT* pCallbackData) => extensions.vk_submit_debug_utils_message_ext(instance, messageSeverity, messageTypes, pCallbackData);
 fn void cmd_write_buffer_marker_amd (CommandBuffer commandBuffer, PipelineStageFlagBits pipelineStage, Buffer dstBuffer, DeviceSize dstOffset, uint marker) => extensions.vk_cmd_write_buffer_marker_amd(commandBuffer, pipelineStage, dstBuffer, dstOffset, marker);
-fn void cmd_begin_render_pass_2_khr (CommandBuffer commandBuffer, RenderPassBeginInfo* pRenderPassBegin, SubpassBeginInfo* pSubpassBeginInfo) => extensions.vk_cmd_begin_render_pass_2_khr(commandBuffer, pRenderPassBegin, pSubpassBeginInfo);
-fn void cmd_next_subpass_2_khr (CommandBuffer commandBuffer, SubpassBeginInfo* pSubpassBeginInfo, SubpassEndInfo* pSubpassEndInfo) => extensions.vk_cmd_next_subpass_2_khr(commandBuffer, pSubpassBeginInfo, pSubpassEndInfo);
-fn void cmd_end_render_pass_2_khr (CommandBuffer commandBuffer, SubpassEndInfo* pSubpassEndInfo) => extensions.vk_cmd_end_render_pass_2_khr(commandBuffer, pSubpassEndInfo);
+fn void cmd_begin_render_pass2_khr (CommandBuffer commandBuffer, RenderPassBeginInfo* pRenderPassBegin, SubpassBeginInfo* pSubpassBeginInfo) => extensions.vk_cmd_begin_render_pass2_khr(commandBuffer, pRenderPassBegin, pSubpassBeginInfo);
+fn void cmd_next_subpass2_khr (CommandBuffer commandBuffer, SubpassBeginInfo* pSubpassBeginInfo, SubpassEndInfo* pSubpassEndInfo) => extensions.vk_cmd_next_subpass2_khr(commandBuffer, pSubpassBeginInfo, pSubpassEndInfo);
+fn void cmd_end_render_pass2_khr (CommandBuffer commandBuffer, SubpassEndInfo* pSubpassEndInfo) => extensions.vk_cmd_end_render_pass2_khr(commandBuffer, pSubpassEndInfo);
 fn void cmd_draw_indirect_count_khr (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, Buffer countBuffer, DeviceSize countBufferOffset, uint maxDrawCount, uint stride) => extensions.vk_cmd_draw_indirect_count_khr(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
 fn void cmd_draw_indirect_count_amd (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, Buffer countBuffer, DeviceSize countBufferOffset, uint maxDrawCount, uint stride) => extensions.vk_cmd_draw_indirect_count_amd(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
 fn void cmd_draw_indexed_indirect_count_khr (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, Buffer countBuffer, DeviceSize countBufferOffset, uint maxDrawCount, uint stride) => extensions.vk_cmd_draw_indexed_indirect_count_khr(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
@@ -1673,7 +1673,7 @@ fn void cmd_write_acceleration_structures_properties_nv (CommandBuffer commandBu
 fn void cmd_trace_rays_khr (CommandBuffer commandBuffer, StridedDeviceAddressRegionKHR* pRaygenShaderBindingTable, StridedDeviceAddressRegionKHR* pMissShaderBindingTable, StridedDeviceAddressRegionKHR* pHitShaderBindingTable, StridedDeviceAddressRegionKHR* pCallableShaderBindingTable, uint width, uint height, uint depth) => extensions.vk_cmd_trace_rays_khr(commandBuffer, pRaygenShaderBindingTable, pMissShaderBindingTable, pHitShaderBindingTable, pCallableShaderBindingTable, width, height, depth);
 fn void cmd_trace_rays_nv (CommandBuffer commandBuffer, Buffer raygenShaderBindingTableBuffer, DeviceSize raygenShaderBindingOffset, Buffer missShaderBindingTableBuffer, DeviceSize missShaderBindingOffset, DeviceSize missShaderBindingStride, Buffer hitShaderBindingTableBuffer, DeviceSize hitShaderBindingOffset, DeviceSize hitShaderBindingStride, Buffer callableShaderBindingTableBuffer, DeviceSize callableShaderBindingOffset, DeviceSize callableShaderBindingStride, uint width, uint height, uint depth) => extensions.vk_cmd_trace_rays_nv(commandBuffer, raygenShaderBindingTableBuffer, raygenShaderBindingOffset, missShaderBindingTableBuffer, missShaderBindingOffset, missShaderBindingStride, hitShaderBindingTableBuffer, hitShaderBindingOffset, hitShaderBindingStride, callableShaderBindingTableBuffer, callableShaderBindingOffset, callableShaderBindingStride, width, height, depth);
 fn void cmd_trace_rays_indirect_khr (CommandBuffer commandBuffer, StridedDeviceAddressRegionKHR* pRaygenShaderBindingTable, StridedDeviceAddressRegionKHR* pMissShaderBindingTable, StridedDeviceAddressRegionKHR* pHitShaderBindingTable, StridedDeviceAddressRegionKHR* pCallableShaderBindingTable, DeviceAddress indirectDeviceAddress) => extensions.vk_cmd_trace_rays_indirect_khr(commandBuffer, pRaygenShaderBindingTable, pMissShaderBindingTable, pHitShaderBindingTable, pCallableShaderBindingTable, indirectDeviceAddress);
-fn void cmd_trace_rays_indirect_2_khr (CommandBuffer commandBuffer, DeviceAddress indirectDeviceAddress) => extensions.vk_cmd_trace_rays_indirect_2_khr(commandBuffer, indirectDeviceAddress);
+fn void cmd_trace_rays_indirect2_khr (CommandBuffer commandBuffer, DeviceAddress indirectDeviceAddress) => extensions.vk_cmd_trace_rays_indirect2_khr(commandBuffer, indirectDeviceAddress);
 fn void get_device_acceleration_structure_compatibility_khr (Device device, AccelerationStructureVersionInfoKHR* pVersionInfo, AccelerationStructureCompatibilityKHR* pCompatibility) => extensions.vk_get_device_acceleration_structure_compatibility_khr(device, pVersionInfo, pCompatibility);
 fn DeviceSize get_ray_tracing_shader_group_stack_size_khr (Device device, Pipeline pipeline, uint group, ShaderGroupShaderKHR groupShader) => extensions.vk_get_ray_tracing_shader_group_stack_size_khr(device, pipeline, group, groupShader);
 fn void cmd_set_ray_tracing_pipeline_stack_size_khr (CommandBuffer commandBuffer, uint pipelineStackSize) => extensions.vk_cmd_set_ray_tracing_pipeline_stack_size_khr(commandBuffer, pipelineStackSize);
@@ -1700,8 +1700,8 @@ fn void cmd_set_front_face_ext (CommandBuffer commandBuffer, FrontFace frontFace
 fn void cmd_set_primitive_topology_ext (CommandBuffer commandBuffer, PrimitiveTopology primitiveTopology) => extensions.vk_cmd_set_primitive_topology_ext(commandBuffer, primitiveTopology);
 fn void cmd_set_viewport_with_count_ext (CommandBuffer commandBuffer, uint viewportCount, Viewport* pViewports) => extensions.vk_cmd_set_viewport_with_count_ext(commandBuffer, viewportCount, pViewports);
 fn void cmd_set_scissor_with_count_ext (CommandBuffer commandBuffer, uint scissorCount, Rect2D* pScissors) => extensions.vk_cmd_set_scissor_with_count_ext(commandBuffer, scissorCount, pScissors);
-fn void cmd_bind_index_buffer_2_khr (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, DeviceSize size, IndexType indexType) => extensions.vk_cmd_bind_index_buffer_2_khr(commandBuffer, buffer, offset, size, indexType);
-fn void cmd_bind_vertex_buffers_2_ext (CommandBuffer commandBuffer, uint firstBinding, uint bindingCount, Buffer* pBuffers, DeviceSize* pOffsets, DeviceSize* pSizes, DeviceSize* pStrides) => extensions.vk_cmd_bind_vertex_buffers_2_ext(commandBuffer, firstBinding, bindingCount, pBuffers, pOffsets, pSizes, pStrides);
+fn void cmd_bind_index_buffer2_khr (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, DeviceSize size, IndexType indexType) => extensions.vk_cmd_bind_index_buffer2_khr(commandBuffer, buffer, offset, size, indexType);
+fn void cmd_bind_vertex_buffers2_ext (CommandBuffer commandBuffer, uint firstBinding, uint bindingCount, Buffer* pBuffers, DeviceSize* pOffsets, DeviceSize* pSizes, DeviceSize* pStrides) => extensions.vk_cmd_bind_vertex_buffers2_ext(commandBuffer, firstBinding, bindingCount, pBuffers, pOffsets, pSizes, pStrides);
 fn void cmd_set_depth_test_enable_ext (CommandBuffer commandBuffer, uint depthTestEnable) => extensions.vk_cmd_set_depth_test_enable_ext(commandBuffer, depthTestEnable);
 fn void cmd_set_depth_write_enable_ext (CommandBuffer commandBuffer, uint depthWriteEnable) => extensions.vk_cmd_set_depth_write_enable_ext(commandBuffer, depthWriteEnable);
 fn void cmd_set_depth_compare_op_ext (CommandBuffer commandBuffer, CompareOp depthCompareOp) => extensions.vk_cmd_set_depth_compare_op_ext(commandBuffer, depthCompareOp);
@@ -1745,24 +1745,24 @@ fn void cmd_set_coverage_reduction_mode_nv (CommandBuffer commandBuffer, Coverag
 fn void cmd_set_representative_fragment_test_enable_nv (CommandBuffer commandBuffer, uint representativeFragmentTestEnable) => extensions.vk_cmd_set_representative_fragment_test_enable_nv(commandBuffer, representativeFragmentTestEnable);
 fn void destroy_private_data_slot_ext (Device device, PrivateDataSlot privateDataSlot, AllocationCallbacks* pAllocator) => extensions.vk_destroy_private_data_slot_ext(device, privateDataSlot, pAllocator);
 fn void get_private_data_ext (Device device, ObjectType objectType, ulong objectHandle, PrivateDataSlot privateDataSlot, ulong* pData) => extensions.vk_get_private_data_ext(device, objectType, objectHandle, privateDataSlot, pData);
-fn void cmd_copy_buffer_2_khr (CommandBuffer commandBuffer, CopyBufferInfo2* pCopyBufferInfo) => extensions.vk_cmd_copy_buffer_2_khr(commandBuffer, pCopyBufferInfo);
-fn void cmd_copy_image_2_khr (CommandBuffer commandBuffer, CopyImageInfo2* pCopyImageInfo) => extensions.vk_cmd_copy_image_2_khr(commandBuffer, pCopyImageInfo);
-fn void cmd_blit_image_2_khr (CommandBuffer commandBuffer, BlitImageInfo2* pBlitImageInfo) => extensions.vk_cmd_blit_image_2_khr(commandBuffer, pBlitImageInfo);
-fn void cmd_copy_buffer_to_image_2_khr (CommandBuffer commandBuffer, CopyBufferToImageInfo2* pCopyBufferToImageInfo) => extensions.vk_cmd_copy_buffer_to_image_2_khr(commandBuffer, pCopyBufferToImageInfo);
-fn void cmd_copy_image_to_buffer_2_khr (CommandBuffer commandBuffer, CopyImageToBufferInfo2* pCopyImageToBufferInfo) => extensions.vk_cmd_copy_image_to_buffer_2_khr(commandBuffer, pCopyImageToBufferInfo);
-fn void cmd_resolve_image_2_khr (CommandBuffer commandBuffer, ResolveImageInfo2* pResolveImageInfo) => extensions.vk_cmd_resolve_image_2_khr(commandBuffer, pResolveImageInfo);
+fn void cmd_copy_buffer2_khr (CommandBuffer commandBuffer, CopyBufferInfo2* pCopyBufferInfo) => extensions.vk_cmd_copy_buffer2_khr(commandBuffer, pCopyBufferInfo);
+fn void cmd_copy_image2_khr (CommandBuffer commandBuffer, CopyImageInfo2* pCopyImageInfo) => extensions.vk_cmd_copy_image2_khr(commandBuffer, pCopyImageInfo);
+fn void cmd_blit_image2_khr (CommandBuffer commandBuffer, BlitImageInfo2* pBlitImageInfo) => extensions.vk_cmd_blit_image2_khr(commandBuffer, pBlitImageInfo);
+fn void cmd_copy_buffer_to_image2_khr (CommandBuffer commandBuffer, CopyBufferToImageInfo2* pCopyBufferToImageInfo) => extensions.vk_cmd_copy_buffer_to_image2_khr(commandBuffer, pCopyBufferToImageInfo);
+fn void cmd_copy_image_to_buffer2_khr (CommandBuffer commandBuffer, CopyImageToBufferInfo2* pCopyImageToBufferInfo) => extensions.vk_cmd_copy_image_to_buffer2_khr(commandBuffer, pCopyImageToBufferInfo);
+fn void cmd_resolve_image2_khr (CommandBuffer commandBuffer, ResolveImageInfo2* pResolveImageInfo) => extensions.vk_cmd_resolve_image2_khr(commandBuffer, pResolveImageInfo);
 fn void cmd_set_fragment_shading_rate_khr (CommandBuffer commandBuffer, Extent2D* pFragmentSize, FragmentShadingRateCombinerOpKHR[2] combinerOps) => extensions.vk_cmd_set_fragment_shading_rate_khr(commandBuffer, pFragmentSize, combinerOps);
 fn void cmd_set_fragment_shading_rate_enum_nv (CommandBuffer commandBuffer, FragmentShadingRateNV shadingRate, FragmentShadingRateCombinerOpKHR[2] combinerOps) => extensions.vk_cmd_set_fragment_shading_rate_enum_nv(commandBuffer, shadingRate, combinerOps);
 fn void get_acceleration_structure_build_sizes_khr (Device device, AccelerationStructureBuildTypeKHR buildType, AccelerationStructureBuildGeometryInfoKHR* pBuildInfo, uint* pMaxPrimitiveCounts, AccelerationStructureBuildSizesInfoKHR* pSizeInfo) => extensions.vk_get_acceleration_structure_build_sizes_khr(device, buildType, pBuildInfo, pMaxPrimitiveCounts, pSizeInfo);
 fn void cmd_set_vertex_input_ext (CommandBuffer commandBuffer, uint vertexBindingDescriptionCount, VertexInputBindingDescription2EXT* pVertexBindingDescriptions, uint vertexAttributeDescriptionCount, VertexInputAttributeDescription2EXT* pVertexAttributeDescriptions) => extensions.vk_cmd_set_vertex_input_ext(commandBuffer, vertexBindingDescriptionCount, pVertexBindingDescriptions, vertexAttributeDescriptionCount, pVertexAttributeDescriptions);
 fn void cmd_set_color_write_enable_ext (CommandBuffer commandBuffer, uint attachmentCount, uint* pColorWriteEnables) => extensions.vk_cmd_set_color_write_enable_ext(commandBuffer, attachmentCount, pColorWriteEnables);
-fn void cmd_set_event_2_khr (CommandBuffer commandBuffer, Event event, DependencyInfo* pDependencyInfo) => extensions.vk_cmd_set_event_2_khr(commandBuffer, event, pDependencyInfo);
-fn void cmd_reset_event_2_khr (CommandBuffer commandBuffer, Event event, PipelineStageFlags2 stageMask) => extensions.vk_cmd_reset_event_2_khr(commandBuffer, event, stageMask);
-fn void cmd_wait_events_2_khr (CommandBuffer commandBuffer, uint eventCount, Event* pEvents, DependencyInfo* pDependencyInfos) => extensions.vk_cmd_wait_events_2_khr(commandBuffer, eventCount, pEvents, pDependencyInfos);
-fn void cmd_pipeline_barrier_2_khr (CommandBuffer commandBuffer, DependencyInfo* pDependencyInfo) => extensions.vk_cmd_pipeline_barrier_2_khr(commandBuffer, pDependencyInfo);
-fn void cmd_write_timestamp_2_khr (CommandBuffer commandBuffer, PipelineStageFlags2 stage, QueryPool queryPool, uint query) => extensions.vk_cmd_write_timestamp_2_khr(commandBuffer, stage, queryPool, query);
-fn void cmd_write_buffer_marker_2_amd (CommandBuffer commandBuffer, PipelineStageFlags2 stage, Buffer dstBuffer, DeviceSize dstOffset, uint marker) => extensions.vk_cmd_write_buffer_marker_2_amd(commandBuffer, stage, dstBuffer, dstOffset, marker);
-fn void get_queue_checkpoint_data_2_nv (Queue queue, uint* pCheckpointDataCount, CheckpointData2NV* pCheckpointData) => extensions.vk_get_queue_checkpoint_data_2_nv(queue, pCheckpointDataCount, pCheckpointData);
+fn void cmd_set_event2_khr (CommandBuffer commandBuffer, Event event, DependencyInfo* pDependencyInfo) => extensions.vk_cmd_set_event2_khr(commandBuffer, event, pDependencyInfo);
+fn void cmd_reset_event2_khr (CommandBuffer commandBuffer, Event event, PipelineStageFlags2 stageMask) => extensions.vk_cmd_reset_event2_khr(commandBuffer, event, stageMask);
+fn void cmd_wait_events2_khr (CommandBuffer commandBuffer, uint eventCount, Event* pEvents, DependencyInfo* pDependencyInfos) => extensions.vk_cmd_wait_events2_khr(commandBuffer, eventCount, pEvents, pDependencyInfos);
+fn void cmd_pipeline_barrier2_khr (CommandBuffer commandBuffer, DependencyInfo* pDependencyInfo) => extensions.vk_cmd_pipeline_barrier2_khr(commandBuffer, pDependencyInfo);
+fn void cmd_write_timestamp2_khr (CommandBuffer commandBuffer, PipelineStageFlags2 stage, QueryPool queryPool, uint query) => extensions.vk_cmd_write_timestamp2_khr(commandBuffer, stage, queryPool, query);
+fn void cmd_write_buffer_marker2_amd (CommandBuffer commandBuffer, PipelineStageFlags2 stage, Buffer dstBuffer, DeviceSize dstOffset, uint marker) => extensions.vk_cmd_write_buffer_marker2_amd(commandBuffer, stage, dstBuffer, dstOffset, marker);
+fn void get_queue_checkpoint_data2_nv (Queue queue, uint* pCheckpointDataCount, CheckpointData2NV* pCheckpointData) => extensions.vk_get_queue_checkpoint_data2_nv(queue, pCheckpointDataCount, pCheckpointData);
 fn void destroy_video_session_khr (Device device, VideoSessionKHR videoSession, AllocationCallbacks* pAllocator) => extensions.vk_destroy_video_session_khr(device, videoSession, pAllocator);
 fn void destroy_video_session_parameters_khr (Device device, VideoSessionParametersKHR videoSessionParameters, AllocationCallbacks* pAllocator) => extensions.vk_destroy_video_session_parameters_khr(device, videoSessionParameters, pAllocator);
 fn void cmd_decode_video_khr (CommandBuffer commandBuffer, VideoDecodeInfoKHR* pDecodeInfo) => extensions.vk_cmd_decode_video_khr(commandBuffer, pDecodeInfo);
@@ -1796,21 +1796,21 @@ fn void get_device_micromap_compatibility_ext (Device device, MicromapVersionInf
 fn void get_micromap_build_sizes_ext (Device device, AccelerationStructureBuildTypeKHR buildType, MicromapBuildInfoEXT* pBuildInfo, MicromapBuildSizesInfoEXT* pSizeInfo) => extensions.vk_get_micromap_build_sizes_ext(device, buildType, pBuildInfo, pSizeInfo);
 fn void get_shader_module_identifier_ext (Device device, ShaderModule shaderModule, ShaderModuleIdentifierEXT* pIdentifier) => extensions.vk_get_shader_module_identifier_ext(device, shaderModule, pIdentifier);
 fn void get_shader_module_create_info_identifier_ext (Device device, ShaderModuleCreateInfo* pCreateInfo, ShaderModuleIdentifierEXT* pIdentifier) => extensions.vk_get_shader_module_create_info_identifier_ext(device, pCreateInfo, pIdentifier);
-fn void get_image_subresource_layout_2_khr (Device device, Image image, ImageSubresource2KHR* pSubresource, SubresourceLayout2KHR* pLayout) => extensions.vk_get_image_subresource_layout_2_khr(device, image, pSubresource, pLayout);
-fn void get_image_subresource_layout_2_ext (Device device, Image image, ImageSubresource2KHR* pSubresource, SubresourceLayout2KHR* pLayout) => extensions.vk_get_image_subresource_layout_2_ext(device, image, pSubresource, pLayout);
+fn void get_image_subresource_layout2_khr (Device device, Image image, ImageSubresource2KHR* pSubresource, SubresourceLayout2KHR* pLayout) => extensions.vk_get_image_subresource_layout2_khr(device, image, pSubresource, pLayout);
+fn void get_image_subresource_layout2_ext (Device device, Image image, ImageSubresource2KHR* pSubresource, SubresourceLayout2KHR* pLayout) => extensions.vk_get_image_subresource_layout2_ext(device, image, pSubresource, pLayout);
 fn void export_metal_objects_ext (Device device, ExportMetalObjectsInfoEXT* pMetalObjectsInfo) => extensions.vk_export_metal_objects_ext(device, pMetalObjectsInfo);
 fn void destroy_optical_flow_session_nv (Device device, OpticalFlowSessionNV session, AllocationCallbacks* pAllocator) => extensions.vk_destroy_optical_flow_session_nv(device, session, pAllocator);
 fn void cmd_optical_flow_execute_nv (CommandBuffer commandBuffer, OpticalFlowSessionNV session, OpticalFlowExecuteInfoNV* pExecuteInfo) => extensions.vk_cmd_optical_flow_execute_nv(commandBuffer, session, pExecuteInfo);
-fn void cmd_set_depth_bias_2_ext (CommandBuffer commandBuffer, DepthBiasInfoEXT* pDepthBiasInfo) => extensions.vk_cmd_set_depth_bias_2_ext(commandBuffer, pDepthBiasInfo);
+fn void cmd_set_depth_bias2_ext (CommandBuffer commandBuffer, DepthBiasInfoEXT* pDepthBiasInfo) => extensions.vk_cmd_set_depth_bias2_ext(commandBuffer, pDepthBiasInfo);
 fn void get_device_image_subresource_layout_khr (Device device, DeviceImageSubresourceInfoKHR* pInfo, SubresourceLayout2KHR* pLayout) => extensions.vk_get_device_image_subresource_layout_khr(device, pInfo, pLayout);
 fn void destroy_shader_ext (Device device, ShaderEXT shader, AllocationCallbacks* pAllocator) => extensions.vk_destroy_shader_ext(device, shader, pAllocator);
 fn void cmd_bind_shaders_ext (CommandBuffer commandBuffer, uint stageCount, ShaderStageFlagBits* pStages, ShaderEXT* pShaders) => extensions.vk_cmd_bind_shaders_ext(commandBuffer, stageCount, pStages, pShaders);
-fn void cmd_bind_descriptor_sets_2_khr (CommandBuffer commandBuffer, BindDescriptorSetsInfoKHR* pBindDescriptorSetsInfo) => extensions.vk_cmd_bind_descriptor_sets_2_khr(commandBuffer, pBindDescriptorSetsInfo);
-fn void cmd_push_constants_2_khr (CommandBuffer commandBuffer, PushConstantsInfoKHR* pPushConstantsInfo) => extensions.vk_cmd_push_constants_2_khr(commandBuffer, pPushConstantsInfo);
-fn void cmd_push_descriptor_set_2_khr (CommandBuffer commandBuffer, PushDescriptorSetInfoKHR* pPushDescriptorSetInfo) => extensions.vk_cmd_push_descriptor_set_2_khr(commandBuffer, pPushDescriptorSetInfo);
-fn void cmd_push_descriptor_set_with_template_2_khr (CommandBuffer commandBuffer, PushDescriptorSetWithTemplateInfoKHR* pPushDescriptorSetWithTemplateInfo) => extensions.vk_cmd_push_descriptor_set_with_template_2_khr(commandBuffer, pPushDescriptorSetWithTemplateInfo);
-fn void cmd_set_descriptor_buffer_offsets_2_ext (CommandBuffer commandBuffer, SetDescriptorBufferOffsetsInfoEXT* pSetDescriptorBufferOffsetsInfo) => extensions.vk_cmd_set_descriptor_buffer_offsets_2_ext(commandBuffer, pSetDescriptorBufferOffsetsInfo);
-fn void cmd_bind_descriptor_buffer_embedded_samplers_2_ext (CommandBuffer commandBuffer, BindDescriptorBufferEmbeddedSamplersInfoEXT* pBindDescriptorBufferEmbeddedSamplersInfo) => extensions.vk_cmd_bind_descriptor_buffer_embedded_samplers_2_ext(commandBuffer, pBindDescriptorBufferEmbeddedSamplersInfo);
+fn void cmd_bind_descriptor_sets2_khr (CommandBuffer commandBuffer, BindDescriptorSetsInfoKHR* pBindDescriptorSetsInfo) => extensions.vk_cmd_bind_descriptor_sets2_khr(commandBuffer, pBindDescriptorSetsInfo);
+fn void cmd_push_constants2_khr (CommandBuffer commandBuffer, PushConstantsInfoKHR* pPushConstantsInfo) => extensions.vk_cmd_push_constants2_khr(commandBuffer, pPushConstantsInfo);
+fn void cmd_push_descriptor_set2_khr (CommandBuffer commandBuffer, PushDescriptorSetInfoKHR* pPushDescriptorSetInfo) => extensions.vk_cmd_push_descriptor_set2_khr(commandBuffer, pPushDescriptorSetInfo);
+fn void cmd_push_descriptor_set_with_template2_khr (CommandBuffer commandBuffer, PushDescriptorSetWithTemplateInfoKHR* pPushDescriptorSetWithTemplateInfo) => extensions.vk_cmd_push_descriptor_set_with_template2_khr(commandBuffer, pPushDescriptorSetWithTemplateInfo);
+fn void cmd_set_descriptor_buffer_offsets2_ext (CommandBuffer commandBuffer, SetDescriptorBufferOffsetsInfoEXT* pSetDescriptorBufferOffsetsInfo) => extensions.vk_cmd_set_descriptor_buffer_offsets2_ext(commandBuffer, pSetDescriptorBufferOffsetsInfo);
+fn void cmd_bind_descriptor_buffer_embedded_samplers2_ext (CommandBuffer commandBuffer, BindDescriptorBufferEmbeddedSamplersInfoEXT* pBindDescriptorBufferEmbeddedSamplersInfo) => extensions.vk_cmd_bind_descriptor_buffer_embedded_samplers2_ext(commandBuffer, pBindDescriptorBufferEmbeddedSamplersInfo);
 fn void set_latency_marker_nv (Device device, SwapchainKHR swapchain, SetLatencyMarkerInfoNV* pLatencyMarkerInfo) => extensions.vk_set_latency_marker_nv(device, swapchain, pLatencyMarkerInfo);
 fn void get_latency_timings_nv (Device device, SwapchainKHR swapchain, GetLatencyMarkerInfoNV* pLatencyMarkerInfo) => extensions.vk_get_latency_timings_nv(device, swapchain, pLatencyMarkerInfo);
 fn void queue_notify_out_of_band_nv (Queue queue, OutOfBandQueueTypeInfoNV* pQueueTypeInfo) => extensions.vk_queue_notify_out_of_band_nv(queue, pQueueTypeInfo);
@@ -1818,1839 +1818,1839 @@ fn void cmd_set_rendering_attachment_locations_khr (CommandBuffer commandBuffer,
 fn void cmd_set_rendering_input_attachment_indices_khr (CommandBuffer commandBuffer, RenderingInputAttachmentIndexInfoKHR* pInputAttachmentIndexInfo) => extensions.vk_cmd_set_rendering_input_attachment_indices_khr(commandBuffer, pInputAttachmentIndexInfo);
 fn void cmd_set_depth_clamp_range_ext (CommandBuffer commandBuffer, DepthClampModeEXT depthClampMode, DepthClampRangeEXT* pDepthClampRange) => extensions.vk_cmd_set_depth_clamp_range_ext(commandBuffer, depthClampMode, pDepthClampRange);
 
-fn void? try_create_instance (InstanceCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, Instance* pInstance) {
-  Result result = create_instance(pCreateInfo, pAllocator, pInstance);
+fn void? try_create_instance (InstanceCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Instance* p_instance) {
+  Result result = create_instance(p_create_info, p_allocator, p_instance);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_LAYER_NOT_PRESENT: return E_ERROR_LAYER_NOT_PRESENT~;
-       case ERROR_EXTENSION_NOT_PRESENT: return E_ERROR_EXTENSION_NOT_PRESENT~;
-       case ERROR_INCOMPATIBLE_DRIVER: return E_ERROR_INCOMPATIBLE_DRIVER~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_LAYER_NOT_PRESENT: return ERROR_LAYER_NOT_PRESENT~;
+       case ERROR_EXTENSION_NOT_PRESENT: return ERROR_EXTENSION_NOT_PRESENT~;
+       case ERROR_INCOMPATIBLE_DRIVER: return ERROR_INCOMPATIBLE_DRIVER~;
   }
 }
-fn void? try_enumerate_physical_devices (Instance instance, uint* pPhysicalDeviceCount, PhysicalDevice* pPhysicalDevices) {
-  Result result = enumerate_physical_devices(instance, pPhysicalDeviceCount, pPhysicalDevices);
+fn void? try_enumerate_physical_devices (Instance instance, uint* p_physical_device_count, PhysicalDevice* p_physical_devices) {
+  Result result = enumerate_physical_devices(instance, p_physical_device_count, p_physical_devices);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_get_physical_device_image_format_properties (PhysicalDevice physicalDevice, Format format, ImageType type, ImageTiling tiling, ImageUsageFlags usage, ImageCreateFlags flags, ImageFormatProperties* pImageFormatProperties) {
-  Result result = get_physical_device_image_format_properties(physicalDevice, format, type, tiling, usage, flags, pImageFormatProperties);
+fn void? try_get_physical_device_image_format_properties (PhysicalDevice physical_device, Format format, ImageType type, ImageTiling tiling, ImageUsageFlags usage, ImageCreateFlags flags, ImageFormatProperties* p_image_format_properties) {
+  Result result = get_physical_device_image_format_properties(physical_device, format, type, tiling, usage, flags, p_image_format_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_FORMAT_NOT_SUPPORTED: return E_ERROR_FORMAT_NOT_SUPPORTED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_FORMAT_NOT_SUPPORTED: return ERROR_FORMAT_NOT_SUPPORTED~;
   }
 }
-fn void? try_create_device (PhysicalDevice physicalDevice, DeviceCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, Device* pDevice) {
-  Result result = create_device(physicalDevice, pCreateInfo, pAllocator, pDevice);
+fn void? try_create_device (PhysicalDevice physical_device, DeviceCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Device* p_device) {
+  Result result = create_device(physical_device, p_create_info, p_allocator, p_device);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_EXTENSION_NOT_PRESENT: return E_ERROR_EXTENSION_NOT_PRESENT~;
-       case ERROR_FEATURE_NOT_PRESENT: return E_ERROR_FEATURE_NOT_PRESENT~;
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_EXTENSION_NOT_PRESENT: return ERROR_EXTENSION_NOT_PRESENT~;
+       case ERROR_FEATURE_NOT_PRESENT: return ERROR_FEATURE_NOT_PRESENT~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_enumerate_instance_version (uint* pApiVersion) {
-  Result result = enumerate_instance_version(pApiVersion);
+fn void? try_enumerate_instance_version (uint* p_api_version) {
+  Result result = enumerate_instance_version(p_api_version);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_enumerate_instance_layer_properties (uint* pPropertyCount, LayerProperties* pProperties) {
-  Result result = enumerate_instance_layer_properties(pPropertyCount, pProperties);
+fn void? try_enumerate_instance_layer_properties (uint* p_property_count, LayerProperties* p_properties) {
+  Result result = enumerate_instance_layer_properties(p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_enumerate_instance_extension_properties (char* pLayerName, uint* pPropertyCount, ExtensionProperties* pProperties) {
-  Result result = enumerate_instance_extension_properties(pLayerName, pPropertyCount, pProperties);
+fn void? try_enumerate_instance_extension_properties (char* p_layer_name, uint* p_property_count, ExtensionProperties* p_properties) {
+  Result result = enumerate_instance_extension_properties(p_layer_name, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_LAYER_NOT_PRESENT: return E_ERROR_LAYER_NOT_PRESENT~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_LAYER_NOT_PRESENT: return ERROR_LAYER_NOT_PRESENT~;
   }
 }
-fn void? try_enumerate_device_layer_properties (PhysicalDevice physicalDevice, uint* pPropertyCount, LayerProperties* pProperties) {
-  Result result = enumerate_device_layer_properties(physicalDevice, pPropertyCount, pProperties);
+fn void? try_enumerate_device_layer_properties (PhysicalDevice physical_device, uint* p_property_count, LayerProperties* p_properties) {
+  Result result = enumerate_device_layer_properties(physical_device, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_enumerate_device_extension_properties (PhysicalDevice physicalDevice, char* pLayerName, uint* pPropertyCount, ExtensionProperties* pProperties) {
-  Result result = enumerate_device_extension_properties(physicalDevice, pLayerName, pPropertyCount, pProperties);
+fn void? try_enumerate_device_extension_properties (PhysicalDevice physical_device, char* p_layer_name, uint* p_property_count, ExtensionProperties* p_properties) {
+  Result result = enumerate_device_extension_properties(physical_device, p_layer_name, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_LAYER_NOT_PRESENT: return E_ERROR_LAYER_NOT_PRESENT~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_LAYER_NOT_PRESENT: return ERROR_LAYER_NOT_PRESENT~;
   }
 }
-fn void? try_queue_submit (Queue queue, uint submitCount, SubmitInfo* pSubmits, Fence fence) {
-  Result result = queue_submit(queue, submitCount, pSubmits, fence);
+fn void? try_queue_submit (Queue queue, uint submit_count, SubmitInfo* p_submits, Fence fence) {
+  Result result = queue_submit(queue, submit_count, p_submits, fence);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
 fn void? try_queue_wait_idle (Queue queue) {
   Result result = queue_wait_idle(queue);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
 fn void? try_device_wait_idle (Device device) {
   Result result = device_wait_idle(device);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_allocate_memory (Device device, MemoryAllocateInfo* pAllocateInfo, AllocationCallbacks* pAllocator, DeviceMemory* pMemory) {
-  Result result = allocate_memory(device, pAllocateInfo, pAllocator, pMemory);
+fn void? try_allocate_memory (Device device, MemoryAllocateInfo* p_allocate_info, AllocationCallbacks* p_allocator, DeviceMemory* p_memory) {
+  Result result = allocate_memory(device, p_allocate_info, p_allocator, p_memory);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_EXTERNAL_HANDLE: return E_ERROR_INVALID_EXTERNAL_HANDLE~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_EXTERNAL_HANDLE: return ERROR_INVALID_EXTERNAL_HANDLE~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_map_memory (Device device, DeviceMemory memory, DeviceSize offset, DeviceSize size, MemoryMapFlags flags, void** ppData) {
-  Result result = map_memory(device, memory, offset, size, flags, ppData);
+fn void? try_map_memory (Device device, DeviceMemory memory, DeviceSize offset, DeviceSize size, MemoryMapFlags flags, void** pp_data) {
+  Result result = map_memory(device, memory, offset, size, flags, pp_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_MEMORY_MAP_FAILED: return E_ERROR_MEMORY_MAP_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_MEMORY_MAP_FAILED: return ERROR_MEMORY_MAP_FAILED~;
   }
 }
-fn void? try_flush_mapped_memory_ranges (Device device, uint memoryRangeCount, MappedMemoryRange* pMemoryRanges) {
-  Result result = flush_mapped_memory_ranges(device, memoryRangeCount, pMemoryRanges);
+fn void? try_flush_mapped_memory_ranges (Device device, uint memory_range_count, MappedMemoryRange* p_memory_ranges) {
+  Result result = flush_mapped_memory_ranges(device, memory_range_count, p_memory_ranges);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_invalidate_mapped_memory_ranges (Device device, uint memoryRangeCount, MappedMemoryRange* pMemoryRanges) {
-  Result result = invalidate_mapped_memory_ranges(device, memoryRangeCount, pMemoryRanges);
+fn void? try_invalidate_mapped_memory_ranges (Device device, uint memory_range_count, MappedMemoryRange* p_memory_ranges) {
+  Result result = invalidate_mapped_memory_ranges(device, memory_range_count, p_memory_ranges);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_bind_buffer_memory (Device device, Buffer buffer, DeviceMemory memory, DeviceSize memoryOffset) {
-  Result result = bind_buffer_memory(device, buffer, memory, memoryOffset);
+fn void? try_bind_buffer_memory (Device device, Buffer buffer, DeviceMemory memory, DeviceSize memory_offset) {
+  Result result = bind_buffer_memory(device, buffer, memory, memory_offset);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_bind_image_memory (Device device, Image image, DeviceMemory memory, DeviceSize memoryOffset) {
-  Result result = bind_image_memory(device, image, memory, memoryOffset);
+fn void? try_bind_image_memory (Device device, Image image, DeviceMemory memory, DeviceSize memory_offset) {
+  Result result = bind_image_memory(device, image, memory, memory_offset);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_queue_bind_sparse (Queue queue, uint bindInfoCount, BindSparseInfo* pBindInfo, Fence fence) {
-  Result result = queue_bind_sparse(queue, bindInfoCount, pBindInfo, fence);
+fn void? try_queue_bind_sparse (Queue queue, uint bind_info_count, BindSparseInfo* p_bind_info, Fence fence) {
+  Result result = queue_bind_sparse(queue, bind_info_count, p_bind_info, fence);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_create_fence (Device device, FenceCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, Fence* pFence) {
-  Result result = create_fence(device, pCreateInfo, pAllocator, pFence);
+fn void? try_create_fence (Device device, FenceCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Fence* p_fence) {
+  Result result = create_fence(device, p_create_info, p_allocator, p_fence);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_reset_fences (Device device, uint fenceCount, Fence* pFences) {
-  Result result = reset_fences(device, fenceCount, pFences);
+fn void? try_reset_fences (Device device, uint fence_count, Fence* p_fences) {
+  Result result = reset_fences(device, fence_count, p_fences);
   switch(result) { 
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
 fn void? try_get_fence_status (Device device, Fence fence) {
   Result result = get_fence_status(device, fence);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_wait_for_fences (Device device, uint fenceCount, Fence* pFences, uint waitAll, ulong timeout) {
-  Result result = wait_for_fences(device, fenceCount, pFences, waitAll, timeout);
+fn void? try_wait_for_fences (Device device, uint fence_count, Fence* p_fences, uint wait_all, ulong timeout) {
+  Result result = wait_for_fences(device, fence_count, p_fences, wait_all, timeout);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_create_semaphore (Device device, SemaphoreCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, Semaphore* pSemaphore) {
-  Result result = create_semaphore(device, pCreateInfo, pAllocator, pSemaphore);
+fn void? try_create_semaphore (Device device, SemaphoreCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Semaphore* p_semaphore) {
+  Result result = create_semaphore(device, p_create_info, p_allocator, p_semaphore);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_event (Device device, EventCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, Event* pEvent) {
-  Result result = create_event(device, pCreateInfo, pAllocator, pEvent);
+fn void? try_create_event (Device device, EventCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Event* p_event) {
+  Result result = create_event(device, p_create_info, p_allocator, p_event);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
 fn void? try_get_event_status (Device device, Event event) {
   Result result = get_event_status(device, event);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
 fn void? try_set_event (Device device, Event event) {
   Result result = set_event(device, event);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
 fn void? try_reset_event (Device device, Event event) {
   Result result = reset_event(device, event);
   switch(result) { 
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_query_pool (Device device, QueryPoolCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, QueryPool* pQueryPool) {
-  Result result = create_query_pool(device, pCreateInfo, pAllocator, pQueryPool);
+fn void? try_create_query_pool (Device device, QueryPoolCreateInfo* p_create_info, AllocationCallbacks* p_allocator, QueryPool* p_query_pool) {
+  Result result = create_query_pool(device, p_create_info, p_allocator, p_query_pool);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_query_pool_results (Device device, QueryPool queryPool, uint firstQuery, uint queryCount, sz dataSize, void* pData, DeviceSize stride, QueryResultFlags flags) {
-  Result result = get_query_pool_results(device, queryPool, firstQuery, queryCount, dataSize, pData, stride, flags);
+fn void? try_get_query_pool_results (Device device, QueryPool query_pool, uint first_query, uint query_count, sz data_size, void* p_data, DeviceSize stride, QueryResultFlags flags) {
+  Result result = get_query_pool_results(device, query_pool, first_query, query_count, data_size, p_data, stride, flags);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_create_buffer (Device device, BufferCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, Buffer* pBuffer) {
-  Result result = create_buffer(device, pCreateInfo, pAllocator, pBuffer);
+fn void? try_create_buffer (Device device, BufferCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Buffer* p_buffer) {
+  Result result = create_buffer(device, p_create_info, p_allocator, p_buffer);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_create_buffer_view (Device device, BufferViewCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, BufferView* pView) {
-  Result result = create_buffer_view(device, pCreateInfo, pAllocator, pView);
+fn void? try_create_buffer_view (Device device, BufferViewCreateInfo* p_create_info, AllocationCallbacks* p_allocator, BufferView* p_view) {
+  Result result = create_buffer_view(device, p_create_info, p_allocator, p_view);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_image (Device device, ImageCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, Image* pImage) {
-  Result result = create_image(device, pCreateInfo, pAllocator, pImage);
+fn void? try_create_image (Device device, ImageCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Image* p_image) {
+  Result result = create_image(device, p_create_info, p_allocator, p_image);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_COMPRESSION_EXHAUSTED_EXT: return E_ERROR_COMPRESSION_EXHAUSTED_EXT~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_COMPRESSION_EXHAUSTED_EXT: return ERROR_COMPRESSION_EXHAUSTED_EXT~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_create_image_view (Device device, ImageViewCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, ImageView* pView) {
-  Result result = create_image_view(device, pCreateInfo, pAllocator, pView);
+fn void? try_create_image_view (Device device, ImageViewCreateInfo* p_create_info, AllocationCallbacks* p_allocator, ImageView* p_view) {
+  Result result = create_image_view(device, p_create_info, p_allocator, p_view);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_create_shader_module (Device device, ShaderModuleCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, ShaderModule* pShaderModule) {
-  Result result = create_shader_module(device, pCreateInfo, pAllocator, pShaderModule);
+fn void? try_create_shader_module (Device device, ShaderModuleCreateInfo* p_create_info, AllocationCallbacks* p_allocator, ShaderModule* p_shader_module) {
+  Result result = create_shader_module(device, p_create_info, p_allocator, p_shader_module);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_SHADER_NV: return E_ERROR_INVALID_SHADER_NV~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_SHADER_NV: return ERROR_INVALID_SHADER_NV~;
   }
 }
-fn void? try_create_pipeline_cache (Device device, PipelineCacheCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, PipelineCache* pPipelineCache) {
-  Result result = create_pipeline_cache(device, pCreateInfo, pAllocator, pPipelineCache);
+fn void? try_create_pipeline_cache (Device device, PipelineCacheCreateInfo* p_create_info, AllocationCallbacks* p_allocator, PipelineCache* p_pipeline_cache) {
+  Result result = create_pipeline_cache(device, p_create_info, p_allocator, p_pipeline_cache);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_pipeline_cache_data (Device device, PipelineCache pipelineCache, sz* pDataSize, void* pData) {
-  Result result = get_pipeline_cache_data(device, pipelineCache, pDataSize, pData);
+fn void? try_get_pipeline_cache_data (Device device, PipelineCache pipeline_cache, sz* p_data_size, void* p_data) {
+  Result result = get_pipeline_cache_data(device, pipeline_cache, p_data_size, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_merge_pipeline_caches (Device device, PipelineCache dstCache, uint srcCacheCount, PipelineCache* pSrcCaches) {
-  Result result = merge_pipeline_caches(device, dstCache, srcCacheCount, pSrcCaches);
+fn void? try_merge_pipeline_caches (Device device, PipelineCache dst_cache, uint src_cache_count, PipelineCache* p_src_caches) {
+  Result result = merge_pipeline_caches(device, dst_cache, src_cache_count, p_src_caches);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_pipeline_binaries_khr (Device device, PipelineBinaryCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, PipelineBinaryHandlesInfoKHR* pBinaries) {
-  Result result = extensions.vk_create_pipeline_binaries_khr(device, pCreateInfo, pAllocator, pBinaries);
+fn void? try_create_pipeline_binaries_khr (Device device, PipelineBinaryCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, PipelineBinaryHandlesInfoKHR* p_binaries) {
+  Result result = extensions.vk_create_pipeline_binaries_khr(device, p_create_info, p_allocator, p_binaries);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_get_pipeline_key_khr (Device device, PipelineCreateInfoKHR* pPipelineCreateInfo, PipelineBinaryKeyKHR* pPipelineKey) {
-  Result result = extensions.vk_get_pipeline_key_khr(device, pPipelineCreateInfo, pPipelineKey);
+fn void? try_get_pipeline_key_khr (Device device, PipelineCreateInfoKHR* p_pipeline_create_info, PipelineBinaryKeyKHR* p_pipeline_key) {
+  Result result = extensions.vk_get_pipeline_key_khr(device, p_pipeline_create_info, p_pipeline_key);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_pipeline_binary_data_khr (Device device, PipelineBinaryDataInfoKHR* pInfo, PipelineBinaryKeyKHR* pPipelineBinaryKey, sz* pPipelineBinaryDataSize, void* pPipelineBinaryData) {
-  Result result = extensions.vk_get_pipeline_binary_data_khr(device, pInfo, pPipelineBinaryKey, pPipelineBinaryDataSize, pPipelineBinaryData);
+fn void? try_get_pipeline_binary_data_khr (Device device, PipelineBinaryDataInfoKHR* p_info, PipelineBinaryKeyKHR* p_pipeline_binary_key, sz* p_pipeline_binary_data_size, void* p_pipeline_binary_data) {
+  Result result = extensions.vk_get_pipeline_binary_data_khr(device, p_info, p_pipeline_binary_key, p_pipeline_binary_data_size, p_pipeline_binary_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_NOT_ENOUGH_SPACE_KHR: return E_ERROR_NOT_ENOUGH_SPACE_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_NOT_ENOUGH_SPACE_KHR: return ERROR_NOT_ENOUGH_SPACE_KHR~;
   }
 }
-fn void? try_release_captured_pipeline_data_khr (Device device, ReleaseCapturedPipelineDataInfoKHR* pInfo, AllocationCallbacks* pAllocator) {
-  Result result = extensions.vk_release_captured_pipeline_data_khr(device, pInfo, pAllocator);
-  if (result != (Result)0) return E_ERROR_UNKNOWN~;
+fn void? try_release_captured_pipeline_data_khr (Device device, ReleaseCapturedPipelineDataInfoKHR* p_info, AllocationCallbacks* p_allocator) {
+  Result result = extensions.vk_release_captured_pipeline_data_khr(device, p_info, p_allocator);
+  if (result != (Result)0) return ERROR_UNKNOWN~;
 }
-fn void? try_create_graphics_pipelines (Device device, PipelineCache pipelineCache, uint createInfoCount, GraphicsPipelineCreateInfo* pCreateInfos, AllocationCallbacks* pAllocator, Pipeline* pPipelines) {
-  Result result = create_graphics_pipelines(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines);
+fn void? try_create_graphics_pipelines (Device device, PipelineCache pipeline_cache, uint create_info_count, GraphicsPipelineCreateInfo* p_create_infos, AllocationCallbacks* p_allocator, Pipeline* p_pipelines) {
+  Result result = create_graphics_pipelines(device, pipeline_cache, create_info_count, p_create_infos, p_allocator, p_pipelines);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_SHADER_NV: return E_ERROR_INVALID_SHADER_NV~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_SHADER_NV: return ERROR_INVALID_SHADER_NV~;
   }
 }
-fn void? try_create_compute_pipelines (Device device, PipelineCache pipelineCache, uint createInfoCount, ComputePipelineCreateInfo* pCreateInfos, AllocationCallbacks* pAllocator, Pipeline* pPipelines) {
-  Result result = create_compute_pipelines(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines);
+fn void? try_create_compute_pipelines (Device device, PipelineCache pipeline_cache, uint create_info_count, ComputePipelineCreateInfo* p_create_infos, AllocationCallbacks* p_allocator, Pipeline* p_pipelines) {
+  Result result = create_compute_pipelines(device, pipeline_cache, create_info_count, p_create_infos, p_allocator, p_pipelines);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_SHADER_NV: return E_ERROR_INVALID_SHADER_NV~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_SHADER_NV: return ERROR_INVALID_SHADER_NV~;
   }
 }
-fn void? try_get_device_subpass_shading_max_workgroup_size_huawei (Device device, RenderPass renderpass, Extent2D* pMaxWorkgroupSize) {
-  Result result = extensions.vk_get_device_subpass_shading_max_workgroup_size_huawei(device, renderpass, pMaxWorkgroupSize);
+fn void? try_get_device_subpass_shading_max_workgroup_size_huawei (Device device, RenderPass renderpass, Extent2D* p_max_workgroup_size) {
+  Result result = extensions.vk_get_device_subpass_shading_max_workgroup_size_huawei(device, renderpass, p_max_workgroup_size);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_create_pipeline_layout (Device device, PipelineLayoutCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, PipelineLayout* pPipelineLayout) {
-  Result result = create_pipeline_layout(device, pCreateInfo, pAllocator, pPipelineLayout);
+fn void? try_create_pipeline_layout (Device device, PipelineLayoutCreateInfo* p_create_info, AllocationCallbacks* p_allocator, PipelineLayout* p_pipeline_layout) {
+  Result result = create_pipeline_layout(device, p_create_info, p_allocator, p_pipeline_layout);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_sampler (Device device, SamplerCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, Sampler* pSampler) {
-  Result result = create_sampler(device, pCreateInfo, pAllocator, pSampler);
+fn void? try_create_sampler (Device device, SamplerCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Sampler* p_sampler) {
+  Result result = create_sampler(device, p_create_info, p_allocator, p_sampler);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_create_descriptor_set_layout (Device device, DescriptorSetLayoutCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, DescriptorSetLayout* pSetLayout) {
-  Result result = create_descriptor_set_layout(device, pCreateInfo, pAllocator, pSetLayout);
+fn void? try_create_descriptor_set_layout (Device device, DescriptorSetLayoutCreateInfo* p_create_info, AllocationCallbacks* p_allocator, DescriptorSetLayout* p_set_layout) {
+  Result result = create_descriptor_set_layout(device, p_create_info, p_allocator, p_set_layout);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_descriptor_pool (Device device, DescriptorPoolCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, DescriptorPool* pDescriptorPool) {
-  Result result = create_descriptor_pool(device, pCreateInfo, pAllocator, pDescriptorPool);
+fn void? try_create_descriptor_pool (Device device, DescriptorPoolCreateInfo* p_create_info, AllocationCallbacks* p_allocator, DescriptorPool* p_descriptor_pool) {
+  Result result = create_descriptor_pool(device, p_create_info, p_allocator, p_descriptor_pool);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_FRAGMENTATION: return E_ERROR_FRAGMENTATION~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_FRAGMENTATION: return ERROR_FRAGMENTATION~;
   }
 }
-fn void? try_reset_descriptor_pool (Device device, DescriptorPool descriptorPool, DescriptorPoolResetFlags flags) {
-  Result result = reset_descriptor_pool(device, descriptorPool, flags);
-  if (result != (Result)0) return E_ERROR_UNKNOWN~;
+fn void? try_reset_descriptor_pool (Device device, DescriptorPool descriptor_pool, DescriptorPoolResetFlags flags) {
+  Result result = reset_descriptor_pool(device, descriptor_pool, flags);
+  if (result != (Result)0) return ERROR_UNKNOWN~;
 }
-fn void? try_allocate_descriptor_sets (Device device, DescriptorSetAllocateInfo* pAllocateInfo, DescriptorSet* pDescriptorSets) {
-  Result result = allocate_descriptor_sets(device, pAllocateInfo, pDescriptorSets);
+fn void? try_allocate_descriptor_sets (Device device, DescriptorSetAllocateInfo* p_allocate_info, DescriptorSet* p_descriptor_sets) {
+  Result result = allocate_descriptor_sets(device, p_allocate_info, p_descriptor_sets);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_FRAGMENTED_POOL: return E_ERROR_FRAGMENTED_POOL~;
-       case ERROR_OUT_OF_POOL_MEMORY: return E_ERROR_OUT_OF_POOL_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_FRAGMENTED_POOL: return ERROR_FRAGMENTED_POOL~;
+       case ERROR_OUT_OF_POOL_MEMORY: return ERROR_OUT_OF_POOL_MEMORY~;
   }
 }
-fn void? try_free_descriptor_sets (Device device, DescriptorPool descriptorPool, uint descriptorSetCount, DescriptorSet* pDescriptorSets) {
-  Result result = free_descriptor_sets(device, descriptorPool, descriptorSetCount, pDescriptorSets);
-  if (result != (Result)0) return E_ERROR_UNKNOWN~;
+fn void? try_free_descriptor_sets (Device device, DescriptorPool descriptor_pool, uint descriptor_set_count, DescriptorSet* p_descriptor_sets) {
+  Result result = free_descriptor_sets(device, descriptor_pool, descriptor_set_count, p_descriptor_sets);
+  if (result != (Result)0) return ERROR_UNKNOWN~;
 }
-fn void? try_create_framebuffer (Device device, FramebufferCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, Framebuffer* pFramebuffer) {
-  Result result = create_framebuffer(device, pCreateInfo, pAllocator, pFramebuffer);
+fn void? try_create_framebuffer (Device device, FramebufferCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Framebuffer* p_framebuffer) {
+  Result result = create_framebuffer(device, p_create_info, p_allocator, p_framebuffer);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_render_pass (Device device, RenderPassCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, RenderPass* pRenderPass) {
-  Result result = create_render_pass(device, pCreateInfo, pAllocator, pRenderPass);
+fn void? try_create_render_pass (Device device, RenderPassCreateInfo* p_create_info, AllocationCallbacks* p_allocator, RenderPass* p_render_pass) {
+  Result result = create_render_pass(device, p_create_info, p_allocator, p_render_pass);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_command_pool (Device device, CommandPoolCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, CommandPool* pCommandPool) {
-  Result result = create_command_pool(device, pCreateInfo, pAllocator, pCommandPool);
+fn void? try_create_command_pool (Device device, CommandPoolCreateInfo* p_create_info, AllocationCallbacks* p_allocator, CommandPool* p_command_pool) {
+  Result result = create_command_pool(device, p_create_info, p_allocator, p_command_pool);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_reset_command_pool (Device device, CommandPool commandPool, CommandPoolResetFlags flags) {
-  Result result = reset_command_pool(device, commandPool, flags);
+fn void? try_reset_command_pool (Device device, CommandPool command_pool, CommandPoolResetFlags flags) {
+  Result result = reset_command_pool(device, command_pool, flags);
   switch(result) { 
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_allocate_command_buffers (Device device, CommandBufferAllocateInfo* pAllocateInfo, CommandBuffer* pCommandBuffers) {
-  Result result = allocate_command_buffers(device, pAllocateInfo, pCommandBuffers);
+fn void? try_allocate_command_buffers (Device device, CommandBufferAllocateInfo* p_allocate_info, CommandBuffer* p_command_buffers) {
+  Result result = allocate_command_buffers(device, p_allocate_info, p_command_buffers);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_begin_command_buffer (CommandBuffer commandBuffer, CommandBufferBeginInfo* pBeginInfo) {
-  Result result = begin_command_buffer(commandBuffer, pBeginInfo);
+fn void? try_begin_command_buffer (CommandBuffer command_buffer, CommandBufferBeginInfo* p_begin_info) {
+  Result result = begin_command_buffer(command_buffer, p_begin_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_end_command_buffer (CommandBuffer commandBuffer) {
-  Result result = end_command_buffer(commandBuffer);
+fn void? try_end_command_buffer (CommandBuffer command_buffer) {
+  Result result = end_command_buffer(command_buffer);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR: return E_ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR: return ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR~;
   }
 }
-fn void? try_reset_command_buffer (CommandBuffer commandBuffer, CommandBufferResetFlags flags) {
-  Result result = reset_command_buffer(commandBuffer, flags);
+fn void? try_reset_command_buffer (CommandBuffer command_buffer, CommandBufferResetFlags flags) {
+  Result result = reset_command_buffer(command_buffer, flags);
   switch(result) { 
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_physical_device_display_properties_khr (PhysicalDevice physicalDevice, uint* pPropertyCount, DisplayPropertiesKHR* pProperties) {
-  Result result = extensions.vk_get_physical_device_display_properties_khr(physicalDevice, pPropertyCount, pProperties);
+fn void? try_get_physical_device_display_properties_khr (PhysicalDevice physical_device, uint* p_property_count, DisplayPropertiesKHR* p_properties) {
+  Result result = extensions.vk_get_physical_device_display_properties_khr(physical_device, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_physical_device_display_plane_properties_khr (PhysicalDevice physicalDevice, uint* pPropertyCount, DisplayPlanePropertiesKHR* pProperties) {
-  Result result = extensions.vk_get_physical_device_display_plane_properties_khr(physicalDevice, pPropertyCount, pProperties);
+fn void? try_get_physical_device_display_plane_properties_khr (PhysicalDevice physical_device, uint* p_property_count, DisplayPlanePropertiesKHR* p_properties) {
+  Result result = extensions.vk_get_physical_device_display_plane_properties_khr(physical_device, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_display_plane_supported_displays_khr (PhysicalDevice physicalDevice, uint planeIndex, uint* pDisplayCount, DisplayKHR* pDisplays) {
-  Result result = extensions.vk_get_display_plane_supported_displays_khr(physicalDevice, planeIndex, pDisplayCount, pDisplays);
+fn void? try_get_display_plane_supported_displays_khr (PhysicalDevice physical_device, uint plane_index, uint* p_display_count, DisplayKHR* p_displays) {
+  Result result = extensions.vk_get_display_plane_supported_displays_khr(physical_device, plane_index, p_display_count, p_displays);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_display_mode_properties_khr (PhysicalDevice physicalDevice, DisplayKHR display, uint* pPropertyCount, DisplayModePropertiesKHR* pProperties) {
-  Result result = extensions.vk_get_display_mode_properties_khr(physicalDevice, display, pPropertyCount, pProperties);
+fn void? try_get_display_mode_properties_khr (PhysicalDevice physical_device, DisplayKHR display, uint* p_property_count, DisplayModePropertiesKHR* p_properties) {
+  Result result = extensions.vk_get_display_mode_properties_khr(physical_device, display, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_display_mode_khr (PhysicalDevice physicalDevice, DisplayKHR display, DisplayModeCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, DisplayModeKHR* pMode) {
-  Result result = extensions.vk_create_display_mode_khr(physicalDevice, display, pCreateInfo, pAllocator, pMode);
+fn void? try_create_display_mode_khr (PhysicalDevice physical_device, DisplayKHR display, DisplayModeCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, DisplayModeKHR* p_mode) {
+  Result result = extensions.vk_create_display_mode_khr(physical_device, display, p_create_info, p_allocator, p_mode);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_get_display_plane_capabilities_khr (PhysicalDevice physicalDevice, DisplayModeKHR mode, uint planeIndex, DisplayPlaneCapabilitiesKHR* pCapabilities) {
-  Result result = extensions.vk_get_display_plane_capabilities_khr(physicalDevice, mode, planeIndex, pCapabilities);
+fn void? try_get_display_plane_capabilities_khr (PhysicalDevice physical_device, DisplayModeKHR mode, uint plane_index, DisplayPlaneCapabilitiesKHR* p_capabilities) {
+  Result result = extensions.vk_get_display_plane_capabilities_khr(physical_device, mode, plane_index, p_capabilities);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_display_plane_surface_khr (Instance instance, DisplaySurfaceCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, SurfaceKHR* pSurface) {
-  Result result = extensions.vk_create_display_plane_surface_khr(instance, pCreateInfo, pAllocator, pSurface);
+fn void? try_create_display_plane_surface_khr (Instance instance, DisplaySurfaceCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, SurfaceKHR* p_surface) {
+  Result result = extensions.vk_create_display_plane_surface_khr(instance, p_create_info, p_allocator, p_surface);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_shared_swapchains_khr (Device device, uint swapchainCount, SwapchainCreateInfoKHR* pCreateInfos, AllocationCallbacks* pAllocator, SwapchainKHR* pSwapchains) {
-  Result result = extensions.vk_create_shared_swapchains_khr(device, swapchainCount, pCreateInfos, pAllocator, pSwapchains);
+fn void? try_create_shared_swapchains_khr (Device device, uint swapchain_count, SwapchainCreateInfoKHR* p_create_infos, AllocationCallbacks* p_allocator, SwapchainKHR* p_swapchains) {
+  Result result = extensions.vk_create_shared_swapchains_khr(device, swapchain_count, p_create_infos, p_allocator, p_swapchains);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INCOMPATIBLE_DISPLAY_KHR: return E_ERROR_INCOMPATIBLE_DISPLAY_KHR~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INCOMPATIBLE_DISPLAY_KHR: return ERROR_INCOMPATIBLE_DISPLAY_KHR~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_get_physical_device_surface_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex, SurfaceKHR surface, uint* pSupported) {
-  Result result = extensions.vk_get_physical_device_surface_support_khr(physicalDevice, queueFamilyIndex, surface, pSupported);
+fn void? try_get_physical_device_surface_support_khr (PhysicalDevice physical_device, uint queue_family_index, SurfaceKHR surface, uint* p_supported) {
+  Result result = extensions.vk_get_physical_device_surface_support_khr(physical_device, queue_family_index, surface, p_supported);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_get_physical_device_surface_capabilities_khr (PhysicalDevice physicalDevice, SurfaceKHR surface, SurfaceCapabilitiesKHR* pSurfaceCapabilities) {
-  Result result = extensions.vk_get_physical_device_surface_capabilities_khr(physicalDevice, surface, pSurfaceCapabilities);
+fn void? try_get_physical_device_surface_capabilities_khr (PhysicalDevice physical_device, SurfaceKHR surface, SurfaceCapabilitiesKHR* p_surface_capabilities) {
+  Result result = extensions.vk_get_physical_device_surface_capabilities_khr(physical_device, surface, p_surface_capabilities);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_get_physical_device_surface_formats_khr (PhysicalDevice physicalDevice, SurfaceKHR surface, uint* pSurfaceFormatCount, SurfaceFormatKHR* pSurfaceFormats) {
-  Result result = extensions.vk_get_physical_device_surface_formats_khr(physicalDevice, surface, pSurfaceFormatCount, pSurfaceFormats);
+fn void? try_get_physical_device_surface_formats_khr (PhysicalDevice physical_device, SurfaceKHR surface, uint* p_surface_format_count, SurfaceFormatKHR* p_surface_formats) {
+  Result result = extensions.vk_get_physical_device_surface_formats_khr(physical_device, surface, p_surface_format_count, p_surface_formats);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_get_physical_device_surface_present_modes_khr (PhysicalDevice physicalDevice, SurfaceKHR surface, uint* pPresentModeCount, PresentModeKHR* pPresentModes) {
-  Result result = extensions.vk_get_physical_device_surface_present_modes_khr(physicalDevice, surface, pPresentModeCount, pPresentModes);
+fn void? try_get_physical_device_surface_present_modes_khr (PhysicalDevice physical_device, SurfaceKHR surface, uint* p_present_mode_count, PresentModeKHR* p_present_modes) {
+  Result result = extensions.vk_get_physical_device_surface_present_modes_khr(physical_device, surface, p_present_mode_count, p_present_modes);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_create_swapchain_khr (Device device, SwapchainCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, SwapchainKHR* pSwapchain) {
-  Result result = extensions.vk_create_swapchain_khr(device, pCreateInfo, pAllocator, pSwapchain);
+fn void? try_create_swapchain_khr (Device device, SwapchainCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, SwapchainKHR* p_swapchain) {
+  Result result = extensions.vk_create_swapchain_khr(device, p_create_info, p_allocator, p_swapchain);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
-       case ERROR_NATIVE_WINDOW_IN_USE_KHR: return E_ERROR_NATIVE_WINDOW_IN_USE_KHR~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_COMPRESSION_EXHAUSTED_EXT: return E_ERROR_COMPRESSION_EXHAUSTED_EXT~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
+       case ERROR_NATIVE_WINDOW_IN_USE_KHR: return ERROR_NATIVE_WINDOW_IN_USE_KHR~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_COMPRESSION_EXHAUSTED_EXT: return ERROR_COMPRESSION_EXHAUSTED_EXT~;
   }
 }
-fn void? try_get_swapchain_images_khr (Device device, SwapchainKHR swapchain, uint* pSwapchainImageCount, Image* pSwapchainImages) {
-  Result result = extensions.vk_get_swapchain_images_khr(device, swapchain, pSwapchainImageCount, pSwapchainImages);
+fn void? try_get_swapchain_images_khr (Device device, SwapchainKHR swapchain, uint* p_swapchain_image_count, Image* p_swapchain_images) {
+  Result result = extensions.vk_get_swapchain_images_khr(device, swapchain, p_swapchain_image_count, p_swapchain_images);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_acquire_next_image_khr (Device device, SwapchainKHR swapchain, ulong timeout, Semaphore semaphore, Fence fence, uint* pImageIndex) {
-  Result result = extensions.vk_acquire_next_image_khr(device, swapchain, timeout, semaphore, fence, pImageIndex);
+fn void? try_acquire_next_image_khr (Device device, SwapchainKHR swapchain, ulong timeout, Semaphore semaphore, Fence fence, uint* p_image_index) {
+  Result result = extensions.vk_acquire_next_image_khr(device, swapchain, timeout, semaphore, fence, p_image_index);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_OUT_OF_DATE_KHR: return E_ERROR_OUT_OF_DATE_KHR~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
-       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return E_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_DATE_KHR: return ERROR_OUT_OF_DATE_KHR~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
+       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
   }
 }
-fn void? try_queue_present_khr (Queue queue, PresentInfoKHR* pPresentInfo) {
-  Result result = extensions.vk_queue_present_khr(queue, pPresentInfo);
+fn void? try_queue_present_khr (Queue queue, PresentInfoKHR* p_present_info) {
+  Result result = extensions.vk_queue_present_khr(queue, p_present_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_OUT_OF_DATE_KHR: return E_ERROR_OUT_OF_DATE_KHR~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
-       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return E_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_DATE_KHR: return ERROR_OUT_OF_DATE_KHR~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
+       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
   }
 }
-fn void? try_create_wayland_surface_khr (Instance instance, WaylandSurfaceCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, SurfaceKHR* pSurface) {
-  Result result = extensions.vk_create_wayland_surface_khr(instance, pCreateInfo, pAllocator, pSurface);
+fn void? try_create_wayland_surface_khr (Instance instance, WaylandSurfaceCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, SurfaceKHR* p_surface) {
+  Result result = extensions.vk_create_wayland_surface_khr(instance, p_create_info, p_allocator, p_surface);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_win_32_surface_khr (Instance instance, Win32SurfaceCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, SurfaceKHR* pSurface) {
-  Result result = extensions.vk_create_win_32_surface_khr(instance, pCreateInfo, pAllocator, pSurface);
+fn void? try_create_win32surface_khr (Instance instance, Win32SurfaceCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, SurfaceKHR* p_surface) {
+  Result result = extensions.vk_create_win32surface_khr(instance, p_create_info, p_allocator, p_surface);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_xlib_surface_khr (Instance instance, XlibSurfaceCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, SurfaceKHR* pSurface) {
-  Result result = extensions.vk_create_xlib_surface_khr(instance, pCreateInfo, pAllocator, pSurface);
+fn void? try_create_xlib_surface_khr (Instance instance, XlibSurfaceCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, SurfaceKHR* p_surface) {
+  Result result = extensions.vk_create_xlib_surface_khr(instance, p_create_info, p_allocator, p_surface);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_xcb_surface_khr (Instance instance, XcbSurfaceCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, SurfaceKHR* pSurface) {
-  Result result = extensions.vk_create_xcb_surface_khr(instance, pCreateInfo, pAllocator, pSurface);
+fn void? try_create_xcb_surface_khr (Instance instance, XcbSurfaceCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, SurfaceKHR* p_surface) {
+  Result result = extensions.vk_create_xcb_surface_khr(instance, p_create_info, p_allocator, p_surface);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_debug_report_callback_ext (Instance instance, DebugReportCallbackCreateInfoEXT* pCreateInfo, AllocationCallbacks* pAllocator, DebugReportCallbackEXT* pCallback) {
-  Result result = extensions.vk_create_debug_report_callback_ext(instance, pCreateInfo, pAllocator, pCallback);
+fn void? try_create_debug_report_callback_ext (Instance instance, DebugReportCallbackCreateInfoEXT* p_create_info, AllocationCallbacks* p_allocator, DebugReportCallbackEXT* p_callback) {
+  Result result = extensions.vk_create_debug_report_callback_ext(instance, p_create_info, p_allocator, p_callback);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_debug_marker_set_object_name_ext (Device device, DebugMarkerObjectNameInfoEXT* pNameInfo) {
-  Result result = extensions.vk_debug_marker_set_object_name_ext(device, pNameInfo);
+fn void? try_debug_marker_set_object_name_ext (Device device, DebugMarkerObjectNameInfoEXT* p_name_info) {
+  Result result = extensions.vk_debug_marker_set_object_name_ext(device, p_name_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_debug_marker_set_object_tag_ext (Device device, DebugMarkerObjectTagInfoEXT* pTagInfo) {
-  Result result = extensions.vk_debug_marker_set_object_tag_ext(device, pTagInfo);
+fn void? try_debug_marker_set_object_tag_ext (Device device, DebugMarkerObjectTagInfoEXT* p_tag_info) {
+  Result result = extensions.vk_debug_marker_set_object_tag_ext(device, p_tag_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_physical_device_external_image_format_properties_nv (PhysicalDevice physicalDevice, Format format, ImageType type, ImageTiling tiling, ImageUsageFlags usage, ImageCreateFlags flags, ExternalMemoryHandleTypeFlagsNV externalHandleType, ExternalImageFormatPropertiesNV* pExternalImageFormatProperties) {
-  Result result = extensions.vk_get_physical_device_external_image_format_properties_nv(physicalDevice, format, type, tiling, usage, flags, externalHandleType, pExternalImageFormatProperties);
+fn void? try_get_physical_device_external_image_format_properties_nv (PhysicalDevice physical_device, Format format, ImageType type, ImageTiling tiling, ImageUsageFlags usage, ImageCreateFlags flags, ExternalMemoryHandleTypeFlagsNV external_handle_type, ExternalImageFormatPropertiesNV* p_external_image_format_properties) {
+  Result result = extensions.vk_get_physical_device_external_image_format_properties_nv(physical_device, format, type, tiling, usage, flags, external_handle_type, p_external_image_format_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_FORMAT_NOT_SUPPORTED: return E_ERROR_FORMAT_NOT_SUPPORTED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_FORMAT_NOT_SUPPORTED: return ERROR_FORMAT_NOT_SUPPORTED~;
   }
 }
-fn void? try_get_memory_win_32_handle_nv (Device device, DeviceMemory memory, ExternalMemoryHandleTypeFlagsNV handleType, void** pHandle) {
-  Result result = extensions.vk_get_memory_win_32_handle_nv(device, memory, handleType, pHandle);
+fn void? try_get_memory_win32handle_nv (Device device, DeviceMemory memory, ExternalMemoryHandleTypeFlagsNV handle_type, void** p_handle) {
+  Result result = extensions.vk_get_memory_win32handle_nv(device, memory, handle_type, p_handle);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_create_indirect_commands_layout_nv (Device device, IndirectCommandsLayoutCreateInfoNV* pCreateInfo, AllocationCallbacks* pAllocator, IndirectCommandsLayoutNV* pIndirectCommandsLayout) {
-  Result result = extensions.vk_create_indirect_commands_layout_nv(device, pCreateInfo, pAllocator, pIndirectCommandsLayout);
+fn void? try_create_indirect_commands_layout_nv (Device device, IndirectCommandsLayoutCreateInfoNV* p_create_info, AllocationCallbacks* p_allocator, IndirectCommandsLayoutNV* p_indirect_commands_layout) {
+  Result result = extensions.vk_create_indirect_commands_layout_nv(device, p_create_info, p_allocator, p_indirect_commands_layout);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_indirect_commands_layout_ext (Device device, IndirectCommandsLayoutCreateInfoEXT* pCreateInfo, AllocationCallbacks* pAllocator, IndirectCommandsLayoutEXT* pIndirectCommandsLayout) {
-  Result result = extensions.vk_create_indirect_commands_layout_ext(device, pCreateInfo, pAllocator, pIndirectCommandsLayout);
+fn void? try_create_indirect_commands_layout_ext (Device device, IndirectCommandsLayoutCreateInfoEXT* p_create_info, AllocationCallbacks* p_allocator, IndirectCommandsLayoutEXT* p_indirect_commands_layout) {
+  Result result = extensions.vk_create_indirect_commands_layout_ext(device, p_create_info, p_allocator, p_indirect_commands_layout);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_indirect_execution_set_ext (Device device, IndirectExecutionSetCreateInfoEXT* pCreateInfo, AllocationCallbacks* pAllocator, IndirectExecutionSetEXT* pIndirectExecutionSet) {
-  Result result = extensions.vk_create_indirect_execution_set_ext(device, pCreateInfo, pAllocator, pIndirectExecutionSet);
+fn void? try_create_indirect_execution_set_ext (Device device, IndirectExecutionSetCreateInfoEXT* p_create_info, AllocationCallbacks* p_allocator, IndirectExecutionSetEXT* p_indirect_execution_set) {
+  Result result = extensions.vk_create_indirect_execution_set_ext(device, p_create_info, p_allocator, p_indirect_execution_set);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_physical_device_image_format_properties_2 (PhysicalDevice physicalDevice, PhysicalDeviceImageFormatInfo2* pImageFormatInfo, ImageFormatProperties2* pImageFormatProperties) {
-  Result result = get_physical_device_image_format_properties_2(physicalDevice, pImageFormatInfo, pImageFormatProperties);
+fn void? try_get_physical_device_image_format_properties2 (PhysicalDevice physical_device, PhysicalDeviceImageFormatInfo2* p_image_format_info, ImageFormatProperties2* p_image_format_properties) {
+  Result result = get_physical_device_image_format_properties2(physical_device, p_image_format_info, p_image_format_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_FORMAT_NOT_SUPPORTED: return E_ERROR_FORMAT_NOT_SUPPORTED~;
-       case ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR: return E_ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_FORMAT_NOT_SUPPORTED: return ERROR_FORMAT_NOT_SUPPORTED~;
+       case ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR: return ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
   }
 }
-fn void? try_get_physical_device_image_format_properties_2_khr (PhysicalDevice physicalDevice, PhysicalDeviceImageFormatInfo2* pImageFormatInfo, ImageFormatProperties2* pImageFormatProperties) {
-  Result result = extensions.vk_get_physical_device_image_format_properties_2_khr(physicalDevice, pImageFormatInfo, pImageFormatProperties);
+fn void? try_get_physical_device_image_format_properties2_khr (PhysicalDevice physical_device, PhysicalDeviceImageFormatInfo2* p_image_format_info, ImageFormatProperties2* p_image_format_properties) {
+  Result result = extensions.vk_get_physical_device_image_format_properties2_khr(physical_device, p_image_format_info, p_image_format_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_FORMAT_NOT_SUPPORTED: return E_ERROR_FORMAT_NOT_SUPPORTED~;
-       case ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR: return E_ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_FORMAT_NOT_SUPPORTED: return ERROR_FORMAT_NOT_SUPPORTED~;
+       case ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR: return ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
   }
 }
-fn void? try_get_memory_win_32_handle_khr (Device device, MemoryGetWin32HandleInfoKHR* pGetWin32HandleInfo, void** pHandle) {
-  Result result = extensions.vk_get_memory_win_32_handle_khr(device, pGetWin32HandleInfo, pHandle);
+fn void? try_get_memory_win32handle_khr (Device device, MemoryGetWin32HandleInfoKHR* p_get_win32handle_info, void** p_handle) {
+  Result result = extensions.vk_get_memory_win32handle_khr(device, p_get_win32handle_info, p_handle);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_memory_win_32_handle_properties_khr (Device device, ExternalMemoryHandleTypeFlagBits handleType, void* handle, MemoryWin32HandlePropertiesKHR* pMemoryWin32HandleProperties) {
-  Result result = extensions.vk_get_memory_win_32_handle_properties_khr(device, handleType, handle, pMemoryWin32HandleProperties);
+fn void? try_get_memory_win32handle_properties_khr (Device device, ExternalMemoryHandleTypeFlagBits handle_type, void* handle, MemoryWin32HandlePropertiesKHR* p_memory_win32handle_properties) {
+  Result result = extensions.vk_get_memory_win32handle_properties_khr(device, handle_type, handle, p_memory_win32handle_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INVALID_EXTERNAL_HANDLE: return E_ERROR_INVALID_EXTERNAL_HANDLE~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INVALID_EXTERNAL_HANDLE: return ERROR_INVALID_EXTERNAL_HANDLE~;
   }
 }
-fn void? try_get_memory_fd_khr (Device device, MemoryGetFdInfoKHR* pGetFdInfo, int* pFd) {
-  Result result = extensions.vk_get_memory_fd_khr(device, pGetFdInfo, pFd);
+fn void? try_get_memory_fd_khr (Device device, MemoryGetFdInfoKHR* p_get_fd_info, int* p_fd) {
+  Result result = extensions.vk_get_memory_fd_khr(device, p_get_fd_info, p_fd);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_memory_fd_properties_khr (Device device, ExternalMemoryHandleTypeFlagBits handleType, int fd, MemoryFdPropertiesKHR* pMemoryFdProperties) {
-  Result result = extensions.vk_get_memory_fd_properties_khr(device, handleType, fd, pMemoryFdProperties);
+fn void? try_get_memory_fd_properties_khr (Device device, ExternalMemoryHandleTypeFlagBits handle_type, int fd, MemoryFdPropertiesKHR* p_memory_fd_properties) {
+  Result result = extensions.vk_get_memory_fd_properties_khr(device, handle_type, fd, p_memory_fd_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INVALID_EXTERNAL_HANDLE: return E_ERROR_INVALID_EXTERNAL_HANDLE~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INVALID_EXTERNAL_HANDLE: return ERROR_INVALID_EXTERNAL_HANDLE~;
   }
 }
-fn void? try_get_memory_remote_address_nv (Device device, MemoryGetRemoteAddressInfoNV* pMemoryGetRemoteAddressInfo, RemoteAddressNV* pAddress) {
-  Result result = extensions.vk_get_memory_remote_address_nv(device, pMemoryGetRemoteAddressInfo, pAddress);
+fn void? try_get_memory_remote_address_nv (Device device, MemoryGetRemoteAddressInfoNV* p_memory_get_remote_address_info, RemoteAddressNV* p_address) {
+  Result result = extensions.vk_get_memory_remote_address_nv(device, p_memory_get_remote_address_info, p_address);
   switch(result) { 
-       case ERROR_INVALID_EXTERNAL_HANDLE: return E_ERROR_INVALID_EXTERNAL_HANDLE~;
+       case ERROR_INVALID_EXTERNAL_HANDLE: return ERROR_INVALID_EXTERNAL_HANDLE~;
   }
 }
-fn void? try_get_semaphore_win_32_handle_khr (Device device, SemaphoreGetWin32HandleInfoKHR* pGetWin32HandleInfo, void** pHandle) {
-  Result result = extensions.vk_get_semaphore_win_32_handle_khr(device, pGetWin32HandleInfo, pHandle);
+fn void? try_get_semaphore_win32handle_khr (Device device, SemaphoreGetWin32HandleInfoKHR* p_get_win32handle_info, void** p_handle) {
+  Result result = extensions.vk_get_semaphore_win32handle_khr(device, p_get_win32handle_info, p_handle);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_import_semaphore_win_32_handle_khr (Device device, ImportSemaphoreWin32HandleInfoKHR* pImportSemaphoreWin32HandleInfo) {
-  Result result = extensions.vk_import_semaphore_win_32_handle_khr(device, pImportSemaphoreWin32HandleInfo);
+fn void? try_import_semaphore_win32handle_khr (Device device, ImportSemaphoreWin32HandleInfoKHR* p_import_semaphore_win32handle_info) {
+  Result result = extensions.vk_import_semaphore_win32handle_khr(device, p_import_semaphore_win32handle_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INVALID_EXTERNAL_HANDLE: return E_ERROR_INVALID_EXTERNAL_HANDLE~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INVALID_EXTERNAL_HANDLE: return ERROR_INVALID_EXTERNAL_HANDLE~;
   }
 }
-fn void? try_get_semaphore_fd_khr (Device device, SemaphoreGetFdInfoKHR* pGetFdInfo, int* pFd) {
-  Result result = extensions.vk_get_semaphore_fd_khr(device, pGetFdInfo, pFd);
+fn void? try_get_semaphore_fd_khr (Device device, SemaphoreGetFdInfoKHR* p_get_fd_info, int* p_fd) {
+  Result result = extensions.vk_get_semaphore_fd_khr(device, p_get_fd_info, p_fd);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_import_semaphore_fd_khr (Device device, ImportSemaphoreFdInfoKHR* pImportSemaphoreFdInfo) {
-  Result result = extensions.vk_import_semaphore_fd_khr(device, pImportSemaphoreFdInfo);
+fn void? try_import_semaphore_fd_khr (Device device, ImportSemaphoreFdInfoKHR* p_import_semaphore_fd_info) {
+  Result result = extensions.vk_import_semaphore_fd_khr(device, p_import_semaphore_fd_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INVALID_EXTERNAL_HANDLE: return E_ERROR_INVALID_EXTERNAL_HANDLE~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INVALID_EXTERNAL_HANDLE: return ERROR_INVALID_EXTERNAL_HANDLE~;
   }
 }
-fn void? try_get_fence_win_32_handle_khr (Device device, FenceGetWin32HandleInfoKHR* pGetWin32HandleInfo, void** pHandle) {
-  Result result = extensions.vk_get_fence_win_32_handle_khr(device, pGetWin32HandleInfo, pHandle);
+fn void? try_get_fence_win32handle_khr (Device device, FenceGetWin32HandleInfoKHR* p_get_win32handle_info, void** p_handle) {
+  Result result = extensions.vk_get_fence_win32handle_khr(device, p_get_win32handle_info, p_handle);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_import_fence_win_32_handle_khr (Device device, ImportFenceWin32HandleInfoKHR* pImportFenceWin32HandleInfo) {
-  Result result = extensions.vk_import_fence_win_32_handle_khr(device, pImportFenceWin32HandleInfo);
+fn void? try_import_fence_win32handle_khr (Device device, ImportFenceWin32HandleInfoKHR* p_import_fence_win32handle_info) {
+  Result result = extensions.vk_import_fence_win32handle_khr(device, p_import_fence_win32handle_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INVALID_EXTERNAL_HANDLE: return E_ERROR_INVALID_EXTERNAL_HANDLE~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INVALID_EXTERNAL_HANDLE: return ERROR_INVALID_EXTERNAL_HANDLE~;
   }
 }
-fn void? try_get_fence_fd_khr (Device device, FenceGetFdInfoKHR* pGetFdInfo, int* pFd) {
-  Result result = extensions.vk_get_fence_fd_khr(device, pGetFdInfo, pFd);
+fn void? try_get_fence_fd_khr (Device device, FenceGetFdInfoKHR* p_get_fd_info, int* p_fd) {
+  Result result = extensions.vk_get_fence_fd_khr(device, p_get_fd_info, p_fd);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_import_fence_fd_khr (Device device, ImportFenceFdInfoKHR* pImportFenceFdInfo) {
-  Result result = extensions.vk_import_fence_fd_khr(device, pImportFenceFdInfo);
+fn void? try_import_fence_fd_khr (Device device, ImportFenceFdInfoKHR* p_import_fence_fd_info) {
+  Result result = extensions.vk_import_fence_fd_khr(device, p_import_fence_fd_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INVALID_EXTERNAL_HANDLE: return E_ERROR_INVALID_EXTERNAL_HANDLE~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INVALID_EXTERNAL_HANDLE: return ERROR_INVALID_EXTERNAL_HANDLE~;
   }
 }
-fn void? try_release_display_ext (PhysicalDevice physicalDevice, DisplayKHR display) {
-  Result result = extensions.vk_release_display_ext(physicalDevice, display);
-  if (result != (Result)0) return E_ERROR_UNKNOWN~;
+fn void? try_release_display_ext (PhysicalDevice physical_device, DisplayKHR display) {
+  Result result = extensions.vk_release_display_ext(physical_device, display);
+  if (result != (Result)0) return ERROR_UNKNOWN~;
 }
-fn void? try_acquire_xlib_display_ext (PhysicalDevice physicalDevice, void* dpy, DisplayKHR display) {
-  Result result = extensions.vk_acquire_xlib_display_ext(physicalDevice, dpy, display);
+fn void? try_acquire_xlib_display_ext (PhysicalDevice physical_device, void* dpy, DisplayKHR display) {
+  Result result = extensions.vk_acquire_xlib_display_ext(physical_device, dpy, display);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_acquire_winrt_display_nv (PhysicalDevice physicalDevice, DisplayKHR display) {
-  Result result = extensions.vk_acquire_winrt_display_nv(physicalDevice, display);
+fn void? try_acquire_winrt_display_nv (PhysicalDevice physical_device, DisplayKHR display) {
+  Result result = extensions.vk_acquire_winrt_display_nv(physical_device, display);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_get_winrt_display_nv (PhysicalDevice physicalDevice, uint deviceRelativeId, DisplayKHR* pDisplay) {
-  Result result = extensions.vk_get_winrt_display_nv(physicalDevice, deviceRelativeId, pDisplay);
+fn void? try_get_winrt_display_nv (PhysicalDevice physical_device, uint device_relative_id, DisplayKHR* p_display) {
+  Result result = extensions.vk_get_winrt_display_nv(physical_device, device_relative_id, p_display);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_display_power_control_ext (Device device, DisplayKHR display, DisplayPowerInfoEXT* pDisplayPowerInfo) {
-  Result result = extensions.vk_display_power_control_ext(device, display, pDisplayPowerInfo);
+fn void? try_display_power_control_ext (Device device, DisplayKHR display, DisplayPowerInfoEXT* p_display_power_info) {
+  Result result = extensions.vk_display_power_control_ext(device, display, p_display_power_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_register_device_event_ext (Device device, DeviceEventInfoEXT* pDeviceEventInfo, AllocationCallbacks* pAllocator, Fence* pFence) {
-  Result result = extensions.vk_register_device_event_ext(device, pDeviceEventInfo, pAllocator, pFence);
+fn void? try_register_device_event_ext (Device device, DeviceEventInfoEXT* p_device_event_info, AllocationCallbacks* p_allocator, Fence* p_fence) {
+  Result result = extensions.vk_register_device_event_ext(device, p_device_event_info, p_allocator, p_fence);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_register_display_event_ext (Device device, DisplayKHR display, DisplayEventInfoEXT* pDisplayEventInfo, AllocationCallbacks* pAllocator, Fence* pFence) {
-  Result result = extensions.vk_register_display_event_ext(device, display, pDisplayEventInfo, pAllocator, pFence);
+fn void? try_register_display_event_ext (Device device, DisplayKHR display, DisplayEventInfoEXT* p_display_event_info, AllocationCallbacks* p_allocator, Fence* p_fence) {
+  Result result = extensions.vk_register_display_event_ext(device, display, p_display_event_info, p_allocator, p_fence);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_swapchain_counter_ext (Device device, SwapchainKHR swapchain, SurfaceCounterFlagBitsEXT counter, ulong* pCounterValue) {
-  Result result = extensions.vk_get_swapchain_counter_ext(device, swapchain, counter, pCounterValue);
+fn void? try_get_swapchain_counter_ext (Device device, SwapchainKHR swapchain, SurfaceCounterFlagBitsEXT counter, ulong* p_counter_value) {
+  Result result = extensions.vk_get_swapchain_counter_ext(device, swapchain, counter, p_counter_value);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_OUT_OF_DATE_KHR: return E_ERROR_OUT_OF_DATE_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_DATE_KHR: return ERROR_OUT_OF_DATE_KHR~;
   }
 }
-fn void? try_get_physical_device_surface_capabilities_2_ext (PhysicalDevice physicalDevice, SurfaceKHR surface, SurfaceCapabilities2EXT* pSurfaceCapabilities) {
-  Result result = extensions.vk_get_physical_device_surface_capabilities_2_ext(physicalDevice, surface, pSurfaceCapabilities);
+fn void? try_get_physical_device_surface_capabilities2_ext (PhysicalDevice physical_device, SurfaceKHR surface, SurfaceCapabilities2EXT* p_surface_capabilities) {
+  Result result = extensions.vk_get_physical_device_surface_capabilities2_ext(physical_device, surface, p_surface_capabilities);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_enumerate_physical_device_groups (Instance instance, uint* pPhysicalDeviceGroupCount, PhysicalDeviceGroupProperties* pPhysicalDeviceGroupProperties) {
-  Result result = enumerate_physical_device_groups(instance, pPhysicalDeviceGroupCount, pPhysicalDeviceGroupProperties);
+fn void? try_enumerate_physical_device_groups (Instance instance, uint* p_physical_device_group_count, PhysicalDeviceGroupProperties* p_physical_device_group_properties) {
+  Result result = enumerate_physical_device_groups(instance, p_physical_device_group_count, p_physical_device_group_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_enumerate_physical_device_groups_khr (Instance instance, uint* pPhysicalDeviceGroupCount, PhysicalDeviceGroupProperties* pPhysicalDeviceGroupProperties) {
-  Result result = extensions.vk_enumerate_physical_device_groups_khr(instance, pPhysicalDeviceGroupCount, pPhysicalDeviceGroupProperties);
+fn void? try_enumerate_physical_device_groups_khr (Instance instance, uint* p_physical_device_group_count, PhysicalDeviceGroupProperties* p_physical_device_group_properties) {
+  Result result = extensions.vk_enumerate_physical_device_groups_khr(instance, p_physical_device_group_count, p_physical_device_group_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_bind_buffer_memory_2 (Device device, uint bindInfoCount, BindBufferMemoryInfo* pBindInfos) {
-  Result result = bind_buffer_memory_2(device, bindInfoCount, pBindInfos);
+fn void? try_bind_buffer_memory2 (Device device, uint bind_info_count, BindBufferMemoryInfo* p_bind_infos) {
+  Result result = bind_buffer_memory2(device, bind_info_count, p_bind_infos);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_bind_buffer_memory_2_khr (Device device, uint bindInfoCount, BindBufferMemoryInfo* pBindInfos) {
-  Result result = extensions.vk_bind_buffer_memory_2_khr(device, bindInfoCount, pBindInfos);
+fn void? try_bind_buffer_memory2_khr (Device device, uint bind_info_count, BindBufferMemoryInfo* p_bind_infos) {
+  Result result = extensions.vk_bind_buffer_memory2_khr(device, bind_info_count, p_bind_infos);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_bind_image_memory_2 (Device device, uint bindInfoCount, BindImageMemoryInfo* pBindInfos) {
-  Result result = bind_image_memory_2(device, bindInfoCount, pBindInfos);
+fn void? try_bind_image_memory2 (Device device, uint bind_info_count, BindImageMemoryInfo* p_bind_infos) {
+  Result result = bind_image_memory2(device, bind_info_count, p_bind_infos);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_bind_image_memory_2_khr (Device device, uint bindInfoCount, BindImageMemoryInfo* pBindInfos) {
-  Result result = extensions.vk_bind_image_memory_2_khr(device, bindInfoCount, pBindInfos);
+fn void? try_bind_image_memory2_khr (Device device, uint bind_info_count, BindImageMemoryInfo* p_bind_infos) {
+  Result result = extensions.vk_bind_image_memory2_khr(device, bind_info_count, p_bind_infos);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_device_group_present_capabilities_khr (Device device, DeviceGroupPresentCapabilitiesKHR* pDeviceGroupPresentCapabilities) {
-  Result result = extensions.vk_get_device_group_present_capabilities_khr(device, pDeviceGroupPresentCapabilities);
+fn void? try_get_device_group_present_capabilities_khr (Device device, DeviceGroupPresentCapabilitiesKHR* p_device_group_present_capabilities) {
+  Result result = extensions.vk_get_device_group_present_capabilities_khr(device, p_device_group_present_capabilities);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_device_group_surface_present_modes_khr (Device device, SurfaceKHR surface, DeviceGroupPresentModeFlagsKHR* pModes) {
-  Result result = extensions.vk_get_device_group_surface_present_modes_khr(device, surface, pModes);
+fn void? try_get_device_group_surface_present_modes_khr (Device device, SurfaceKHR surface, DeviceGroupPresentModeFlagsKHR* p_modes) {
+  Result result = extensions.vk_get_device_group_surface_present_modes_khr(device, surface, p_modes);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_acquire_next_image_2_khr (Device device, AcquireNextImageInfoKHR* pAcquireInfo, uint* pImageIndex) {
-  Result result = extensions.vk_acquire_next_image_2_khr(device, pAcquireInfo, pImageIndex);
+fn void? try_acquire_next_image2_khr (Device device, AcquireNextImageInfoKHR* p_acquire_info, uint* p_image_index) {
+  Result result = extensions.vk_acquire_next_image2_khr(device, p_acquire_info, p_image_index);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_OUT_OF_DATE_KHR: return E_ERROR_OUT_OF_DATE_KHR~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
-       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return E_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_DATE_KHR: return ERROR_OUT_OF_DATE_KHR~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
+       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
   }
 }
-fn void? try_get_physical_device_present_rectangles_khr (PhysicalDevice physicalDevice, SurfaceKHR surface, uint* pRectCount, Rect2D* pRects) {
-  Result result = extensions.vk_get_physical_device_present_rectangles_khr(physicalDevice, surface, pRectCount, pRects);
+fn void? try_get_physical_device_present_rectangles_khr (PhysicalDevice physical_device, SurfaceKHR surface, uint* p_rect_count, Rect2D* p_rects) {
+  Result result = extensions.vk_get_physical_device_present_rectangles_khr(physical_device, surface, p_rect_count, p_rects);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_descriptor_update_template (Device device, DescriptorUpdateTemplateCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, DescriptorUpdateTemplate* pDescriptorUpdateTemplate) {
-  Result result = create_descriptor_update_template(device, pCreateInfo, pAllocator, pDescriptorUpdateTemplate);
+fn void? try_create_descriptor_update_template (Device device, DescriptorUpdateTemplateCreateInfo* p_create_info, AllocationCallbacks* p_allocator, DescriptorUpdateTemplate* p_descriptor_update_template) {
+  Result result = create_descriptor_update_template(device, p_create_info, p_allocator, p_descriptor_update_template);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_descriptor_update_template_khr (Device device, DescriptorUpdateTemplateCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, DescriptorUpdateTemplate* pDescriptorUpdateTemplate) {
-  Result result = extensions.vk_create_descriptor_update_template_khr(device, pCreateInfo, pAllocator, pDescriptorUpdateTemplate);
+fn void? try_create_descriptor_update_template_khr (Device device, DescriptorUpdateTemplateCreateInfo* p_create_info, AllocationCallbacks* p_allocator, DescriptorUpdateTemplate* p_descriptor_update_template) {
+  Result result = extensions.vk_create_descriptor_update_template_khr(device, p_create_info, p_allocator, p_descriptor_update_template);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
 fn void? try_get_swapchain_status_khr (Device device, SwapchainKHR swapchain) {
   Result result = extensions.vk_get_swapchain_status_khr(device, swapchain);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_OUT_OF_DATE_KHR: return E_ERROR_OUT_OF_DATE_KHR~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
-       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return E_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_DATE_KHR: return ERROR_OUT_OF_DATE_KHR~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
+       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
   }
 }
-fn void? try_get_refresh_cycle_duration_google (Device device, SwapchainKHR swapchain, RefreshCycleDurationGOOGLE* pDisplayTimingProperties) {
-  Result result = extensions.vk_get_refresh_cycle_duration_google(device, swapchain, pDisplayTimingProperties);
+fn void? try_get_refresh_cycle_duration_google (Device device, SwapchainKHR swapchain, RefreshCycleDurationGOOGLE* p_display_timing_properties) {
+  Result result = extensions.vk_get_refresh_cycle_duration_google(device, swapchain, p_display_timing_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_get_past_presentation_timing_google (Device device, SwapchainKHR swapchain, uint* pPresentationTimingCount, PastPresentationTimingGOOGLE* pPresentationTimings) {
-  Result result = extensions.vk_get_past_presentation_timing_google(device, swapchain, pPresentationTimingCount, pPresentationTimings);
+fn void? try_get_past_presentation_timing_google (Device device, SwapchainKHR swapchain, uint* p_presentation_timing_count, PastPresentationTimingGOOGLE* p_presentation_timings) {
+  Result result = extensions.vk_get_past_presentation_timing_google(device, swapchain, p_presentation_timing_count, p_presentation_timings);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_OUT_OF_DATE_KHR: return E_ERROR_OUT_OF_DATE_KHR~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_DATE_KHR: return ERROR_OUT_OF_DATE_KHR~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_create_ios_surface_mvk (Instance instance, IOSSurfaceCreateInfoMVK* pCreateInfo, AllocationCallbacks* pAllocator, SurfaceKHR* pSurface) {
-  Result result = extensions.vk_create_ios_surface_mvk(instance, pCreateInfo, pAllocator, pSurface);
+fn void? try_create_ios_surface_mvk (Instance instance, IOSSurfaceCreateInfoMVK* p_create_info, AllocationCallbacks* p_allocator, SurfaceKHR* p_surface) {
+  Result result = extensions.vk_create_ios_surface_mvk(instance, p_create_info, p_allocator, p_surface);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_NATIVE_WINDOW_IN_USE_KHR: return E_ERROR_NATIVE_WINDOW_IN_USE_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_NATIVE_WINDOW_IN_USE_KHR: return ERROR_NATIVE_WINDOW_IN_USE_KHR~;
   }
 }
-fn void? try_create_mac_os_surface_mvk (Instance instance, MacOSSurfaceCreateInfoMVK* pCreateInfo, AllocationCallbacks* pAllocator, SurfaceKHR* pSurface) {
-  Result result = extensions.vk_create_mac_os_surface_mvk(instance, pCreateInfo, pAllocator, pSurface);
+fn void? try_create_mac_os_surface_mvk (Instance instance, MacOSSurfaceCreateInfoMVK* p_create_info, AllocationCallbacks* p_allocator, SurfaceKHR* p_surface) {
+  Result result = extensions.vk_create_mac_os_surface_mvk(instance, p_create_info, p_allocator, p_surface);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_NATIVE_WINDOW_IN_USE_KHR: return E_ERROR_NATIVE_WINDOW_IN_USE_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_NATIVE_WINDOW_IN_USE_KHR: return ERROR_NATIVE_WINDOW_IN_USE_KHR~;
   }
 }
-fn void? try_create_metal_surface_ext (Instance instance, MetalSurfaceCreateInfoEXT* pCreateInfo, AllocationCallbacks* pAllocator, SurfaceKHR* pSurface) {
-  Result result = extensions.vk_create_metal_surface_ext(instance, pCreateInfo, pAllocator, pSurface);
+fn void? try_create_metal_surface_ext (Instance instance, MetalSurfaceCreateInfoEXT* p_create_info, AllocationCallbacks* p_allocator, SurfaceKHR* p_surface) {
+  Result result = extensions.vk_create_metal_surface_ext(instance, p_create_info, p_allocator, p_surface);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_NATIVE_WINDOW_IN_USE_KHR: return E_ERROR_NATIVE_WINDOW_IN_USE_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_NATIVE_WINDOW_IN_USE_KHR: return ERROR_NATIVE_WINDOW_IN_USE_KHR~;
   }
 }
-fn void? try_get_physical_device_surface_capabilities_2_khr (PhysicalDevice physicalDevice, PhysicalDeviceSurfaceInfo2KHR* pSurfaceInfo, SurfaceCapabilities2KHR* pSurfaceCapabilities) {
-  Result result = extensions.vk_get_physical_device_surface_capabilities_2_khr(physicalDevice, pSurfaceInfo, pSurfaceCapabilities);
+fn void? try_get_physical_device_surface_capabilities2_khr (PhysicalDevice physical_device, PhysicalDeviceSurfaceInfo2KHR* p_surface_info, SurfaceCapabilities2KHR* p_surface_capabilities) {
+  Result result = extensions.vk_get_physical_device_surface_capabilities2_khr(physical_device, p_surface_info, p_surface_capabilities);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_get_physical_device_surface_formats_2_khr (PhysicalDevice physicalDevice, PhysicalDeviceSurfaceInfo2KHR* pSurfaceInfo, uint* pSurfaceFormatCount, SurfaceFormat2KHR* pSurfaceFormats) {
-  Result result = extensions.vk_get_physical_device_surface_formats_2_khr(physicalDevice, pSurfaceInfo, pSurfaceFormatCount, pSurfaceFormats);
+fn void? try_get_physical_device_surface_formats2_khr (PhysicalDevice physical_device, PhysicalDeviceSurfaceInfo2KHR* p_surface_info, uint* p_surface_format_count, SurfaceFormat2KHR* p_surface_formats) {
+  Result result = extensions.vk_get_physical_device_surface_formats2_khr(physical_device, p_surface_info, p_surface_format_count, p_surface_formats);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_get_physical_device_display_properties_2_khr (PhysicalDevice physicalDevice, uint* pPropertyCount, DisplayProperties2KHR* pProperties) {
-  Result result = extensions.vk_get_physical_device_display_properties_2_khr(physicalDevice, pPropertyCount, pProperties);
+fn void? try_get_physical_device_display_properties2_khr (PhysicalDevice physical_device, uint* p_property_count, DisplayProperties2KHR* p_properties) {
+  Result result = extensions.vk_get_physical_device_display_properties2_khr(physical_device, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_physical_device_display_plane_properties_2_khr (PhysicalDevice physicalDevice, uint* pPropertyCount, DisplayPlaneProperties2KHR* pProperties) {
-  Result result = extensions.vk_get_physical_device_display_plane_properties_2_khr(physicalDevice, pPropertyCount, pProperties);
+fn void? try_get_physical_device_display_plane_properties2_khr (PhysicalDevice physical_device, uint* p_property_count, DisplayPlaneProperties2KHR* p_properties) {
+  Result result = extensions.vk_get_physical_device_display_plane_properties2_khr(physical_device, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_display_mode_properties_2_khr (PhysicalDevice physicalDevice, DisplayKHR display, uint* pPropertyCount, DisplayModeProperties2KHR* pProperties) {
-  Result result = extensions.vk_get_display_mode_properties_2_khr(physicalDevice, display, pPropertyCount, pProperties);
+fn void? try_get_display_mode_properties2_khr (PhysicalDevice physical_device, DisplayKHR display, uint* p_property_count, DisplayModeProperties2KHR* p_properties) {
+  Result result = extensions.vk_get_display_mode_properties2_khr(physical_device, display, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_display_plane_capabilities_2_khr (PhysicalDevice physicalDevice, DisplayPlaneInfo2KHR* pDisplayPlaneInfo, DisplayPlaneCapabilities2KHR* pCapabilities) {
-  Result result = extensions.vk_get_display_plane_capabilities_2_khr(physicalDevice, pDisplayPlaneInfo, pCapabilities);
+fn void? try_get_display_plane_capabilities2_khr (PhysicalDevice physical_device, DisplayPlaneInfo2KHR* p_display_plane_info, DisplayPlaneCapabilities2KHR* p_capabilities) {
+  Result result = extensions.vk_get_display_plane_capabilities2_khr(physical_device, p_display_plane_info, p_capabilities);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_sampler_ycbcr_conversion (Device device, SamplerYcbcrConversionCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, SamplerYcbcrConversion* pYcbcrConversion) {
-  Result result = create_sampler_ycbcr_conversion(device, pCreateInfo, pAllocator, pYcbcrConversion);
+fn void? try_create_sampler_ycbcr_conversion (Device device, SamplerYcbcrConversionCreateInfo* p_create_info, AllocationCallbacks* p_allocator, SamplerYcbcrConversion* p_ycbcr_conversion) {
+  Result result = create_sampler_ycbcr_conversion(device, p_create_info, p_allocator, p_ycbcr_conversion);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_sampler_ycbcr_conversion_khr (Device device, SamplerYcbcrConversionCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, SamplerYcbcrConversion* pYcbcrConversion) {
-  Result result = extensions.vk_create_sampler_ycbcr_conversion_khr(device, pCreateInfo, pAllocator, pYcbcrConversion);
+fn void? try_create_sampler_ycbcr_conversion_khr (Device device, SamplerYcbcrConversionCreateInfo* p_create_info, AllocationCallbacks* p_allocator, SamplerYcbcrConversion* p_ycbcr_conversion) {
+  Result result = extensions.vk_create_sampler_ycbcr_conversion_khr(device, p_create_info, p_allocator, p_ycbcr_conversion);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_validation_cache_ext (Device device, ValidationCacheCreateInfoEXT* pCreateInfo, AllocationCallbacks* pAllocator, ValidationCacheEXT* pValidationCache) {
-  Result result = extensions.vk_create_validation_cache_ext(device, pCreateInfo, pAllocator, pValidationCache);
+fn void? try_create_validation_cache_ext (Device device, ValidationCacheCreateInfoEXT* p_create_info, AllocationCallbacks* p_allocator, ValidationCacheEXT* p_validation_cache) {
+  Result result = extensions.vk_create_validation_cache_ext(device, p_create_info, p_allocator, p_validation_cache);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_validation_cache_data_ext (Device device, ValidationCacheEXT validationCache, sz* pDataSize, void* pData) {
-  Result result = extensions.vk_get_validation_cache_data_ext(device, validationCache, pDataSize, pData);
+fn void? try_get_validation_cache_data_ext (Device device, ValidationCacheEXT validation_cache, sz* p_data_size, void* p_data) {
+  Result result = extensions.vk_get_validation_cache_data_ext(device, validation_cache, p_data_size, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_merge_validation_caches_ext (Device device, ValidationCacheEXT dstCache, uint srcCacheCount, ValidationCacheEXT* pSrcCaches) {
-  Result result = extensions.vk_merge_validation_caches_ext(device, dstCache, srcCacheCount, pSrcCaches);
+fn void? try_merge_validation_caches_ext (Device device, ValidationCacheEXT dst_cache, uint src_cache_count, ValidationCacheEXT* p_src_caches) {
+  Result result = extensions.vk_merge_validation_caches_ext(device, dst_cache, src_cache_count, p_src_caches);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_shader_info_amd (Device device, Pipeline pipeline, ShaderStageFlagBits shaderStage, ShaderInfoTypeAMD infoType, sz* pInfoSize, void* pInfo) {
-  Result result = extensions.vk_get_shader_info_amd(device, pipeline, shaderStage, infoType, pInfoSize, pInfo);
+fn void? try_get_shader_info_amd (Device device, Pipeline pipeline, ShaderStageFlagBits shader_stage, ShaderInfoTypeAMD info_type, sz* p_info_size, void* p_info) {
+  Result result = extensions.vk_get_shader_info_amd(device, pipeline, shader_stage, info_type, p_info_size, p_info);
   switch(result) { 
-       case ERROR_FEATURE_NOT_PRESENT: return E_ERROR_FEATURE_NOT_PRESENT~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_FEATURE_NOT_PRESENT: return ERROR_FEATURE_NOT_PRESENT~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_physical_device_calibrateable_time_domains_khr (PhysicalDevice physicalDevice, uint* pTimeDomainCount, TimeDomainKHR* pTimeDomains) {
-  Result result = extensions.vk_get_physical_device_calibrateable_time_domains_khr(physicalDevice, pTimeDomainCount, pTimeDomains);
+fn void? try_get_physical_device_calibrateable_time_domains_khr (PhysicalDevice physical_device, uint* p_time_domain_count, TimeDomainKHR* p_time_domains) {
+  Result result = extensions.vk_get_physical_device_calibrateable_time_domains_khr(physical_device, p_time_domain_count, p_time_domains);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_physical_device_calibrateable_time_domains_ext (PhysicalDevice physicalDevice, uint* pTimeDomainCount, TimeDomainKHR* pTimeDomains) {
-  Result result = extensions.vk_get_physical_device_calibrateable_time_domains_ext(physicalDevice, pTimeDomainCount, pTimeDomains);
+fn void? try_get_physical_device_calibrateable_time_domains_ext (PhysicalDevice physical_device, uint* p_time_domain_count, TimeDomainKHR* p_time_domains) {
+  Result result = extensions.vk_get_physical_device_calibrateable_time_domains_ext(physical_device, p_time_domain_count, p_time_domains);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_calibrated_timestamps_khr (Device device, uint timestampCount, CalibratedTimestampInfoKHR* pTimestampInfos, ulong* pTimestamps, ulong* pMaxDeviation) {
-  Result result = extensions.vk_get_calibrated_timestamps_khr(device, timestampCount, pTimestampInfos, pTimestamps, pMaxDeviation);
+fn void? try_get_calibrated_timestamps_khr (Device device, uint timestamp_count, CalibratedTimestampInfoKHR* p_timestamp_infos, ulong* p_timestamps, ulong* p_max_deviation) {
+  Result result = extensions.vk_get_calibrated_timestamps_khr(device, timestamp_count, p_timestamp_infos, p_timestamps, p_max_deviation);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_calibrated_timestamps_ext (Device device, uint timestampCount, CalibratedTimestampInfoKHR* pTimestampInfos, ulong* pTimestamps, ulong* pMaxDeviation) {
-  Result result = extensions.vk_get_calibrated_timestamps_ext(device, timestampCount, pTimestampInfos, pTimestamps, pMaxDeviation);
+fn void? try_get_calibrated_timestamps_ext (Device device, uint timestamp_count, CalibratedTimestampInfoKHR* p_timestamp_infos, ulong* p_timestamps, ulong* p_max_deviation) {
+  Result result = extensions.vk_get_calibrated_timestamps_ext(device, timestamp_count, p_timestamp_infos, p_timestamps, p_max_deviation);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_set_debug_utils_object_name_ext (Device device, DebugUtilsObjectNameInfoEXT* pNameInfo) {
-  Result result = extensions.vk_set_debug_utils_object_name_ext(device, pNameInfo);
+fn void? try_set_debug_utils_object_name_ext (Device device, DebugUtilsObjectNameInfoEXT* p_name_info) {
+  Result result = extensions.vk_set_debug_utils_object_name_ext(device, p_name_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_set_debug_utils_object_tag_ext (Device device, DebugUtilsObjectTagInfoEXT* pTagInfo) {
-  Result result = extensions.vk_set_debug_utils_object_tag_ext(device, pTagInfo);
+fn void? try_set_debug_utils_object_tag_ext (Device device, DebugUtilsObjectTagInfoEXT* p_tag_info) {
+  Result result = extensions.vk_set_debug_utils_object_tag_ext(device, p_tag_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_debug_utils_messenger_ext (Instance instance, DebugUtilsMessengerCreateInfoEXT* pCreateInfo, AllocationCallbacks* pAllocator, DebugUtilsMessengerEXT* pMessenger) {
-  Result result = extensions.vk_create_debug_utils_messenger_ext(instance, pCreateInfo, pAllocator, pMessenger);
+fn void? try_create_debug_utils_messenger_ext (Instance instance, DebugUtilsMessengerCreateInfoEXT* p_create_info, AllocationCallbacks* p_allocator, DebugUtilsMessengerEXT* p_messenger) {
+  Result result = extensions.vk_create_debug_utils_messenger_ext(instance, p_create_info, p_allocator, p_messenger);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_memory_host_pointer_properties_ext (Device device, ExternalMemoryHandleTypeFlagBits handleType, void* pHostPointer, MemoryHostPointerPropertiesEXT* pMemoryHostPointerProperties) {
-  Result result = extensions.vk_get_memory_host_pointer_properties_ext(device, handleType, pHostPointer, pMemoryHostPointerProperties);
+fn void? try_get_memory_host_pointer_properties_ext (Device device, ExternalMemoryHandleTypeFlagBits handle_type, void* p_host_pointer, MemoryHostPointerPropertiesEXT* p_memory_host_pointer_properties) {
+  Result result = extensions.vk_get_memory_host_pointer_properties_ext(device, handle_type, p_host_pointer, p_memory_host_pointer_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INVALID_EXTERNAL_HANDLE: return E_ERROR_INVALID_EXTERNAL_HANDLE~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INVALID_EXTERNAL_HANDLE: return ERROR_INVALID_EXTERNAL_HANDLE~;
   }
 }
-fn void? try_create_render_pass_2 (Device device, RenderPassCreateInfo2* pCreateInfo, AllocationCallbacks* pAllocator, RenderPass* pRenderPass) {
-  Result result = create_render_pass_2(device, pCreateInfo, pAllocator, pRenderPass);
+fn void? try_create_render_pass2 (Device device, RenderPassCreateInfo2* p_create_info, AllocationCallbacks* p_allocator, RenderPass* p_render_pass) {
+  Result result = create_render_pass2(device, p_create_info, p_allocator, p_render_pass);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_render_pass_2_khr (Device device, RenderPassCreateInfo2* pCreateInfo, AllocationCallbacks* pAllocator, RenderPass* pRenderPass) {
-  Result result = extensions.vk_create_render_pass_2_khr(device, pCreateInfo, pAllocator, pRenderPass);
+fn void? try_create_render_pass2_khr (Device device, RenderPassCreateInfo2* p_create_info, AllocationCallbacks* p_allocator, RenderPass* p_render_pass) {
+  Result result = extensions.vk_create_render_pass2_khr(device, p_create_info, p_allocator, p_render_pass);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_semaphore_counter_value (Device device, Semaphore semaphore, ulong* pValue) {
-  Result result = get_semaphore_counter_value(device, semaphore, pValue);
+fn void? try_get_semaphore_counter_value (Device device, Semaphore semaphore, ulong* p_value) {
+  Result result = get_semaphore_counter_value(device, semaphore, p_value);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_get_semaphore_counter_value_khr (Device device, Semaphore semaphore, ulong* pValue) {
-  Result result = extensions.vk_get_semaphore_counter_value_khr(device, semaphore, pValue);
+fn void? try_get_semaphore_counter_value_khr (Device device, Semaphore semaphore, ulong* p_value) {
+  Result result = extensions.vk_get_semaphore_counter_value_khr(device, semaphore, p_value);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_wait_semaphores (Device device, SemaphoreWaitInfo* pWaitInfo, ulong timeout) {
-  Result result = wait_semaphores(device, pWaitInfo, timeout);
+fn void? try_wait_semaphores (Device device, SemaphoreWaitInfo* p_wait_info, ulong timeout) {
+  Result result = wait_semaphores(device, p_wait_info, timeout);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_wait_semaphores_khr (Device device, SemaphoreWaitInfo* pWaitInfo, ulong timeout) {
-  Result result = extensions.vk_wait_semaphores_khr(device, pWaitInfo, timeout);
+fn void? try_wait_semaphores_khr (Device device, SemaphoreWaitInfo* p_wait_info, ulong timeout) {
+  Result result = extensions.vk_wait_semaphores_khr(device, p_wait_info, timeout);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_signal_semaphore (Device device, SemaphoreSignalInfo* pSignalInfo) {
-  Result result = signal_semaphore(device, pSignalInfo);
+fn void? try_signal_semaphore (Device device, SemaphoreSignalInfo* p_signal_info) {
+  Result result = signal_semaphore(device, p_signal_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_signal_semaphore_khr (Device device, SemaphoreSignalInfo* pSignalInfo) {
-  Result result = extensions.vk_signal_semaphore_khr(device, pSignalInfo);
+fn void? try_signal_semaphore_khr (Device device, SemaphoreSignalInfo* p_signal_info) {
+  Result result = extensions.vk_signal_semaphore_khr(device, p_signal_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
 fn void? try_compile_deferred_nv (Device device, Pipeline pipeline, uint shader) {
   Result result = extensions.vk_compile_deferred_nv(device, pipeline, shader);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_bind_acceleration_structure_memory_nv (Device device, uint bindInfoCount, BindAccelerationStructureMemoryInfoNV* pBindInfos) {
-  Result result = extensions.vk_bind_acceleration_structure_memory_nv(device, bindInfoCount, pBindInfos);
+fn void? try_bind_acceleration_structure_memory_nv (Device device, uint bind_info_count, BindAccelerationStructureMemoryInfoNV* p_bind_infos) {
+  Result result = extensions.vk_bind_acceleration_structure_memory_nv(device, bind_info_count, p_bind_infos);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_copy_acceleration_structure_khr (Device device, DeferredOperationKHR deferredOperation, CopyAccelerationStructureInfoKHR* pInfo) {
-  Result result = extensions.vk_copy_acceleration_structure_khr(device, deferredOperation, pInfo);
+fn void? try_copy_acceleration_structure_khr (Device device, DeferredOperationKHR deferred_operation, CopyAccelerationStructureInfoKHR* p_info) {
+  Result result = extensions.vk_copy_acceleration_structure_khr(device, deferred_operation, p_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_copy_acceleration_structure_to_memory_khr (Device device, DeferredOperationKHR deferredOperation, CopyAccelerationStructureToMemoryInfoKHR* pInfo) {
-  Result result = extensions.vk_copy_acceleration_structure_to_memory_khr(device, deferredOperation, pInfo);
+fn void? try_copy_acceleration_structure_to_memory_khr (Device device, DeferredOperationKHR deferred_operation, CopyAccelerationStructureToMemoryInfoKHR* p_info) {
+  Result result = extensions.vk_copy_acceleration_structure_to_memory_khr(device, deferred_operation, p_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_copy_memory_to_acceleration_structure_khr (Device device, DeferredOperationKHR deferredOperation, CopyMemoryToAccelerationStructureInfoKHR* pInfo) {
-  Result result = extensions.vk_copy_memory_to_acceleration_structure_khr(device, deferredOperation, pInfo);
+fn void? try_copy_memory_to_acceleration_structure_khr (Device device, DeferredOperationKHR deferred_operation, CopyMemoryToAccelerationStructureInfoKHR* p_info) {
+  Result result = extensions.vk_copy_memory_to_acceleration_structure_khr(device, deferred_operation, p_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_write_acceleration_structures_properties_khr (Device device, uint accelerationStructureCount, AccelerationStructureKHR* pAccelerationStructures, QueryType queryType, sz dataSize, void* pData, sz stride) {
-  Result result = extensions.vk_write_acceleration_structures_properties_khr(device, accelerationStructureCount, pAccelerationStructures, queryType, dataSize, pData, stride);
+fn void? try_write_acceleration_structures_properties_khr (Device device, uint acceleration_structure_count, AccelerationStructureKHR* p_acceleration_structures, QueryType query_type, sz data_size, void* p_data, sz stride) {
+  Result result = extensions.vk_write_acceleration_structures_properties_khr(device, acceleration_structure_count, p_acceleration_structures, query_type, data_size, p_data, stride);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_ray_tracing_shader_group_handles_khr (Device device, Pipeline pipeline, uint firstGroup, uint groupCount, sz dataSize, void* pData) {
-  Result result = extensions.vk_get_ray_tracing_shader_group_handles_khr(device, pipeline, firstGroup, groupCount, dataSize, pData);
+fn void? try_get_ray_tracing_shader_group_handles_khr (Device device, Pipeline pipeline, uint first_group, uint group_count, sz data_size, void* p_data) {
+  Result result = extensions.vk_get_ray_tracing_shader_group_handles_khr(device, pipeline, first_group, group_count, data_size, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_ray_tracing_shader_group_handles_nv (Device device, Pipeline pipeline, uint firstGroup, uint groupCount, sz dataSize, void* pData) {
-  Result result = extensions.vk_get_ray_tracing_shader_group_handles_nv(device, pipeline, firstGroup, groupCount, dataSize, pData);
+fn void? try_get_ray_tracing_shader_group_handles_nv (Device device, Pipeline pipeline, uint first_group, uint group_count, sz data_size, void* p_data) {
+  Result result = extensions.vk_get_ray_tracing_shader_group_handles_nv(device, pipeline, first_group, group_count, data_size, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_ray_tracing_capture_replay_shader_group_handles_khr (Device device, Pipeline pipeline, uint firstGroup, uint groupCount, sz dataSize, void* pData) {
-  Result result = extensions.vk_get_ray_tracing_capture_replay_shader_group_handles_khr(device, pipeline, firstGroup, groupCount, dataSize, pData);
+fn void? try_get_ray_tracing_capture_replay_shader_group_handles_khr (Device device, Pipeline pipeline, uint first_group, uint group_count, sz data_size, void* p_data) {
+  Result result = extensions.vk_get_ray_tracing_capture_replay_shader_group_handles_khr(device, pipeline, first_group, group_count, data_size, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_acceleration_structure_handle_nv (Device device, AccelerationStructureNV accelerationStructure, sz dataSize, void* pData) {
-  Result result = extensions.vk_get_acceleration_structure_handle_nv(device, accelerationStructure, dataSize, pData);
+fn void? try_get_acceleration_structure_handle_nv (Device device, AccelerationStructureNV acceleration_structure, sz data_size, void* p_data) {
+  Result result = extensions.vk_get_acceleration_structure_handle_nv(device, acceleration_structure, data_size, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_ray_tracing_pipelines_nv (Device device, PipelineCache pipelineCache, uint createInfoCount, RayTracingPipelineCreateInfoNV* pCreateInfos, AllocationCallbacks* pAllocator, Pipeline* pPipelines) {
-  Result result = extensions.vk_create_ray_tracing_pipelines_nv(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines);
+fn void? try_create_ray_tracing_pipelines_nv (Device device, PipelineCache pipeline_cache, uint create_info_count, RayTracingPipelineCreateInfoNV* p_create_infos, AllocationCallbacks* p_allocator, Pipeline* p_pipelines) {
+  Result result = extensions.vk_create_ray_tracing_pipelines_nv(device, pipeline_cache, create_info_count, p_create_infos, p_allocator, p_pipelines);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_SHADER_NV: return E_ERROR_INVALID_SHADER_NV~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_SHADER_NV: return ERROR_INVALID_SHADER_NV~;
   }
 }
-fn void? try_create_ray_tracing_pipelines_khr (Device device, DeferredOperationKHR deferredOperation, PipelineCache pipelineCache, uint createInfoCount, RayTracingPipelineCreateInfoKHR* pCreateInfos, AllocationCallbacks* pAllocator, Pipeline* pPipelines) {
-  Result result = extensions.vk_create_ray_tracing_pipelines_khr(device, deferredOperation, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines);
+fn void? try_create_ray_tracing_pipelines_khr (Device device, DeferredOperationKHR deferred_operation, PipelineCache pipeline_cache, uint create_info_count, RayTracingPipelineCreateInfoKHR* p_create_infos, AllocationCallbacks* p_allocator, Pipeline* p_pipelines) {
+  Result result = extensions.vk_create_ray_tracing_pipelines_khr(device, deferred_operation, pipeline_cache, create_info_count, p_create_infos, p_allocator, p_pipelines);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_get_image_view_address_nvx (Device device, ImageView imageView, ImageViewAddressPropertiesNVX* pProperties) {
-  Result result = extensions.vk_get_image_view_address_nvx(device, imageView, pProperties);
+fn void? try_get_image_view_address_nvx (Device device, ImageView image_view, ImageViewAddressPropertiesNVX* p_properties) {
+  Result result = extensions.vk_get_image_view_address_nvx(device, image_view, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_physical_device_surface_present_modes_2_ext (PhysicalDevice physicalDevice, PhysicalDeviceSurfaceInfo2KHR* pSurfaceInfo, uint* pPresentModeCount, PresentModeKHR* pPresentModes) {
-  Result result = extensions.vk_get_physical_device_surface_present_modes_2_ext(physicalDevice, pSurfaceInfo, pPresentModeCount, pPresentModes);
+fn void? try_get_physical_device_surface_present_modes2_ext (PhysicalDevice physical_device, PhysicalDeviceSurfaceInfo2KHR* p_surface_info, uint* p_present_mode_count, PresentModeKHR* p_present_modes) {
+  Result result = extensions.vk_get_physical_device_surface_present_modes2_ext(physical_device, p_surface_info, p_present_mode_count, p_present_modes);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_get_device_group_surface_present_modes_2_ext (Device device, PhysicalDeviceSurfaceInfo2KHR* pSurfaceInfo, DeviceGroupPresentModeFlagsKHR* pModes) {
-  Result result = extensions.vk_get_device_group_surface_present_modes_2_ext(device, pSurfaceInfo, pModes);
+fn void? try_get_device_group_surface_present_modes2_ext (Device device, PhysicalDeviceSurfaceInfo2KHR* p_surface_info, DeviceGroupPresentModeFlagsKHR* p_modes) {
+  Result result = extensions.vk_get_device_group_surface_present_modes2_ext(device, p_surface_info, p_modes);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
 fn void? try_acquire_full_screen_exclusive_mode_ext (Device device, SwapchainKHR swapchain) {
   Result result = extensions.vk_acquire_full_screen_exclusive_mode_ext(device, swapchain);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
 fn void? try_release_full_screen_exclusive_mode_ext (Device device, SwapchainKHR swapchain) {
   Result result = extensions.vk_release_full_screen_exclusive_mode_ext(device, swapchain);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_enumerate_physical_device_queue_family_performance_query_counters_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex, uint* pCounterCount, PerformanceCounterKHR* pCounters, PerformanceCounterDescriptionKHR* pCounterDescriptions) {
-  Result result = extensions.vk_enumerate_physical_device_queue_family_performance_query_counters_khr(physicalDevice, queueFamilyIndex, pCounterCount, pCounters, pCounterDescriptions);
+fn void? try_enumerate_physical_device_queue_family_performance_query_counters_khr (PhysicalDevice physical_device, uint queue_family_index, uint* p_counter_count, PerformanceCounterKHR* p_counters, PerformanceCounterDescriptionKHR* p_counter_descriptions) {
+  Result result = extensions.vk_enumerate_physical_device_queue_family_performance_query_counters_khr(physical_device, queue_family_index, p_counter_count, p_counters, p_counter_descriptions);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_acquire_profiling_lock_khr (Device device, AcquireProfilingLockInfoKHR* pInfo) {
-  Result result = extensions.vk_acquire_profiling_lock_khr(device, pInfo);
+fn void? try_acquire_profiling_lock_khr (Device device, AcquireProfilingLockInfoKHR* p_info) {
+  Result result = extensions.vk_acquire_profiling_lock_khr(device, p_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_image_drm_format_modifier_properties_ext (Device device, Image image, ImageDrmFormatModifierPropertiesEXT* pProperties) {
-  Result result = extensions.vk_get_image_drm_format_modifier_properties_ext(device, image, pProperties);
+fn void? try_get_image_drm_format_modifier_properties_ext (Device device, Image image, ImageDrmFormatModifierPropertiesEXT* p_properties) {
+  Result result = extensions.vk_get_image_drm_format_modifier_properties_ext(device, image, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_create_headless_surface_ext (Instance instance, HeadlessSurfaceCreateInfoEXT* pCreateInfo, AllocationCallbacks* pAllocator, SurfaceKHR* pSurface) {
-  Result result = extensions.vk_create_headless_surface_ext(instance, pCreateInfo, pAllocator, pSurface);
+fn void? try_create_headless_surface_ext (Instance instance, HeadlessSurfaceCreateInfoEXT* p_create_info, AllocationCallbacks* p_allocator, SurfaceKHR* p_surface) {
+  Result result = extensions.vk_create_headless_surface_ext(instance, p_create_info, p_allocator, p_surface);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_physical_device_supported_framebuffer_mixed_samples_combinations_nv (PhysicalDevice physicalDevice, uint* pCombinationCount, FramebufferMixedSamplesCombinationNV* pCombinations) {
-  Result result = extensions.vk_get_physical_device_supported_framebuffer_mixed_samples_combinations_nv(physicalDevice, pCombinationCount, pCombinations);
+fn void? try_get_physical_device_supported_framebuffer_mixed_samples_combinations_nv (PhysicalDevice physical_device, uint* p_combination_count, FramebufferMixedSamplesCombinationNV* p_combinations) {
+  Result result = extensions.vk_get_physical_device_supported_framebuffer_mixed_samples_combinations_nv(physical_device, p_combination_count, p_combinations);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_initialize_performance_api_intel (Device device, InitializePerformanceApiInfoINTEL* pInitializeInfo) {
-  Result result = extensions.vk_initialize_performance_api_intel(device, pInitializeInfo);
+fn void? try_initialize_performance_api_intel (Device device, InitializePerformanceApiInfoINTEL* p_initialize_info) {
+  Result result = extensions.vk_initialize_performance_api_intel(device, p_initialize_info);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_cmd_set_performance_marker_intel (CommandBuffer commandBuffer, PerformanceMarkerInfoINTEL* pMarkerInfo) {
-  Result result = extensions.vk_cmd_set_performance_marker_intel(commandBuffer, pMarkerInfo);
+fn void? try_cmd_set_performance_marker_intel (CommandBuffer command_buffer, PerformanceMarkerInfoINTEL* p_marker_info) {
+  Result result = extensions.vk_cmd_set_performance_marker_intel(command_buffer, p_marker_info);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_cmd_set_performance_stream_marker_intel (CommandBuffer commandBuffer, PerformanceStreamMarkerInfoINTEL* pMarkerInfo) {
-  Result result = extensions.vk_cmd_set_performance_stream_marker_intel(commandBuffer, pMarkerInfo);
+fn void? try_cmd_set_performance_stream_marker_intel (CommandBuffer command_buffer, PerformanceStreamMarkerInfoINTEL* p_marker_info) {
+  Result result = extensions.vk_cmd_set_performance_stream_marker_intel(command_buffer, p_marker_info);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_cmd_set_performance_override_intel (CommandBuffer commandBuffer, PerformanceOverrideInfoINTEL* pOverrideInfo) {
-  Result result = extensions.vk_cmd_set_performance_override_intel(commandBuffer, pOverrideInfo);
+fn void? try_cmd_set_performance_override_intel (CommandBuffer command_buffer, PerformanceOverrideInfoINTEL* p_override_info) {
+  Result result = extensions.vk_cmd_set_performance_override_intel(command_buffer, p_override_info);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_acquire_performance_configuration_intel (Device device, PerformanceConfigurationAcquireInfoINTEL* pAcquireInfo, PerformanceConfigurationINTEL* pConfiguration) {
-  Result result = extensions.vk_acquire_performance_configuration_intel(device, pAcquireInfo, pConfiguration);
+fn void? try_acquire_performance_configuration_intel (Device device, PerformanceConfigurationAcquireInfoINTEL* p_acquire_info, PerformanceConfigurationINTEL* p_configuration) {
+  Result result = extensions.vk_acquire_performance_configuration_intel(device, p_acquire_info, p_configuration);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
 fn void? try_release_performance_configuration_intel (Device device, PerformanceConfigurationINTEL configuration) {
   Result result = extensions.vk_release_performance_configuration_intel(device, configuration);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
 fn void? try_queue_set_performance_configuration_intel (Queue queue, PerformanceConfigurationINTEL configuration) {
   Result result = extensions.vk_queue_set_performance_configuration_intel(queue, configuration);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_performance_parameter_intel (Device device, PerformanceParameterTypeINTEL parameter, PerformanceValueINTEL* pValue) {
-  Result result = extensions.vk_get_performance_parameter_intel(device, parameter, pValue);
+fn void? try_get_performance_parameter_intel (Device device, PerformanceParameterTypeINTEL parameter, PerformanceValueINTEL* p_value) {
+  Result result = extensions.vk_get_performance_parameter_intel(device, parameter, p_value);
   switch(result) { 
-       case ERROR_TOO_MANY_OBJECTS: return E_ERROR_TOO_MANY_OBJECTS~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_TOO_MANY_OBJECTS: return ERROR_TOO_MANY_OBJECTS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_pipeline_executable_properties_khr (Device device, PipelineInfoKHR* pPipelineInfo, uint* pExecutableCount, PipelineExecutablePropertiesKHR* pProperties) {
-  Result result = extensions.vk_get_pipeline_executable_properties_khr(device, pPipelineInfo, pExecutableCount, pProperties);
+fn void? try_get_pipeline_executable_properties_khr (Device device, PipelineInfoKHR* p_pipeline_info, uint* p_executable_count, PipelineExecutablePropertiesKHR* p_properties) {
+  Result result = extensions.vk_get_pipeline_executable_properties_khr(device, p_pipeline_info, p_executable_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_pipeline_executable_statistics_khr (Device device, PipelineExecutableInfoKHR* pExecutableInfo, uint* pStatisticCount, PipelineExecutableStatisticKHR* pStatistics) {
-  Result result = extensions.vk_get_pipeline_executable_statistics_khr(device, pExecutableInfo, pStatisticCount, pStatistics);
+fn void? try_get_pipeline_executable_statistics_khr (Device device, PipelineExecutableInfoKHR* p_executable_info, uint* p_statistic_count, PipelineExecutableStatisticKHR* p_statistics) {
+  Result result = extensions.vk_get_pipeline_executable_statistics_khr(device, p_executable_info, p_statistic_count, p_statistics);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_pipeline_executable_internal_representations_khr (Device device, PipelineExecutableInfoKHR* pExecutableInfo, uint* pInternalRepresentationCount, PipelineExecutableInternalRepresentationKHR* pInternalRepresentations) {
-  Result result = extensions.vk_get_pipeline_executable_internal_representations_khr(device, pExecutableInfo, pInternalRepresentationCount, pInternalRepresentations);
+fn void? try_get_pipeline_executable_internal_representations_khr (Device device, PipelineExecutableInfoKHR* p_executable_info, uint* p_internal_representation_count, PipelineExecutableInternalRepresentationKHR* p_internal_representations) {
+  Result result = extensions.vk_get_pipeline_executable_internal_representations_khr(device, p_executable_info, p_internal_representation_count, p_internal_representations);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_physical_device_tool_properties (PhysicalDevice physicalDevice, uint* pToolCount, PhysicalDeviceToolProperties* pToolProperties) {
-  Result result = get_physical_device_tool_properties(physicalDevice, pToolCount, pToolProperties);
+fn void? try_get_physical_device_tool_properties (PhysicalDevice physical_device, uint* p_tool_count, PhysicalDeviceToolProperties* p_tool_properties) {
+  Result result = get_physical_device_tool_properties(physical_device, p_tool_count, p_tool_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_physical_device_tool_properties_ext (PhysicalDevice physicalDevice, uint* pToolCount, PhysicalDeviceToolProperties* pToolProperties) {
-  Result result = extensions.vk_get_physical_device_tool_properties_ext(physicalDevice, pToolCount, pToolProperties);
+fn void? try_get_physical_device_tool_properties_ext (PhysicalDevice physical_device, uint* p_tool_count, PhysicalDeviceToolProperties* p_tool_properties) {
+  Result result = extensions.vk_get_physical_device_tool_properties_ext(physical_device, p_tool_count, p_tool_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_create_acceleration_structure_khr (Device device, AccelerationStructureCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, AccelerationStructureKHR* pAccelerationStructure) {
-  Result result = extensions.vk_create_acceleration_structure_khr(device, pCreateInfo, pAllocator, pAccelerationStructure);
+fn void? try_create_acceleration_structure_khr (Device device, AccelerationStructureCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, AccelerationStructureKHR* p_acceleration_structure) {
+  Result result = extensions.vk_create_acceleration_structure_khr(device, p_create_info, p_allocator, p_acceleration_structure);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_build_acceleration_structures_khr (Device device, DeferredOperationKHR deferredOperation, uint infoCount, AccelerationStructureBuildGeometryInfoKHR* pInfos, AccelerationStructureBuildRangeInfoKHR*  ppBuildRangeInfos) {
-  Result result = extensions.vk_build_acceleration_structures_khr(device, deferredOperation, infoCount, pInfos, ppBuildRangeInfos);
+fn void? try_build_acceleration_structures_khr (Device device, DeferredOperationKHR deferred_operation, uint info_count, AccelerationStructureBuildGeometryInfoKHR* p_infos, AccelerationStructureBuildRangeInfoKHR*  pp_build_range_infos) {
+  Result result = extensions.vk_build_acceleration_structures_khr(device, deferred_operation, info_count, p_infos, pp_build_range_infos);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_deferred_operation_khr (Device device, AllocationCallbacks* pAllocator, DeferredOperationKHR* pDeferredOperation) {
-  Result result = extensions.vk_create_deferred_operation_khr(device, pAllocator, pDeferredOperation);
+fn void? try_create_deferred_operation_khr (Device device, AllocationCallbacks* p_allocator, DeferredOperationKHR* p_deferred_operation) {
+  Result result = extensions.vk_create_deferred_operation_khr(device, p_allocator, p_deferred_operation);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
 fn void? try_get_deferred_operation_result_khr (Device device, DeferredOperationKHR operation) {
   Result result = extensions.vk_get_deferred_operation_result_khr(device, operation);
-  if (result != (Result)0) return E_ERROR_UNKNOWN~;
+  if (result != (Result)0) return ERROR_UNKNOWN~;
 }
 fn void? try_deferred_operation_join_khr (Device device, DeferredOperationKHR operation) {
   Result result = extensions.vk_deferred_operation_join_khr(device, operation);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_private_data_slot (Device device, PrivateDataSlotCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, PrivateDataSlot* pPrivateDataSlot) {
-  Result result = create_private_data_slot(device, pCreateInfo, pAllocator, pPrivateDataSlot);
+fn void? try_create_private_data_slot (Device device, PrivateDataSlotCreateInfo* p_create_info, AllocationCallbacks* p_allocator, PrivateDataSlot* p_private_data_slot) {
+  Result result = create_private_data_slot(device, p_create_info, p_allocator, p_private_data_slot);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_create_private_data_slot_ext (Device device, PrivateDataSlotCreateInfo* pCreateInfo, AllocationCallbacks* pAllocator, PrivateDataSlot* pPrivateDataSlot) {
-  Result result = extensions.vk_create_private_data_slot_ext(device, pCreateInfo, pAllocator, pPrivateDataSlot);
+fn void? try_create_private_data_slot_ext (Device device, PrivateDataSlotCreateInfo* p_create_info, AllocationCallbacks* p_allocator, PrivateDataSlot* p_private_data_slot) {
+  Result result = extensions.vk_create_private_data_slot_ext(device, p_create_info, p_allocator, p_private_data_slot);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_set_private_data (Device device, ObjectType objectType, ulong objectHandle, PrivateDataSlot privateDataSlot, ulong data) {
-  Result result = set_private_data(device, objectType, objectHandle, privateDataSlot, data);
+fn void? try_set_private_data (Device device, ObjectType object_type, ulong object_handle, PrivateDataSlot private_data_slot, ulong data) {
+  Result result = set_private_data(device, object_type, object_handle, private_data_slot, data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_set_private_data_ext (Device device, ObjectType objectType, ulong objectHandle, PrivateDataSlot privateDataSlot, ulong data) {
-  Result result = extensions.vk_set_private_data_ext(device, objectType, objectHandle, privateDataSlot, data);
+fn void? try_set_private_data_ext (Device device, ObjectType object_type, ulong object_handle, PrivateDataSlot private_data_slot, ulong data) {
+  Result result = extensions.vk_set_private_data_ext(device, object_type, object_handle, private_data_slot, data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_physical_device_fragment_shading_rates_khr (PhysicalDevice physicalDevice, uint* pFragmentShadingRateCount, PhysicalDeviceFragmentShadingRateKHR* pFragmentShadingRates) {
-  Result result = extensions.vk_get_physical_device_fragment_shading_rates_khr(physicalDevice, pFragmentShadingRateCount, pFragmentShadingRates);
+fn void? try_get_physical_device_fragment_shading_rates_khr (PhysicalDevice physical_device, uint* p_fragment_shading_rate_count, PhysicalDeviceFragmentShadingRateKHR* p_fragment_shading_rates) {
+  Result result = extensions.vk_get_physical_device_fragment_shading_rates_khr(physical_device, p_fragment_shading_rate_count, p_fragment_shading_rates);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_queue_submit_2 (Queue queue, uint submitCount, SubmitInfo2* pSubmits, Fence fence) {
-  Result result = queue_submit_2(queue, submitCount, pSubmits, fence);
+fn void? try_queue_submit2 (Queue queue, uint submit_count, SubmitInfo2* p_submits, Fence fence) {
+  Result result = queue_submit2(queue, submit_count, p_submits, fence);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_queue_submit_2_khr (Queue queue, uint submitCount, SubmitInfo2* pSubmits, Fence fence) {
-  Result result = extensions.vk_queue_submit_2_khr(queue, submitCount, pSubmits, fence);
+fn void? try_queue_submit2_khr (Queue queue, uint submit_count, SubmitInfo2* p_submits, Fence fence) {
+  Result result = extensions.vk_queue_submit2_khr(queue, submit_count, p_submits, fence);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
   }
 }
-fn void? try_copy_memory_to_image_ext (Device device, CopyMemoryToImageInfoEXT* pCopyMemoryToImageInfo) {
-  Result result = extensions.vk_copy_memory_to_image_ext(device, pCopyMemoryToImageInfo);
+fn void? try_copy_memory_to_image_ext (Device device, CopyMemoryToImageInfoEXT* p_copy_memory_to_image_info) {
+  Result result = extensions.vk_copy_memory_to_image_ext(device, p_copy_memory_to_image_info);
   switch(result) { 
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_MEMORY_MAP_FAILED: return E_ERROR_MEMORY_MAP_FAILED~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_MEMORY_MAP_FAILED: return ERROR_MEMORY_MAP_FAILED~;
   }
 }
-fn void? try_copy_image_to_memory_ext (Device device, CopyImageToMemoryInfoEXT* pCopyImageToMemoryInfo) {
-  Result result = extensions.vk_copy_image_to_memory_ext(device, pCopyImageToMemoryInfo);
+fn void? try_copy_image_to_memory_ext (Device device, CopyImageToMemoryInfoEXT* p_copy_image_to_memory_info) {
+  Result result = extensions.vk_copy_image_to_memory_ext(device, p_copy_image_to_memory_info);
   switch(result) { 
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_MEMORY_MAP_FAILED: return E_ERROR_MEMORY_MAP_FAILED~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_MEMORY_MAP_FAILED: return ERROR_MEMORY_MAP_FAILED~;
   }
 }
-fn void? try_copy_image_to_image_ext (Device device, CopyImageToImageInfoEXT* pCopyImageToImageInfo) {
-  Result result = extensions.vk_copy_image_to_image_ext(device, pCopyImageToImageInfo);
+fn void? try_copy_image_to_image_ext (Device device, CopyImageToImageInfoEXT* p_copy_image_to_image_info) {
+  Result result = extensions.vk_copy_image_to_image_ext(device, p_copy_image_to_image_info);
   switch(result) { 
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_MEMORY_MAP_FAILED: return E_ERROR_MEMORY_MAP_FAILED~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_MEMORY_MAP_FAILED: return ERROR_MEMORY_MAP_FAILED~;
   }
 }
-fn void? try_transition_image_layout_ext (Device device, uint transitionCount, HostImageLayoutTransitionInfoEXT* pTransitions) {
-  Result result = extensions.vk_transition_image_layout_ext(device, transitionCount, pTransitions);
+fn void? try_transition_image_layout_ext (Device device, uint transition_count, HostImageLayoutTransitionInfoEXT* p_transitions) {
+  Result result = extensions.vk_transition_image_layout_ext(device, transition_count, p_transitions);
   switch(result) { 
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_MEMORY_MAP_FAILED: return E_ERROR_MEMORY_MAP_FAILED~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_MEMORY_MAP_FAILED: return ERROR_MEMORY_MAP_FAILED~;
   }
 }
-fn void? try_get_physical_device_video_capabilities_khr (PhysicalDevice physicalDevice, VideoProfileInfoKHR* pVideoProfile, VideoCapabilitiesKHR* pCapabilities) {
-  Result result = extensions.vk_get_physical_device_video_capabilities_khr(physicalDevice, pVideoProfile, pCapabilities);
+fn void? try_get_physical_device_video_capabilities_khr (PhysicalDevice physical_device, VideoProfileInfoKHR* p_video_profile, VideoCapabilitiesKHR* p_capabilities) {
+  Result result = extensions.vk_get_physical_device_video_capabilities_khr(physical_device, p_video_profile, p_capabilities);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
   }
 }
-fn void? try_get_physical_device_video_format_properties_khr (PhysicalDevice physicalDevice, PhysicalDeviceVideoFormatInfoKHR* pVideoFormatInfo, uint* pVideoFormatPropertyCount, VideoFormatPropertiesKHR* pVideoFormatProperties) {
-  Result result = extensions.vk_get_physical_device_video_format_properties_khr(physicalDevice, pVideoFormatInfo, pVideoFormatPropertyCount, pVideoFormatProperties);
+fn void? try_get_physical_device_video_format_properties_khr (PhysicalDevice physical_device, PhysicalDeviceVideoFormatInfoKHR* p_video_format_info, uint* p_video_format_property_count, VideoFormatPropertiesKHR* p_video_format_properties) {
+  Result result = extensions.vk_get_physical_device_video_format_properties_khr(physical_device, p_video_format_info, p_video_format_property_count, p_video_format_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR: return E_ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR: return ERROR_IMAGE_USAGE_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
   }
 }
-fn void? try_get_physical_device_video_encode_quality_level_properties_khr (PhysicalDevice physicalDevice, PhysicalDeviceVideoEncodeQualityLevelInfoKHR* pQualityLevelInfo, VideoEncodeQualityLevelPropertiesKHR* pQualityLevelProperties) {
-  Result result = extensions.vk_get_physical_device_video_encode_quality_level_properties_khr(physicalDevice, pQualityLevelInfo, pQualityLevelProperties);
+fn void? try_get_physical_device_video_encode_quality_level_properties_khr (PhysicalDevice physical_device, PhysicalDeviceVideoEncodeQualityLevelInfoKHR* p_quality_level_info, VideoEncodeQualityLevelPropertiesKHR* p_quality_level_properties) {
+  Result result = extensions.vk_get_physical_device_video_encode_quality_level_properties_khr(physical_device, p_quality_level_info, p_quality_level_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
-       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_OPERATION_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_FORMAT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PICTURE_LAYOUT_NOT_SUPPORTED_KHR~;
+       case ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR: return ERROR_VIDEO_PROFILE_CODEC_NOT_SUPPORTED_KHR~;
   }
 }
-fn void? try_create_video_session_khr (Device device, VideoSessionCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, VideoSessionKHR* pVideoSession) {
-  Result result = extensions.vk_create_video_session_khr(device, pCreateInfo, pAllocator, pVideoSession);
+fn void? try_create_video_session_khr (Device device, VideoSessionCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, VideoSessionKHR* p_video_session) {
+  Result result = extensions.vk_create_video_session_khr(device, p_create_info, p_allocator, p_video_session);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_VIDEO_STD_VERSION_NOT_SUPPORTED_KHR: return E_ERROR_VIDEO_STD_VERSION_NOT_SUPPORTED_KHR~;
-       case ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR: return E_ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_VIDEO_STD_VERSION_NOT_SUPPORTED_KHR: return ERROR_VIDEO_STD_VERSION_NOT_SUPPORTED_KHR~;
+       case ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR: return ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR~;
   }
 }
-fn void? try_create_video_session_parameters_khr (Device device, VideoSessionParametersCreateInfoKHR* pCreateInfo, AllocationCallbacks* pAllocator, VideoSessionParametersKHR* pVideoSessionParameters) {
-  Result result = extensions.vk_create_video_session_parameters_khr(device, pCreateInfo, pAllocator, pVideoSessionParameters);
+fn void? try_create_video_session_parameters_khr (Device device, VideoSessionParametersCreateInfoKHR* p_create_info, AllocationCallbacks* p_allocator, VideoSessionParametersKHR* p_video_session_parameters) {
+  Result result = extensions.vk_create_video_session_parameters_khr(device, p_create_info, p_allocator, p_video_session_parameters);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR: return E_ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR: return ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR~;
   }
 }
-fn void? try_update_video_session_parameters_khr (Device device, VideoSessionParametersKHR videoSessionParameters, VideoSessionParametersUpdateInfoKHR* pUpdateInfo) {
-  Result result = extensions.vk_update_video_session_parameters_khr(device, videoSessionParameters, pUpdateInfo);
+fn void? try_update_video_session_parameters_khr (Device device, VideoSessionParametersKHR video_session_parameters, VideoSessionParametersUpdateInfoKHR* p_update_info) {
+  Result result = extensions.vk_update_video_session_parameters_khr(device, video_session_parameters, p_update_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR: return E_ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR: return ERROR_INVALID_VIDEO_STD_PARAMETERS_KHR~;
   }
 }
-fn void? try_get_encoded_video_session_parameters_khr (Device device, VideoEncodeSessionParametersGetInfoKHR* pVideoSessionParametersInfo, VideoEncodeSessionParametersFeedbackInfoKHR* pFeedbackInfo, sz* pDataSize, void* pData) {
-  Result result = extensions.vk_get_encoded_video_session_parameters_khr(device, pVideoSessionParametersInfo, pFeedbackInfo, pDataSize, pData);
+fn void? try_get_encoded_video_session_parameters_khr (Device device, VideoEncodeSessionParametersGetInfoKHR* p_video_session_parameters_info, VideoEncodeSessionParametersFeedbackInfoKHR* p_feedback_info, sz* p_data_size, void* p_data) {
+  Result result = extensions.vk_get_encoded_video_session_parameters_khr(device, p_video_session_parameters_info, p_feedback_info, p_data_size, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_video_session_memory_requirements_khr (Device device, VideoSessionKHR videoSession, uint* pMemoryRequirementsCount, VideoSessionMemoryRequirementsKHR* pMemoryRequirements) {
-  Result result = extensions.vk_get_video_session_memory_requirements_khr(device, videoSession, pMemoryRequirementsCount, pMemoryRequirements);
-  if (result != (Result)0) return E_ERROR_UNKNOWN~;
+fn void? try_get_video_session_memory_requirements_khr (Device device, VideoSessionKHR video_session, uint* p_memory_requirements_count, VideoSessionMemoryRequirementsKHR* p_memory_requirements) {
+  Result result = extensions.vk_get_video_session_memory_requirements_khr(device, video_session, p_memory_requirements_count, p_memory_requirements);
+  if (result != (Result)0) return ERROR_UNKNOWN~;
 }
-fn void? try_bind_video_session_memory_khr (Device device, VideoSessionKHR videoSession, uint bindSessionMemoryInfoCount, BindVideoSessionMemoryInfoKHR* pBindSessionMemoryInfos) {
-  Result result = extensions.vk_bind_video_session_memory_khr(device, videoSession, bindSessionMemoryInfoCount, pBindSessionMemoryInfos);
+fn void? try_bind_video_session_memory_khr (Device device, VideoSessionKHR video_session, uint bind_session_memory_info_count, BindVideoSessionMemoryInfoKHR* p_bind_session_memory_infos) {
+  Result result = extensions.vk_bind_video_session_memory_khr(device, video_session, bind_session_memory_info_count, p_bind_session_memory_infos);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_create_cu_module_nvx (Device device, CuModuleCreateInfoNVX* pCreateInfo, AllocationCallbacks* pAllocator, CuModuleNVX* pModule) {
-  Result result = extensions.vk_create_cu_module_nvx(device, pCreateInfo, pAllocator, pModule);
+fn void? try_create_cu_module_nvx (Device device, CuModuleCreateInfoNVX* p_create_info, AllocationCallbacks* p_allocator, CuModuleNVX* p_module) {
+  Result result = extensions.vk_create_cu_module_nvx(device, p_create_info, p_allocator, p_module);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_create_cu_function_nvx (Device device, CuFunctionCreateInfoNVX* pCreateInfo, AllocationCallbacks* pAllocator, CuFunctionNVX* pFunction) {
-  Result result = extensions.vk_create_cu_function_nvx(device, pCreateInfo, pAllocator, pFunction);
+fn void? try_create_cu_function_nvx (Device device, CuFunctionCreateInfoNVX* p_create_info, AllocationCallbacks* p_allocator, CuFunctionNVX* p_function) {
+  Result result = extensions.vk_create_cu_function_nvx(device, p_create_info, p_allocator, p_function);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_get_buffer_opaque_capture_descriptor_data_ext (Device device, BufferCaptureDescriptorDataInfoEXT* pInfo, void* pData) {
-  Result result = extensions.vk_get_buffer_opaque_capture_descriptor_data_ext(device, pInfo, pData);
+fn void? try_get_buffer_opaque_capture_descriptor_data_ext (Device device, BufferCaptureDescriptorDataInfoEXT* p_info, void* p_data) {
+  Result result = extensions.vk_get_buffer_opaque_capture_descriptor_data_ext(device, p_info, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_image_opaque_capture_descriptor_data_ext (Device device, ImageCaptureDescriptorDataInfoEXT* pInfo, void* pData) {
-  Result result = extensions.vk_get_image_opaque_capture_descriptor_data_ext(device, pInfo, pData);
+fn void? try_get_image_opaque_capture_descriptor_data_ext (Device device, ImageCaptureDescriptorDataInfoEXT* p_info, void* p_data) {
+  Result result = extensions.vk_get_image_opaque_capture_descriptor_data_ext(device, p_info, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_image_view_opaque_capture_descriptor_data_ext (Device device, ImageViewCaptureDescriptorDataInfoEXT* pInfo, void* pData) {
-  Result result = extensions.vk_get_image_view_opaque_capture_descriptor_data_ext(device, pInfo, pData);
+fn void? try_get_image_view_opaque_capture_descriptor_data_ext (Device device, ImageViewCaptureDescriptorDataInfoEXT* p_info, void* p_data) {
+  Result result = extensions.vk_get_image_view_opaque_capture_descriptor_data_ext(device, p_info, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_sampler_opaque_capture_descriptor_data_ext (Device device, SamplerCaptureDescriptorDataInfoEXT* pInfo, void* pData) {
-  Result result = extensions.vk_get_sampler_opaque_capture_descriptor_data_ext(device, pInfo, pData);
+fn void? try_get_sampler_opaque_capture_descriptor_data_ext (Device device, SamplerCaptureDescriptorDataInfoEXT* p_info, void* p_data) {
+  Result result = extensions.vk_get_sampler_opaque_capture_descriptor_data_ext(device, p_info, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_acceleration_structure_opaque_capture_descriptor_data_ext (Device device, AccelerationStructureCaptureDescriptorDataInfoEXT* pInfo, void* pData) {
-  Result result = extensions.vk_get_acceleration_structure_opaque_capture_descriptor_data_ext(device, pInfo, pData);
+fn void? try_get_acceleration_structure_opaque_capture_descriptor_data_ext (Device device, AccelerationStructureCaptureDescriptorDataInfoEXT* p_info, void* p_data) {
+  Result result = extensions.vk_get_acceleration_structure_opaque_capture_descriptor_data_ext(device, p_info, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_acquire_drm_display_ext (PhysicalDevice physicalDevice, int drmFd, DisplayKHR display) {
-  Result result = extensions.vk_acquire_drm_display_ext(physicalDevice, drmFd, display);
+fn void? try_acquire_drm_display_ext (PhysicalDevice physical_device, int drm_fd, DisplayKHR display) {
+  Result result = extensions.vk_acquire_drm_display_ext(physical_device, drm_fd, display);
   switch(result) { 
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_get_drm_display_ext (PhysicalDevice physicalDevice, int drmFd, uint connectorId, DisplayKHR* display) {
-  Result result = extensions.vk_get_drm_display_ext(physicalDevice, drmFd, connectorId, display);
+fn void? try_get_drm_display_ext (PhysicalDevice physical_device, int drm_fd, uint connector_id, DisplayKHR* display) {
+  Result result = extensions.vk_get_drm_display_ext(physical_device, drm_fd, connector_id, display);
   switch(result) { 
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_wait_for_present_khr (Device device, SwapchainKHR swapchain, ulong presentId, ulong timeout) {
-  Result result = extensions.vk_wait_for_present_khr(device, swapchain, presentId, timeout);
+fn void? try_wait_for_present_khr (Device device, SwapchainKHR swapchain, ulong present_id, ulong timeout) {
+  Result result = extensions.vk_wait_for_present_khr(device, swapchain, present_id, timeout);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_DEVICE_LOST: return E_ERROR_DEVICE_LOST~;
-       case ERROR_OUT_OF_DATE_KHR: return E_ERROR_OUT_OF_DATE_KHR~;
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
-       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return E_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_DEVICE_LOST: return ERROR_DEVICE_LOST~;
+       case ERROR_OUT_OF_DATE_KHR: return ERROR_OUT_OF_DATE_KHR~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
+       case ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT: return ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT~;
   }
 }
-fn void? try_create_micromap_ext (Device device, MicromapCreateInfoEXT* pCreateInfo, AllocationCallbacks* pAllocator, MicromapEXT* pMicromap) {
-  Result result = extensions.vk_create_micromap_ext(device, pCreateInfo, pAllocator, pMicromap);
+fn void? try_create_micromap_ext (Device device, MicromapCreateInfoEXT* p_create_info, AllocationCallbacks* p_allocator, MicromapEXT* p_micromap) {
+  Result result = extensions.vk_create_micromap_ext(device, p_create_info, p_allocator, p_micromap);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return E_ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS: return ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS~;
   }
 }
-fn void? try_build_micromaps_ext (Device device, DeferredOperationKHR deferredOperation, uint infoCount, MicromapBuildInfoEXT* pInfos) {
-  Result result = extensions.vk_build_micromaps_ext(device, deferredOperation, infoCount, pInfos);
+fn void? try_build_micromaps_ext (Device device, DeferredOperationKHR deferred_operation, uint info_count, MicromapBuildInfoEXT* p_infos) {
+  Result result = extensions.vk_build_micromaps_ext(device, deferred_operation, info_count, p_infos);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_copy_micromap_ext (Device device, DeferredOperationKHR deferredOperation, CopyMicromapInfoEXT* pInfo) {
-  Result result = extensions.vk_copy_micromap_ext(device, deferredOperation, pInfo);
+fn void? try_copy_micromap_ext (Device device, DeferredOperationKHR deferred_operation, CopyMicromapInfoEXT* p_info) {
+  Result result = extensions.vk_copy_micromap_ext(device, deferred_operation, p_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_copy_micromap_to_memory_ext (Device device, DeferredOperationKHR deferredOperation, CopyMicromapToMemoryInfoEXT* pInfo) {
-  Result result = extensions.vk_copy_micromap_to_memory_ext(device, deferredOperation, pInfo);
+fn void? try_copy_micromap_to_memory_ext (Device device, DeferredOperationKHR deferred_operation, CopyMicromapToMemoryInfoEXT* p_info) {
+  Result result = extensions.vk_copy_micromap_to_memory_ext(device, deferred_operation, p_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_copy_memory_to_micromap_ext (Device device, DeferredOperationKHR deferredOperation, CopyMemoryToMicromapInfoEXT* pInfo) {
-  Result result = extensions.vk_copy_memory_to_micromap_ext(device, deferredOperation, pInfo);
+fn void? try_copy_memory_to_micromap_ext (Device device, DeferredOperationKHR deferred_operation, CopyMemoryToMicromapInfoEXT* p_info) {
+  Result result = extensions.vk_copy_memory_to_micromap_ext(device, deferred_operation, p_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_write_micromaps_properties_ext (Device device, uint micromapCount, MicromapEXT* pMicromaps, QueryType queryType, sz dataSize, void* pData, sz stride) {
-  Result result = extensions.vk_write_micromaps_properties_ext(device, micromapCount, pMicromaps, queryType, dataSize, pData, stride);
+fn void? try_write_micromaps_properties_ext (Device device, uint micromap_count, MicromapEXT* p_micromaps, QueryType query_type, sz data_size, void* p_data, sz stride) {
+  Result result = extensions.vk_write_micromaps_properties_ext(device, micromap_count, p_micromaps, query_type, data_size, p_data, stride);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_pipeline_properties_ext (Device device, PipelineInfoEXT* pPipelineInfo, BaseOutStructure* pPipelineProperties) {
-  Result result = extensions.vk_get_pipeline_properties_ext(device, pPipelineInfo, pPipelineProperties);
+fn void? try_get_pipeline_properties_ext (Device device, PipelineInfoEXT* p_pipeline_info, BaseOutStructure* p_pipeline_properties) {
+  Result result = extensions.vk_get_pipeline_properties_ext(device, p_pipeline_info, p_pipeline_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_get_framebuffer_tile_properties_qcom (Device device, Framebuffer framebuffer, uint* pPropertiesCount, TilePropertiesQCOM* pProperties) {
-  Result result = extensions.vk_get_framebuffer_tile_properties_qcom(device, framebuffer, pPropertiesCount, pProperties);
-  if (result != (Result)0) return E_ERROR_UNKNOWN~;
+fn void? try_get_framebuffer_tile_properties_qcom (Device device, Framebuffer framebuffer, uint* p_properties_count, TilePropertiesQCOM* p_properties) {
+  Result result = extensions.vk_get_framebuffer_tile_properties_qcom(device, framebuffer, p_properties_count, p_properties);
+  if (result != (Result)0) return ERROR_UNKNOWN~;
 }
-fn void? try_get_dynamic_rendering_tile_properties_qcom (Device device, RenderingInfo* pRenderingInfo, TilePropertiesQCOM* pProperties) {
-  Result result = extensions.vk_get_dynamic_rendering_tile_properties_qcom(device, pRenderingInfo, pProperties);
-  if (result != (Result)0) return E_ERROR_UNKNOWN~;
+fn void? try_get_dynamic_rendering_tile_properties_qcom (Device device, RenderingInfo* p_rendering_info, TilePropertiesQCOM* p_properties) {
+  Result result = extensions.vk_get_dynamic_rendering_tile_properties_qcom(device, p_rendering_info, p_properties);
+  if (result != (Result)0) return ERROR_UNKNOWN~;
 }
-fn void? try_get_physical_device_optical_flow_image_formats_nv (PhysicalDevice physicalDevice, OpticalFlowImageFormatInfoNV* pOpticalFlowImageFormatInfo, uint* pFormatCount, OpticalFlowImageFormatPropertiesNV* pImageFormatProperties) {
-  Result result = extensions.vk_get_physical_device_optical_flow_image_formats_nv(physicalDevice, pOpticalFlowImageFormatInfo, pFormatCount, pImageFormatProperties);
+fn void? try_get_physical_device_optical_flow_image_formats_nv (PhysicalDevice physical_device, OpticalFlowImageFormatInfoNV* p_optical_flow_image_format_info, uint* p_format_count, OpticalFlowImageFormatPropertiesNV* p_image_format_properties) {
+  Result result = extensions.vk_get_physical_device_optical_flow_image_formats_nv(physical_device, p_optical_flow_image_format_info, p_format_count, p_image_format_properties);
   switch(result) { 
-       case ERROR_EXTENSION_NOT_PRESENT: return E_ERROR_EXTENSION_NOT_PRESENT~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
-       case ERROR_FORMAT_NOT_SUPPORTED: return E_ERROR_FORMAT_NOT_SUPPORTED~;
+       case ERROR_EXTENSION_NOT_PRESENT: return ERROR_EXTENSION_NOT_PRESENT~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
+       case ERROR_FORMAT_NOT_SUPPORTED: return ERROR_FORMAT_NOT_SUPPORTED~;
   }
 }
-fn void? try_create_optical_flow_session_nv (Device device, OpticalFlowSessionCreateInfoNV* pCreateInfo, AllocationCallbacks* pAllocator, OpticalFlowSessionNV* pSession) {
-  Result result = extensions.vk_create_optical_flow_session_nv(device, pCreateInfo, pAllocator, pSession);
+fn void? try_create_optical_flow_session_nv (Device device, OpticalFlowSessionCreateInfoNV* p_create_info, AllocationCallbacks* p_allocator, OpticalFlowSessionNV* p_session) {
+  Result result = extensions.vk_create_optical_flow_session_nv(device, p_create_info, p_allocator, p_session);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_bind_optical_flow_session_image_nv (Device device, OpticalFlowSessionNV session, OpticalFlowSessionBindingPointNV bindingPoint, ImageView view, ImageLayout layout) {
-  Result result = extensions.vk_bind_optical_flow_session_image_nv(device, session, bindingPoint, view, layout);
+fn void? try_bind_optical_flow_session_image_nv (Device device, OpticalFlowSessionNV session, OpticalFlowSessionBindingPointNV binding_point, ImageView view, ImageLayout layout) {
+  Result result = extensions.vk_bind_optical_flow_session_image_nv(device, session, binding_point, view, layout);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_get_device_fault_info_ext (Device device, DeviceFaultCountsEXT* pFaultCounts, DeviceFaultInfoEXT* pFaultInfo) {
-  Result result = extensions.vk_get_device_fault_info_ext(device, pFaultCounts, pFaultInfo);
+fn void? try_get_device_fault_info_ext (Device device, DeviceFaultCountsEXT* p_fault_counts, DeviceFaultInfoEXT* p_fault_info) {
+  Result result = extensions.vk_get_device_fault_info_ext(device, p_fault_counts, p_fault_info);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
   }
 }
-fn void? try_release_swapchain_images_ext (Device device, ReleaseSwapchainImagesInfoEXT* pReleaseInfo) {
-  Result result = extensions.vk_release_swapchain_images_ext(device, pReleaseInfo);
+fn void? try_release_swapchain_images_ext (Device device, ReleaseSwapchainImagesInfoEXT* p_release_info) {
+  Result result = extensions.vk_release_swapchain_images_ext(device, p_release_info);
   switch(result) { 
-       case ERROR_SURFACE_LOST_KHR: return E_ERROR_SURFACE_LOST_KHR~;
+       case ERROR_SURFACE_LOST_KHR: return ERROR_SURFACE_LOST_KHR~;
   }
 }
-fn void? try_map_memory_2_khr (Device device, MemoryMapInfoKHR* pMemoryMapInfo, void** ppData) {
-  Result result = extensions.vk_map_memory_2_khr(device, pMemoryMapInfo, ppData);
+fn void? try_map_memory2_khr (Device device, MemoryMapInfoKHR* p_memory_map_info, void** pp_data) {
+  Result result = extensions.vk_map_memory2_khr(device, p_memory_map_info, pp_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_MEMORY_MAP_FAILED: return E_ERROR_MEMORY_MAP_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_MEMORY_MAP_FAILED: return ERROR_MEMORY_MAP_FAILED~;
   }
 }
-fn void? try_unmap_memory_2_khr (Device device, MemoryUnmapInfoKHR* pMemoryUnmapInfo) {
-  Result result = extensions.vk_unmap_memory_2_khr(device, pMemoryUnmapInfo);
+fn void? try_unmap_memory2_khr (Device device, MemoryUnmapInfoKHR* p_memory_unmap_info) {
+  Result result = extensions.vk_unmap_memory2_khr(device, p_memory_unmap_info);
   switch(result) { 
-       case ERROR_MEMORY_MAP_FAILED: return E_ERROR_MEMORY_MAP_FAILED~;
+       case ERROR_MEMORY_MAP_FAILED: return ERROR_MEMORY_MAP_FAILED~;
   }
 }
-fn void? try_create_shaders_ext (Device device, uint createInfoCount, ShaderCreateInfoEXT* pCreateInfos, AllocationCallbacks* pAllocator, ShaderEXT* pShaders) {
-  Result result = extensions.vk_create_shaders_ext(device, createInfoCount, pCreateInfos, pAllocator, pShaders);
+fn void? try_create_shaders_ext (Device device, uint create_info_count, ShaderCreateInfoEXT* p_create_infos, AllocationCallbacks* p_allocator, ShaderEXT* p_shaders) {
+  Result result = extensions.vk_create_shaders_ext(device, create_info_count, p_create_infos, p_allocator, p_shaders);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_get_shader_binary_data_ext (Device device, ShaderEXT shader, sz* pDataSize, void* pData) {
-  Result result = extensions.vk_get_shader_binary_data_ext(device, shader, pDataSize, pData);
+fn void? try_get_shader_binary_data_ext (Device device, ShaderEXT shader, sz* p_data_size, void* p_data) {
+  Result result = extensions.vk_get_shader_binary_data_ext(device, shader, p_data_size, p_data);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_get_physical_device_cooperative_matrix_properties_khr (PhysicalDevice physicalDevice, uint* pPropertyCount, CooperativeMatrixPropertiesKHR* pProperties) {
-  Result result = extensions.vk_get_physical_device_cooperative_matrix_properties_khr(physicalDevice, pPropertyCount, pProperties);
+fn void? try_get_physical_device_cooperative_matrix_properties_khr (PhysicalDevice physical_device, uint* p_property_count, CooperativeMatrixPropertiesKHR* p_properties) {
+  Result result = extensions.vk_get_physical_device_cooperative_matrix_properties_khr(physical_device, p_property_count, p_properties);
   switch(result) { 
-       case ERROR_OUT_OF_HOST_MEMORY: return E_ERROR_OUT_OF_HOST_MEMORY~;
-       case ERROR_OUT_OF_DEVICE_MEMORY: return E_ERROR_OUT_OF_DEVICE_MEMORY~;
+       case ERROR_OUT_OF_HOST_MEMORY: return ERROR_OUT_OF_HOST_MEMORY~;
+       case ERROR_OUT_OF_DEVICE_MEMORY: return ERROR_OUT_OF_DEVICE_MEMORY~;
   }
 }
-fn void? try_set_latency_sleep_mode_nv (Device device, SwapchainKHR swapchain, LatencySleepModeInfoNV* pSleepModeInfo) {
-  Result result = extensions.vk_set_latency_sleep_mode_nv(device, swapchain, pSleepModeInfo);
+fn void? try_set_latency_sleep_mode_nv (Device device, SwapchainKHR swapchain, LatencySleepModeInfoNV* p_sleep_mode_info) {
+  Result result = extensions.vk_set_latency_sleep_mode_nv(device, swapchain, p_sleep_mode_info);
   switch(result) { 
-       case ERROR_INITIALIZATION_FAILED: return E_ERROR_INITIALIZATION_FAILED~;
+       case ERROR_INITIALIZATION_FAILED: return ERROR_INITIALIZATION_FAILED~;
   }
 }
-fn void? try_latency_sleep_nv (Device device, SwapchainKHR swapchain, LatencySleepInfoNV* pSleepInfo) {
-  Result result = extensions.vk_latency_sleep_nv(device, swapchain, pSleepInfo);
-  if (result != (Result)0) return E_ERROR_UNKNOWN~;
+fn void? try_latency_sleep_nv (Device device, SwapchainKHR swapchain, LatencySleepInfoNV* p_sleep_info) {
+  Result result = extensions.vk_latency_sleep_nv(device, swapchain, p_sleep_info);
+  if (result != (Result)0) return ERROR_UNKNOWN~;
 }
 
 fn Instance? InstanceCreateInfo.build(&self, AllocationCallbacks* pAllocator = null) {
@@ -3786,7 +3786,7 @@ fn SurfaceKHR? WaylandSurfaceCreateInfoKHR.build(&self, Instance instance, Alloc
 }
 fn SurfaceKHR? Win32SurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
    SurfaceKHR response;
-   try_create_win_32_surface_khr(instance, self, pAllocator, &response)!;
+   try_create_win32surface_khr(instance, self, pAllocator, &response)!;
    return response;
 }
 fn SurfaceKHR? XlibSurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
@@ -3856,7 +3856,7 @@ fn DebugUtilsMessengerEXT? DebugUtilsMessengerCreateInfoEXT.build(&self, Instanc
 }
 fn RenderPass? RenderPassCreateInfo2.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
    RenderPass response;
-   try_create_render_pass_2(device, self, pAllocator, &response)!;
+   try_create_render_pass2(device, self, pAllocator, &response)!;
    return response;
 }
 fn Pipeline? RayTracingPipelineCreateInfoNV.build(&self, Device device, PipelineCache pipelineCache = (PipelineCache)null, uint createInfoCount = 1, AllocationCallbacks* pAllocator = null) {
