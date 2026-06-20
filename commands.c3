@@ -1554,269 +1554,269 @@ fn void load_extensions(Instance instance) {
    extensions.vk_cmd_set_depth_clamp_range_ext = (PFN_vkCmdSetDepthClampRangeEXT)get_instance_proc_addr(instance,"vkCmdSetDepthClampRangeEXT");
 }
 
-fn void reset_query_pool_ext (Device device, QueryPool queryPool, uint firstQuery, uint queryCount) => extensions.vk_reset_query_pool_ext(device, queryPool, firstQuery, queryCount);
-fn void destroy_pipeline_binary_khr (Device device, PipelineBinaryKHR pipelineBinary, AllocationCallbacks* pAllocator) => extensions.vk_destroy_pipeline_binary_khr(device, pipelineBinary, pAllocator);
-fn void get_rendering_area_granularity_khr (Device device, RenderingAreaInfoKHR* pRenderingAreaInfo, Extent2D* pGranularity) => extensions.vk_get_rendering_area_granularity_khr(device, pRenderingAreaInfo, pGranularity);
-fn void cmd_set_attachment_feedback_loop_enable_ext (CommandBuffer commandBuffer, ImageAspectFlags aspectMask) => extensions.vk_cmd_set_attachment_feedback_loop_enable_ext(commandBuffer, aspectMask);
-fn void cmd_draw_multi_ext (CommandBuffer commandBuffer, uint drawCount, MultiDrawInfoEXT* pVertexInfo, uint instanceCount, uint firstInstance, uint stride) => extensions.vk_cmd_draw_multi_ext(commandBuffer, drawCount, pVertexInfo, instanceCount, firstInstance, stride);
-fn void cmd_draw_multi_indexed_ext (CommandBuffer commandBuffer, uint drawCount, MultiDrawIndexedInfoEXT* pIndexInfo, uint instanceCount, uint firstInstance, uint stride, int* pVertexOffset) => extensions.vk_cmd_draw_multi_indexed_ext(commandBuffer, drawCount, pIndexInfo, instanceCount, firstInstance, stride, pVertexOffset);
-fn void cmd_subpass_shading_huawei (CommandBuffer commandBuffer) => extensions.vk_cmd_subpass_shading_huawei(commandBuffer);
-fn void cmd_draw_cluster_huawei (CommandBuffer commandBuffer, uint groupCountX, uint groupCountY, uint groupCountZ) => extensions.vk_cmd_draw_cluster_huawei(commandBuffer, groupCountX, groupCountY, groupCountZ);
-fn void cmd_draw_cluster_indirect_huawei (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset) => extensions.vk_cmd_draw_cluster_indirect_huawei(commandBuffer, buffer, offset);
-fn void cmd_update_pipeline_indirect_buffer_nv (CommandBuffer commandBuffer, PipelineBindPoint pipelineBindPoint, Pipeline pipeline) => extensions.vk_cmd_update_pipeline_indirect_buffer_nv(commandBuffer, pipelineBindPoint, pipeline);
-fn void cmd_copy_memory_indirect_nv (CommandBuffer commandBuffer, DeviceAddress copyBufferAddress, uint copyCount, uint stride) => extensions.vk_cmd_copy_memory_indirect_nv(commandBuffer, copyBufferAddress, copyCount, stride);
-fn void cmd_copy_memory_to_image_indirect_nv (CommandBuffer commandBuffer, DeviceAddress copyBufferAddress, uint copyCount, uint stride, Image dstImage, ImageLayout dstImageLayout, ImageSubresourceLayers* pImageSubresources) => extensions.vk_cmd_copy_memory_to_image_indirect_nv(commandBuffer, copyBufferAddress, copyCount, stride, dstImage, dstImageLayout, pImageSubresources);
-fn void cmd_begin_conditional_rendering_ext (CommandBuffer commandBuffer, ConditionalRenderingBeginInfoEXT* pConditionalRenderingBegin) => extensions.vk_cmd_begin_conditional_rendering_ext(commandBuffer, pConditionalRenderingBegin);
-fn void cmd_end_conditional_rendering_ext (CommandBuffer commandBuffer) => extensions.vk_cmd_end_conditional_rendering_ext(commandBuffer);
-fn void destroy_surface_khr (Instance instance, SurfaceKHR surface, AllocationCallbacks* pAllocator) => extensions.vk_destroy_surface_khr(instance, surface, pAllocator);
-fn void destroy_swapchain_khr (Device device, SwapchainKHR swapchain, AllocationCallbacks* pAllocator) => extensions.vk_destroy_swapchain_khr(device, swapchain, pAllocator);
-fn uint get_physical_device_wayland_presentation_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex, void* display) => extensions.vk_get_physical_device_wayland_presentation_support_khr(physicalDevice, queueFamilyIndex, display);
-fn uint get_physical_device_win32presentation_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex) => extensions.vk_get_physical_device_win32presentation_support_khr(physicalDevice, queueFamilyIndex);
-fn uint get_physical_device_xlib_presentation_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex, void* dpy, ulong visualID) => extensions.vk_get_physical_device_xlib_presentation_support_khr(physicalDevice, queueFamilyIndex, dpy, visualID);
-fn uint get_physical_device_xcb_presentation_support_khr (PhysicalDevice physicalDevice, uint queueFamilyIndex, void* connection, uint visual_id) => extensions.vk_get_physical_device_xcb_presentation_support_khr(physicalDevice, queueFamilyIndex, connection, visual_id);
-fn void destroy_debug_report_callback_ext (Instance instance, DebugReportCallbackEXT callback, AllocationCallbacks* pAllocator) => extensions.vk_destroy_debug_report_callback_ext(instance, callback, pAllocator);
-fn void debug_report_message_ext (Instance instance, DebugReportFlagsEXT flags, DebugReportObjectTypeEXT objectType, ulong object, sz location, int messageCode, char* pLayerPrefix, char* pMessage) => extensions.vk_debug_report_message_ext(instance, flags, objectType, object, location, messageCode, pLayerPrefix, pMessage);
-fn void cmd_debug_marker_begin_ext (CommandBuffer commandBuffer, DebugMarkerMarkerInfoEXT* pMarkerInfo) => extensions.vk_cmd_debug_marker_begin_ext(commandBuffer, pMarkerInfo);
-fn void cmd_debug_marker_end_ext (CommandBuffer commandBuffer) => extensions.vk_cmd_debug_marker_end_ext(commandBuffer);
-fn void cmd_debug_marker_insert_ext (CommandBuffer commandBuffer, DebugMarkerMarkerInfoEXT* pMarkerInfo) => extensions.vk_cmd_debug_marker_insert_ext(commandBuffer, pMarkerInfo);
-fn void cmd_execute_generated_commands_nv (CommandBuffer commandBuffer, uint isPreprocessed, GeneratedCommandsInfoNV* pGeneratedCommandsInfo) => extensions.vk_cmd_execute_generated_commands_nv(commandBuffer, isPreprocessed, pGeneratedCommandsInfo);
-fn void cmd_preprocess_generated_commands_nv (CommandBuffer commandBuffer, GeneratedCommandsInfoNV* pGeneratedCommandsInfo) => extensions.vk_cmd_preprocess_generated_commands_nv(commandBuffer, pGeneratedCommandsInfo);
-fn void cmd_bind_pipeline_shader_group_nv (CommandBuffer commandBuffer, PipelineBindPoint pipelineBindPoint, Pipeline pipeline, uint groupIndex) => extensions.vk_cmd_bind_pipeline_shader_group_nv(commandBuffer, pipelineBindPoint, pipeline, groupIndex);
-fn void get_generated_commands_memory_requirements_nv (Device device, GeneratedCommandsMemoryRequirementsInfoNV* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_generated_commands_memory_requirements_nv(device, pInfo, pMemoryRequirements);
-fn void destroy_indirect_commands_layout_nv (Device device, IndirectCommandsLayoutNV indirectCommandsLayout, AllocationCallbacks* pAllocator) => extensions.vk_destroy_indirect_commands_layout_nv(device, indirectCommandsLayout, pAllocator);
-fn void cmd_execute_generated_commands_ext (CommandBuffer commandBuffer, uint isPreprocessed, GeneratedCommandsInfoEXT* pGeneratedCommandsInfo) => extensions.vk_cmd_execute_generated_commands_ext(commandBuffer, isPreprocessed, pGeneratedCommandsInfo);
-fn void cmd_preprocess_generated_commands_ext (CommandBuffer commandBuffer, GeneratedCommandsInfoEXT* pGeneratedCommandsInfo, CommandBuffer stateCommandBuffer) => extensions.vk_cmd_preprocess_generated_commands_ext(commandBuffer, pGeneratedCommandsInfo, stateCommandBuffer);
-fn void get_generated_commands_memory_requirements_ext (Device device, GeneratedCommandsMemoryRequirementsInfoEXT* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_generated_commands_memory_requirements_ext(device, pInfo, pMemoryRequirements);
-fn void destroy_indirect_commands_layout_ext (Device device, IndirectCommandsLayoutEXT indirectCommandsLayout, AllocationCallbacks* pAllocator) => extensions.vk_destroy_indirect_commands_layout_ext(device, indirectCommandsLayout, pAllocator);
-fn void destroy_indirect_execution_set_ext (Device device, IndirectExecutionSetEXT indirectExecutionSet, AllocationCallbacks* pAllocator) => extensions.vk_destroy_indirect_execution_set_ext(device, indirectExecutionSet, pAllocator);
-fn void update_indirect_execution_set_pipeline_ext (Device device, IndirectExecutionSetEXT indirectExecutionSet, uint executionSetWriteCount, WriteIndirectExecutionSetPipelineEXT* pExecutionSetWrites) => extensions.vk_update_indirect_execution_set_pipeline_ext(device, indirectExecutionSet, executionSetWriteCount, pExecutionSetWrites);
-fn void update_indirect_execution_set_shader_ext (Device device, IndirectExecutionSetEXT indirectExecutionSet, uint executionSetWriteCount, WriteIndirectExecutionSetShaderEXT* pExecutionSetWrites) => extensions.vk_update_indirect_execution_set_shader_ext(device, indirectExecutionSet, executionSetWriteCount, pExecutionSetWrites);
-fn void get_physical_device_features2_khr (PhysicalDevice physicalDevice, PhysicalDeviceFeatures2* pFeatures) => extensions.vk_get_physical_device_features2_khr(physicalDevice, pFeatures);
-fn void get_physical_device_properties2_khr (PhysicalDevice physicalDevice, PhysicalDeviceProperties2* pProperties) => extensions.vk_get_physical_device_properties2_khr(physicalDevice, pProperties);
-fn void get_physical_device_format_properties2_khr (PhysicalDevice physicalDevice, Format format, FormatProperties2* pFormatProperties) => extensions.vk_get_physical_device_format_properties2_khr(physicalDevice, format, pFormatProperties);
-fn void get_physical_device_queue_family_properties2_khr (PhysicalDevice physicalDevice, uint* pQueueFamilyPropertyCount, QueueFamilyProperties2* pQueueFamilyProperties) => extensions.vk_get_physical_device_queue_family_properties2_khr(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties);
-fn void get_physical_device_memory_properties2_khr (PhysicalDevice physicalDevice, PhysicalDeviceMemoryProperties2* pMemoryProperties) => extensions.vk_get_physical_device_memory_properties2_khr(physicalDevice, pMemoryProperties);
-fn void get_physical_device_sparse_image_format_properties2_khr (PhysicalDevice physicalDevice, PhysicalDeviceSparseImageFormatInfo2* pFormatInfo, uint* pPropertyCount, SparseImageFormatProperties2* pProperties) => extensions.vk_get_physical_device_sparse_image_format_properties2_khr(physicalDevice, pFormatInfo, pPropertyCount, pProperties);
-fn void cmd_push_descriptor_set_khr (CommandBuffer commandBuffer, PipelineBindPoint pipelineBindPoint, PipelineLayout layout, uint set, uint descriptorWriteCount, WriteDescriptorSet* pDescriptorWrites) => extensions.vk_cmd_push_descriptor_set_khr(commandBuffer, pipelineBindPoint, layout, set, descriptorWriteCount, pDescriptorWrites);
-fn void trim_command_pool_khr (Device device, CommandPool commandPool, CommandPoolTrimFlags flags) => extensions.vk_trim_command_pool_khr(device, commandPool, flags);
-fn void get_physical_device_external_buffer_properties_khr (PhysicalDevice physicalDevice, PhysicalDeviceExternalBufferInfo* pExternalBufferInfo, ExternalBufferProperties* pExternalBufferProperties) => extensions.vk_get_physical_device_external_buffer_properties_khr(physicalDevice, pExternalBufferInfo, pExternalBufferProperties);
-fn void get_physical_device_external_semaphore_properties_khr (PhysicalDevice physicalDevice, PhysicalDeviceExternalSemaphoreInfo* pExternalSemaphoreInfo, ExternalSemaphoreProperties* pExternalSemaphoreProperties) => extensions.vk_get_physical_device_external_semaphore_properties_khr(physicalDevice, pExternalSemaphoreInfo, pExternalSemaphoreProperties);
-fn void get_physical_device_external_fence_properties_khr (PhysicalDevice physicalDevice, PhysicalDeviceExternalFenceInfo* pExternalFenceInfo, ExternalFenceProperties* pExternalFenceProperties) => extensions.vk_get_physical_device_external_fence_properties_khr(physicalDevice, pExternalFenceInfo, pExternalFenceProperties);
-fn void get_device_group_peer_memory_features_khr (Device device, uint heapIndex, uint localDeviceIndex, uint remoteDeviceIndex, PeerMemoryFeatureFlags* pPeerMemoryFeatures) => extensions.vk_get_device_group_peer_memory_features_khr(device, heapIndex, localDeviceIndex, remoteDeviceIndex, pPeerMemoryFeatures);
-fn void cmd_set_device_mask_khr (CommandBuffer commandBuffer, uint deviceMask) => extensions.vk_cmd_set_device_mask_khr(commandBuffer, deviceMask);
-fn void cmd_dispatch_base_khr (CommandBuffer commandBuffer, uint baseGroupX, uint baseGroupY, uint baseGroupZ, uint groupCountX, uint groupCountY, uint groupCountZ) => extensions.vk_cmd_dispatch_base_khr(commandBuffer, baseGroupX, baseGroupY, baseGroupZ, groupCountX, groupCountY, groupCountZ);
-fn void destroy_descriptor_update_template_khr (Device device, DescriptorUpdateTemplate descriptorUpdateTemplate, AllocationCallbacks* pAllocator) => extensions.vk_destroy_descriptor_update_template_khr(device, descriptorUpdateTemplate, pAllocator);
-fn void update_descriptor_set_with_template_khr (Device device, DescriptorSet descriptorSet, DescriptorUpdateTemplate descriptorUpdateTemplate, void* pData) => extensions.vk_update_descriptor_set_with_template_khr(device, descriptorSet, descriptorUpdateTemplate, pData);
-fn void cmd_push_descriptor_set_with_template_khr (CommandBuffer commandBuffer, DescriptorUpdateTemplate descriptorUpdateTemplate, PipelineLayout layout, uint set, void* pData) => extensions.vk_cmd_push_descriptor_set_with_template_khr(commandBuffer, descriptorUpdateTemplate, layout, set, pData);
-fn void set_hdr_metadata_ext (Device device, uint swapchainCount, SwapchainKHR* pSwapchains, HdrMetadataEXT* pMetadata) => extensions.vk_set_hdr_metadata_ext(device, swapchainCount, pSwapchains, pMetadata);
-fn void cmd_set_viewport_w_scaling_nv (CommandBuffer commandBuffer, uint firstViewport, uint viewportCount, ViewportWScalingNV* pViewportWScalings) => extensions.vk_cmd_set_viewport_w_scaling_nv(commandBuffer, firstViewport, viewportCount, pViewportWScalings);
-fn void cmd_set_discard_rectangle_ext (CommandBuffer commandBuffer, uint firstDiscardRectangle, uint discardRectangleCount, Rect2D* pDiscardRectangles) => extensions.vk_cmd_set_discard_rectangle_ext(commandBuffer, firstDiscardRectangle, discardRectangleCount, pDiscardRectangles);
-fn void cmd_set_discard_rectangle_enable_ext (CommandBuffer commandBuffer, uint discardRectangleEnable) => extensions.vk_cmd_set_discard_rectangle_enable_ext(commandBuffer, discardRectangleEnable);
-fn void cmd_set_discard_rectangle_mode_ext (CommandBuffer commandBuffer, DiscardRectangleModeEXT discardRectangleMode) => extensions.vk_cmd_set_discard_rectangle_mode_ext(commandBuffer, discardRectangleMode);
-fn void cmd_set_sample_locations_ext (CommandBuffer commandBuffer, SampleLocationsInfoEXT* pSampleLocationsInfo) => extensions.vk_cmd_set_sample_locations_ext(commandBuffer, pSampleLocationsInfo);
-fn void get_physical_device_multisample_properties_ext (PhysicalDevice physicalDevice, SampleCountFlagBits samples, MultisamplePropertiesEXT* pMultisampleProperties) => extensions.vk_get_physical_device_multisample_properties_ext(physicalDevice, samples, pMultisampleProperties);
-fn void get_buffer_memory_requirements2_khr (Device device, BufferMemoryRequirementsInfo2* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_buffer_memory_requirements2_khr(device, pInfo, pMemoryRequirements);
-fn void get_image_memory_requirements2_khr (Device device, ImageMemoryRequirementsInfo2* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_image_memory_requirements2_khr(device, pInfo, pMemoryRequirements);
-fn void get_image_sparse_memory_requirements2_khr (Device device, ImageSparseMemoryRequirementsInfo2* pInfo, uint* pSparseMemoryRequirementCount, SparseImageMemoryRequirements2* pSparseMemoryRequirements) => extensions.vk_get_image_sparse_memory_requirements2_khr(device, pInfo, pSparseMemoryRequirementCount, pSparseMemoryRequirements);
-fn void get_device_buffer_memory_requirements_khr (Device device, DeviceBufferMemoryRequirements* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_device_buffer_memory_requirements_khr(device, pInfo, pMemoryRequirements);
-fn void get_device_image_memory_requirements_khr (Device device, DeviceImageMemoryRequirements* pInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_device_image_memory_requirements_khr(device, pInfo, pMemoryRequirements);
-fn void get_device_image_sparse_memory_requirements_khr (Device device, DeviceImageMemoryRequirements* pInfo, uint* pSparseMemoryRequirementCount, SparseImageMemoryRequirements2* pSparseMemoryRequirements) => extensions.vk_get_device_image_sparse_memory_requirements_khr(device, pInfo, pSparseMemoryRequirementCount, pSparseMemoryRequirements);
-fn void destroy_sampler_ycbcr_conversion_khr (Device device, SamplerYcbcrConversion ycbcrConversion, AllocationCallbacks* pAllocator) => extensions.vk_destroy_sampler_ycbcr_conversion_khr(device, ycbcrConversion, pAllocator);
-fn void destroy_validation_cache_ext (Device device, ValidationCacheEXT validationCache, AllocationCallbacks* pAllocator) => extensions.vk_destroy_validation_cache_ext(device, validationCache, pAllocator);
-fn void get_descriptor_set_layout_support_khr (Device device, DescriptorSetLayoutCreateInfo* pCreateInfo, DescriptorSetLayoutSupport* pSupport) => extensions.vk_get_descriptor_set_layout_support_khr(device, pCreateInfo, pSupport);
-fn void set_local_dimming_amd (Device device, SwapchainKHR swapChain, uint localDimmingEnable) => extensions.vk_set_local_dimming_amd(device, swapChain, localDimmingEnable);
-fn void queue_begin_debug_utils_label_ext (Queue queue, DebugUtilsLabelEXT* pLabelInfo) => extensions.vk_queue_begin_debug_utils_label_ext(queue, pLabelInfo);
+fn void reset_query_pool_ext (Device device, QueryPool query_pool, uint first_query, uint query_count) => extensions.vk_reset_query_pool_ext(device, query_pool, first_query, query_count);
+fn void destroy_pipeline_binary_khr (Device device, PipelineBinaryKHR pipeline_binary, AllocationCallbacks* p_allocator) => extensions.vk_destroy_pipeline_binary_khr(device, pipeline_binary, p_allocator);
+fn void get_rendering_area_granularity_khr (Device device, RenderingAreaInfoKHR* p_rendering_area_info, Extent2D* p_granularity) => extensions.vk_get_rendering_area_granularity_khr(device, p_rendering_area_info, p_granularity);
+fn void cmd_set_attachment_feedback_loop_enable_ext (CommandBuffer command_buffer, ImageAspectFlags aspect_mask) => extensions.vk_cmd_set_attachment_feedback_loop_enable_ext(command_buffer, aspect_mask);
+fn void cmd_draw_multi_ext (CommandBuffer command_buffer, uint draw_count, MultiDrawInfoEXT* p_vertex_info, uint instance_count, uint first_instance, uint stride) => extensions.vk_cmd_draw_multi_ext(command_buffer, draw_count, p_vertex_info, instance_count, first_instance, stride);
+fn void cmd_draw_multi_indexed_ext (CommandBuffer command_buffer, uint draw_count, MultiDrawIndexedInfoEXT* p_index_info, uint instance_count, uint first_instance, uint stride, int* p_vertex_offset) => extensions.vk_cmd_draw_multi_indexed_ext(command_buffer, draw_count, p_index_info, instance_count, first_instance, stride, p_vertex_offset);
+fn void cmd_subpass_shading_huawei (CommandBuffer command_buffer) => extensions.vk_cmd_subpass_shading_huawei(command_buffer);
+fn void cmd_draw_cluster_huawei (CommandBuffer command_buffer, uint group_count_x, uint group_count_y, uint group_count_z) => extensions.vk_cmd_draw_cluster_huawei(command_buffer, group_count_x, group_count_y, group_count_z);
+fn void cmd_draw_cluster_indirect_huawei (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset) => extensions.vk_cmd_draw_cluster_indirect_huawei(command_buffer, buffer, offset);
+fn void cmd_update_pipeline_indirect_buffer_nv (CommandBuffer command_buffer, PipelineBindPoint pipeline_bind_point, Pipeline pipeline) => extensions.vk_cmd_update_pipeline_indirect_buffer_nv(command_buffer, pipeline_bind_point, pipeline);
+fn void cmd_copy_memory_indirect_nv (CommandBuffer command_buffer, DeviceAddress copy_buffer_address, uint copy_count, uint stride) => extensions.vk_cmd_copy_memory_indirect_nv(command_buffer, copy_buffer_address, copy_count, stride);
+fn void cmd_copy_memory_to_image_indirect_nv (CommandBuffer command_buffer, DeviceAddress copy_buffer_address, uint copy_count, uint stride, Image dst_image, ImageLayout dst_image_layout, ImageSubresourceLayers* p_image_subresources) => extensions.vk_cmd_copy_memory_to_image_indirect_nv(command_buffer, copy_buffer_address, copy_count, stride, dst_image, dst_image_layout, p_image_subresources);
+fn void cmd_begin_conditional_rendering_ext (CommandBuffer command_buffer, ConditionalRenderingBeginInfoEXT* p_conditional_rendering_begin) => extensions.vk_cmd_begin_conditional_rendering_ext(command_buffer, p_conditional_rendering_begin);
+fn void cmd_end_conditional_rendering_ext (CommandBuffer command_buffer) => extensions.vk_cmd_end_conditional_rendering_ext(command_buffer);
+fn void destroy_surface_khr (Instance instance, SurfaceKHR surface, AllocationCallbacks* p_allocator) => extensions.vk_destroy_surface_khr(instance, surface, p_allocator);
+fn void destroy_swapchain_khr (Device device, SwapchainKHR swapchain, AllocationCallbacks* p_allocator) => extensions.vk_destroy_swapchain_khr(device, swapchain, p_allocator);
+fn uint get_physical_device_wayland_presentation_support_khr (PhysicalDevice physical_device, uint queue_family_index, void* display) => extensions.vk_get_physical_device_wayland_presentation_support_khr(physical_device, queue_family_index, display);
+fn uint get_physical_device_win32presentation_support_khr (PhysicalDevice physical_device, uint queue_family_index) => extensions.vk_get_physical_device_win32presentation_support_khr(physical_device, queue_family_index);
+fn uint get_physical_device_xlib_presentation_support_khr (PhysicalDevice physical_device, uint queue_family_index, void* dpy, ulong visual_id) => extensions.vk_get_physical_device_xlib_presentation_support_khr(physical_device, queue_family_index, dpy, visual_id);
+fn uint get_physical_device_xcb_presentation_support_khr (PhysicalDevice physical_device, uint queue_family_index, void* connection, uint visual_id) => extensions.vk_get_physical_device_xcb_presentation_support_khr(physical_device, queue_family_index, connection, visual_id);
+fn void destroy_debug_report_callback_ext (Instance instance, DebugReportCallbackEXT callback, AllocationCallbacks* p_allocator) => extensions.vk_destroy_debug_report_callback_ext(instance, callback, p_allocator);
+fn void debug_report_message_ext (Instance instance, DebugReportFlagsEXT flags, DebugReportObjectTypeEXT object_type, ulong object, sz location, int message_code, char* p_layer_prefix, char* p_message) => extensions.vk_debug_report_message_ext(instance, flags, object_type, object, location, message_code, p_layer_prefix, p_message);
+fn void cmd_debug_marker_begin_ext (CommandBuffer command_buffer, DebugMarkerMarkerInfoEXT* p_marker_info) => extensions.vk_cmd_debug_marker_begin_ext(command_buffer, p_marker_info);
+fn void cmd_debug_marker_end_ext (CommandBuffer command_buffer) => extensions.vk_cmd_debug_marker_end_ext(command_buffer);
+fn void cmd_debug_marker_insert_ext (CommandBuffer command_buffer, DebugMarkerMarkerInfoEXT* p_marker_info) => extensions.vk_cmd_debug_marker_insert_ext(command_buffer, p_marker_info);
+fn void cmd_execute_generated_commands_nv (CommandBuffer command_buffer, uint is_preprocessed, GeneratedCommandsInfoNV* p_generated_commands_info) => extensions.vk_cmd_execute_generated_commands_nv(command_buffer, is_preprocessed, p_generated_commands_info);
+fn void cmd_preprocess_generated_commands_nv (CommandBuffer command_buffer, GeneratedCommandsInfoNV* p_generated_commands_info) => extensions.vk_cmd_preprocess_generated_commands_nv(command_buffer, p_generated_commands_info);
+fn void cmd_bind_pipeline_shader_group_nv (CommandBuffer command_buffer, PipelineBindPoint pipeline_bind_point, Pipeline pipeline, uint group_index) => extensions.vk_cmd_bind_pipeline_shader_group_nv(command_buffer, pipeline_bind_point, pipeline, group_index);
+fn void get_generated_commands_memory_requirements_nv (Device device, GeneratedCommandsMemoryRequirementsInfoNV* p_info, MemoryRequirements2* p_memory_requirements) => extensions.vk_get_generated_commands_memory_requirements_nv(device, p_info, p_memory_requirements);
+fn void destroy_indirect_commands_layout_nv (Device device, IndirectCommandsLayoutNV indirect_commands_layout, AllocationCallbacks* p_allocator) => extensions.vk_destroy_indirect_commands_layout_nv(device, indirect_commands_layout, p_allocator);
+fn void cmd_execute_generated_commands_ext (CommandBuffer command_buffer, uint is_preprocessed, GeneratedCommandsInfoEXT* p_generated_commands_info) => extensions.vk_cmd_execute_generated_commands_ext(command_buffer, is_preprocessed, p_generated_commands_info);
+fn void cmd_preprocess_generated_commands_ext (CommandBuffer command_buffer, GeneratedCommandsInfoEXT* p_generated_commands_info, CommandBuffer state_command_buffer) => extensions.vk_cmd_preprocess_generated_commands_ext(command_buffer, p_generated_commands_info, state_command_buffer);
+fn void get_generated_commands_memory_requirements_ext (Device device, GeneratedCommandsMemoryRequirementsInfoEXT* p_info, MemoryRequirements2* p_memory_requirements) => extensions.vk_get_generated_commands_memory_requirements_ext(device, p_info, p_memory_requirements);
+fn void destroy_indirect_commands_layout_ext (Device device, IndirectCommandsLayoutEXT indirect_commands_layout, AllocationCallbacks* p_allocator) => extensions.vk_destroy_indirect_commands_layout_ext(device, indirect_commands_layout, p_allocator);
+fn void destroy_indirect_execution_set_ext (Device device, IndirectExecutionSetEXT indirect_execution_set, AllocationCallbacks* p_allocator) => extensions.vk_destroy_indirect_execution_set_ext(device, indirect_execution_set, p_allocator);
+fn void update_indirect_execution_set_pipeline_ext (Device device, IndirectExecutionSetEXT indirect_execution_set, uint execution_set_write_count, WriteIndirectExecutionSetPipelineEXT* p_execution_set_writes) => extensions.vk_update_indirect_execution_set_pipeline_ext(device, indirect_execution_set, execution_set_write_count, p_execution_set_writes);
+fn void update_indirect_execution_set_shader_ext (Device device, IndirectExecutionSetEXT indirect_execution_set, uint execution_set_write_count, WriteIndirectExecutionSetShaderEXT* p_execution_set_writes) => extensions.vk_update_indirect_execution_set_shader_ext(device, indirect_execution_set, execution_set_write_count, p_execution_set_writes);
+fn void get_physical_device_features2_khr (PhysicalDevice physical_device, PhysicalDeviceFeatures2* p_features) => extensions.vk_get_physical_device_features2_khr(physical_device, p_features);
+fn void get_physical_device_properties2_khr (PhysicalDevice physical_device, PhysicalDeviceProperties2* p_properties) => extensions.vk_get_physical_device_properties2_khr(physical_device, p_properties);
+fn void get_physical_device_format_properties2_khr (PhysicalDevice physical_device, Format format, FormatProperties2* p_format_properties) => extensions.vk_get_physical_device_format_properties2_khr(physical_device, format, p_format_properties);
+fn void get_physical_device_queue_family_properties2_khr (PhysicalDevice physical_device, uint* p_queue_family_property_count, QueueFamilyProperties2* p_queue_family_properties) => extensions.vk_get_physical_device_queue_family_properties2_khr(physical_device, p_queue_family_property_count, p_queue_family_properties);
+fn void get_physical_device_memory_properties2_khr (PhysicalDevice physical_device, PhysicalDeviceMemoryProperties2* p_memory_properties) => extensions.vk_get_physical_device_memory_properties2_khr(physical_device, p_memory_properties);
+fn void get_physical_device_sparse_image_format_properties2_khr (PhysicalDevice physical_device, PhysicalDeviceSparseImageFormatInfo2* p_format_info, uint* p_property_count, SparseImageFormatProperties2* p_properties) => extensions.vk_get_physical_device_sparse_image_format_properties2_khr(physical_device, p_format_info, p_property_count, p_properties);
+fn void cmd_push_descriptor_set_khr (CommandBuffer command_buffer, PipelineBindPoint pipeline_bind_point, PipelineLayout layout, uint set, uint descriptor_write_count, WriteDescriptorSet* p_descriptor_writes) => extensions.vk_cmd_push_descriptor_set_khr(command_buffer, pipeline_bind_point, layout, set, descriptor_write_count, p_descriptor_writes);
+fn void trim_command_pool_khr (Device device, CommandPool command_pool, CommandPoolTrimFlags flags) => extensions.vk_trim_command_pool_khr(device, command_pool, flags);
+fn void get_physical_device_external_buffer_properties_khr (PhysicalDevice physical_device, PhysicalDeviceExternalBufferInfo* p_external_buffer_info, ExternalBufferProperties* p_external_buffer_properties) => extensions.vk_get_physical_device_external_buffer_properties_khr(physical_device, p_external_buffer_info, p_external_buffer_properties);
+fn void get_physical_device_external_semaphore_properties_khr (PhysicalDevice physical_device, PhysicalDeviceExternalSemaphoreInfo* p_external_semaphore_info, ExternalSemaphoreProperties* p_external_semaphore_properties) => extensions.vk_get_physical_device_external_semaphore_properties_khr(physical_device, p_external_semaphore_info, p_external_semaphore_properties);
+fn void get_physical_device_external_fence_properties_khr (PhysicalDevice physical_device, PhysicalDeviceExternalFenceInfo* p_external_fence_info, ExternalFenceProperties* p_external_fence_properties) => extensions.vk_get_physical_device_external_fence_properties_khr(physical_device, p_external_fence_info, p_external_fence_properties);
+fn void get_device_group_peer_memory_features_khr (Device device, uint heap_index, uint local_device_index, uint remote_device_index, PeerMemoryFeatureFlags* p_peer_memory_features) => extensions.vk_get_device_group_peer_memory_features_khr(device, heap_index, local_device_index, remote_device_index, p_peer_memory_features);
+fn void cmd_set_device_mask_khr (CommandBuffer command_buffer, uint device_mask) => extensions.vk_cmd_set_device_mask_khr(command_buffer, device_mask);
+fn void cmd_dispatch_base_khr (CommandBuffer command_buffer, uint base_group_x, uint base_group_y, uint base_group_z, uint group_count_x, uint group_count_y, uint group_count_z) => extensions.vk_cmd_dispatch_base_khr(command_buffer, base_group_x, base_group_y, base_group_z, group_count_x, group_count_y, group_count_z);
+fn void destroy_descriptor_update_template_khr (Device device, DescriptorUpdateTemplate descriptor_update_template, AllocationCallbacks* p_allocator) => extensions.vk_destroy_descriptor_update_template_khr(device, descriptor_update_template, p_allocator);
+fn void update_descriptor_set_with_template_khr (Device device, DescriptorSet descriptor_set, DescriptorUpdateTemplate descriptor_update_template, void* p_data) => extensions.vk_update_descriptor_set_with_template_khr(device, descriptor_set, descriptor_update_template, p_data);
+fn void cmd_push_descriptor_set_with_template_khr (CommandBuffer command_buffer, DescriptorUpdateTemplate descriptor_update_template, PipelineLayout layout, uint set, void* p_data) => extensions.vk_cmd_push_descriptor_set_with_template_khr(command_buffer, descriptor_update_template, layout, set, p_data);
+fn void set_hdr_metadata_ext (Device device, uint swapchain_count, SwapchainKHR* p_swapchains, HdrMetadataEXT* p_metadata) => extensions.vk_set_hdr_metadata_ext(device, swapchain_count, p_swapchains, p_metadata);
+fn void cmd_set_viewport_w_scaling_nv (CommandBuffer command_buffer, uint first_viewport, uint viewport_count, ViewportWScalingNV* p_viewport_w_scalings) => extensions.vk_cmd_set_viewport_w_scaling_nv(command_buffer, first_viewport, viewport_count, p_viewport_w_scalings);
+fn void cmd_set_discard_rectangle_ext (CommandBuffer command_buffer, uint first_discard_rectangle, uint discard_rectangle_count, Rect2D* p_discard_rectangles) => extensions.vk_cmd_set_discard_rectangle_ext(command_buffer, first_discard_rectangle, discard_rectangle_count, p_discard_rectangles);
+fn void cmd_set_discard_rectangle_enable_ext (CommandBuffer command_buffer, uint discard_rectangle_enable) => extensions.vk_cmd_set_discard_rectangle_enable_ext(command_buffer, discard_rectangle_enable);
+fn void cmd_set_discard_rectangle_mode_ext (CommandBuffer command_buffer, DiscardRectangleModeEXT discard_rectangle_mode) => extensions.vk_cmd_set_discard_rectangle_mode_ext(command_buffer, discard_rectangle_mode);
+fn void cmd_set_sample_locations_ext (CommandBuffer command_buffer, SampleLocationsInfoEXT* p_sample_locations_info) => extensions.vk_cmd_set_sample_locations_ext(command_buffer, p_sample_locations_info);
+fn void get_physical_device_multisample_properties_ext (PhysicalDevice physical_device, SampleCountFlagBits samples, MultisamplePropertiesEXT* p_multisample_properties) => extensions.vk_get_physical_device_multisample_properties_ext(physical_device, samples, p_multisample_properties);
+fn void get_buffer_memory_requirements2_khr (Device device, BufferMemoryRequirementsInfo2* p_info, MemoryRequirements2* p_memory_requirements) => extensions.vk_get_buffer_memory_requirements2_khr(device, p_info, p_memory_requirements);
+fn void get_image_memory_requirements2_khr (Device device, ImageMemoryRequirementsInfo2* p_info, MemoryRequirements2* p_memory_requirements) => extensions.vk_get_image_memory_requirements2_khr(device, p_info, p_memory_requirements);
+fn void get_image_sparse_memory_requirements2_khr (Device device, ImageSparseMemoryRequirementsInfo2* p_info, uint* p_sparse_memory_requirement_count, SparseImageMemoryRequirements2* p_sparse_memory_requirements) => extensions.vk_get_image_sparse_memory_requirements2_khr(device, p_info, p_sparse_memory_requirement_count, p_sparse_memory_requirements);
+fn void get_device_buffer_memory_requirements_khr (Device device, DeviceBufferMemoryRequirements* p_info, MemoryRequirements2* p_memory_requirements) => extensions.vk_get_device_buffer_memory_requirements_khr(device, p_info, p_memory_requirements);
+fn void get_device_image_memory_requirements_khr (Device device, DeviceImageMemoryRequirements* p_info, MemoryRequirements2* p_memory_requirements) => extensions.vk_get_device_image_memory_requirements_khr(device, p_info, p_memory_requirements);
+fn void get_device_image_sparse_memory_requirements_khr (Device device, DeviceImageMemoryRequirements* p_info, uint* p_sparse_memory_requirement_count, SparseImageMemoryRequirements2* p_sparse_memory_requirements) => extensions.vk_get_device_image_sparse_memory_requirements_khr(device, p_info, p_sparse_memory_requirement_count, p_sparse_memory_requirements);
+fn void destroy_sampler_ycbcr_conversion_khr (Device device, SamplerYcbcrConversion ycbcr_conversion, AllocationCallbacks* p_allocator) => extensions.vk_destroy_sampler_ycbcr_conversion_khr(device, ycbcr_conversion, p_allocator);
+fn void destroy_validation_cache_ext (Device device, ValidationCacheEXT validation_cache, AllocationCallbacks* p_allocator) => extensions.vk_destroy_validation_cache_ext(device, validation_cache, p_allocator);
+fn void get_descriptor_set_layout_support_khr (Device device, DescriptorSetLayoutCreateInfo* p_create_info, DescriptorSetLayoutSupport* p_support) => extensions.vk_get_descriptor_set_layout_support_khr(device, p_create_info, p_support);
+fn void set_local_dimming_amd (Device device, SwapchainKHR swap_chain, uint local_dimming_enable) => extensions.vk_set_local_dimming_amd(device, swap_chain, local_dimming_enable);
+fn void queue_begin_debug_utils_label_ext (Queue queue, DebugUtilsLabelEXT* p_label_info) => extensions.vk_queue_begin_debug_utils_label_ext(queue, p_label_info);
 fn void queue_end_debug_utils_label_ext (Queue queue) => extensions.vk_queue_end_debug_utils_label_ext(queue);
-fn void queue_insert_debug_utils_label_ext (Queue queue, DebugUtilsLabelEXT* pLabelInfo) => extensions.vk_queue_insert_debug_utils_label_ext(queue, pLabelInfo);
-fn void cmd_begin_debug_utils_label_ext (CommandBuffer commandBuffer, DebugUtilsLabelEXT* pLabelInfo) => extensions.vk_cmd_begin_debug_utils_label_ext(commandBuffer, pLabelInfo);
-fn void cmd_end_debug_utils_label_ext (CommandBuffer commandBuffer) => extensions.vk_cmd_end_debug_utils_label_ext(commandBuffer);
-fn void cmd_insert_debug_utils_label_ext (CommandBuffer commandBuffer, DebugUtilsLabelEXT* pLabelInfo) => extensions.vk_cmd_insert_debug_utils_label_ext(commandBuffer, pLabelInfo);
-fn void destroy_debug_utils_messenger_ext (Instance instance, DebugUtilsMessengerEXT messenger, AllocationCallbacks* pAllocator) => extensions.vk_destroy_debug_utils_messenger_ext(instance, messenger, pAllocator);
-fn void submit_debug_utils_message_ext (Instance instance, DebugUtilsMessageSeverityFlagBitsEXT messageSeverity, DebugUtilsMessageTypeFlagsEXT messageTypes, DebugUtilsMessengerCallbackDataEXT* pCallbackData) => extensions.vk_submit_debug_utils_message_ext(instance, messageSeverity, messageTypes, pCallbackData);
-fn void cmd_write_buffer_marker_amd (CommandBuffer commandBuffer, PipelineStageFlagBits pipelineStage, Buffer dstBuffer, DeviceSize dstOffset, uint marker) => extensions.vk_cmd_write_buffer_marker_amd(commandBuffer, pipelineStage, dstBuffer, dstOffset, marker);
-fn void cmd_begin_render_pass2_khr (CommandBuffer commandBuffer, RenderPassBeginInfo* pRenderPassBegin, SubpassBeginInfo* pSubpassBeginInfo) => extensions.vk_cmd_begin_render_pass2_khr(commandBuffer, pRenderPassBegin, pSubpassBeginInfo);
-fn void cmd_next_subpass2_khr (CommandBuffer commandBuffer, SubpassBeginInfo* pSubpassBeginInfo, SubpassEndInfo* pSubpassEndInfo) => extensions.vk_cmd_next_subpass2_khr(commandBuffer, pSubpassBeginInfo, pSubpassEndInfo);
-fn void cmd_end_render_pass2_khr (CommandBuffer commandBuffer, SubpassEndInfo* pSubpassEndInfo) => extensions.vk_cmd_end_render_pass2_khr(commandBuffer, pSubpassEndInfo);
-fn void cmd_draw_indirect_count_khr (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, Buffer countBuffer, DeviceSize countBufferOffset, uint maxDrawCount, uint stride) => extensions.vk_cmd_draw_indirect_count_khr(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
-fn void cmd_draw_indirect_count_amd (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, Buffer countBuffer, DeviceSize countBufferOffset, uint maxDrawCount, uint stride) => extensions.vk_cmd_draw_indirect_count_amd(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
-fn void cmd_draw_indexed_indirect_count_khr (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, Buffer countBuffer, DeviceSize countBufferOffset, uint maxDrawCount, uint stride) => extensions.vk_cmd_draw_indexed_indirect_count_khr(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
-fn void cmd_draw_indexed_indirect_count_amd (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, Buffer countBuffer, DeviceSize countBufferOffset, uint maxDrawCount, uint stride) => extensions.vk_cmd_draw_indexed_indirect_count_amd(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
-fn void cmd_set_checkpoint_nv (CommandBuffer commandBuffer, void* pCheckpointMarker) => extensions.vk_cmd_set_checkpoint_nv(commandBuffer, pCheckpointMarker);
-fn void get_queue_checkpoint_data_nv (Queue queue, uint* pCheckpointDataCount, CheckpointDataNV* pCheckpointData) => extensions.vk_get_queue_checkpoint_data_nv(queue, pCheckpointDataCount, pCheckpointData);
-fn void cmd_bind_transform_feedback_buffers_ext (CommandBuffer commandBuffer, uint firstBinding, uint bindingCount, Buffer* pBuffers, DeviceSize* pOffsets, DeviceSize* pSizes) => extensions.vk_cmd_bind_transform_feedback_buffers_ext(commandBuffer, firstBinding, bindingCount, pBuffers, pOffsets, pSizes);
-fn void cmd_begin_transform_feedback_ext (CommandBuffer commandBuffer, uint firstCounterBuffer, uint counterBufferCount, Buffer* pCounterBuffers, DeviceSize* pCounterBufferOffsets) => extensions.vk_cmd_begin_transform_feedback_ext(commandBuffer, firstCounterBuffer, counterBufferCount, pCounterBuffers, pCounterBufferOffsets);
-fn void cmd_end_transform_feedback_ext (CommandBuffer commandBuffer, uint firstCounterBuffer, uint counterBufferCount, Buffer* pCounterBuffers, DeviceSize* pCounterBufferOffsets) => extensions.vk_cmd_end_transform_feedback_ext(commandBuffer, firstCounterBuffer, counterBufferCount, pCounterBuffers, pCounterBufferOffsets);
-fn void cmd_begin_query_indexed_ext (CommandBuffer commandBuffer, QueryPool queryPool, uint query, QueryControlFlags flags, uint index) => extensions.vk_cmd_begin_query_indexed_ext(commandBuffer, queryPool, query, flags, index);
-fn void cmd_end_query_indexed_ext (CommandBuffer commandBuffer, QueryPool queryPool, uint query, uint index) => extensions.vk_cmd_end_query_indexed_ext(commandBuffer, queryPool, query, index);
-fn void cmd_draw_indirect_byte_count_ext (CommandBuffer commandBuffer, uint instanceCount, uint firstInstance, Buffer counterBuffer, DeviceSize counterBufferOffset, uint counterOffset, uint vertexStride) => extensions.vk_cmd_draw_indirect_byte_count_ext(commandBuffer, instanceCount, firstInstance, counterBuffer, counterBufferOffset, counterOffset, vertexStride);
-fn void cmd_set_exclusive_scissor_nv (CommandBuffer commandBuffer, uint firstExclusiveScissor, uint exclusiveScissorCount, Rect2D* pExclusiveScissors) => extensions.vk_cmd_set_exclusive_scissor_nv(commandBuffer, firstExclusiveScissor, exclusiveScissorCount, pExclusiveScissors);
-fn void cmd_set_exclusive_scissor_enable_nv (CommandBuffer commandBuffer, uint firstExclusiveScissor, uint exclusiveScissorCount, uint* pExclusiveScissorEnables) => extensions.vk_cmd_set_exclusive_scissor_enable_nv(commandBuffer, firstExclusiveScissor, exclusiveScissorCount, pExclusiveScissorEnables);
-fn void cmd_bind_shading_rate_image_nv (CommandBuffer commandBuffer, ImageView imageView, ImageLayout imageLayout) => extensions.vk_cmd_bind_shading_rate_image_nv(commandBuffer, imageView, imageLayout);
-fn void cmd_set_viewport_shading_rate_palette_nv (CommandBuffer commandBuffer, uint firstViewport, uint viewportCount, ShadingRatePaletteNV* pShadingRatePalettes) => extensions.vk_cmd_set_viewport_shading_rate_palette_nv(commandBuffer, firstViewport, viewportCount, pShadingRatePalettes);
-fn void cmd_set_coarse_sample_order_nv (CommandBuffer commandBuffer, CoarseSampleOrderTypeNV sampleOrderType, uint customSampleOrderCount, CoarseSampleOrderCustomNV* pCustomSampleOrders) => extensions.vk_cmd_set_coarse_sample_order_nv(commandBuffer, sampleOrderType, customSampleOrderCount, pCustomSampleOrders);
-fn void cmd_draw_mesh_tasks_nv (CommandBuffer commandBuffer, uint taskCount, uint firstTask) => extensions.vk_cmd_draw_mesh_tasks_nv(commandBuffer, taskCount, firstTask);
-fn void cmd_draw_mesh_tasks_indirect_nv (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, uint drawCount, uint stride) => extensions.vk_cmd_draw_mesh_tasks_indirect_nv(commandBuffer, buffer, offset, drawCount, stride);
-fn void cmd_draw_mesh_tasks_indirect_count_nv (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, Buffer countBuffer, DeviceSize countBufferOffset, uint maxDrawCount, uint stride) => extensions.vk_cmd_draw_mesh_tasks_indirect_count_nv(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
-fn void cmd_draw_mesh_tasks_ext (CommandBuffer commandBuffer, uint groupCountX, uint groupCountY, uint groupCountZ) => extensions.vk_cmd_draw_mesh_tasks_ext(commandBuffer, groupCountX, groupCountY, groupCountZ);
-fn void cmd_draw_mesh_tasks_indirect_ext (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, uint drawCount, uint stride) => extensions.vk_cmd_draw_mesh_tasks_indirect_ext(commandBuffer, buffer, offset, drawCount, stride);
-fn void cmd_draw_mesh_tasks_indirect_count_ext (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, Buffer countBuffer, DeviceSize countBufferOffset, uint maxDrawCount, uint stride) => extensions.vk_cmd_draw_mesh_tasks_indirect_count_ext(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
-fn void cmd_bind_invocation_mask_huawei (CommandBuffer commandBuffer, ImageView imageView, ImageLayout imageLayout) => extensions.vk_cmd_bind_invocation_mask_huawei(commandBuffer, imageView, imageLayout);
-fn void destroy_acceleration_structure_khr (Device device, AccelerationStructureKHR accelerationStructure, AllocationCallbacks* pAllocator) => extensions.vk_destroy_acceleration_structure_khr(device, accelerationStructure, pAllocator);
-fn void destroy_acceleration_structure_nv (Device device, AccelerationStructureNV accelerationStructure, AllocationCallbacks* pAllocator) => extensions.vk_destroy_acceleration_structure_nv(device, accelerationStructure, pAllocator);
-fn void get_acceleration_structure_memory_requirements_nv (Device device, AccelerationStructureMemoryRequirementsInfoNV* pInfo, MemoryRequirements2KHR* pMemoryRequirements) => extensions.vk_get_acceleration_structure_memory_requirements_nv(device, pInfo, pMemoryRequirements);
-fn void cmd_copy_acceleration_structure_nv (CommandBuffer commandBuffer, AccelerationStructureNV dst, AccelerationStructureNV src, CopyAccelerationStructureModeKHR mode) => extensions.vk_cmd_copy_acceleration_structure_nv(commandBuffer, dst, src, mode);
-fn void cmd_copy_acceleration_structure_khr (CommandBuffer commandBuffer, CopyAccelerationStructureInfoKHR* pInfo) => extensions.vk_cmd_copy_acceleration_structure_khr(commandBuffer, pInfo);
-fn void cmd_copy_acceleration_structure_to_memory_khr (CommandBuffer commandBuffer, CopyAccelerationStructureToMemoryInfoKHR* pInfo) => extensions.vk_cmd_copy_acceleration_structure_to_memory_khr(commandBuffer, pInfo);
-fn void cmd_copy_memory_to_acceleration_structure_khr (CommandBuffer commandBuffer, CopyMemoryToAccelerationStructureInfoKHR* pInfo) => extensions.vk_cmd_copy_memory_to_acceleration_structure_khr(commandBuffer, pInfo);
-fn void cmd_write_acceleration_structures_properties_khr (CommandBuffer commandBuffer, uint accelerationStructureCount, AccelerationStructureKHR* pAccelerationStructures, QueryType queryType, QueryPool queryPool, uint firstQuery) => extensions.vk_cmd_write_acceleration_structures_properties_khr(commandBuffer, accelerationStructureCount, pAccelerationStructures, queryType, queryPool, firstQuery);
-fn void cmd_write_acceleration_structures_properties_nv (CommandBuffer commandBuffer, uint accelerationStructureCount, AccelerationStructureNV* pAccelerationStructures, QueryType queryType, QueryPool queryPool, uint firstQuery) => extensions.vk_cmd_write_acceleration_structures_properties_nv(commandBuffer, accelerationStructureCount, pAccelerationStructures, queryType, queryPool, firstQuery);
-fn void cmd_trace_rays_khr (CommandBuffer commandBuffer, StridedDeviceAddressRegionKHR* pRaygenShaderBindingTable, StridedDeviceAddressRegionKHR* pMissShaderBindingTable, StridedDeviceAddressRegionKHR* pHitShaderBindingTable, StridedDeviceAddressRegionKHR* pCallableShaderBindingTable, uint width, uint height, uint depth) => extensions.vk_cmd_trace_rays_khr(commandBuffer, pRaygenShaderBindingTable, pMissShaderBindingTable, pHitShaderBindingTable, pCallableShaderBindingTable, width, height, depth);
-fn void cmd_trace_rays_nv (CommandBuffer commandBuffer, Buffer raygenShaderBindingTableBuffer, DeviceSize raygenShaderBindingOffset, Buffer missShaderBindingTableBuffer, DeviceSize missShaderBindingOffset, DeviceSize missShaderBindingStride, Buffer hitShaderBindingTableBuffer, DeviceSize hitShaderBindingOffset, DeviceSize hitShaderBindingStride, Buffer callableShaderBindingTableBuffer, DeviceSize callableShaderBindingOffset, DeviceSize callableShaderBindingStride, uint width, uint height, uint depth) => extensions.vk_cmd_trace_rays_nv(commandBuffer, raygenShaderBindingTableBuffer, raygenShaderBindingOffset, missShaderBindingTableBuffer, missShaderBindingOffset, missShaderBindingStride, hitShaderBindingTableBuffer, hitShaderBindingOffset, hitShaderBindingStride, callableShaderBindingTableBuffer, callableShaderBindingOffset, callableShaderBindingStride, width, height, depth);
-fn void cmd_trace_rays_indirect_khr (CommandBuffer commandBuffer, StridedDeviceAddressRegionKHR* pRaygenShaderBindingTable, StridedDeviceAddressRegionKHR* pMissShaderBindingTable, StridedDeviceAddressRegionKHR* pHitShaderBindingTable, StridedDeviceAddressRegionKHR* pCallableShaderBindingTable, DeviceAddress indirectDeviceAddress) => extensions.vk_cmd_trace_rays_indirect_khr(commandBuffer, pRaygenShaderBindingTable, pMissShaderBindingTable, pHitShaderBindingTable, pCallableShaderBindingTable, indirectDeviceAddress);
-fn void cmd_trace_rays_indirect2_khr (CommandBuffer commandBuffer, DeviceAddress indirectDeviceAddress) => extensions.vk_cmd_trace_rays_indirect2_khr(commandBuffer, indirectDeviceAddress);
-fn void get_device_acceleration_structure_compatibility_khr (Device device, AccelerationStructureVersionInfoKHR* pVersionInfo, AccelerationStructureCompatibilityKHR* pCompatibility) => extensions.vk_get_device_acceleration_structure_compatibility_khr(device, pVersionInfo, pCompatibility);
-fn DeviceSize get_ray_tracing_shader_group_stack_size_khr (Device device, Pipeline pipeline, uint group, ShaderGroupShaderKHR groupShader) => extensions.vk_get_ray_tracing_shader_group_stack_size_khr(device, pipeline, group, groupShader);
-fn void cmd_set_ray_tracing_pipeline_stack_size_khr (CommandBuffer commandBuffer, uint pipelineStackSize) => extensions.vk_cmd_set_ray_tracing_pipeline_stack_size_khr(commandBuffer, pipelineStackSize);
-fn uint get_image_view_handle_nvx (Device device, ImageViewHandleInfoNVX* pInfo) => extensions.vk_get_image_view_handle_nvx(device, pInfo);
-fn void get_physical_device_queue_family_performance_query_passes_khr (PhysicalDevice physicalDevice, QueryPoolPerformanceCreateInfoKHR* pPerformanceQueryCreateInfo, uint* pNumPasses) => extensions.vk_get_physical_device_queue_family_performance_query_passes_khr(physicalDevice, pPerformanceQueryCreateInfo, pNumPasses);
+fn void queue_insert_debug_utils_label_ext (Queue queue, DebugUtilsLabelEXT* p_label_info) => extensions.vk_queue_insert_debug_utils_label_ext(queue, p_label_info);
+fn void cmd_begin_debug_utils_label_ext (CommandBuffer command_buffer, DebugUtilsLabelEXT* p_label_info) => extensions.vk_cmd_begin_debug_utils_label_ext(command_buffer, p_label_info);
+fn void cmd_end_debug_utils_label_ext (CommandBuffer command_buffer) => extensions.vk_cmd_end_debug_utils_label_ext(command_buffer);
+fn void cmd_insert_debug_utils_label_ext (CommandBuffer command_buffer, DebugUtilsLabelEXT* p_label_info) => extensions.vk_cmd_insert_debug_utils_label_ext(command_buffer, p_label_info);
+fn void destroy_debug_utils_messenger_ext (Instance instance, DebugUtilsMessengerEXT messenger, AllocationCallbacks* p_allocator) => extensions.vk_destroy_debug_utils_messenger_ext(instance, messenger, p_allocator);
+fn void submit_debug_utils_message_ext (Instance instance, DebugUtilsMessageSeverityFlagBitsEXT message_severity, DebugUtilsMessageTypeFlagsEXT message_types, DebugUtilsMessengerCallbackDataEXT* p_callback_data) => extensions.vk_submit_debug_utils_message_ext(instance, message_severity, message_types, p_callback_data);
+fn void cmd_write_buffer_marker_amd (CommandBuffer command_buffer, PipelineStageFlagBits pipeline_stage, Buffer dst_buffer, DeviceSize dst_offset, uint marker) => extensions.vk_cmd_write_buffer_marker_amd(command_buffer, pipeline_stage, dst_buffer, dst_offset, marker);
+fn void cmd_begin_render_pass2_khr (CommandBuffer command_buffer, RenderPassBeginInfo* p_render_pass_begin, SubpassBeginInfo* p_subpass_begin_info) => extensions.vk_cmd_begin_render_pass2_khr(command_buffer, p_render_pass_begin, p_subpass_begin_info);
+fn void cmd_next_subpass2_khr (CommandBuffer command_buffer, SubpassBeginInfo* p_subpass_begin_info, SubpassEndInfo* p_subpass_end_info) => extensions.vk_cmd_next_subpass2_khr(command_buffer, p_subpass_begin_info, p_subpass_end_info);
+fn void cmd_end_render_pass2_khr (CommandBuffer command_buffer, SubpassEndInfo* p_subpass_end_info) => extensions.vk_cmd_end_render_pass2_khr(command_buffer, p_subpass_end_info);
+fn void cmd_draw_indirect_count_khr (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset, Buffer count_buffer, DeviceSize count_buffer_offset, uint max_draw_count, uint stride) => extensions.vk_cmd_draw_indirect_count_khr(command_buffer, buffer, offset, count_buffer, count_buffer_offset, max_draw_count, stride);
+fn void cmd_draw_indirect_count_amd (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset, Buffer count_buffer, DeviceSize count_buffer_offset, uint max_draw_count, uint stride) => extensions.vk_cmd_draw_indirect_count_amd(command_buffer, buffer, offset, count_buffer, count_buffer_offset, max_draw_count, stride);
+fn void cmd_draw_indexed_indirect_count_khr (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset, Buffer count_buffer, DeviceSize count_buffer_offset, uint max_draw_count, uint stride) => extensions.vk_cmd_draw_indexed_indirect_count_khr(command_buffer, buffer, offset, count_buffer, count_buffer_offset, max_draw_count, stride);
+fn void cmd_draw_indexed_indirect_count_amd (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset, Buffer count_buffer, DeviceSize count_buffer_offset, uint max_draw_count, uint stride) => extensions.vk_cmd_draw_indexed_indirect_count_amd(command_buffer, buffer, offset, count_buffer, count_buffer_offset, max_draw_count, stride);
+fn void cmd_set_checkpoint_nv (CommandBuffer command_buffer, void* p_checkpoint_marker) => extensions.vk_cmd_set_checkpoint_nv(command_buffer, p_checkpoint_marker);
+fn void get_queue_checkpoint_data_nv (Queue queue, uint* p_checkpoint_data_count, CheckpointDataNV* p_checkpoint_data) => extensions.vk_get_queue_checkpoint_data_nv(queue, p_checkpoint_data_count, p_checkpoint_data);
+fn void cmd_bind_transform_feedback_buffers_ext (CommandBuffer command_buffer, uint first_binding, uint binding_count, Buffer* p_buffers, DeviceSize* p_offsets, DeviceSize* p_sizes) => extensions.vk_cmd_bind_transform_feedback_buffers_ext(command_buffer, first_binding, binding_count, p_buffers, p_offsets, p_sizes);
+fn void cmd_begin_transform_feedback_ext (CommandBuffer command_buffer, uint first_counter_buffer, uint counter_buffer_count, Buffer* p_counter_buffers, DeviceSize* p_counter_buffer_offsets) => extensions.vk_cmd_begin_transform_feedback_ext(command_buffer, first_counter_buffer, counter_buffer_count, p_counter_buffers, p_counter_buffer_offsets);
+fn void cmd_end_transform_feedback_ext (CommandBuffer command_buffer, uint first_counter_buffer, uint counter_buffer_count, Buffer* p_counter_buffers, DeviceSize* p_counter_buffer_offsets) => extensions.vk_cmd_end_transform_feedback_ext(command_buffer, first_counter_buffer, counter_buffer_count, p_counter_buffers, p_counter_buffer_offsets);
+fn void cmd_begin_query_indexed_ext (CommandBuffer command_buffer, QueryPool query_pool, uint query, QueryControlFlags flags, uint index) => extensions.vk_cmd_begin_query_indexed_ext(command_buffer, query_pool, query, flags, index);
+fn void cmd_end_query_indexed_ext (CommandBuffer command_buffer, QueryPool query_pool, uint query, uint index) => extensions.vk_cmd_end_query_indexed_ext(command_buffer, query_pool, query, index);
+fn void cmd_draw_indirect_byte_count_ext (CommandBuffer command_buffer, uint instance_count, uint first_instance, Buffer counter_buffer, DeviceSize counter_buffer_offset, uint counter_offset, uint vertex_stride) => extensions.vk_cmd_draw_indirect_byte_count_ext(command_buffer, instance_count, first_instance, counter_buffer, counter_buffer_offset, counter_offset, vertex_stride);
+fn void cmd_set_exclusive_scissor_nv (CommandBuffer command_buffer, uint first_exclusive_scissor, uint exclusive_scissor_count, Rect2D* p_exclusive_scissors) => extensions.vk_cmd_set_exclusive_scissor_nv(command_buffer, first_exclusive_scissor, exclusive_scissor_count, p_exclusive_scissors);
+fn void cmd_set_exclusive_scissor_enable_nv (CommandBuffer command_buffer, uint first_exclusive_scissor, uint exclusive_scissor_count, uint* p_exclusive_scissor_enables) => extensions.vk_cmd_set_exclusive_scissor_enable_nv(command_buffer, first_exclusive_scissor, exclusive_scissor_count, p_exclusive_scissor_enables);
+fn void cmd_bind_shading_rate_image_nv (CommandBuffer command_buffer, ImageView image_view, ImageLayout image_layout) => extensions.vk_cmd_bind_shading_rate_image_nv(command_buffer, image_view, image_layout);
+fn void cmd_set_viewport_shading_rate_palette_nv (CommandBuffer command_buffer, uint first_viewport, uint viewport_count, ShadingRatePaletteNV* p_shading_rate_palettes) => extensions.vk_cmd_set_viewport_shading_rate_palette_nv(command_buffer, first_viewport, viewport_count, p_shading_rate_palettes);
+fn void cmd_set_coarse_sample_order_nv (CommandBuffer command_buffer, CoarseSampleOrderTypeNV sample_order_type, uint custom_sample_order_count, CoarseSampleOrderCustomNV* p_custom_sample_orders) => extensions.vk_cmd_set_coarse_sample_order_nv(command_buffer, sample_order_type, custom_sample_order_count, p_custom_sample_orders);
+fn void cmd_draw_mesh_tasks_nv (CommandBuffer command_buffer, uint task_count, uint first_task) => extensions.vk_cmd_draw_mesh_tasks_nv(command_buffer, task_count, first_task);
+fn void cmd_draw_mesh_tasks_indirect_nv (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset, uint draw_count, uint stride) => extensions.vk_cmd_draw_mesh_tasks_indirect_nv(command_buffer, buffer, offset, draw_count, stride);
+fn void cmd_draw_mesh_tasks_indirect_count_nv (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset, Buffer count_buffer, DeviceSize count_buffer_offset, uint max_draw_count, uint stride) => extensions.vk_cmd_draw_mesh_tasks_indirect_count_nv(command_buffer, buffer, offset, count_buffer, count_buffer_offset, max_draw_count, stride);
+fn void cmd_draw_mesh_tasks_ext (CommandBuffer command_buffer, uint group_count_x, uint group_count_y, uint group_count_z) => extensions.vk_cmd_draw_mesh_tasks_ext(command_buffer, group_count_x, group_count_y, group_count_z);
+fn void cmd_draw_mesh_tasks_indirect_ext (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset, uint draw_count, uint stride) => extensions.vk_cmd_draw_mesh_tasks_indirect_ext(command_buffer, buffer, offset, draw_count, stride);
+fn void cmd_draw_mesh_tasks_indirect_count_ext (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset, Buffer count_buffer, DeviceSize count_buffer_offset, uint max_draw_count, uint stride) => extensions.vk_cmd_draw_mesh_tasks_indirect_count_ext(command_buffer, buffer, offset, count_buffer, count_buffer_offset, max_draw_count, stride);
+fn void cmd_bind_invocation_mask_huawei (CommandBuffer command_buffer, ImageView image_view, ImageLayout image_layout) => extensions.vk_cmd_bind_invocation_mask_huawei(command_buffer, image_view, image_layout);
+fn void destroy_acceleration_structure_khr (Device device, AccelerationStructureKHR acceleration_structure, AllocationCallbacks* p_allocator) => extensions.vk_destroy_acceleration_structure_khr(device, acceleration_structure, p_allocator);
+fn void destroy_acceleration_structure_nv (Device device, AccelerationStructureNV acceleration_structure, AllocationCallbacks* p_allocator) => extensions.vk_destroy_acceleration_structure_nv(device, acceleration_structure, p_allocator);
+fn void get_acceleration_structure_memory_requirements_nv (Device device, AccelerationStructureMemoryRequirementsInfoNV* p_info, MemoryRequirements2KHR* p_memory_requirements) => extensions.vk_get_acceleration_structure_memory_requirements_nv(device, p_info, p_memory_requirements);
+fn void cmd_copy_acceleration_structure_nv (CommandBuffer command_buffer, AccelerationStructureNV dst, AccelerationStructureNV src, CopyAccelerationStructureModeKHR mode) => extensions.vk_cmd_copy_acceleration_structure_nv(command_buffer, dst, src, mode);
+fn void cmd_copy_acceleration_structure_khr (CommandBuffer command_buffer, CopyAccelerationStructureInfoKHR* p_info) => extensions.vk_cmd_copy_acceleration_structure_khr(command_buffer, p_info);
+fn void cmd_copy_acceleration_structure_to_memory_khr (CommandBuffer command_buffer, CopyAccelerationStructureToMemoryInfoKHR* p_info) => extensions.vk_cmd_copy_acceleration_structure_to_memory_khr(command_buffer, p_info);
+fn void cmd_copy_memory_to_acceleration_structure_khr (CommandBuffer command_buffer, CopyMemoryToAccelerationStructureInfoKHR* p_info) => extensions.vk_cmd_copy_memory_to_acceleration_structure_khr(command_buffer, p_info);
+fn void cmd_write_acceleration_structures_properties_khr (CommandBuffer command_buffer, uint acceleration_structure_count, AccelerationStructureKHR* p_acceleration_structures, QueryType query_type, QueryPool query_pool, uint first_query) => extensions.vk_cmd_write_acceleration_structures_properties_khr(command_buffer, acceleration_structure_count, p_acceleration_structures, query_type, query_pool, first_query);
+fn void cmd_write_acceleration_structures_properties_nv (CommandBuffer command_buffer, uint acceleration_structure_count, AccelerationStructureNV* p_acceleration_structures, QueryType query_type, QueryPool query_pool, uint first_query) => extensions.vk_cmd_write_acceleration_structures_properties_nv(command_buffer, acceleration_structure_count, p_acceleration_structures, query_type, query_pool, first_query);
+fn void cmd_trace_rays_khr (CommandBuffer command_buffer, StridedDeviceAddressRegionKHR* p_raygen_shader_binding_table, StridedDeviceAddressRegionKHR* p_miss_shader_binding_table, StridedDeviceAddressRegionKHR* p_hit_shader_binding_table, StridedDeviceAddressRegionKHR* p_callable_shader_binding_table, uint width, uint height, uint depth) => extensions.vk_cmd_trace_rays_khr(command_buffer, p_raygen_shader_binding_table, p_miss_shader_binding_table, p_hit_shader_binding_table, p_callable_shader_binding_table, width, height, depth);
+fn void cmd_trace_rays_nv (CommandBuffer command_buffer, Buffer raygen_shader_binding_table_buffer, DeviceSize raygen_shader_binding_offset, Buffer miss_shader_binding_table_buffer, DeviceSize miss_shader_binding_offset, DeviceSize miss_shader_binding_stride, Buffer hit_shader_binding_table_buffer, DeviceSize hit_shader_binding_offset, DeviceSize hit_shader_binding_stride, Buffer callable_shader_binding_table_buffer, DeviceSize callable_shader_binding_offset, DeviceSize callable_shader_binding_stride, uint width, uint height, uint depth) => extensions.vk_cmd_trace_rays_nv(command_buffer, raygen_shader_binding_table_buffer, raygen_shader_binding_offset, miss_shader_binding_table_buffer, miss_shader_binding_offset, miss_shader_binding_stride, hit_shader_binding_table_buffer, hit_shader_binding_offset, hit_shader_binding_stride, callable_shader_binding_table_buffer, callable_shader_binding_offset, callable_shader_binding_stride, width, height, depth);
+fn void cmd_trace_rays_indirect_khr (CommandBuffer command_buffer, StridedDeviceAddressRegionKHR* p_raygen_shader_binding_table, StridedDeviceAddressRegionKHR* p_miss_shader_binding_table, StridedDeviceAddressRegionKHR* p_hit_shader_binding_table, StridedDeviceAddressRegionKHR* p_callable_shader_binding_table, DeviceAddress indirect_device_address) => extensions.vk_cmd_trace_rays_indirect_khr(command_buffer, p_raygen_shader_binding_table, p_miss_shader_binding_table, p_hit_shader_binding_table, p_callable_shader_binding_table, indirect_device_address);
+fn void cmd_trace_rays_indirect2_khr (CommandBuffer command_buffer, DeviceAddress indirect_device_address) => extensions.vk_cmd_trace_rays_indirect2_khr(command_buffer, indirect_device_address);
+fn void get_device_acceleration_structure_compatibility_khr (Device device, AccelerationStructureVersionInfoKHR* p_version_info, AccelerationStructureCompatibilityKHR* p_compatibility) => extensions.vk_get_device_acceleration_structure_compatibility_khr(device, p_version_info, p_compatibility);
+fn DeviceSize get_ray_tracing_shader_group_stack_size_khr (Device device, Pipeline pipeline, uint group, ShaderGroupShaderKHR group_shader) => extensions.vk_get_ray_tracing_shader_group_stack_size_khr(device, pipeline, group, group_shader);
+fn void cmd_set_ray_tracing_pipeline_stack_size_khr (CommandBuffer command_buffer, uint pipeline_stack_size) => extensions.vk_cmd_set_ray_tracing_pipeline_stack_size_khr(command_buffer, pipeline_stack_size);
+fn uint get_image_view_handle_nvx (Device device, ImageViewHandleInfoNVX* p_info) => extensions.vk_get_image_view_handle_nvx(device, p_info);
+fn void get_physical_device_queue_family_performance_query_passes_khr (PhysicalDevice physical_device, QueryPoolPerformanceCreateInfoKHR* p_performance_query_create_info, uint* p_num_passes) => extensions.vk_get_physical_device_queue_family_performance_query_passes_khr(physical_device, p_performance_query_create_info, p_num_passes);
 fn void release_profiling_lock_khr (Device device) => extensions.vk_release_profiling_lock_khr(device);
-fn ulong get_buffer_opaque_capture_address_khr (Device device, BufferDeviceAddressInfo* pInfo) => extensions.vk_get_buffer_opaque_capture_address_khr(device, pInfo);
-fn DeviceAddress get_buffer_device_address_khr (Device device, BufferDeviceAddressInfo* pInfo) => extensions.vk_get_buffer_device_address_khr(device, pInfo);
-fn DeviceAddress get_buffer_device_address_ext (Device device, BufferDeviceAddressInfo* pInfo) => extensions.vk_get_buffer_device_address_ext(device, pInfo);
+fn ulong get_buffer_opaque_capture_address_khr (Device device, BufferDeviceAddressInfo* p_info) => extensions.vk_get_buffer_opaque_capture_address_khr(device, p_info);
+fn DeviceAddress get_buffer_device_address_khr (Device device, BufferDeviceAddressInfo* p_info) => extensions.vk_get_buffer_device_address_khr(device, p_info);
+fn DeviceAddress get_buffer_device_address_ext (Device device, BufferDeviceAddressInfo* p_info) => extensions.vk_get_buffer_device_address_ext(device, p_info);
 fn void uninitialize_performance_api_intel (Device device) => extensions.vk_uninitialize_performance_api_intel(device);
-fn ulong get_device_memory_opaque_capture_address_khr (Device device, DeviceMemoryOpaqueCaptureAddressInfo* pInfo) => extensions.vk_get_device_memory_opaque_capture_address_khr(device, pInfo);
-fn void cmd_set_line_stipple_khr (CommandBuffer commandBuffer, uint lineStippleFactor, uint lineStipplePattern) => extensions.vk_cmd_set_line_stipple_khr(commandBuffer, lineStippleFactor, lineStipplePattern);
-fn void cmd_set_line_stipple_ext (CommandBuffer commandBuffer, uint lineStippleFactor, uint lineStipplePattern) => extensions.vk_cmd_set_line_stipple_ext(commandBuffer, lineStippleFactor, lineStipplePattern);
-fn void cmd_build_acceleration_structures_khr (CommandBuffer commandBuffer, uint infoCount, AccelerationStructureBuildGeometryInfoKHR* pInfos, AccelerationStructureBuildRangeInfoKHR*  ppBuildRangeInfos) => extensions.vk_cmd_build_acceleration_structures_khr(commandBuffer, infoCount, pInfos, ppBuildRangeInfos);
-fn void cmd_build_acceleration_structures_indirect_khr (CommandBuffer commandBuffer, uint infoCount, AccelerationStructureBuildGeometryInfoKHR* pInfos, DeviceAddress* pIndirectDeviceAddresses, uint* pIndirectStrides, uint*  ppMaxPrimitiveCounts) => extensions.vk_cmd_build_acceleration_structures_indirect_khr(commandBuffer, infoCount, pInfos, pIndirectDeviceAddresses, pIndirectStrides, ppMaxPrimitiveCounts);
-fn DeviceAddress get_acceleration_structure_device_address_khr (Device device, AccelerationStructureDeviceAddressInfoKHR* pInfo) => extensions.vk_get_acceleration_structure_device_address_khr(device, pInfo);
-fn void destroy_deferred_operation_khr (Device device, DeferredOperationKHR operation, AllocationCallbacks* pAllocator) => extensions.vk_destroy_deferred_operation_khr(device, operation, pAllocator);
+fn ulong get_device_memory_opaque_capture_address_khr (Device device, DeviceMemoryOpaqueCaptureAddressInfo* p_info) => extensions.vk_get_device_memory_opaque_capture_address_khr(device, p_info);
+fn void cmd_set_line_stipple_khr (CommandBuffer command_buffer, uint line_stipple_factor, uint line_stipple_pattern) => extensions.vk_cmd_set_line_stipple_khr(command_buffer, line_stipple_factor, line_stipple_pattern);
+fn void cmd_set_line_stipple_ext (CommandBuffer command_buffer, uint line_stipple_factor, uint line_stipple_pattern) => extensions.vk_cmd_set_line_stipple_ext(command_buffer, line_stipple_factor, line_stipple_pattern);
+fn void cmd_build_acceleration_structures_khr (CommandBuffer command_buffer, uint info_count, AccelerationStructureBuildGeometryInfoKHR* p_infos, AccelerationStructureBuildRangeInfoKHR*  pp_build_range_infos) => extensions.vk_cmd_build_acceleration_structures_khr(command_buffer, info_count, p_infos, pp_build_range_infos);
+fn void cmd_build_acceleration_structures_indirect_khr (CommandBuffer command_buffer, uint info_count, AccelerationStructureBuildGeometryInfoKHR* p_infos, DeviceAddress* p_indirect_device_addresses, uint* p_indirect_strides, uint*  pp_max_primitive_counts) => extensions.vk_cmd_build_acceleration_structures_indirect_khr(command_buffer, info_count, p_infos, p_indirect_device_addresses, p_indirect_strides, pp_max_primitive_counts);
+fn DeviceAddress get_acceleration_structure_device_address_khr (Device device, AccelerationStructureDeviceAddressInfoKHR* p_info) => extensions.vk_get_acceleration_structure_device_address_khr(device, p_info);
+fn void destroy_deferred_operation_khr (Device device, DeferredOperationKHR operation, AllocationCallbacks* p_allocator) => extensions.vk_destroy_deferred_operation_khr(device, operation, p_allocator);
 fn uint get_deferred_operation_max_concurrency_khr (Device device, DeferredOperationKHR operation) => extensions.vk_get_deferred_operation_max_concurrency_khr(device, operation);
-fn void get_pipeline_indirect_memory_requirements_nv (Device device, ComputePipelineCreateInfo* pCreateInfo, MemoryRequirements2* pMemoryRequirements) => extensions.vk_get_pipeline_indirect_memory_requirements_nv(device, pCreateInfo, pMemoryRequirements);
-fn DeviceAddress get_pipeline_indirect_device_address_nv (Device device, PipelineIndirectDeviceAddressInfoNV* pInfo) => extensions.vk_get_pipeline_indirect_device_address_nv(device, pInfo);
-fn void anti_lag_update_amd (Device device, AntiLagDataAMD* pData) => extensions.vk_anti_lag_update_amd(device, pData);
-fn void cmd_set_cull_mode_ext (CommandBuffer commandBuffer, CullModeFlags cullMode) => extensions.vk_cmd_set_cull_mode_ext(commandBuffer, cullMode);
-fn void cmd_set_front_face_ext (CommandBuffer commandBuffer, FrontFace frontFace) => extensions.vk_cmd_set_front_face_ext(commandBuffer, frontFace);
-fn void cmd_set_primitive_topology_ext (CommandBuffer commandBuffer, PrimitiveTopology primitiveTopology) => extensions.vk_cmd_set_primitive_topology_ext(commandBuffer, primitiveTopology);
-fn void cmd_set_viewport_with_count_ext (CommandBuffer commandBuffer, uint viewportCount, Viewport* pViewports) => extensions.vk_cmd_set_viewport_with_count_ext(commandBuffer, viewportCount, pViewports);
-fn void cmd_set_scissor_with_count_ext (CommandBuffer commandBuffer, uint scissorCount, Rect2D* pScissors) => extensions.vk_cmd_set_scissor_with_count_ext(commandBuffer, scissorCount, pScissors);
-fn void cmd_bind_index_buffer2_khr (CommandBuffer commandBuffer, Buffer buffer, DeviceSize offset, DeviceSize size, IndexType indexType) => extensions.vk_cmd_bind_index_buffer2_khr(commandBuffer, buffer, offset, size, indexType);
-fn void cmd_bind_vertex_buffers2_ext (CommandBuffer commandBuffer, uint firstBinding, uint bindingCount, Buffer* pBuffers, DeviceSize* pOffsets, DeviceSize* pSizes, DeviceSize* pStrides) => extensions.vk_cmd_bind_vertex_buffers2_ext(commandBuffer, firstBinding, bindingCount, pBuffers, pOffsets, pSizes, pStrides);
-fn void cmd_set_depth_test_enable_ext (CommandBuffer commandBuffer, uint depthTestEnable) => extensions.vk_cmd_set_depth_test_enable_ext(commandBuffer, depthTestEnable);
-fn void cmd_set_depth_write_enable_ext (CommandBuffer commandBuffer, uint depthWriteEnable) => extensions.vk_cmd_set_depth_write_enable_ext(commandBuffer, depthWriteEnable);
-fn void cmd_set_depth_compare_op_ext (CommandBuffer commandBuffer, CompareOp depthCompareOp) => extensions.vk_cmd_set_depth_compare_op_ext(commandBuffer, depthCompareOp);
-fn void cmd_set_depth_bounds_test_enable_ext (CommandBuffer commandBuffer, uint depthBoundsTestEnable) => extensions.vk_cmd_set_depth_bounds_test_enable_ext(commandBuffer, depthBoundsTestEnable);
-fn void cmd_set_stencil_test_enable_ext (CommandBuffer commandBuffer, uint stencilTestEnable) => extensions.vk_cmd_set_stencil_test_enable_ext(commandBuffer, stencilTestEnable);
-fn void cmd_set_stencil_op_ext (CommandBuffer commandBuffer, StencilFaceFlags faceMask, StencilOp failOp, StencilOp passOp, StencilOp depthFailOp, CompareOp compareOp) => extensions.vk_cmd_set_stencil_op_ext(commandBuffer, faceMask, failOp, passOp, depthFailOp, compareOp);
-fn void cmd_set_patch_control_points_ext (CommandBuffer commandBuffer, uint patchControlPoints) => extensions.vk_cmd_set_patch_control_points_ext(commandBuffer, patchControlPoints);
-fn void cmd_set_rasterizer_discard_enable_ext (CommandBuffer commandBuffer, uint rasterizerDiscardEnable) => extensions.vk_cmd_set_rasterizer_discard_enable_ext(commandBuffer, rasterizerDiscardEnable);
-fn void cmd_set_depth_bias_enable_ext (CommandBuffer commandBuffer, uint depthBiasEnable) => extensions.vk_cmd_set_depth_bias_enable_ext(commandBuffer, depthBiasEnable);
-fn void cmd_set_logic_op_ext (CommandBuffer commandBuffer, LogicOp logicOp) => extensions.vk_cmd_set_logic_op_ext(commandBuffer, logicOp);
-fn void cmd_set_primitive_restart_enable_ext (CommandBuffer commandBuffer, uint primitiveRestartEnable) => extensions.vk_cmd_set_primitive_restart_enable_ext(commandBuffer, primitiveRestartEnable);
-fn void cmd_set_tessellation_domain_origin_ext (CommandBuffer commandBuffer, TessellationDomainOrigin domainOrigin) => extensions.vk_cmd_set_tessellation_domain_origin_ext(commandBuffer, domainOrigin);
-fn void cmd_set_depth_clamp_enable_ext (CommandBuffer commandBuffer, uint depthClampEnable) => extensions.vk_cmd_set_depth_clamp_enable_ext(commandBuffer, depthClampEnable);
-fn void cmd_set_polygon_mode_ext (CommandBuffer commandBuffer, PolygonMode polygonMode) => extensions.vk_cmd_set_polygon_mode_ext(commandBuffer, polygonMode);
-fn void cmd_set_rasterization_samples_ext (CommandBuffer commandBuffer, SampleCountFlagBits rasterizationSamples) => extensions.vk_cmd_set_rasterization_samples_ext(commandBuffer, rasterizationSamples);
-fn void cmd_set_sample_mask_ext (CommandBuffer commandBuffer, SampleCountFlagBits samples, SampleMask* pSampleMask) => extensions.vk_cmd_set_sample_mask_ext(commandBuffer, samples, pSampleMask);
-fn void cmd_set_alpha_to_coverage_enable_ext (CommandBuffer commandBuffer, uint alphaToCoverageEnable) => extensions.vk_cmd_set_alpha_to_coverage_enable_ext(commandBuffer, alphaToCoverageEnable);
-fn void cmd_set_alpha_to_one_enable_ext (CommandBuffer commandBuffer, uint alphaToOneEnable) => extensions.vk_cmd_set_alpha_to_one_enable_ext(commandBuffer, alphaToOneEnable);
-fn void cmd_set_logic_op_enable_ext (CommandBuffer commandBuffer, uint logicOpEnable) => extensions.vk_cmd_set_logic_op_enable_ext(commandBuffer, logicOpEnable);
-fn void cmd_set_color_blend_enable_ext (CommandBuffer commandBuffer, uint firstAttachment, uint attachmentCount, uint* pColorBlendEnables) => extensions.vk_cmd_set_color_blend_enable_ext(commandBuffer, firstAttachment, attachmentCount, pColorBlendEnables);
-fn void cmd_set_color_blend_equation_ext (CommandBuffer commandBuffer, uint firstAttachment, uint attachmentCount, ColorBlendEquationEXT* pColorBlendEquations) => extensions.vk_cmd_set_color_blend_equation_ext(commandBuffer, firstAttachment, attachmentCount, pColorBlendEquations);
-fn void cmd_set_color_write_mask_ext (CommandBuffer commandBuffer, uint firstAttachment, uint attachmentCount, ColorComponentFlags* pColorWriteMasks) => extensions.vk_cmd_set_color_write_mask_ext(commandBuffer, firstAttachment, attachmentCount, pColorWriteMasks);
-fn void cmd_set_rasterization_stream_ext (CommandBuffer commandBuffer, uint rasterizationStream) => extensions.vk_cmd_set_rasterization_stream_ext(commandBuffer, rasterizationStream);
-fn void cmd_set_conservative_rasterization_mode_ext (CommandBuffer commandBuffer, ConservativeRasterizationModeEXT conservativeRasterizationMode) => extensions.vk_cmd_set_conservative_rasterization_mode_ext(commandBuffer, conservativeRasterizationMode);
-fn void cmd_set_extra_primitive_overestimation_size_ext (CommandBuffer commandBuffer, float extraPrimitiveOverestimationSize) => extensions.vk_cmd_set_extra_primitive_overestimation_size_ext(commandBuffer, extraPrimitiveOverestimationSize);
-fn void cmd_set_depth_clip_enable_ext (CommandBuffer commandBuffer, uint depthClipEnable) => extensions.vk_cmd_set_depth_clip_enable_ext(commandBuffer, depthClipEnable);
-fn void cmd_set_sample_locations_enable_ext (CommandBuffer commandBuffer, uint sampleLocationsEnable) => extensions.vk_cmd_set_sample_locations_enable_ext(commandBuffer, sampleLocationsEnable);
-fn void cmd_set_color_blend_advanced_ext (CommandBuffer commandBuffer, uint firstAttachment, uint attachmentCount, ColorBlendAdvancedEXT* pColorBlendAdvanced) => extensions.vk_cmd_set_color_blend_advanced_ext(commandBuffer, firstAttachment, attachmentCount, pColorBlendAdvanced);
-fn void cmd_set_provoking_vertex_mode_ext (CommandBuffer commandBuffer, ProvokingVertexModeEXT provokingVertexMode) => extensions.vk_cmd_set_provoking_vertex_mode_ext(commandBuffer, provokingVertexMode);
-fn void cmd_set_line_stipple_enable_ext (CommandBuffer commandBuffer, uint stippledLineEnable) => extensions.vk_cmd_set_line_stipple_enable_ext(commandBuffer, stippledLineEnable);
-fn void cmd_set_depth_clip_negative_one_to_one_ext (CommandBuffer commandBuffer, uint negativeOneToOne) => extensions.vk_cmd_set_depth_clip_negative_one_to_one_ext(commandBuffer, negativeOneToOne);
-fn void cmd_set_viewport_w_scaling_enable_nv (CommandBuffer commandBuffer, uint viewportWScalingEnable) => extensions.vk_cmd_set_viewport_w_scaling_enable_nv(commandBuffer, viewportWScalingEnable);
-fn void cmd_set_viewport_swizzle_nv (CommandBuffer commandBuffer, uint firstViewport, uint viewportCount, ViewportSwizzleNV* pViewportSwizzles) => extensions.vk_cmd_set_viewport_swizzle_nv(commandBuffer, firstViewport, viewportCount, pViewportSwizzles);
-fn void cmd_set_coverage_to_color_enable_nv (CommandBuffer commandBuffer, uint coverageToColorEnable) => extensions.vk_cmd_set_coverage_to_color_enable_nv(commandBuffer, coverageToColorEnable);
-fn void cmd_set_coverage_to_color_location_nv (CommandBuffer commandBuffer, uint coverageToColorLocation) => extensions.vk_cmd_set_coverage_to_color_location_nv(commandBuffer, coverageToColorLocation);
-fn void cmd_set_coverage_modulation_mode_nv (CommandBuffer commandBuffer, CoverageModulationModeNV coverageModulationMode) => extensions.vk_cmd_set_coverage_modulation_mode_nv(commandBuffer, coverageModulationMode);
-fn void cmd_set_coverage_modulation_table_enable_nv (CommandBuffer commandBuffer, uint coverageModulationTableEnable) => extensions.vk_cmd_set_coverage_modulation_table_enable_nv(commandBuffer, coverageModulationTableEnable);
-fn void cmd_set_coverage_modulation_table_nv (CommandBuffer commandBuffer, uint coverageModulationTableCount, float* pCoverageModulationTable) => extensions.vk_cmd_set_coverage_modulation_table_nv(commandBuffer, coverageModulationTableCount, pCoverageModulationTable);
-fn void cmd_set_shading_rate_image_enable_nv (CommandBuffer commandBuffer, uint shadingRateImageEnable) => extensions.vk_cmd_set_shading_rate_image_enable_nv(commandBuffer, shadingRateImageEnable);
-fn void cmd_set_coverage_reduction_mode_nv (CommandBuffer commandBuffer, CoverageReductionModeNV coverageReductionMode) => extensions.vk_cmd_set_coverage_reduction_mode_nv(commandBuffer, coverageReductionMode);
-fn void cmd_set_representative_fragment_test_enable_nv (CommandBuffer commandBuffer, uint representativeFragmentTestEnable) => extensions.vk_cmd_set_representative_fragment_test_enable_nv(commandBuffer, representativeFragmentTestEnable);
-fn void destroy_private_data_slot_ext (Device device, PrivateDataSlot privateDataSlot, AllocationCallbacks* pAllocator) => extensions.vk_destroy_private_data_slot_ext(device, privateDataSlot, pAllocator);
-fn void get_private_data_ext (Device device, ObjectType objectType, ulong objectHandle, PrivateDataSlot privateDataSlot, ulong* pData) => extensions.vk_get_private_data_ext(device, objectType, objectHandle, privateDataSlot, pData);
-fn void cmd_copy_buffer2_khr (CommandBuffer commandBuffer, CopyBufferInfo2* pCopyBufferInfo) => extensions.vk_cmd_copy_buffer2_khr(commandBuffer, pCopyBufferInfo);
-fn void cmd_copy_image2_khr (CommandBuffer commandBuffer, CopyImageInfo2* pCopyImageInfo) => extensions.vk_cmd_copy_image2_khr(commandBuffer, pCopyImageInfo);
-fn void cmd_blit_image2_khr (CommandBuffer commandBuffer, BlitImageInfo2* pBlitImageInfo) => extensions.vk_cmd_blit_image2_khr(commandBuffer, pBlitImageInfo);
-fn void cmd_copy_buffer_to_image2_khr (CommandBuffer commandBuffer, CopyBufferToImageInfo2* pCopyBufferToImageInfo) => extensions.vk_cmd_copy_buffer_to_image2_khr(commandBuffer, pCopyBufferToImageInfo);
-fn void cmd_copy_image_to_buffer2_khr (CommandBuffer commandBuffer, CopyImageToBufferInfo2* pCopyImageToBufferInfo) => extensions.vk_cmd_copy_image_to_buffer2_khr(commandBuffer, pCopyImageToBufferInfo);
-fn void cmd_resolve_image2_khr (CommandBuffer commandBuffer, ResolveImageInfo2* pResolveImageInfo) => extensions.vk_cmd_resolve_image2_khr(commandBuffer, pResolveImageInfo);
-fn void cmd_set_fragment_shading_rate_khr (CommandBuffer commandBuffer, Extent2D* pFragmentSize, FragmentShadingRateCombinerOpKHR[2] combinerOps) => extensions.vk_cmd_set_fragment_shading_rate_khr(commandBuffer, pFragmentSize, combinerOps);
-fn void cmd_set_fragment_shading_rate_enum_nv (CommandBuffer commandBuffer, FragmentShadingRateNV shadingRate, FragmentShadingRateCombinerOpKHR[2] combinerOps) => extensions.vk_cmd_set_fragment_shading_rate_enum_nv(commandBuffer, shadingRate, combinerOps);
-fn void get_acceleration_structure_build_sizes_khr (Device device, AccelerationStructureBuildTypeKHR buildType, AccelerationStructureBuildGeometryInfoKHR* pBuildInfo, uint* pMaxPrimitiveCounts, AccelerationStructureBuildSizesInfoKHR* pSizeInfo) => extensions.vk_get_acceleration_structure_build_sizes_khr(device, buildType, pBuildInfo, pMaxPrimitiveCounts, pSizeInfo);
-fn void cmd_set_vertex_input_ext (CommandBuffer commandBuffer, uint vertexBindingDescriptionCount, VertexInputBindingDescription2EXT* pVertexBindingDescriptions, uint vertexAttributeDescriptionCount, VertexInputAttributeDescription2EXT* pVertexAttributeDescriptions) => extensions.vk_cmd_set_vertex_input_ext(commandBuffer, vertexBindingDescriptionCount, pVertexBindingDescriptions, vertexAttributeDescriptionCount, pVertexAttributeDescriptions);
-fn void cmd_set_color_write_enable_ext (CommandBuffer commandBuffer, uint attachmentCount, uint* pColorWriteEnables) => extensions.vk_cmd_set_color_write_enable_ext(commandBuffer, attachmentCount, pColorWriteEnables);
-fn void cmd_set_event2_khr (CommandBuffer commandBuffer, Event event, DependencyInfo* pDependencyInfo) => extensions.vk_cmd_set_event2_khr(commandBuffer, event, pDependencyInfo);
-fn void cmd_reset_event2_khr (CommandBuffer commandBuffer, Event event, PipelineStageFlags2 stageMask) => extensions.vk_cmd_reset_event2_khr(commandBuffer, event, stageMask);
-fn void cmd_wait_events2_khr (CommandBuffer commandBuffer, uint eventCount, Event* pEvents, DependencyInfo* pDependencyInfos) => extensions.vk_cmd_wait_events2_khr(commandBuffer, eventCount, pEvents, pDependencyInfos);
-fn void cmd_pipeline_barrier2_khr (CommandBuffer commandBuffer, DependencyInfo* pDependencyInfo) => extensions.vk_cmd_pipeline_barrier2_khr(commandBuffer, pDependencyInfo);
-fn void cmd_write_timestamp2_khr (CommandBuffer commandBuffer, PipelineStageFlags2 stage, QueryPool queryPool, uint query) => extensions.vk_cmd_write_timestamp2_khr(commandBuffer, stage, queryPool, query);
-fn void cmd_write_buffer_marker2_amd (CommandBuffer commandBuffer, PipelineStageFlags2 stage, Buffer dstBuffer, DeviceSize dstOffset, uint marker) => extensions.vk_cmd_write_buffer_marker2_amd(commandBuffer, stage, dstBuffer, dstOffset, marker);
-fn void get_queue_checkpoint_data2_nv (Queue queue, uint* pCheckpointDataCount, CheckpointData2NV* pCheckpointData) => extensions.vk_get_queue_checkpoint_data2_nv(queue, pCheckpointDataCount, pCheckpointData);
-fn void destroy_video_session_khr (Device device, VideoSessionKHR videoSession, AllocationCallbacks* pAllocator) => extensions.vk_destroy_video_session_khr(device, videoSession, pAllocator);
-fn void destroy_video_session_parameters_khr (Device device, VideoSessionParametersKHR videoSessionParameters, AllocationCallbacks* pAllocator) => extensions.vk_destroy_video_session_parameters_khr(device, videoSessionParameters, pAllocator);
-fn void cmd_decode_video_khr (CommandBuffer commandBuffer, VideoDecodeInfoKHR* pDecodeInfo) => extensions.vk_cmd_decode_video_khr(commandBuffer, pDecodeInfo);
-fn void cmd_begin_video_coding_khr (CommandBuffer commandBuffer, VideoBeginCodingInfoKHR* pBeginInfo) => extensions.vk_cmd_begin_video_coding_khr(commandBuffer, pBeginInfo);
-fn void cmd_control_video_coding_khr (CommandBuffer commandBuffer, VideoCodingControlInfoKHR* pCodingControlInfo) => extensions.vk_cmd_control_video_coding_khr(commandBuffer, pCodingControlInfo);
-fn void cmd_end_video_coding_khr (CommandBuffer commandBuffer, VideoEndCodingInfoKHR* pEndCodingInfo) => extensions.vk_cmd_end_video_coding_khr(commandBuffer, pEndCodingInfo);
-fn void cmd_encode_video_khr (CommandBuffer commandBuffer, VideoEncodeInfoKHR* pEncodeInfo) => extensions.vk_cmd_encode_video_khr(commandBuffer, pEncodeInfo);
-fn void cmd_decompress_memory_nv (CommandBuffer commandBuffer, uint decompressRegionCount, DecompressMemoryRegionNV* pDecompressMemoryRegions) => extensions.vk_cmd_decompress_memory_nv(commandBuffer, decompressRegionCount, pDecompressMemoryRegions);
-fn void cmd_decompress_memory_indirect_count_nv (CommandBuffer commandBuffer, DeviceAddress indirectCommandsAddress, DeviceAddress indirectCommandsCountAddress, uint stride) => extensions.vk_cmd_decompress_memory_indirect_count_nv(commandBuffer, indirectCommandsAddress, indirectCommandsCountAddress, stride);
-fn void destroy_cu_module_nvx (Device device, CuModuleNVX mod, AllocationCallbacks* pAllocator) => extensions.vk_destroy_cu_module_nvx(device, mod, pAllocator);
-fn void destroy_cu_function_nvx (Device device, CuFunctionNVX function, AllocationCallbacks* pAllocator) => extensions.vk_destroy_cu_function_nvx(device, function, pAllocator);
-fn void cmd_cu_launch_kernel_nvx (CommandBuffer commandBuffer, CuLaunchInfoNVX* pLaunchInfo) => extensions.vk_cmd_cu_launch_kernel_nvx(commandBuffer, pLaunchInfo);
-fn void get_descriptor_set_layout_size_ext (Device device, DescriptorSetLayout layout, DeviceSize* pLayoutSizeInBytes) => extensions.vk_get_descriptor_set_layout_size_ext(device, layout, pLayoutSizeInBytes);
-fn void get_descriptor_set_layout_binding_offset_ext (Device device, DescriptorSetLayout layout, uint binding, DeviceSize* pOffset) => extensions.vk_get_descriptor_set_layout_binding_offset_ext(device, layout, binding, pOffset);
-fn void get_descriptor_ext (Device device, DescriptorGetInfoEXT* pDescriptorInfo, sz dataSize, void* pDescriptor) => extensions.vk_get_descriptor_ext(device, pDescriptorInfo, dataSize, pDescriptor);
-fn void cmd_bind_descriptor_buffers_ext (CommandBuffer commandBuffer, uint bufferCount, DescriptorBufferBindingInfoEXT* pBindingInfos) => extensions.vk_cmd_bind_descriptor_buffers_ext(commandBuffer, bufferCount, pBindingInfos);
-fn void cmd_set_descriptor_buffer_offsets_ext (CommandBuffer commandBuffer, PipelineBindPoint pipelineBindPoint, PipelineLayout layout, uint firstSet, uint setCount, uint* pBufferIndices, DeviceSize* pOffsets) => extensions.vk_cmd_set_descriptor_buffer_offsets_ext(commandBuffer, pipelineBindPoint, layout, firstSet, setCount, pBufferIndices, pOffsets);
-fn void cmd_bind_descriptor_buffer_embedded_samplers_ext (CommandBuffer commandBuffer, PipelineBindPoint pipelineBindPoint, PipelineLayout layout, uint set) => extensions.vk_cmd_bind_descriptor_buffer_embedded_samplers_ext(commandBuffer, pipelineBindPoint, layout, set);
+fn void get_pipeline_indirect_memory_requirements_nv (Device device, ComputePipelineCreateInfo* p_create_info, MemoryRequirements2* p_memory_requirements) => extensions.vk_get_pipeline_indirect_memory_requirements_nv(device, p_create_info, p_memory_requirements);
+fn DeviceAddress get_pipeline_indirect_device_address_nv (Device device, PipelineIndirectDeviceAddressInfoNV* p_info) => extensions.vk_get_pipeline_indirect_device_address_nv(device, p_info);
+fn void anti_lag_update_amd (Device device, AntiLagDataAMD* p_data) => extensions.vk_anti_lag_update_amd(device, p_data);
+fn void cmd_set_cull_mode_ext (CommandBuffer command_buffer, CullModeFlags cull_mode) => extensions.vk_cmd_set_cull_mode_ext(command_buffer, cull_mode);
+fn void cmd_set_front_face_ext (CommandBuffer command_buffer, FrontFace front_face) => extensions.vk_cmd_set_front_face_ext(command_buffer, front_face);
+fn void cmd_set_primitive_topology_ext (CommandBuffer command_buffer, PrimitiveTopology primitive_topology) => extensions.vk_cmd_set_primitive_topology_ext(command_buffer, primitive_topology);
+fn void cmd_set_viewport_with_count_ext (CommandBuffer command_buffer, uint viewport_count, Viewport* p_viewports) => extensions.vk_cmd_set_viewport_with_count_ext(command_buffer, viewport_count, p_viewports);
+fn void cmd_set_scissor_with_count_ext (CommandBuffer command_buffer, uint scissor_count, Rect2D* p_scissors) => extensions.vk_cmd_set_scissor_with_count_ext(command_buffer, scissor_count, p_scissors);
+fn void cmd_bind_index_buffer2_khr (CommandBuffer command_buffer, Buffer buffer, DeviceSize offset, DeviceSize size, IndexType index_type) => extensions.vk_cmd_bind_index_buffer2_khr(command_buffer, buffer, offset, size, index_type);
+fn void cmd_bind_vertex_buffers2_ext (CommandBuffer command_buffer, uint first_binding, uint binding_count, Buffer* p_buffers, DeviceSize* p_offsets, DeviceSize* p_sizes, DeviceSize* p_strides) => extensions.vk_cmd_bind_vertex_buffers2_ext(command_buffer, first_binding, binding_count, p_buffers, p_offsets, p_sizes, p_strides);
+fn void cmd_set_depth_test_enable_ext (CommandBuffer command_buffer, uint depth_test_enable) => extensions.vk_cmd_set_depth_test_enable_ext(command_buffer, depth_test_enable);
+fn void cmd_set_depth_write_enable_ext (CommandBuffer command_buffer, uint depth_write_enable) => extensions.vk_cmd_set_depth_write_enable_ext(command_buffer, depth_write_enable);
+fn void cmd_set_depth_compare_op_ext (CommandBuffer command_buffer, CompareOp depth_compare_op) => extensions.vk_cmd_set_depth_compare_op_ext(command_buffer, depth_compare_op);
+fn void cmd_set_depth_bounds_test_enable_ext (CommandBuffer command_buffer, uint depth_bounds_test_enable) => extensions.vk_cmd_set_depth_bounds_test_enable_ext(command_buffer, depth_bounds_test_enable);
+fn void cmd_set_stencil_test_enable_ext (CommandBuffer command_buffer, uint stencil_test_enable) => extensions.vk_cmd_set_stencil_test_enable_ext(command_buffer, stencil_test_enable);
+fn void cmd_set_stencil_op_ext (CommandBuffer command_buffer, StencilFaceFlags face_mask, StencilOp fail_op, StencilOp pass_op, StencilOp depth_fail_op, CompareOp compare_op) => extensions.vk_cmd_set_stencil_op_ext(command_buffer, face_mask, fail_op, pass_op, depth_fail_op, compare_op);
+fn void cmd_set_patch_control_points_ext (CommandBuffer command_buffer, uint patch_control_points) => extensions.vk_cmd_set_patch_control_points_ext(command_buffer, patch_control_points);
+fn void cmd_set_rasterizer_discard_enable_ext (CommandBuffer command_buffer, uint rasterizer_discard_enable) => extensions.vk_cmd_set_rasterizer_discard_enable_ext(command_buffer, rasterizer_discard_enable);
+fn void cmd_set_depth_bias_enable_ext (CommandBuffer command_buffer, uint depth_bias_enable) => extensions.vk_cmd_set_depth_bias_enable_ext(command_buffer, depth_bias_enable);
+fn void cmd_set_logic_op_ext (CommandBuffer command_buffer, LogicOp logic_op) => extensions.vk_cmd_set_logic_op_ext(command_buffer, logic_op);
+fn void cmd_set_primitive_restart_enable_ext (CommandBuffer command_buffer, uint primitive_restart_enable) => extensions.vk_cmd_set_primitive_restart_enable_ext(command_buffer, primitive_restart_enable);
+fn void cmd_set_tessellation_domain_origin_ext (CommandBuffer command_buffer, TessellationDomainOrigin domain_origin) => extensions.vk_cmd_set_tessellation_domain_origin_ext(command_buffer, domain_origin);
+fn void cmd_set_depth_clamp_enable_ext (CommandBuffer command_buffer, uint depth_clamp_enable) => extensions.vk_cmd_set_depth_clamp_enable_ext(command_buffer, depth_clamp_enable);
+fn void cmd_set_polygon_mode_ext (CommandBuffer command_buffer, PolygonMode polygon_mode) => extensions.vk_cmd_set_polygon_mode_ext(command_buffer, polygon_mode);
+fn void cmd_set_rasterization_samples_ext (CommandBuffer command_buffer, SampleCountFlagBits rasterization_samples) => extensions.vk_cmd_set_rasterization_samples_ext(command_buffer, rasterization_samples);
+fn void cmd_set_sample_mask_ext (CommandBuffer command_buffer, SampleCountFlagBits samples, SampleMask* p_sample_mask) => extensions.vk_cmd_set_sample_mask_ext(command_buffer, samples, p_sample_mask);
+fn void cmd_set_alpha_to_coverage_enable_ext (CommandBuffer command_buffer, uint alpha_to_coverage_enable) => extensions.vk_cmd_set_alpha_to_coverage_enable_ext(command_buffer, alpha_to_coverage_enable);
+fn void cmd_set_alpha_to_one_enable_ext (CommandBuffer command_buffer, uint alpha_to_one_enable) => extensions.vk_cmd_set_alpha_to_one_enable_ext(command_buffer, alpha_to_one_enable);
+fn void cmd_set_logic_op_enable_ext (CommandBuffer command_buffer, uint logic_op_enable) => extensions.vk_cmd_set_logic_op_enable_ext(command_buffer, logic_op_enable);
+fn void cmd_set_color_blend_enable_ext (CommandBuffer command_buffer, uint first_attachment, uint attachment_count, uint* p_color_blend_enables) => extensions.vk_cmd_set_color_blend_enable_ext(command_buffer, first_attachment, attachment_count, p_color_blend_enables);
+fn void cmd_set_color_blend_equation_ext (CommandBuffer command_buffer, uint first_attachment, uint attachment_count, ColorBlendEquationEXT* p_color_blend_equations) => extensions.vk_cmd_set_color_blend_equation_ext(command_buffer, first_attachment, attachment_count, p_color_blend_equations);
+fn void cmd_set_color_write_mask_ext (CommandBuffer command_buffer, uint first_attachment, uint attachment_count, ColorComponentFlags* p_color_write_masks) => extensions.vk_cmd_set_color_write_mask_ext(command_buffer, first_attachment, attachment_count, p_color_write_masks);
+fn void cmd_set_rasterization_stream_ext (CommandBuffer command_buffer, uint rasterization_stream) => extensions.vk_cmd_set_rasterization_stream_ext(command_buffer, rasterization_stream);
+fn void cmd_set_conservative_rasterization_mode_ext (CommandBuffer command_buffer, ConservativeRasterizationModeEXT conservative_rasterization_mode) => extensions.vk_cmd_set_conservative_rasterization_mode_ext(command_buffer, conservative_rasterization_mode);
+fn void cmd_set_extra_primitive_overestimation_size_ext (CommandBuffer command_buffer, float extra_primitive_overestimation_size) => extensions.vk_cmd_set_extra_primitive_overestimation_size_ext(command_buffer, extra_primitive_overestimation_size);
+fn void cmd_set_depth_clip_enable_ext (CommandBuffer command_buffer, uint depth_clip_enable) => extensions.vk_cmd_set_depth_clip_enable_ext(command_buffer, depth_clip_enable);
+fn void cmd_set_sample_locations_enable_ext (CommandBuffer command_buffer, uint sample_locations_enable) => extensions.vk_cmd_set_sample_locations_enable_ext(command_buffer, sample_locations_enable);
+fn void cmd_set_color_blend_advanced_ext (CommandBuffer command_buffer, uint first_attachment, uint attachment_count, ColorBlendAdvancedEXT* p_color_blend_advanced) => extensions.vk_cmd_set_color_blend_advanced_ext(command_buffer, first_attachment, attachment_count, p_color_blend_advanced);
+fn void cmd_set_provoking_vertex_mode_ext (CommandBuffer command_buffer, ProvokingVertexModeEXT provoking_vertex_mode) => extensions.vk_cmd_set_provoking_vertex_mode_ext(command_buffer, provoking_vertex_mode);
+fn void cmd_set_line_stipple_enable_ext (CommandBuffer command_buffer, uint stippled_line_enable) => extensions.vk_cmd_set_line_stipple_enable_ext(command_buffer, stippled_line_enable);
+fn void cmd_set_depth_clip_negative_one_to_one_ext (CommandBuffer command_buffer, uint negative_one_to_one) => extensions.vk_cmd_set_depth_clip_negative_one_to_one_ext(command_buffer, negative_one_to_one);
+fn void cmd_set_viewport_w_scaling_enable_nv (CommandBuffer command_buffer, uint viewport_w_scaling_enable) => extensions.vk_cmd_set_viewport_w_scaling_enable_nv(command_buffer, viewport_w_scaling_enable);
+fn void cmd_set_viewport_swizzle_nv (CommandBuffer command_buffer, uint first_viewport, uint viewport_count, ViewportSwizzleNV* p_viewport_swizzles) => extensions.vk_cmd_set_viewport_swizzle_nv(command_buffer, first_viewport, viewport_count, p_viewport_swizzles);
+fn void cmd_set_coverage_to_color_enable_nv (CommandBuffer command_buffer, uint coverage_to_color_enable) => extensions.vk_cmd_set_coverage_to_color_enable_nv(command_buffer, coverage_to_color_enable);
+fn void cmd_set_coverage_to_color_location_nv (CommandBuffer command_buffer, uint coverage_to_color_location) => extensions.vk_cmd_set_coverage_to_color_location_nv(command_buffer, coverage_to_color_location);
+fn void cmd_set_coverage_modulation_mode_nv (CommandBuffer command_buffer, CoverageModulationModeNV coverage_modulation_mode) => extensions.vk_cmd_set_coverage_modulation_mode_nv(command_buffer, coverage_modulation_mode);
+fn void cmd_set_coverage_modulation_table_enable_nv (CommandBuffer command_buffer, uint coverage_modulation_table_enable) => extensions.vk_cmd_set_coverage_modulation_table_enable_nv(command_buffer, coverage_modulation_table_enable);
+fn void cmd_set_coverage_modulation_table_nv (CommandBuffer command_buffer, uint coverage_modulation_table_count, float* p_coverage_modulation_table) => extensions.vk_cmd_set_coverage_modulation_table_nv(command_buffer, coverage_modulation_table_count, p_coverage_modulation_table);
+fn void cmd_set_shading_rate_image_enable_nv (CommandBuffer command_buffer, uint shading_rate_image_enable) => extensions.vk_cmd_set_shading_rate_image_enable_nv(command_buffer, shading_rate_image_enable);
+fn void cmd_set_coverage_reduction_mode_nv (CommandBuffer command_buffer, CoverageReductionModeNV coverage_reduction_mode) => extensions.vk_cmd_set_coverage_reduction_mode_nv(command_buffer, coverage_reduction_mode);
+fn void cmd_set_representative_fragment_test_enable_nv (CommandBuffer command_buffer, uint representative_fragment_test_enable) => extensions.vk_cmd_set_representative_fragment_test_enable_nv(command_buffer, representative_fragment_test_enable);
+fn void destroy_private_data_slot_ext (Device device, PrivateDataSlot private_data_slot, AllocationCallbacks* p_allocator) => extensions.vk_destroy_private_data_slot_ext(device, private_data_slot, p_allocator);
+fn void get_private_data_ext (Device device, ObjectType object_type, ulong object_handle, PrivateDataSlot private_data_slot, ulong* p_data) => extensions.vk_get_private_data_ext(device, object_type, object_handle, private_data_slot, p_data);
+fn void cmd_copy_buffer2_khr (CommandBuffer command_buffer, CopyBufferInfo2* p_copy_buffer_info) => extensions.vk_cmd_copy_buffer2_khr(command_buffer, p_copy_buffer_info);
+fn void cmd_copy_image2_khr (CommandBuffer command_buffer, CopyImageInfo2* p_copy_image_info) => extensions.vk_cmd_copy_image2_khr(command_buffer, p_copy_image_info);
+fn void cmd_blit_image2_khr (CommandBuffer command_buffer, BlitImageInfo2* p_blit_image_info) => extensions.vk_cmd_blit_image2_khr(command_buffer, p_blit_image_info);
+fn void cmd_copy_buffer_to_image2_khr (CommandBuffer command_buffer, CopyBufferToImageInfo2* p_copy_buffer_to_image_info) => extensions.vk_cmd_copy_buffer_to_image2_khr(command_buffer, p_copy_buffer_to_image_info);
+fn void cmd_copy_image_to_buffer2_khr (CommandBuffer command_buffer, CopyImageToBufferInfo2* p_copy_image_to_buffer_info) => extensions.vk_cmd_copy_image_to_buffer2_khr(command_buffer, p_copy_image_to_buffer_info);
+fn void cmd_resolve_image2_khr (CommandBuffer command_buffer, ResolveImageInfo2* p_resolve_image_info) => extensions.vk_cmd_resolve_image2_khr(command_buffer, p_resolve_image_info);
+fn void cmd_set_fragment_shading_rate_khr (CommandBuffer command_buffer, Extent2D* p_fragment_size, FragmentShadingRateCombinerOpKHR[2] combiner_ops) => extensions.vk_cmd_set_fragment_shading_rate_khr(command_buffer, p_fragment_size, combiner_ops);
+fn void cmd_set_fragment_shading_rate_enum_nv (CommandBuffer command_buffer, FragmentShadingRateNV shading_rate, FragmentShadingRateCombinerOpKHR[2] combiner_ops) => extensions.vk_cmd_set_fragment_shading_rate_enum_nv(command_buffer, shading_rate, combiner_ops);
+fn void get_acceleration_structure_build_sizes_khr (Device device, AccelerationStructureBuildTypeKHR build_type, AccelerationStructureBuildGeometryInfoKHR* p_build_info, uint* p_max_primitive_counts, AccelerationStructureBuildSizesInfoKHR* p_size_info) => extensions.vk_get_acceleration_structure_build_sizes_khr(device, build_type, p_build_info, p_max_primitive_counts, p_size_info);
+fn void cmd_set_vertex_input_ext (CommandBuffer command_buffer, uint vertex_binding_description_count, VertexInputBindingDescription2EXT* p_vertex_binding_descriptions, uint vertex_attribute_description_count, VertexInputAttributeDescription2EXT* p_vertex_attribute_descriptions) => extensions.vk_cmd_set_vertex_input_ext(command_buffer, vertex_binding_description_count, p_vertex_binding_descriptions, vertex_attribute_description_count, p_vertex_attribute_descriptions);
+fn void cmd_set_color_write_enable_ext (CommandBuffer command_buffer, uint attachment_count, uint* p_color_write_enables) => extensions.vk_cmd_set_color_write_enable_ext(command_buffer, attachment_count, p_color_write_enables);
+fn void cmd_set_event2_khr (CommandBuffer command_buffer, Event event, DependencyInfo* p_dependency_info) => extensions.vk_cmd_set_event2_khr(command_buffer, event, p_dependency_info);
+fn void cmd_reset_event2_khr (CommandBuffer command_buffer, Event event, PipelineStageFlags2 stage_mask) => extensions.vk_cmd_reset_event2_khr(command_buffer, event, stage_mask);
+fn void cmd_wait_events2_khr (CommandBuffer command_buffer, uint event_count, Event* p_events, DependencyInfo* p_dependency_infos) => extensions.vk_cmd_wait_events2_khr(command_buffer, event_count, p_events, p_dependency_infos);
+fn void cmd_pipeline_barrier2_khr (CommandBuffer command_buffer, DependencyInfo* p_dependency_info) => extensions.vk_cmd_pipeline_barrier2_khr(command_buffer, p_dependency_info);
+fn void cmd_write_timestamp2_khr (CommandBuffer command_buffer, PipelineStageFlags2 stage, QueryPool query_pool, uint query) => extensions.vk_cmd_write_timestamp2_khr(command_buffer, stage, query_pool, query);
+fn void cmd_write_buffer_marker2_amd (CommandBuffer command_buffer, PipelineStageFlags2 stage, Buffer dst_buffer, DeviceSize dst_offset, uint marker) => extensions.vk_cmd_write_buffer_marker2_amd(command_buffer, stage, dst_buffer, dst_offset, marker);
+fn void get_queue_checkpoint_data2_nv (Queue queue, uint* p_checkpoint_data_count, CheckpointData2NV* p_checkpoint_data) => extensions.vk_get_queue_checkpoint_data2_nv(queue, p_checkpoint_data_count, p_checkpoint_data);
+fn void destroy_video_session_khr (Device device, VideoSessionKHR video_session, AllocationCallbacks* p_allocator) => extensions.vk_destroy_video_session_khr(device, video_session, p_allocator);
+fn void destroy_video_session_parameters_khr (Device device, VideoSessionParametersKHR video_session_parameters, AllocationCallbacks* p_allocator) => extensions.vk_destroy_video_session_parameters_khr(device, video_session_parameters, p_allocator);
+fn void cmd_decode_video_khr (CommandBuffer command_buffer, VideoDecodeInfoKHR* p_decode_info) => extensions.vk_cmd_decode_video_khr(command_buffer, p_decode_info);
+fn void cmd_begin_video_coding_khr (CommandBuffer command_buffer, VideoBeginCodingInfoKHR* p_begin_info) => extensions.vk_cmd_begin_video_coding_khr(command_buffer, p_begin_info);
+fn void cmd_control_video_coding_khr (CommandBuffer command_buffer, VideoCodingControlInfoKHR* p_coding_control_info) => extensions.vk_cmd_control_video_coding_khr(command_buffer, p_coding_control_info);
+fn void cmd_end_video_coding_khr (CommandBuffer command_buffer, VideoEndCodingInfoKHR* p_end_coding_info) => extensions.vk_cmd_end_video_coding_khr(command_buffer, p_end_coding_info);
+fn void cmd_encode_video_khr (CommandBuffer command_buffer, VideoEncodeInfoKHR* p_encode_info) => extensions.vk_cmd_encode_video_khr(command_buffer, p_encode_info);
+fn void cmd_decompress_memory_nv (CommandBuffer command_buffer, uint decompress_region_count, DecompressMemoryRegionNV* p_decompress_memory_regions) => extensions.vk_cmd_decompress_memory_nv(command_buffer, decompress_region_count, p_decompress_memory_regions);
+fn void cmd_decompress_memory_indirect_count_nv (CommandBuffer command_buffer, DeviceAddress indirect_commands_address, DeviceAddress indirect_commands_count_address, uint stride) => extensions.vk_cmd_decompress_memory_indirect_count_nv(command_buffer, indirect_commands_address, indirect_commands_count_address, stride);
+fn void destroy_cu_module_nvx (Device device, CuModuleNVX mod, AllocationCallbacks* p_allocator) => extensions.vk_destroy_cu_module_nvx(device, mod, p_allocator);
+fn void destroy_cu_function_nvx (Device device, CuFunctionNVX function, AllocationCallbacks* p_allocator) => extensions.vk_destroy_cu_function_nvx(device, function, p_allocator);
+fn void cmd_cu_launch_kernel_nvx (CommandBuffer command_buffer, CuLaunchInfoNVX* p_launch_info) => extensions.vk_cmd_cu_launch_kernel_nvx(command_buffer, p_launch_info);
+fn void get_descriptor_set_layout_size_ext (Device device, DescriptorSetLayout layout, DeviceSize* p_layout_size_in_bytes) => extensions.vk_get_descriptor_set_layout_size_ext(device, layout, p_layout_size_in_bytes);
+fn void get_descriptor_set_layout_binding_offset_ext (Device device, DescriptorSetLayout layout, uint binding, DeviceSize* p_offset) => extensions.vk_get_descriptor_set_layout_binding_offset_ext(device, layout, binding, p_offset);
+fn void get_descriptor_ext (Device device, DescriptorGetInfoEXT* p_descriptor_info, sz data_size, void* p_descriptor) => extensions.vk_get_descriptor_ext(device, p_descriptor_info, data_size, p_descriptor);
+fn void cmd_bind_descriptor_buffers_ext (CommandBuffer command_buffer, uint buffer_count, DescriptorBufferBindingInfoEXT* p_binding_infos) => extensions.vk_cmd_bind_descriptor_buffers_ext(command_buffer, buffer_count, p_binding_infos);
+fn void cmd_set_descriptor_buffer_offsets_ext (CommandBuffer command_buffer, PipelineBindPoint pipeline_bind_point, PipelineLayout layout, uint first_set, uint set_count, uint* p_buffer_indices, DeviceSize* p_offsets) => extensions.vk_cmd_set_descriptor_buffer_offsets_ext(command_buffer, pipeline_bind_point, layout, first_set, set_count, p_buffer_indices, p_offsets);
+fn void cmd_bind_descriptor_buffer_embedded_samplers_ext (CommandBuffer command_buffer, PipelineBindPoint pipeline_bind_point, PipelineLayout layout, uint set) => extensions.vk_cmd_bind_descriptor_buffer_embedded_samplers_ext(command_buffer, pipeline_bind_point, layout, set);
 fn void set_device_memory_priority_ext (Device device, DeviceMemory memory, float priority) => extensions.vk_set_device_memory_priority_ext(device, memory, priority);
-fn void cmd_begin_rendering_khr (CommandBuffer commandBuffer, RenderingInfo* pRenderingInfo) => extensions.vk_cmd_begin_rendering_khr(commandBuffer, pRenderingInfo);
-fn void cmd_end_rendering_khr (CommandBuffer commandBuffer) => extensions.vk_cmd_end_rendering_khr(commandBuffer);
-fn void get_descriptor_set_layout_host_mapping_info_valve (Device device, DescriptorSetBindingReferenceVALVE* pBindingReference, DescriptorSetLayoutHostMappingInfoVALVE* pHostMapping) => extensions.vk_get_descriptor_set_layout_host_mapping_info_valve(device, pBindingReference, pHostMapping);
-fn void get_descriptor_set_host_mapping_valve (Device device, DescriptorSet descriptorSet, void** ppData) => extensions.vk_get_descriptor_set_host_mapping_valve(device, descriptorSet, ppData);
-fn void cmd_build_micromaps_ext (CommandBuffer commandBuffer, uint infoCount, MicromapBuildInfoEXT* pInfos) => extensions.vk_cmd_build_micromaps_ext(commandBuffer, infoCount, pInfos);
-fn void destroy_micromap_ext (Device device, MicromapEXT micromap, AllocationCallbacks* pAllocator) => extensions.vk_destroy_micromap_ext(device, micromap, pAllocator);
-fn void cmd_copy_micromap_ext (CommandBuffer commandBuffer, CopyMicromapInfoEXT* pInfo) => extensions.vk_cmd_copy_micromap_ext(commandBuffer, pInfo);
-fn void cmd_copy_micromap_to_memory_ext (CommandBuffer commandBuffer, CopyMicromapToMemoryInfoEXT* pInfo) => extensions.vk_cmd_copy_micromap_to_memory_ext(commandBuffer, pInfo);
-fn void cmd_copy_memory_to_micromap_ext (CommandBuffer commandBuffer, CopyMemoryToMicromapInfoEXT* pInfo) => extensions.vk_cmd_copy_memory_to_micromap_ext(commandBuffer, pInfo);
-fn void cmd_write_micromaps_properties_ext (CommandBuffer commandBuffer, uint micromapCount, MicromapEXT* pMicromaps, QueryType queryType, QueryPool queryPool, uint firstQuery) => extensions.vk_cmd_write_micromaps_properties_ext(commandBuffer, micromapCount, pMicromaps, queryType, queryPool, firstQuery);
-fn void get_device_micromap_compatibility_ext (Device device, MicromapVersionInfoEXT* pVersionInfo, AccelerationStructureCompatibilityKHR* pCompatibility) => extensions.vk_get_device_micromap_compatibility_ext(device, pVersionInfo, pCompatibility);
-fn void get_micromap_build_sizes_ext (Device device, AccelerationStructureBuildTypeKHR buildType, MicromapBuildInfoEXT* pBuildInfo, MicromapBuildSizesInfoEXT* pSizeInfo) => extensions.vk_get_micromap_build_sizes_ext(device, buildType, pBuildInfo, pSizeInfo);
-fn void get_shader_module_identifier_ext (Device device, ShaderModule shaderModule, ShaderModuleIdentifierEXT* pIdentifier) => extensions.vk_get_shader_module_identifier_ext(device, shaderModule, pIdentifier);
-fn void get_shader_module_create_info_identifier_ext (Device device, ShaderModuleCreateInfo* pCreateInfo, ShaderModuleIdentifierEXT* pIdentifier) => extensions.vk_get_shader_module_create_info_identifier_ext(device, pCreateInfo, pIdentifier);
-fn void get_image_subresource_layout2_khr (Device device, Image image, ImageSubresource2KHR* pSubresource, SubresourceLayout2KHR* pLayout) => extensions.vk_get_image_subresource_layout2_khr(device, image, pSubresource, pLayout);
-fn void get_image_subresource_layout2_ext (Device device, Image image, ImageSubresource2KHR* pSubresource, SubresourceLayout2KHR* pLayout) => extensions.vk_get_image_subresource_layout2_ext(device, image, pSubresource, pLayout);
-fn void export_metal_objects_ext (Device device, ExportMetalObjectsInfoEXT* pMetalObjectsInfo) => extensions.vk_export_metal_objects_ext(device, pMetalObjectsInfo);
-fn void destroy_optical_flow_session_nv (Device device, OpticalFlowSessionNV session, AllocationCallbacks* pAllocator) => extensions.vk_destroy_optical_flow_session_nv(device, session, pAllocator);
-fn void cmd_optical_flow_execute_nv (CommandBuffer commandBuffer, OpticalFlowSessionNV session, OpticalFlowExecuteInfoNV* pExecuteInfo) => extensions.vk_cmd_optical_flow_execute_nv(commandBuffer, session, pExecuteInfo);
-fn void cmd_set_depth_bias2_ext (CommandBuffer commandBuffer, DepthBiasInfoEXT* pDepthBiasInfo) => extensions.vk_cmd_set_depth_bias2_ext(commandBuffer, pDepthBiasInfo);
-fn void get_device_image_subresource_layout_khr (Device device, DeviceImageSubresourceInfoKHR* pInfo, SubresourceLayout2KHR* pLayout) => extensions.vk_get_device_image_subresource_layout_khr(device, pInfo, pLayout);
-fn void destroy_shader_ext (Device device, ShaderEXT shader, AllocationCallbacks* pAllocator) => extensions.vk_destroy_shader_ext(device, shader, pAllocator);
-fn void cmd_bind_shaders_ext (CommandBuffer commandBuffer, uint stageCount, ShaderStageFlagBits* pStages, ShaderEXT* pShaders) => extensions.vk_cmd_bind_shaders_ext(commandBuffer, stageCount, pStages, pShaders);
-fn void cmd_bind_descriptor_sets2_khr (CommandBuffer commandBuffer, BindDescriptorSetsInfoKHR* pBindDescriptorSetsInfo) => extensions.vk_cmd_bind_descriptor_sets2_khr(commandBuffer, pBindDescriptorSetsInfo);
-fn void cmd_push_constants2_khr (CommandBuffer commandBuffer, PushConstantsInfoKHR* pPushConstantsInfo) => extensions.vk_cmd_push_constants2_khr(commandBuffer, pPushConstantsInfo);
-fn void cmd_push_descriptor_set2_khr (CommandBuffer commandBuffer, PushDescriptorSetInfoKHR* pPushDescriptorSetInfo) => extensions.vk_cmd_push_descriptor_set2_khr(commandBuffer, pPushDescriptorSetInfo);
-fn void cmd_push_descriptor_set_with_template2_khr (CommandBuffer commandBuffer, PushDescriptorSetWithTemplateInfoKHR* pPushDescriptorSetWithTemplateInfo) => extensions.vk_cmd_push_descriptor_set_with_template2_khr(commandBuffer, pPushDescriptorSetWithTemplateInfo);
-fn void cmd_set_descriptor_buffer_offsets2_ext (CommandBuffer commandBuffer, SetDescriptorBufferOffsetsInfoEXT* pSetDescriptorBufferOffsetsInfo) => extensions.vk_cmd_set_descriptor_buffer_offsets2_ext(commandBuffer, pSetDescriptorBufferOffsetsInfo);
-fn void cmd_bind_descriptor_buffer_embedded_samplers2_ext (CommandBuffer commandBuffer, BindDescriptorBufferEmbeddedSamplersInfoEXT* pBindDescriptorBufferEmbeddedSamplersInfo) => extensions.vk_cmd_bind_descriptor_buffer_embedded_samplers2_ext(commandBuffer, pBindDescriptorBufferEmbeddedSamplersInfo);
-fn void set_latency_marker_nv (Device device, SwapchainKHR swapchain, SetLatencyMarkerInfoNV* pLatencyMarkerInfo) => extensions.vk_set_latency_marker_nv(device, swapchain, pLatencyMarkerInfo);
-fn void get_latency_timings_nv (Device device, SwapchainKHR swapchain, GetLatencyMarkerInfoNV* pLatencyMarkerInfo) => extensions.vk_get_latency_timings_nv(device, swapchain, pLatencyMarkerInfo);
-fn void queue_notify_out_of_band_nv (Queue queue, OutOfBandQueueTypeInfoNV* pQueueTypeInfo) => extensions.vk_queue_notify_out_of_band_nv(queue, pQueueTypeInfo);
-fn void cmd_set_rendering_attachment_locations_khr (CommandBuffer commandBuffer, RenderingAttachmentLocationInfoKHR* pLocationInfo) => extensions.vk_cmd_set_rendering_attachment_locations_khr(commandBuffer, pLocationInfo);
-fn void cmd_set_rendering_input_attachment_indices_khr (CommandBuffer commandBuffer, RenderingInputAttachmentIndexInfoKHR* pInputAttachmentIndexInfo) => extensions.vk_cmd_set_rendering_input_attachment_indices_khr(commandBuffer, pInputAttachmentIndexInfo);
-fn void cmd_set_depth_clamp_range_ext (CommandBuffer commandBuffer, DepthClampModeEXT depthClampMode, DepthClampRangeEXT* pDepthClampRange) => extensions.vk_cmd_set_depth_clamp_range_ext(commandBuffer, depthClampMode, pDepthClampRange);
+fn void cmd_begin_rendering_khr (CommandBuffer command_buffer, RenderingInfo* p_rendering_info) => extensions.vk_cmd_begin_rendering_khr(command_buffer, p_rendering_info);
+fn void cmd_end_rendering_khr (CommandBuffer command_buffer) => extensions.vk_cmd_end_rendering_khr(command_buffer);
+fn void get_descriptor_set_layout_host_mapping_info_valve (Device device, DescriptorSetBindingReferenceVALVE* p_binding_reference, DescriptorSetLayoutHostMappingInfoVALVE* p_host_mapping) => extensions.vk_get_descriptor_set_layout_host_mapping_info_valve(device, p_binding_reference, p_host_mapping);
+fn void get_descriptor_set_host_mapping_valve (Device device, DescriptorSet descriptor_set, void** pp_data) => extensions.vk_get_descriptor_set_host_mapping_valve(device, descriptor_set, pp_data);
+fn void cmd_build_micromaps_ext (CommandBuffer command_buffer, uint info_count, MicromapBuildInfoEXT* p_infos) => extensions.vk_cmd_build_micromaps_ext(command_buffer, info_count, p_infos);
+fn void destroy_micromap_ext (Device device, MicromapEXT micromap, AllocationCallbacks* p_allocator) => extensions.vk_destroy_micromap_ext(device, micromap, p_allocator);
+fn void cmd_copy_micromap_ext (CommandBuffer command_buffer, CopyMicromapInfoEXT* p_info) => extensions.vk_cmd_copy_micromap_ext(command_buffer, p_info);
+fn void cmd_copy_micromap_to_memory_ext (CommandBuffer command_buffer, CopyMicromapToMemoryInfoEXT* p_info) => extensions.vk_cmd_copy_micromap_to_memory_ext(command_buffer, p_info);
+fn void cmd_copy_memory_to_micromap_ext (CommandBuffer command_buffer, CopyMemoryToMicromapInfoEXT* p_info) => extensions.vk_cmd_copy_memory_to_micromap_ext(command_buffer, p_info);
+fn void cmd_write_micromaps_properties_ext (CommandBuffer command_buffer, uint micromap_count, MicromapEXT* p_micromaps, QueryType query_type, QueryPool query_pool, uint first_query) => extensions.vk_cmd_write_micromaps_properties_ext(command_buffer, micromap_count, p_micromaps, query_type, query_pool, first_query);
+fn void get_device_micromap_compatibility_ext (Device device, MicromapVersionInfoEXT* p_version_info, AccelerationStructureCompatibilityKHR* p_compatibility) => extensions.vk_get_device_micromap_compatibility_ext(device, p_version_info, p_compatibility);
+fn void get_micromap_build_sizes_ext (Device device, AccelerationStructureBuildTypeKHR build_type, MicromapBuildInfoEXT* p_build_info, MicromapBuildSizesInfoEXT* p_size_info) => extensions.vk_get_micromap_build_sizes_ext(device, build_type, p_build_info, p_size_info);
+fn void get_shader_module_identifier_ext (Device device, ShaderModule shader_module, ShaderModuleIdentifierEXT* p_identifier) => extensions.vk_get_shader_module_identifier_ext(device, shader_module, p_identifier);
+fn void get_shader_module_create_info_identifier_ext (Device device, ShaderModuleCreateInfo* p_create_info, ShaderModuleIdentifierEXT* p_identifier) => extensions.vk_get_shader_module_create_info_identifier_ext(device, p_create_info, p_identifier);
+fn void get_image_subresource_layout2_khr (Device device, Image image, ImageSubresource2KHR* p_subresource, SubresourceLayout2KHR* p_layout) => extensions.vk_get_image_subresource_layout2_khr(device, image, p_subresource, p_layout);
+fn void get_image_subresource_layout2_ext (Device device, Image image, ImageSubresource2KHR* p_subresource, SubresourceLayout2KHR* p_layout) => extensions.vk_get_image_subresource_layout2_ext(device, image, p_subresource, p_layout);
+fn void export_metal_objects_ext (Device device, ExportMetalObjectsInfoEXT* p_metal_objects_info) => extensions.vk_export_metal_objects_ext(device, p_metal_objects_info);
+fn void destroy_optical_flow_session_nv (Device device, OpticalFlowSessionNV session, AllocationCallbacks* p_allocator) => extensions.vk_destroy_optical_flow_session_nv(device, session, p_allocator);
+fn void cmd_optical_flow_execute_nv (CommandBuffer command_buffer, OpticalFlowSessionNV session, OpticalFlowExecuteInfoNV* p_execute_info) => extensions.vk_cmd_optical_flow_execute_nv(command_buffer, session, p_execute_info);
+fn void cmd_set_depth_bias2_ext (CommandBuffer command_buffer, DepthBiasInfoEXT* p_depth_bias_info) => extensions.vk_cmd_set_depth_bias2_ext(command_buffer, p_depth_bias_info);
+fn void get_device_image_subresource_layout_khr (Device device, DeviceImageSubresourceInfoKHR* p_info, SubresourceLayout2KHR* p_layout) => extensions.vk_get_device_image_subresource_layout_khr(device, p_info, p_layout);
+fn void destroy_shader_ext (Device device, ShaderEXT shader, AllocationCallbacks* p_allocator) => extensions.vk_destroy_shader_ext(device, shader, p_allocator);
+fn void cmd_bind_shaders_ext (CommandBuffer command_buffer, uint stage_count, ShaderStageFlagBits* p_stages, ShaderEXT* p_shaders) => extensions.vk_cmd_bind_shaders_ext(command_buffer, stage_count, p_stages, p_shaders);
+fn void cmd_bind_descriptor_sets2_khr (CommandBuffer command_buffer, BindDescriptorSetsInfoKHR* p_bind_descriptor_sets_info) => extensions.vk_cmd_bind_descriptor_sets2_khr(command_buffer, p_bind_descriptor_sets_info);
+fn void cmd_push_constants2_khr (CommandBuffer command_buffer, PushConstantsInfoKHR* p_push_constants_info) => extensions.vk_cmd_push_constants2_khr(command_buffer, p_push_constants_info);
+fn void cmd_push_descriptor_set2_khr (CommandBuffer command_buffer, PushDescriptorSetInfoKHR* p_push_descriptor_set_info) => extensions.vk_cmd_push_descriptor_set2_khr(command_buffer, p_push_descriptor_set_info);
+fn void cmd_push_descriptor_set_with_template2_khr (CommandBuffer command_buffer, PushDescriptorSetWithTemplateInfoKHR* p_push_descriptor_set_with_template_info) => extensions.vk_cmd_push_descriptor_set_with_template2_khr(command_buffer, p_push_descriptor_set_with_template_info);
+fn void cmd_set_descriptor_buffer_offsets2_ext (CommandBuffer command_buffer, SetDescriptorBufferOffsetsInfoEXT* p_set_descriptor_buffer_offsets_info) => extensions.vk_cmd_set_descriptor_buffer_offsets2_ext(command_buffer, p_set_descriptor_buffer_offsets_info);
+fn void cmd_bind_descriptor_buffer_embedded_samplers2_ext (CommandBuffer command_buffer, BindDescriptorBufferEmbeddedSamplersInfoEXT* p_bind_descriptor_buffer_embedded_samplers_info) => extensions.vk_cmd_bind_descriptor_buffer_embedded_samplers2_ext(command_buffer, p_bind_descriptor_buffer_embedded_samplers_info);
+fn void set_latency_marker_nv (Device device, SwapchainKHR swapchain, SetLatencyMarkerInfoNV* p_latency_marker_info) => extensions.vk_set_latency_marker_nv(device, swapchain, p_latency_marker_info);
+fn void get_latency_timings_nv (Device device, SwapchainKHR swapchain, GetLatencyMarkerInfoNV* p_latency_marker_info) => extensions.vk_get_latency_timings_nv(device, swapchain, p_latency_marker_info);
+fn void queue_notify_out_of_band_nv (Queue queue, OutOfBandQueueTypeInfoNV* p_queue_type_info) => extensions.vk_queue_notify_out_of_band_nv(queue, p_queue_type_info);
+fn void cmd_set_rendering_attachment_locations_khr (CommandBuffer command_buffer, RenderingAttachmentLocationInfoKHR* p_location_info) => extensions.vk_cmd_set_rendering_attachment_locations_khr(command_buffer, p_location_info);
+fn void cmd_set_rendering_input_attachment_indices_khr (CommandBuffer command_buffer, RenderingInputAttachmentIndexInfoKHR* p_input_attachment_index_info) => extensions.vk_cmd_set_rendering_input_attachment_indices_khr(command_buffer, p_input_attachment_index_info);
+fn void cmd_set_depth_clamp_range_ext (CommandBuffer command_buffer, DepthClampModeEXT depth_clamp_mode, DepthClampRangeEXT* p_depth_clamp_range) => extensions.vk_cmd_set_depth_clamp_range_ext(command_buffer, depth_clamp_mode, p_depth_clamp_range);
 
 fn void? try_create_instance (InstanceCreateInfo* p_create_info, AllocationCallbacks* p_allocator, Instance* p_instance) {
   Result result = create_instance(p_create_info, p_allocator, p_instance);
@@ -3653,270 +3653,270 @@ fn void? try_latency_sleep_nv (Device device, SwapchainKHR swapchain, LatencySle
   if (result != (Result)0) return ERROR_UNKNOWN~;
 }
 
-fn Instance? InstanceCreateInfo.build(&self, AllocationCallbacks* pAllocator = null) {
+fn Instance? InstanceCreateInfo.build(&self, AllocationCallbacks* p_allocator = null) {
    Instance response;
-   try_create_instance(self, pAllocator, &response)!;
+   try_create_instance(self, p_allocator, &response)!;
    load_extensions(response);
    return response;
 }
-fn Device? DeviceCreateInfo.build(&self, PhysicalDevice physicalDevice, AllocationCallbacks* pAllocator = null) {
+fn Device? DeviceCreateInfo.build(&self, PhysicalDevice physical_device, AllocationCallbacks* p_allocator = null) {
    Device response;
-   try_create_device(physicalDevice, self, pAllocator, &response)!;
+   try_create_device(physical_device, self, p_allocator, &response)!;
    return response;
 }
-fn Fence? FenceCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn Fence? FenceCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    Fence response;
-   try_create_fence(device, self, pAllocator, &response)!;
+   try_create_fence(device, self, p_allocator, &response)!;
    return response;
 }
-fn Semaphore? SemaphoreCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn Semaphore? SemaphoreCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    Semaphore response;
-   try_create_semaphore(device, self, pAllocator, &response)!;
+   try_create_semaphore(device, self, p_allocator, &response)!;
    return response;
 }
-fn Event? EventCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn Event? EventCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    Event response;
-   try_create_event(device, self, pAllocator, &response)!;
+   try_create_event(device, self, p_allocator, &response)!;
    return response;
 }
-fn QueryPool? QueryPoolCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn QueryPool? QueryPoolCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    QueryPool response;
-   try_create_query_pool(device, self, pAllocator, &response)!;
+   try_create_query_pool(device, self, p_allocator, &response)!;
    return response;
 }
-fn Buffer? BufferCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn Buffer? BufferCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    Buffer response;
-   try_create_buffer(device, self, pAllocator, &response)!;
+   try_create_buffer(device, self, p_allocator, &response)!;
    return response;
 }
-fn BufferView? BufferViewCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn BufferView? BufferViewCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    BufferView response;
-   try_create_buffer_view(device, self, pAllocator, &response)!;
+   try_create_buffer_view(device, self, p_allocator, &response)!;
    return response;
 }
-fn Image? ImageCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn Image? ImageCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    Image response;
-   try_create_image(device, self, pAllocator, &response)!;
+   try_create_image(device, self, p_allocator, &response)!;
    return response;
 }
-fn ImageView? ImageViewCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn ImageView? ImageViewCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    ImageView response;
-   try_create_image_view(device, self, pAllocator, &response)!;
+   try_create_image_view(device, self, p_allocator, &response)!;
    return response;
 }
-fn ShaderModule? ShaderModuleCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn ShaderModule? ShaderModuleCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    ShaderModule response;
-   try_create_shader_module(device, self, pAllocator, &response)!;
+   try_create_shader_module(device, self, p_allocator, &response)!;
    return response;
 }
-fn PipelineCache? PipelineCacheCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn PipelineCache? PipelineCacheCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    PipelineCache response;
-   try_create_pipeline_cache(device, self, pAllocator, &response)!;
+   try_create_pipeline_cache(device, self, p_allocator, &response)!;
    return response;
 }
-fn PipelineBinaryHandlesInfoKHR? PipelineBinaryCreateInfoKHR.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn PipelineBinaryHandlesInfoKHR? PipelineBinaryCreateInfoKHR.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    PipelineBinaryHandlesInfoKHR response;
-   try_create_pipeline_binaries_khr(device, self, pAllocator, &response)!;
+   try_create_pipeline_binaries_khr(device, self, p_allocator, &response)!;
    return response;
 }
-fn Pipeline? GraphicsPipelineCreateInfo.build(&self, Device device, PipelineCache pipelineCache = (PipelineCache)null, uint createInfoCount = 1, AllocationCallbacks* pAllocator = null) {
+fn Pipeline? GraphicsPipelineCreateInfo.build(&self, Device device, PipelineCache pipeline_cache = (PipelineCache)null, uint create_info_count = 1, AllocationCallbacks* p_allocator = null) {
    Pipeline response;
-   try_create_graphics_pipelines(device, pipelineCache, createInfoCount, self, pAllocator, &response)!;
+   try_create_graphics_pipelines(device, pipeline_cache, create_info_count, self, p_allocator, &response)!;
    return response;
 }
-fn Pipeline? ComputePipelineCreateInfo.build(&self, Device device, PipelineCache pipelineCache = (PipelineCache)null, uint createInfoCount = 1, AllocationCallbacks* pAllocator = null) {
+fn Pipeline? ComputePipelineCreateInfo.build(&self, Device device, PipelineCache pipeline_cache = (PipelineCache)null, uint create_info_count = 1, AllocationCallbacks* p_allocator = null) {
    Pipeline response;
-   try_create_compute_pipelines(device, pipelineCache, createInfoCount, self, pAllocator, &response)!;
+   try_create_compute_pipelines(device, pipeline_cache, create_info_count, self, p_allocator, &response)!;
    return response;
 }
-fn PipelineLayout? PipelineLayoutCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn PipelineLayout? PipelineLayoutCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    PipelineLayout response;
-   try_create_pipeline_layout(device, self, pAllocator, &response)!;
+   try_create_pipeline_layout(device, self, p_allocator, &response)!;
    return response;
 }
-fn Sampler? SamplerCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn Sampler? SamplerCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    Sampler response;
-   try_create_sampler(device, self, pAllocator, &response)!;
+   try_create_sampler(device, self, p_allocator, &response)!;
    return response;
 }
-fn DescriptorSetLayout? DescriptorSetLayoutCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn DescriptorSetLayout? DescriptorSetLayoutCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    DescriptorSetLayout response;
-   try_create_descriptor_set_layout(device, self, pAllocator, &response)!;
+   try_create_descriptor_set_layout(device, self, p_allocator, &response)!;
    return response;
 }
-fn DescriptorPool? DescriptorPoolCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn DescriptorPool? DescriptorPoolCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    DescriptorPool response;
-   try_create_descriptor_pool(device, self, pAllocator, &response)!;
+   try_create_descriptor_pool(device, self, p_allocator, &response)!;
    return response;
 }
-fn Framebuffer? FramebufferCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn Framebuffer? FramebufferCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    Framebuffer response;
-   try_create_framebuffer(device, self, pAllocator, &response)!;
+   try_create_framebuffer(device, self, p_allocator, &response)!;
    return response;
 }
-fn RenderPass? RenderPassCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn RenderPass? RenderPassCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    RenderPass response;
-   try_create_render_pass(device, self, pAllocator, &response)!;
+   try_create_render_pass(device, self, p_allocator, &response)!;
    return response;
 }
-fn CommandPool? CommandPoolCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn CommandPool? CommandPoolCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    CommandPool response;
-   try_create_command_pool(device, self, pAllocator, &response)!;
+   try_create_command_pool(device, self, p_allocator, &response)!;
    return response;
 }
-fn DisplayModeKHR? DisplayModeCreateInfoKHR.build(&self, PhysicalDevice physicalDevice, DisplayKHR display, AllocationCallbacks* pAllocator = null) {
+fn DisplayModeKHR? DisplayModeCreateInfoKHR.build(&self, PhysicalDevice physical_device, DisplayKHR display, AllocationCallbacks* p_allocator = null) {
    DisplayModeKHR response;
-   try_create_display_mode_khr(physicalDevice, display, self, pAllocator, &response)!;
+   try_create_display_mode_khr(physical_device, display, self, p_allocator, &response)!;
    return response;
 }
-fn SurfaceKHR? DisplaySurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn SurfaceKHR? DisplaySurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    SurfaceKHR response;
-   try_create_display_plane_surface_khr(instance, self, pAllocator, &response)!;
+   try_create_display_plane_surface_khr(instance, self, p_allocator, &response)!;
    return response;
 }
-fn SwapchainKHR? SwapchainCreateInfoKHR.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn SwapchainKHR? SwapchainCreateInfoKHR.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    SwapchainKHR response;
-   try_create_swapchain_khr(device, self, pAllocator, &response)!;
+   try_create_swapchain_khr(device, self, p_allocator, &response)!;
    return response;
 }
-fn SurfaceKHR? WaylandSurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn SurfaceKHR? WaylandSurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    SurfaceKHR response;
-   try_create_wayland_surface_khr(instance, self, pAllocator, &response)!;
+   try_create_wayland_surface_khr(instance, self, p_allocator, &response)!;
    return response;
 }
-fn SurfaceKHR? Win32SurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn SurfaceKHR? Win32SurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    SurfaceKHR response;
-   try_create_win32surface_khr(instance, self, pAllocator, &response)!;
+   try_create_win32surface_khr(instance, self, p_allocator, &response)!;
    return response;
 }
-fn SurfaceKHR? XlibSurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn SurfaceKHR? XlibSurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    SurfaceKHR response;
-   try_create_xlib_surface_khr(instance, self, pAllocator, &response)!;
+   try_create_xlib_surface_khr(instance, self, p_allocator, &response)!;
    return response;
 }
-fn SurfaceKHR? XcbSurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn SurfaceKHR? XcbSurfaceCreateInfoKHR.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    SurfaceKHR response;
-   try_create_xcb_surface_khr(instance, self, pAllocator, &response)!;
+   try_create_xcb_surface_khr(instance, self, p_allocator, &response)!;
    return response;
 }
-fn DebugReportCallbackEXT? DebugReportCallbackCreateInfoEXT.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn DebugReportCallbackEXT? DebugReportCallbackCreateInfoEXT.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    DebugReportCallbackEXT response;
-   try_create_debug_report_callback_ext(instance, self, pAllocator, &response)!;
+   try_create_debug_report_callback_ext(instance, self, p_allocator, &response)!;
    return response;
 }
-fn IndirectCommandsLayoutNV? IndirectCommandsLayoutCreateInfoNV.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn IndirectCommandsLayoutNV? IndirectCommandsLayoutCreateInfoNV.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    IndirectCommandsLayoutNV response;
-   try_create_indirect_commands_layout_nv(device, self, pAllocator, &response)!;
+   try_create_indirect_commands_layout_nv(device, self, p_allocator, &response)!;
    return response;
 }
-fn IndirectCommandsLayoutEXT? IndirectCommandsLayoutCreateInfoEXT.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn IndirectCommandsLayoutEXT? IndirectCommandsLayoutCreateInfoEXT.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    IndirectCommandsLayoutEXT response;
-   try_create_indirect_commands_layout_ext(device, self, pAllocator, &response)!;
+   try_create_indirect_commands_layout_ext(device, self, p_allocator, &response)!;
    return response;
 }
-fn IndirectExecutionSetEXT? IndirectExecutionSetCreateInfoEXT.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn IndirectExecutionSetEXT? IndirectExecutionSetCreateInfoEXT.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    IndirectExecutionSetEXT response;
-   try_create_indirect_execution_set_ext(device, self, pAllocator, &response)!;
+   try_create_indirect_execution_set_ext(device, self, p_allocator, &response)!;
    return response;
 }
-fn DescriptorUpdateTemplate? DescriptorUpdateTemplateCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn DescriptorUpdateTemplate? DescriptorUpdateTemplateCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    DescriptorUpdateTemplate response;
-   try_create_descriptor_update_template(device, self, pAllocator, &response)!;
+   try_create_descriptor_update_template(device, self, p_allocator, &response)!;
    return response;
 }
-fn SurfaceKHR? IOSSurfaceCreateInfoMVK.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn SurfaceKHR? IOSSurfaceCreateInfoMVK.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    SurfaceKHR response;
-   try_create_ios_surface_mvk(instance, self, pAllocator, &response)!;
+   try_create_ios_surface_mvk(instance, self, p_allocator, &response)!;
    return response;
 }
-fn SurfaceKHR? MacOSSurfaceCreateInfoMVK.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn SurfaceKHR? MacOSSurfaceCreateInfoMVK.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    SurfaceKHR response;
-   try_create_mac_os_surface_mvk(instance, self, pAllocator, &response)!;
+   try_create_mac_os_surface_mvk(instance, self, p_allocator, &response)!;
    return response;
 }
-fn SurfaceKHR? MetalSurfaceCreateInfoEXT.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn SurfaceKHR? MetalSurfaceCreateInfoEXT.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    SurfaceKHR response;
-   try_create_metal_surface_ext(instance, self, pAllocator, &response)!;
+   try_create_metal_surface_ext(instance, self, p_allocator, &response)!;
    return response;
 }
-fn SamplerYcbcrConversion? SamplerYcbcrConversionCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn SamplerYcbcrConversion? SamplerYcbcrConversionCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    SamplerYcbcrConversion response;
-   try_create_sampler_ycbcr_conversion(device, self, pAllocator, &response)!;
+   try_create_sampler_ycbcr_conversion(device, self, p_allocator, &response)!;
    return response;
 }
-fn ValidationCacheEXT? ValidationCacheCreateInfoEXT.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn ValidationCacheEXT? ValidationCacheCreateInfoEXT.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    ValidationCacheEXT response;
-   try_create_validation_cache_ext(device, self, pAllocator, &response)!;
+   try_create_validation_cache_ext(device, self, p_allocator, &response)!;
    return response;
 }
-fn DebugUtilsMessengerEXT? DebugUtilsMessengerCreateInfoEXT.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn DebugUtilsMessengerEXT? DebugUtilsMessengerCreateInfoEXT.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    DebugUtilsMessengerEXT response;
-   try_create_debug_utils_messenger_ext(instance, self, pAllocator, &response)!;
+   try_create_debug_utils_messenger_ext(instance, self, p_allocator, &response)!;
    return response;
 }
-fn RenderPass? RenderPassCreateInfo2.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn RenderPass? RenderPassCreateInfo2.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    RenderPass response;
-   try_create_render_pass2(device, self, pAllocator, &response)!;
+   try_create_render_pass2(device, self, p_allocator, &response)!;
    return response;
 }
-fn Pipeline? RayTracingPipelineCreateInfoNV.build(&self, Device device, PipelineCache pipelineCache = (PipelineCache)null, uint createInfoCount = 1, AllocationCallbacks* pAllocator = null) {
+fn Pipeline? RayTracingPipelineCreateInfoNV.build(&self, Device device, PipelineCache pipeline_cache = (PipelineCache)null, uint create_info_count = 1, AllocationCallbacks* p_allocator = null) {
    Pipeline response;
-   try_create_ray_tracing_pipelines_nv(device, pipelineCache, createInfoCount, self, pAllocator, &response)!;
+   try_create_ray_tracing_pipelines_nv(device, pipeline_cache, create_info_count, self, p_allocator, &response)!;
    return response;
 }
-fn Pipeline? RayTracingPipelineCreateInfoKHR.build(&self, Device device, DeferredOperationKHR deferredOperation = (DeferredOperationKHR)null, PipelineCache pipelineCache = (PipelineCache)null, uint createInfoCount = 1, AllocationCallbacks* pAllocator = null) {
+fn Pipeline? RayTracingPipelineCreateInfoKHR.build(&self, Device device, DeferredOperationKHR deferred_operation = (DeferredOperationKHR)null, PipelineCache pipeline_cache = (PipelineCache)null, uint create_info_count = 1, AllocationCallbacks* p_allocator = null) {
    Pipeline response;
-   try_create_ray_tracing_pipelines_khr(device, deferredOperation, pipelineCache, createInfoCount, self, pAllocator, &response)!;
+   try_create_ray_tracing_pipelines_khr(device, deferred_operation, pipeline_cache, create_info_count, self, p_allocator, &response)!;
    return response;
 }
-fn SurfaceKHR? HeadlessSurfaceCreateInfoEXT.build(&self, Instance instance, AllocationCallbacks* pAllocator = null) {
+fn SurfaceKHR? HeadlessSurfaceCreateInfoEXT.build(&self, Instance instance, AllocationCallbacks* p_allocator = null) {
    SurfaceKHR response;
-   try_create_headless_surface_ext(instance, self, pAllocator, &response)!;
+   try_create_headless_surface_ext(instance, self, p_allocator, &response)!;
    return response;
 }
-fn AccelerationStructureKHR? AccelerationStructureCreateInfoKHR.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn AccelerationStructureKHR? AccelerationStructureCreateInfoKHR.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    AccelerationStructureKHR response;
-   try_create_acceleration_structure_khr(device, self, pAllocator, &response)!;
+   try_create_acceleration_structure_khr(device, self, p_allocator, &response)!;
    return response;
 }
-fn PrivateDataSlot? PrivateDataSlotCreateInfo.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn PrivateDataSlot? PrivateDataSlotCreateInfo.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    PrivateDataSlot response;
-   try_create_private_data_slot(device, self, pAllocator, &response)!;
+   try_create_private_data_slot(device, self, p_allocator, &response)!;
    return response;
 }
-fn VideoSessionKHR? VideoSessionCreateInfoKHR.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn VideoSessionKHR? VideoSessionCreateInfoKHR.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    VideoSessionKHR response;
-   try_create_video_session_khr(device, self, pAllocator, &response)!;
+   try_create_video_session_khr(device, self, p_allocator, &response)!;
    return response;
 }
-fn VideoSessionParametersKHR? VideoSessionParametersCreateInfoKHR.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn VideoSessionParametersKHR? VideoSessionParametersCreateInfoKHR.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    VideoSessionParametersKHR response;
-   try_create_video_session_parameters_khr(device, self, pAllocator, &response)!;
+   try_create_video_session_parameters_khr(device, self, p_allocator, &response)!;
    return response;
 }
-fn CuModuleNVX? CuModuleCreateInfoNVX.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn CuModuleNVX? CuModuleCreateInfoNVX.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    CuModuleNVX response;
-   try_create_cu_module_nvx(device, self, pAllocator, &response)!;
+   try_create_cu_module_nvx(device, self, p_allocator, &response)!;
    return response;
 }
-fn CuFunctionNVX? CuFunctionCreateInfoNVX.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn CuFunctionNVX? CuFunctionCreateInfoNVX.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    CuFunctionNVX response;
-   try_create_cu_function_nvx(device, self, pAllocator, &response)!;
+   try_create_cu_function_nvx(device, self, p_allocator, &response)!;
    return response;
 }
-fn MicromapEXT? MicromapCreateInfoEXT.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn MicromapEXT? MicromapCreateInfoEXT.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    MicromapEXT response;
-   try_create_micromap_ext(device, self, pAllocator, &response)!;
+   try_create_micromap_ext(device, self, p_allocator, &response)!;
    return response;
 }
-fn OpticalFlowSessionNV? OpticalFlowSessionCreateInfoNV.build(&self, Device device, AllocationCallbacks* pAllocator = null) {
+fn OpticalFlowSessionNV? OpticalFlowSessionCreateInfoNV.build(&self, Device device, AllocationCallbacks* p_allocator = null) {
    OpticalFlowSessionNV response;
-   try_create_optical_flow_session_nv(device, self, pAllocator, &response)!;
+   try_create_optical_flow_session_nv(device, self, p_allocator, &response)!;
    return response;
 }
-fn ShaderEXT? ShaderCreateInfoEXT.build(&self, Device device, uint createInfoCount = 1, AllocationCallbacks* pAllocator = null) {
+fn ShaderEXT? ShaderCreateInfoEXT.build(&self, Device device, uint create_info_count = 1, AllocationCallbacks* p_allocator = null) {
    ShaderEXT response;
-   try_create_shaders_ext(device, createInfoCount, self, pAllocator, &response)!;
+   try_create_shaders_ext(device, create_info_count, self, p_allocator, &response)!;
    return response;
 }
 
