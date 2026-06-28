@@ -4437,7 +4437,7 @@ struct PhysicalDeviceProperties {
    uint device_id;
    PhysicalDeviceType device_type;
    char[MAX_PHYSICAL_DEVICE_NAME_SIZE] device_name;
-   uint[UUID_SIZE] pipeline_cache_uuid;
+   char[UUID_SIZE] pipeline_cache_uuid;
    PhysicalDeviceLimits limits;
    PhysicalDeviceSparseProperties sparse_properties;
 }
@@ -5020,7 +5020,7 @@ struct PipelineCacheHeaderVersionOne {
    PipelineCacheHeaderVersion header_version;
    uint vendor_id;
    uint device_id;
-   uint[UUID_SIZE] pipeline_cache_uuid;
+   char[UUID_SIZE] pipeline_cache_uuid;
 }
 struct PushConstantRange {
    ShaderStageFlags stage_flags;
@@ -5053,7 +5053,7 @@ struct PipelineBinaryKeyKHR {
    StructureType s_type;
    void* p_next;
    uint key_size;
-   uint[MAX_PIPELINE_BINARY_KEY_SIZE_KHR] key;
+   char[MAX_PIPELINE_BINARY_KEY_SIZE_KHR] key;
 }
 struct PipelineBinaryInfoKHR {
    StructureType s_type;
@@ -5958,16 +5958,16 @@ struct PhysicalDevicePushDescriptorPropertiesKHR {
    uint max_push_descriptors;
 }
 struct ConformanceVersion {
-   uint major;
-   uint minor;
-   uint subminor;
-   uint patch;
+   char major;
+   char minor;
+   char subminor;
+   char patch;
 }
 struct ConformanceVersionKHR {
-   uint major;
-   uint minor;
-   uint subminor;
-   uint patch;
+   char major;
+   char minor;
+   char subminor;
+   char patch;
 }
 struct PhysicalDeviceDriverProperties {
    StructureType s_type;
@@ -6081,18 +6081,18 @@ struct ExternalBufferPropertiesKHR {
 struct PhysicalDeviceIDProperties {
    StructureType s_type;
    void* p_next;
-   uint[UUID_SIZE] device_uuid;
-   uint[UUID_SIZE] driver_uuid;
-   uint[LUID_SIZE] device_luid;
+   char[UUID_SIZE] device_uuid;
+   char[UUID_SIZE] driver_uuid;
+   char[LUID_SIZE] device_luid;
    uint device_node_mask;
    uint device_luid_valid;
 }
 struct PhysicalDeviceIDPropertiesKHR {
    StructureType s_type;
    void* p_next;
-   uint[UUID_SIZE] device_uuid;
-   uint[UUID_SIZE] driver_uuid;
-   uint[LUID_SIZE] device_luid;
+   char[UUID_SIZE] device_uuid;
+   char[UUID_SIZE] driver_uuid;
+   char[LUID_SIZE] device_luid;
    uint device_node_mask;
    uint device_luid_valid;
 }
@@ -9007,7 +9007,7 @@ struct PerformanceCounterKHR {
    PerformanceCounterUnitKHR unit;
    PerformanceCounterScopeKHR scope;
    PerformanceCounterStorageKHR storage;
-   uint[UUID_SIZE] uuid;
+   char[UUID_SIZE] uuid;
 }
 struct PerformanceCounterDescriptionKHR {
    StructureType s_type;
@@ -9416,9 +9416,9 @@ struct PhysicalDeviceVulkan11Features {
 struct PhysicalDeviceVulkan11Properties {
    StructureType s_type;
    void* p_next;
-   uint[UUID_SIZE] device_uuid;
-   uint[UUID_SIZE] driver_uuid;
-   uint[LUID_SIZE] device_luid;
+   char[UUID_SIZE] device_uuid;
+   char[UUID_SIZE] driver_uuid;
+   char[LUID_SIZE] device_luid;
    uint device_node_mask;
    uint device_luid_valid;
    uint subgroup_size;
@@ -9769,7 +9769,7 @@ struct AccelerationStructureDeviceAddressInfoKHR {
 struct AccelerationStructureVersionInfoKHR {
    StructureType s_type;
    void* p_next;
-   uint* p_version_data;
+   char* p_version_data;
 }
 struct CopyAccelerationStructureInfoKHR {
    StructureType s_type;
@@ -10687,7 +10687,7 @@ struct PhysicalDeviceHostImageCopyPropertiesEXT {
    ImageLayout* p_copy_src_layouts;
    uint copy_dst_layout_count;
    ImageLayout* p_copy_dst_layouts;
-   uint[UUID_SIZE] optimal_tiling_layout_uuid;
+   char[UUID_SIZE] optimal_tiling_layout_uuid;
    uint identical_memory_type_requirements;
 }
 struct MemoryToImageCopyEXT {
@@ -11756,19 +11756,19 @@ struct PhysicalDeviceShaderModuleIdentifierFeaturesEXT {
 struct PhysicalDeviceShaderModuleIdentifierPropertiesEXT {
    StructureType s_type;
    void* p_next;
-   uint[UUID_SIZE] shader_module_identifier_algorithm_uuid;
+   char[UUID_SIZE] shader_module_identifier_algorithm_uuid;
 }
 struct PipelineShaderStageModuleIdentifierCreateInfoEXT {
    StructureType s_type;
    void* p_next;
    uint identifier_size;
-   uint* p_identifier;
+   char* p_identifier;
 }
 struct ShaderModuleIdentifierEXT {
    StructureType s_type;
    void* p_next;
    uint identifier_size;
-   uint[MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT] identifier;
+   char[MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT] identifier;
 }
 struct ImageCompressionControlEXT {
    StructureType s_type;
@@ -11869,7 +11869,7 @@ struct MicromapCreateInfoEXT {
 struct MicromapVersionInfoEXT {
    StructureType s_type;
    void* p_next;
-   uint* p_version_data;
+   char* p_version_data;
 }
 struct CopyMicromapInfoEXT {
    StructureType s_type;
@@ -11937,7 +11937,7 @@ struct AccelerationStructureTrianglesOpacityMicromapEXT {
 struct PipelinePropertiesIdentifierEXT {
    StructureType s_type;
    void* p_next;
-   uint[UUID_SIZE] pipeline_identifier;
+   char[UUID_SIZE] pipeline_identifier;
 }
 struct PhysicalDevicePipelinePropertiesFeaturesEXT {
    StructureType s_type;
@@ -12211,7 +12211,7 @@ struct DeviceFaultVendorBinaryHeaderVersionOneEXT {
    uint vendor_id;
    uint device_id;
    uint driver_version;
-   uint[UUID_SIZE] pipeline_cache_uuid;
+   char[UUID_SIZE] pipeline_cache_uuid;
    uint application_name_offset;
    uint application_version;
    uint engine_name_offset;
@@ -12426,7 +12426,7 @@ struct PhysicalDeviceShaderObjectFeaturesEXT {
 struct PhysicalDeviceShaderObjectPropertiesEXT {
    StructureType s_type;
    void* p_next;
-   uint[UUID_SIZE] shader_binary_uuid;
+   char[UUID_SIZE] shader_binary_uuid;
    uint shader_binary_version;
 }
 struct ShaderCreateInfoEXT {

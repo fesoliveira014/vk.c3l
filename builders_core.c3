@@ -1556,15 +1556,15 @@ fn PhysicalDeviceIDProperties PhysicalDeviceIDProperties.set_next(&self, void* p
    self.p_next = p_next;
    return *self;
 }
-fn PhysicalDeviceIDProperties PhysicalDeviceIDProperties.set_device_uuid(&self, uint[UUID_SIZE] device_uuid) {
+fn PhysicalDeviceIDProperties PhysicalDeviceIDProperties.set_device_uuid(&self, char[UUID_SIZE] device_uuid) {
    self.device_uuid = device_uuid;
    return *self;
 }
-fn PhysicalDeviceIDProperties PhysicalDeviceIDProperties.set_driver_uuid(&self, uint[UUID_SIZE] driver_uuid) {
+fn PhysicalDeviceIDProperties PhysicalDeviceIDProperties.set_driver_uuid(&self, char[UUID_SIZE] driver_uuid) {
    self.driver_uuid = driver_uuid;
    return *self;
 }
-fn PhysicalDeviceIDProperties PhysicalDeviceIDProperties.set_device_luid(&self, uint[LUID_SIZE] device_luid) {
+fn PhysicalDeviceIDProperties PhysicalDeviceIDProperties.set_device_luid(&self, char[LUID_SIZE] device_luid) {
    self.device_luid = device_luid;
    return *self;
 }
@@ -3471,15 +3471,15 @@ fn PhysicalDeviceVulkan11Properties PhysicalDeviceVulkan11Properties.set_next(&s
    self.p_next = p_next;
    return *self;
 }
-fn PhysicalDeviceVulkan11Properties PhysicalDeviceVulkan11Properties.set_device_uuid(&self, uint[UUID_SIZE] device_uuid) {
+fn PhysicalDeviceVulkan11Properties PhysicalDeviceVulkan11Properties.set_device_uuid(&self, char[UUID_SIZE] device_uuid) {
    self.device_uuid = device_uuid;
    return *self;
 }
-fn PhysicalDeviceVulkan11Properties PhysicalDeviceVulkan11Properties.set_driver_uuid(&self, uint[UUID_SIZE] driver_uuid) {
+fn PhysicalDeviceVulkan11Properties PhysicalDeviceVulkan11Properties.set_driver_uuid(&self, char[UUID_SIZE] driver_uuid) {
    self.driver_uuid = driver_uuid;
    return *self;
 }
-fn PhysicalDeviceVulkan11Properties PhysicalDeviceVulkan11Properties.set_device_luid(&self, uint[LUID_SIZE] device_luid) {
+fn PhysicalDeviceVulkan11Properties PhysicalDeviceVulkan11Properties.set_device_luid(&self, char[LUID_SIZE] device_luid) {
    self.device_luid = device_luid;
    return *self;
 }

@@ -75,7 +75,7 @@ fn PipelineBinaryKeyKHR PipelineBinaryKeyKHR.set_key_size(&self, uint key_size) 
    self.key_size = key_size;
    return *self;
 }
-fn PipelineBinaryKeyKHR PipelineBinaryKeyKHR.set_key(&self, uint[MAX_PIPELINE_BINARY_KEY_SIZE_KHR] key) {
+fn PipelineBinaryKeyKHR PipelineBinaryKeyKHR.set_key(&self, char[MAX_PIPELINE_BINARY_KEY_SIZE_KHR] key) {
    self.key = key;
    return *self;
 }
@@ -1161,15 +1161,15 @@ fn PhysicalDeviceIDPropertiesKHR PhysicalDeviceIDPropertiesKHR.set_next(&self, v
    self.p_next = p_next;
    return *self;
 }
-fn PhysicalDeviceIDPropertiesKHR PhysicalDeviceIDPropertiesKHR.set_device_uuid(&self, uint[UUID_SIZE] device_uuid) {
+fn PhysicalDeviceIDPropertiesKHR PhysicalDeviceIDPropertiesKHR.set_device_uuid(&self, char[UUID_SIZE] device_uuid) {
    self.device_uuid = device_uuid;
    return *self;
 }
-fn PhysicalDeviceIDPropertiesKHR PhysicalDeviceIDPropertiesKHR.set_driver_uuid(&self, uint[UUID_SIZE] driver_uuid) {
+fn PhysicalDeviceIDPropertiesKHR PhysicalDeviceIDPropertiesKHR.set_driver_uuid(&self, char[UUID_SIZE] driver_uuid) {
    self.driver_uuid = driver_uuid;
    return *self;
 }
-fn PhysicalDeviceIDPropertiesKHR PhysicalDeviceIDPropertiesKHR.set_device_luid(&self, uint[LUID_SIZE] device_luid) {
+fn PhysicalDeviceIDPropertiesKHR PhysicalDeviceIDPropertiesKHR.set_device_luid(&self, char[LUID_SIZE] device_luid) {
    self.device_luid = device_luid;
    return *self;
 }
@@ -6224,7 +6224,7 @@ fn PerformanceCounterKHR PerformanceCounterKHR.set_storage(&self, PerformanceCou
    self.storage = storage;
    return *self;
 }
-fn PerformanceCounterKHR PerformanceCounterKHR.set_uuid(&self, uint[UUID_SIZE] uuid) {
+fn PerformanceCounterKHR PerformanceCounterKHR.set_uuid(&self, char[UUID_SIZE] uuid) {
    self.uuid = uuid;
    return *self;
 }
@@ -7195,7 +7195,7 @@ fn AccelerationStructureVersionInfoKHR AccelerationStructureVersionInfoKHR.set_n
    self.p_next = p_next;
    return *self;
 }
-fn AccelerationStructureVersionInfoKHR AccelerationStructureVersionInfoKHR.set_version_data(&self, uint* p_version_data) {
+fn AccelerationStructureVersionInfoKHR AccelerationStructureVersionInfoKHR.set_version_data(&self, char* p_version_data) {
    self.p_version_data = p_version_data;
    return *self;
 }
@@ -8911,7 +8911,7 @@ fn PhysicalDeviceHostImageCopyPropertiesEXT PhysicalDeviceHostImageCopyPropertie
    self.p_copy_dst_layouts = &p_copy_dst_layouts[0];
    return *self;
 }
-fn PhysicalDeviceHostImageCopyPropertiesEXT PhysicalDeviceHostImageCopyPropertiesEXT.set_optimal_tiling_layout_uuid(&self, uint[UUID_SIZE] optimal_tiling_layout_uuid) {
+fn PhysicalDeviceHostImageCopyPropertiesEXT PhysicalDeviceHostImageCopyPropertiesEXT.set_optimal_tiling_layout_uuid(&self, char[UUID_SIZE] optimal_tiling_layout_uuid) {
    self.optimal_tiling_layout_uuid = optimal_tiling_layout_uuid;
    return *self;
 }
@@ -11215,7 +11215,7 @@ fn PhysicalDeviceShaderModuleIdentifierPropertiesEXT PhysicalDeviceShaderModuleI
    self.p_next = p_next;
    return *self;
 }
-fn PhysicalDeviceShaderModuleIdentifierPropertiesEXT PhysicalDeviceShaderModuleIdentifierPropertiesEXT.set_shader_module_identifier_algorithm_uuid(&self, uint[UUID_SIZE] shader_module_identifier_algorithm_uuid) {
+fn PhysicalDeviceShaderModuleIdentifierPropertiesEXT PhysicalDeviceShaderModuleIdentifierPropertiesEXT.set_shader_module_identifier_algorithm_uuid(&self, char[UUID_SIZE] shader_module_identifier_algorithm_uuid) {
    self.shader_module_identifier_algorithm_uuid = shader_module_identifier_algorithm_uuid;
    return *self;
 }
@@ -11228,9 +11228,9 @@ fn PipelineShaderStageModuleIdentifierCreateInfoEXT PipelineShaderStageModuleIde
    self.identifier_size = identifier_size;
    return *self;
 }
-fn PipelineShaderStageModuleIdentifierCreateInfoEXT PipelineShaderStageModuleIdentifierCreateInfoEXT.set_identifier(&self, uint[] p_identifier) {
+fn PipelineShaderStageModuleIdentifierCreateInfoEXT PipelineShaderStageModuleIdentifierCreateInfoEXT.set_dentifier(&self, ZString[] p_identifier) {
    self.identifier_size= (uint)p_identifier.len;
-   self.p_identifier = &p_identifier[0];
+   self.p_identifier = (char*)&p_identifier[0];
    return *self;
 }
 fn ShaderModuleIdentifierEXT shader_module_identifier_ext() => { .s_type = SHADER_MODULE_IDENTIFIER_EXT, .p_next = null };
@@ -11242,7 +11242,7 @@ fn ShaderModuleIdentifierEXT ShaderModuleIdentifierEXT.set_identifier_size(&self
    self.identifier_size = identifier_size;
    return *self;
 }
-fn ShaderModuleIdentifierEXT ShaderModuleIdentifierEXT.set_identifier(&self, uint[MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT] identifier) {
+fn ShaderModuleIdentifierEXT ShaderModuleIdentifierEXT.set_dentifier(&self, char[MAX_SHADER_MODULE_IDENTIFIER_SIZE_EXT] identifier) {
    self.identifier_size= (uint)identifier.len;
    self.identifier = identifier;
    return *self;
@@ -11452,7 +11452,7 @@ fn MicromapVersionInfoEXT MicromapVersionInfoEXT.set_next(&self, void* p_next) {
    self.p_next = p_next;
    return *self;
 }
-fn MicromapVersionInfoEXT MicromapVersionInfoEXT.set_version_data(&self, uint* p_version_data) {
+fn MicromapVersionInfoEXT MicromapVersionInfoEXT.set_version_data(&self, char* p_version_data) {
    self.p_version_data = p_version_data;
    return *self;
 }
@@ -11597,7 +11597,7 @@ fn PipelinePropertiesIdentifierEXT PipelinePropertiesIdentifierEXT.set_next(&sel
    self.p_next = p_next;
    return *self;
 }
-fn PipelinePropertiesIdentifierEXT PipelinePropertiesIdentifierEXT.set_pipeline_identifier(&self, uint[UUID_SIZE] pipeline_identifier) {
+fn PipelinePropertiesIdentifierEXT PipelinePropertiesIdentifierEXT.set_pipeline_identifier(&self, char[UUID_SIZE] pipeline_identifier) {
    self.pipeline_identifier = pipeline_identifier;
    return *self;
 }
@@ -12639,7 +12639,7 @@ fn PhysicalDeviceShaderObjectPropertiesEXT PhysicalDeviceShaderObjectPropertiesE
    self.p_next = p_next;
    return *self;
 }
-fn PhysicalDeviceShaderObjectPropertiesEXT PhysicalDeviceShaderObjectPropertiesEXT.set_shader_binary_uuid(&self, uint[UUID_SIZE] shader_binary_uuid) {
+fn PhysicalDeviceShaderObjectPropertiesEXT PhysicalDeviceShaderObjectPropertiesEXT.set_shader_binary_uuid(&self, char[UUID_SIZE] shader_binary_uuid) {
    self.shader_binary_uuid = shader_binary_uuid;
    return *self;
 }
