@@ -1,6 +1,7 @@
 # vk.c3l
 
-Vulkan 1.3 bindings for the [C3](https://c3-lang.org) language (header version 1.3.296).
+Vulkan 1.3 core bindings for the [C3](https://c3-lang.org) language, generated
+from Vulkan-Headers v1.4.317 (header version 317).
 
 Generated from the Khronos `vk.xml` registry. Binding conventions: single `module vk;`,
 `snake_case` functions with `@cname`, prefix-stripped `PascalCase` types, `try_`-prefixed
