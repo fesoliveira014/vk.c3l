@@ -1,0 +1,11 @@
+{
+  "langrev": "1",
+  "dependency-search-paths": [ "../.." ],
+  "dependencies": [ "vk" ],
+  "targets": {
+    "unit": {
+      "type": "test",
+      "sources": [ "test_ray_query.c3" ]
+    }
+  }
+}

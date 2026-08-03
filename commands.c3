@@ -481,7 +481,7 @@ alias PFN_vkCmdSetLineStippleKHR = fn void (CommandBuffer, uint, uint);
 alias PFN_vkCmdSetLineStippleEXT = fn void (CommandBuffer, uint, uint);
 alias PFN_vkGetPhysicalDeviceToolPropertiesEXT = fn Result (PhysicalDevice, uint*, PhysicalDeviceToolProperties*);
 alias PFN_vkCreateAccelerationStructureKHR = fn Result (Device, AccelerationStructureCreateInfoKHR*, AllocationCallbacks*, AccelerationStructureKHR*);
-alias PFN_vkCmdBuildAccelerationStructuresKHR = fn void (CommandBuffer, uint, AccelerationStructureBuildGeometryInfoKHR*, AccelerationStructureBuildRangeInfoKHR* );
+alias PFN_vkCmdBuildAccelerationStructuresKHR = fn void (CommandBuffer, uint, AccelerationStructureBuildGeometryInfoKHR*, AccelerationStructureBuildRangeInfoKHR** );
 alias PFN_vkCmdBuildAccelerationStructuresIndirectKHR = fn void (CommandBuffer, uint, AccelerationStructureBuildGeometryInfoKHR*, DeviceAddress*, uint*, uint* );
 alias PFN_vkBuildAccelerationStructuresKHR = fn Result (Device, DeferredOperationKHR, uint, AccelerationStructureBuildGeometryInfoKHR*, AccelerationStructureBuildRangeInfoKHR* );
 alias PFN_vkGetAccelerationStructureDeviceAddressKHR = fn DeviceAddress (Device, AccelerationStructureDeviceAddressInfoKHR*);
@@ -1783,7 +1783,7 @@ fn void uninitialize_performance_api_intel (Device device) => extensions.vk_unin
 fn ulong get_device_memory_opaque_capture_address_khr (Device device, DeviceMemoryOpaqueCaptureAddressInfo* p_info) => extensions.vk_get_device_memory_opaque_capture_address_khr(device, p_info);
 fn void cmd_set_line_stipple_khr (CommandBuffer command_buffer, uint line_stipple_factor, uint line_stipple_pattern) => extensions.vk_cmd_set_line_stipple_khr(command_buffer, line_stipple_factor, line_stipple_pattern);
 fn void cmd_set_line_stipple_ext (CommandBuffer command_buffer, uint line_stipple_factor, uint line_stipple_pattern) => extensions.vk_cmd_set_line_stipple_ext(command_buffer, line_stipple_factor, line_stipple_pattern);
-fn void cmd_build_acceleration_structures_khr (CommandBuffer command_buffer, uint info_count, AccelerationStructureBuildGeometryInfoKHR* p_infos, AccelerationStructureBuildRangeInfoKHR*  pp_build_range_infos) => extensions.vk_cmd_build_acceleration_structures_khr(command_buffer, info_count, p_infos, pp_build_range_infos);
+fn void cmd_build_acceleration_structures_khr (CommandBuffer command_buffer, uint info_count, AccelerationStructureBuildGeometryInfoKHR* p_infos, AccelerationStructureBuildRangeInfoKHR** pp_build_range_infos) => extensions.vk_cmd_build_acceleration_structures_khr(command_buffer, info_count, p_infos, pp_build_range_infos);
 fn void cmd_build_acceleration_structures_indirect_khr (CommandBuffer command_buffer, uint info_count, AccelerationStructureBuildGeometryInfoKHR* p_infos, DeviceAddress* p_indirect_device_addresses, uint* p_indirect_strides, uint*  pp_max_primitive_counts) => extensions.vk_cmd_build_acceleration_structures_indirect_khr(command_buffer, info_count, p_infos, p_indirect_device_addresses, p_indirect_strides, pp_max_primitive_counts);
 fn DeviceAddress get_acceleration_structure_device_address_khr (Device device, AccelerationStructureDeviceAddressInfoKHR* p_info) => extensions.vk_get_acceleration_structure_device_address_khr(device, p_info);
 fn void destroy_deferred_operation_khr (Device device, DeferredOperationKHR operation, AllocationCallbacks* p_allocator) => extensions.vk_destroy_deferred_operation_khr(device, operation, p_allocator);
@@ -4133,4 +4133,3 @@ fn TensorViewARM? TensorViewCreateInfoARM.build(&self, Device device, Allocation
    try_create_tensor_view_arm(device, self, p_allocator, &response)!;
    return response;
 }
-
