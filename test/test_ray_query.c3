@@ -14,6 +14,37 @@ fn void command_build_signature_probe(
     (void)range_infos;
 }
 
+fn void command_build_indirect_signature_probe(
+    vk::CommandBuffer command_buffer,
+    uint info_count,
+    vk::AccelerationStructureBuildGeometryInfoKHR* infos,
+    vk::DeviceAddress* indirect_addresses,
+    uint* indirect_strides,
+    uint** max_primitive_counts,
+) {
+    (void)command_buffer;
+    (void)info_count;
+    (void)infos;
+    (void)indirect_addresses;
+    (void)indirect_strides;
+    (void)max_primitive_counts;
+}
+
+fn vk::Result host_build_signature_probe(
+    vk::Device device,
+    vk::DeferredOperationKHR deferred_operation,
+    uint info_count,
+    vk::AccelerationStructureBuildGeometryInfoKHR* infos,
+    vk::AccelerationStructureBuildRangeInfoKHR** range_infos,
+) {
+    (void)device;
+    (void)deferred_operation;
+    (void)info_count;
+    (void)infos;
+    (void)range_infos;
+    return vk::Result.SUCCESS;
+}
+
 fn void required_ray_query_binding_values_match_vulkan() @test {
     assert((uint)vk::DescriptorType.ACCELERATION_STRUCTURE_KHR == 1000150000);
     assert((uint)vk::StructureType
@@ -64,4 +95,14 @@ fn void command_build_uses_an_array_of_range_info_pointers() @test {
     vk::PFN_vkCmdBuildAccelerationStructuresKHR command =
         &command_build_signature_probe;
     assert(command != null);
+}
+
+fn void indirect_and_host_builds_use_pointer_arrays() @test {
+    vk::PFN_vkCmdBuildAccelerationStructuresIndirectKHR indirect_command =
+        &command_build_indirect_signature_probe;
+    vk::PFN_vkBuildAccelerationStructuresKHR host_command =
+        &host_build_signature_probe;
+
+    assert(indirect_command != null);
+    assert(host_command != null);
 }
