@@ -44,6 +44,26 @@ against the Vulkan headers (VMA, for one) links against them as well.
 - `vk::set_loader_library(name)` chooses another library name or path before
   the first successful load (a bundled loader, or a missing name in a test).
 
+Limits:
+
+- Call `vk::load_loader()` (or create a gpu.c3l runtime) before any other
+  `vk*` call. Only the global commands above load on first use; every other
+  entry point called before a load jumps to address 0. This matters when a
+  `VkInstance` or `VkDevice` comes from outside the binding (an OpenXR
+  runtime, a host application, another library).
+- C or C++ code compiled with Vulkan prototypes that calls a loader export
+  outside the 215 core commands (window-system and other extension calls such
+  as `vkCreateSwapchainKHR` or `vkCreateWin32SurfaceKHR`, for example Dear
+  ImGui's `imgui_impl_vulkan` without `VK_NO_PROTOTYPES`) no longer links,
+  because nothing links the loader. Such code must link the loader itself or
+  get its pointers from `vkGetInstanceProcAddr` / `vkGetDeviceProcAddr`. A
+  static library that calls only core commands (VMA) is unaffected.
+- The loader is never closed. A plugin that contains the binding and is
+  unloaded keeps one reference to the loader per load, and must destroy its
+  instances and devices before it is unloaded.
+- The binding requires every Vulkan 1.3 core command: a loader older than 1.3
+  is refused with `LOADER_INCOMPLETE`.
+
 `loader_entry_points.c3` is generated from `commands.c3`:
 `python3 scripts/generate_loader.py` after regenerating the commands
 (`--check` in CI).
