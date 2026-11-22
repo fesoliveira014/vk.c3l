@@ -23,8 +23,30 @@ Then in `project.json`:
 "dependencies": [ "vk" ]
 ```
 
-Linked libraries are declared per-platform in `manifest.json`
-(`:libvulkan.so.1` on Linux, `vulkan` on macOS, `vulkan-1` on Windows).
+## The Vulkan loader
+
+Nothing links the Vulkan loader. The binding opens it at run time
+(`vulkan-1.dll` on Windows, `libvulkan.so.1` on Linux, `libvulkan.1.dylib` on
+macOS) and resolves every Vulkan 1.3 core command it exports, so a program
+built on it starts on a machine without Vulkan and can report that itself.
+The binding defines the `vk*` core symbols, so a static library compiled
+against the Vulkan headers (VMA, for one) links against them as well.
+
+- `vk::load_loader()` opens the loader once per process and keeps it open until
+  the process exits. It is thread-safe; a failed call keeps nothing open and a
+  later call tries again. Faults: `vk::LOADER_NOT_FOUND` (no loader installed)
+  and `vk::LOADER_INCOMPLETE` (the loader lacks a 1.3 core command;
+  `vk::loader_missing_command()` names it).
+- `vkCreateInstance`, the instance enumerations and `vkGetInstanceProcAddr` load
+  it on first use, so calling `load_loader` first is needed only to learn why
+  Vulkan is unavailable. Without a loader they return
+  `ERROR_INITIALIZATION_FAILED` (`null` for `vkGetInstanceProcAddr`).
+- `vk::set_loader_library(name)` chooses another library name or path before
+  the first successful load (a bundled loader, or a missing name in a test).
+
+`loader_entry_points.c3` is generated from `commands.c3`:
+`python3 scripts/generate_loader.py` after regenerating the commands
+(`--check` in CI).
 
 After instance creation, call `vk::load_extensions(instance)` before using any
 WSI/extension entry points.

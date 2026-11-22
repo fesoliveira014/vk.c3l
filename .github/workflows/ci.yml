@@ -42,3 +42,4 @@ jobs:
           }
           C3
           c3c build smoke
+          ! objdump -p build/smoke | grep -F libvulkan

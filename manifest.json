@@ -1,20 +1,21 @@
 {
   "provides" : "vk",
+  // The Vulkan loader is opened at run time (loader.c3), never linked.
   "targets" : {
     "linux-x64" : {
-      "linked-libraries" : [":libvulkan.so.1"]
+      "linked-libraries" : []
     },
     "linux-aarch64" : {
-      "linked-libraries" : [":libvulkan.so.1"]
+      "linked-libraries" : []
     },
     "macos-x64" : {
-      "linked-libraries" : ["vulkan"]
+      "linked-libraries" : []
     },
     "macos-aarch64" : {
-      "linked-libraries" : ["vulkan"]
+      "linked-libraries" : []
     },
     "windows-x64" : {
-      "linked-libraries" : ["vulkan-1"]
+      "linked-libraries" : []
     }
   }
 }
