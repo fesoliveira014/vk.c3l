@@ -12,6 +12,11 @@ jobs:
           curl -L -o c3c.tar.gz https://github.com/c3lang/c3c/releases/download/v0.8.5_1/c3-linux.tar.gz
           tar xf c3c.tar.gz
           echo "$PWD/c3" >> "$GITHUB_PATH"
+      - name: loader entry points match the commands
+        working-directory: vk.c3l
+        run: python3 scripts/generate_loader.py --check
+      - name: install the Vulkan loader (run time only; nothing links it)
+        run: sudo apt-get update -q && sudo apt-get install -y libvulkan1
       - name: binding tests
         working-directory: vk.c3l
         run: c3c test unit --path test
