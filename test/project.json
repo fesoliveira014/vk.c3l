@@ -5,7 +5,7 @@
   "targets": {
     "unit": {
       "type": "test",
-      "sources": [ "test_ray_query.c3" ]
+      "sources": [ "test_ray_query.c3", "test_loader.c3" ]
     }
   }
 }

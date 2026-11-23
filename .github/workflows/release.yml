@@ -38,7 +38,7 @@ jobs:
               | zip -X -q "dist/${PROVIDES}-v${VERSION}-${platform}.c3l" -@
           }
           pack linux-x64 ""
-          pack windows-x64 windows
+          pack windows-x64 ""
           (cd dist && sha256sum ./*.c3l | sed 's|\./||' > SHA256SUMS && cat SHA256SUMS)
       - uses: actions/upload-artifact@v4
         with:
